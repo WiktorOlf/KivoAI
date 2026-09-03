@@ -62,8 +62,64 @@ async function getModels(serverUrl, apiKey) {
     return data.data || [];
 }
 
+async function sendVisionRequest(
+    serverUrl,
+    apiKey,
+    model,
+    imageDataUrl,
+    prompt
+) {
+    const response = await fetch(
+        `${serverUrl}/api/chat/completions`,
+        {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${apiKey}`
+            },
+            body: JSON.stringify({
+                model,
+                messages: [
+                    {
+                        role: "user",
+                        content: [
+                            {
+                                type: "text",
+                                text: "Look at this webpage screenshot. Reply with exactly one short sentence describing what you see."
+                            },
+                            {
+                                type: "image_url",
+                                image_url: {
+                                    url: imageDataUrl
+                                }
+                            }
+                        ]
+                    }
+                ],
+                max_tokens: 50,
+                chat_template_kwargs: {
+                    enable_thinking: false
+                }
+            })
+        }
+    );
+
+    if (!response.ok) {
+        const errorText = await response.text();
+
+        throw new Error(
+            `Open WebUI returned HTTP ${response.status}: ${errorText}`
+        );
+    }
+
+    const data = await response.json();
+
+    return data;
+}
+
 export {
     requestServerPermission,
     testConnection,
-    getModels
+    getModels,
+    sendVisionRequest
 };
