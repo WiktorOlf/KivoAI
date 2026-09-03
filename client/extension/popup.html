@@ -16,22 +16,6 @@
 
         <h3>Open WebUI</h3>
 
-        <label for="serverUrl">
-            Server URL
-        </label>
-
-        <br>
-
-        <input
-            id="serverUrl"
-            type="url"
-            placeholder="https://openwebui.example.com"
-            style="width: 100%;"
-        >
-
-        <br>
-        <br>
-
         <label for="apiKey">
             API Key
         </label>
@@ -48,29 +32,74 @@
         <br>
         <br>
 
-        <label for="model">
-            Model
-        </label>
-
-        <br>
-
-        <input
-            id="model"
-            type="text"
-            placeholder="Model name"
-            style="width: 100%;"
-        >
-
-        <br>
-        <br>
-
         <button id="saveSettings">
-            Save Settings
+            Save API Key
         </button>
 
         <button id="testConnection">
-            Test Connection
+            Connect
         </button>
+
+        <br>
+        <br>
+
+        <button id="advancedSettings">
+            Advanced Settings
+        </button>
+
+        <div id="advancedPanel" style="display: none;">
+            <hr>
+
+            <h3>Advanced Settings</h3>
+
+            <label for="serverUrl">
+                Open WebUI Server
+            </label>
+
+            <br>
+
+            <input
+                id="serverUrl"
+                type="url"
+                style="width: 100%;"
+            >
+
+            <br>
+            <br>
+
+            <label for="model">
+                Model
+            </label>
+
+            <br>
+
+            <select
+                id="model"
+                style="width: 100%;"
+            >
+                <option value="">
+                    Select a model
+                </option>
+            </select>
+
+            <br>
+            <br>
+
+            <button id="fetchModels">
+                Fetch Models
+            </button>
+
+            <button id="saveAdvancedSettings">
+                Save Settings
+            </button>
+
+            <br>
+            <br>
+
+            <button id="closeAdvancedSettings">
+                ← Back
+            </button>
+        </div>
 
         <p id="settingsStatus"></p>
 

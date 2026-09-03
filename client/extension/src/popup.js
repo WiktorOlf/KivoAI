@@ -1,10 +1,8 @@
 import browserAPI from "./browser/api.js";
 import { captureVisibleTab } from "./browser/capture.js";
 import { redactImage } from "./redaction/redactor.js";
-import {
-    DEFAULT_SERVER_URL,
-    DEFAULT_MODEL
-} from "./config.js";
+import { getConfig } from "./config.js";
+import { getModels, requestServerPermission, testConnection} from "./browser/openwebui.js";
 
 document.getElementById("scan").addEventListener("click", async () => {
     const result = document.getElementById("result");
@@ -150,3 +148,183 @@ document.getElementById("scan").addEventListener("click", async () => {
         result.textContent = `Error: ${error.message}`;
     }
 });
+
+document.getElementById("testConnection").addEventListener(
+    "click",
+    async () => {
+        const status =
+            document.getElementById("settingsStatus");
+
+        try {
+            const config = await getConfig();
+
+            if (!config.apiKey) {
+                status.textContent =
+                    "Enter and save your API key first.";
+
+                return;
+            }
+
+            status.textContent =
+                "Connecting...";
+
+            await requestServerPermission(
+                config.serverUrl
+            );
+
+            const data = await testConnection(
+                config.serverUrl,
+                config.apiKey
+            );
+
+            const modelCount =
+                data.data
+                    ? data.data.length
+                    : 0;
+
+            status.textContent =
+                `Connected. Found ${modelCount} model(s).`;
+        } catch (error) {
+            status.textContent =
+                `Connection failed: ${error.message}`;
+        }
+    }
+);
+
+async function loadSettings() {
+    const config = await getConfig();
+
+    document.getElementById("apiKey").value =
+    config.apiKey;
+
+    document.getElementById("serverUrl").value =
+    config.serverUrl;
+
+    document.getElementById("model").value =
+    config.model;
+}
+
+loadSettings();
+
+document.getElementById("saveSettings").addEventListener(
+    "click",
+    async () => {
+        const serverUrl = document.getElementById("serverUrl").value.trim();
+        const apiKey = document.getElementById("apiKey").value.trim();
+        const model = document.getElementById("model").value.trim();
+
+        await browserAPI.storage.local.set({
+            serverUrl,
+            apiKey,
+            model
+        });
+
+        document.getElementById("settingsStatus").textContent =
+            "Settings saved.";
+    }
+);
+
+document.getElementById("advancedSettings").addEventListener(
+    "click",
+    () => {
+        document.getElementById("advancedPanel").style.display =
+            "block";
+
+        document.getElementById("advancedSettings").style.display =
+            "none";
+    }
+);
+
+document.getElementById("closeAdvancedSettings").addEventListener(
+    "click",
+    () => {
+        document.getElementById("advancedPanel").style.display =
+            "none";
+
+        document.getElementById("advancedSettings").style.display =
+            "block";
+    }
+);
+
+document.getElementById("fetchModels").addEventListener(
+    "click",
+    async () => {
+        const status = document.getElementById("settingsStatus");
+
+        const serverUrl = document.getElementById("serverUrl").value.trim();
+
+        if (!serverUrl) {
+            status.textContent =
+            "Enter an Open WebUI server URL.";
+
+    return;
+        }
+
+        let url;
+
+        try {
+            url = new URL(serverUrl);
+        } catch (error) {
+            status.textContent =
+            "Invalid server URL.";
+
+    return;
+        }
+
+        const origin = `${url.protocol}//${url.host}/*`;
+
+        try {
+            const granted = await browserAPI.permissions.request({
+                origins: [
+                    origin
+                ]
+            });
+
+            if (!granted) {
+                status.textContent =
+                "Permission to access this server was denied.";
+
+            return;
+            }
+
+            const config = await getConfig();
+
+            if (!config.apiKey) {
+                status.textContent =
+                "Enter and save your API key first.";
+
+            return;
+            }
+
+            status.textContent =
+            "Fetching models...";
+
+    const models = await getModels(
+        serverUrl,
+        config.apiKey
+    );
+
+    const modelSelect =
+    document.getElementById("model");
+
+    modelSelect.innerHTML = "";
+
+    for (const model of models) {
+        const option =
+        document.createElement("option");
+
+        option.value = model.id;
+        option.textContent =
+        model.name || model.id;
+
+        modelSelect.appendChild(option);
+    }
+
+    status.textContent =
+    `Found ${models.length} model(s).`;
+        } catch (error) {
+            status.textContent =
+            `Failed to fetch models: ${error.message}`;
+        }
+    }
+);

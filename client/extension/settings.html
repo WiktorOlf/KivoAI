@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>KivoAI Advanced Settings</title>
+    </head>
+
+    <body>
+        <h2>KivoAI Advanced Settings</h2>
+
+        <h3>Open WebUI</h3>
+
+        <label for="serverUrl">
+            Server URL
+        </label>
+
+        <br>
+
+        <input
+            id="serverUrl"
+            type="url"
+            style="width: 400px;"
+        >
+
+        <br>
+        <br>
+
+        <label for="model">
+            Model
+        </label>
+
+        <br>
+
+        <select
+            id="model"
+            style="width: 400px;"
+        >
+            <option value="">
+                Select a model
+            </option>
+        </select>
+
+        <br>
+        <br>
+
+        <button id="fetchModels">
+            Fetch Models
+        </button>
+
+        <button id="saveAdvancedSettings">
+            Save Settings
+        </button>
+
+        <p id="settingsStatus"></p>
+
+        <script
+            type="module"
+            src="src/settings.js"
+        ></script>
+    </body>
+</html>

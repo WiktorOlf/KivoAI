@@ -3,11 +3,16 @@
     "name": "KivoAI",
     "version": "0.1.0",
     "description": "Privacy-preserving browser AI agent",
+
     "permissions": [
         "activeTab",
         "scripting",
         "storage"
     ],
+    "optional_host_permissions": [
+        "https://*/*"
+    ],
+
     "action": {
         "default_popup": "popup.html"
     }
