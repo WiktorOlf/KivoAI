@@ -5,10 +5,10 @@
     "description": "Privacy-preserving browser AI agent",
     "permissions": [
         "activeTab",
-        "scripting"
+        "scripting",
+        "storage"
     ],
     "action": {
         "default_popup": "popup.html"
     }
 }
-
