@@ -1,115 +1,243 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>KivoAI</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>KivoAI Agent</title>
+        <link rel="stylesheet" href="popup.css">
     </head>
 
     <body>
-        <h2>KivoAI</h2>
+        <div class="app-container">
+            <div id="viewSlider" class="view-slider">
+                <main id="viewMain" class="view active">
+                    <header class="app-header">
+                        <div class="brand">
+                            <img src="icons/icon48.png" alt="KivoAI Logo" width="22" height="22" style="border-radius: 6px;" />
+                            <span class="brand-name">KivoAI</span>
+                        </div>
+                        <div class="header-actions">
+                            <button type="button" id="btnOpenAutofill" class="icon-btn" aria-label="Autofill Profiles" title="Autofill Profiles">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="12" cy="7" r="4"></circle>
+                                </svg>
+                            </button>
+                            <button type="button" id="btnOpenSettings" class="icon-btn" aria-label="Open Settings" title="Settings">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </header>
 
-        <button id="scan">
-            Scan Page
-        </button>
+                    <div class="page-chip">
+                        <span class="chip-dot"></span>
+                        <span id="pageDomain" class="chip-text">Connecting to active tab...</span>
+                    </div>
 
-        <hr>
+                    <div class="prompt-box">
+                        <label for="userInstruction" class="prompt-label">Ask a question or give a goal</label>
+                        <textarea
+                            id="userInstruction"
+                            rows="3"
+                            placeholder="e.g. 'Fill out this form using my saved profile', or 'Sign in'..."
+                        ></textarea>
+                    </div>
 
-        <h3>Open WebUI</h3>
+                    <div id="aiAnswerCard" class="answer-card hidden">
+                        <div class="answer-header">
+                            <span class="answer-title">AI Explanation</span>
+                            <button type="button" id="btnCloseAnswer" class="btn-link">Dismiss</button>
+                        </div>
+                        <div id="aiAnswerContent" class="answer-body"></div>
+                    </div>
 
-        <label for="apiKey">
-            API Key
-        </label>
+                    <div id="activitySection" class="activity-card">
+                        <div class="activity-header">
+                            <div class="activity-status">
+                                <span id="activitySpinner" class="spinner hidden"></span>
+                                <span id="activityStepCounter" class="step-badge hidden">Step 1/10</span>
+                                <span id="activityCurrentStep" class="activity-label">Ready</span>
+                            </div>
+                            <button type="button" id="btnToggleDetails" class="btn-link">Steps</button>
+                        </div>
 
-        <br>
+                        <div id="activityDetails" class="activity-details collapsed">
+                            <div id="actionHistoryList" class="history-list"></div>
+                        </div>
 
-        <input
-            id="apiKey"
-            type="password"
-            placeholder="sk-..."
-            style="width: 100%;"
-        >
+                        <div id="actionPreview" class="action-preview hidden">
+                            <span id="actionBadge" class="action-tag">-</span>
+                            <span id="actionText" class="action-detail">-</span>
+                        </div>
+                    </div>
 
-        <br>
-        <br>
+                    <div id="errorMessage" class="error-banner hidden"></div>
 
-        <button id="saveSettings">
-            Save API Key
-        </button>
+                    <footer class="app-footer">
+                        <button type="button" id="btnAskPage" class="btn btn-secondary">
+                            <span>Ask AI</span>
+                        </button>
+                        <button type="button" id="btnRunAgent" class="btn btn-primary">
+                            <span id="btnRunText">Run Agent</span>
+                        </button>
+                        <button type="button" id="btnStopAgent" class="btn btn-secondary hidden">Stop</button>
+                    </footer>
+                </main>
 
-        <button id="testConnection">
-            Connect
-        </button>
+                <aside id="viewAutofill" class="view">
+                    <header class="app-header">
+                        <button type="button" id="btnCloseAutofill" class="icon-btn" aria-label="Back" title="Back">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="19" y1="12" x2="5" y2="12"></line>
+                                <polyline points="12 19 5 12 12 5"></polyline>
+                            </svg>
+                        </button>
+                        <span class="brand-name">Autofill Profiles</span>
+                        <div style="width: 24px;"></div>
+                    </header>
 
-        <br>
-        <br>
+                    <form id="autofillForm" class="settings-body">
+                        <div class="profile-select-bar">
+                            <div class="form-group flex-1">
+                                <label for="profileSelector">Select Profile</label>
+                                <select id="profileSelector"></select>
+                            </div>
+                            <button type="button" id="btnNewProfile" class="btn btn-secondary btn-sm" title="Add new profile">+ New</button>
+                            <button type="button" id="btnDeleteProfile" class="btn btn-secondary btn-sm btn-danger-text" title="Delete current profile">Delete</button>
+                        </div>
 
-        <button id="advancedSettings">
-            Advanced Settings
-        </button>
+                        <div class="form-group">
+                            <label for="afProfileName">Profile Name (Label)</label>
+                            <input type="text" id="afProfileName" required placeholder="e.g. Personal, Work, Alex">
+                        </div>
 
-        <div id="advancedPanel" style="display: none;">
-            <hr>
+                        <div class="form-group">
+                            <label for="afUsername">Username / User ID</label>
+                            <input type="text" id="afUsername" placeholder="e.g. jdoe99">
+                        </div>
 
-            <h3>Advanced Settings</h3>
+                        <div class="form-row">
+                            <div class="form-group flex-1">
+                                <label for="afFirstName">First Name</label>
+                                <input type="text" id="afFirstName" placeholder="Jane">
+                            </div>
+                            <div class="form-group flex-1">
+                                <label for="afMiddleName">Middle</label>
+                                <input type="text" id="afMiddleName" placeholder="Marie">
+                            </div>
+                            <div class="form-group flex-1">
+                                <label for="afLastName">Last Name</label>
+                                <input type="text" id="afLastName" placeholder="Doe">
+                            </div>
+                        </div>
 
-            <label for="serverUrl">
-                Open WebUI Server
-            </label>
+                        <div class="form-row">
+                            <div class="form-group flex-1">
+                                <label for="afEmail">Email</label>
+                                <input type="email" id="afEmail" placeholder="jane@example.com">
+                            </div>
+                            <div class="form-group flex-1">
+                                <label for="afPhone">Phone</label>
+                                <input type="tel" id="afPhone" placeholder="+1 555 0199">
+                            </div>
+                        </div>
 
-            <br>
+                        <div class="form-group">
+                            <label for="afAddress1">Street Address</label>
+                            <input type="text" id="afAddress1" placeholder="123 Market Street">
+                        </div>
 
-            <input
-                id="serverUrl"
-                type="url"
-                style="width: 100%;"
-            >
+                        <div class="form-row">
+                            <div class="form-group flex-1">
+                                <label for="afCity">City</label>
+                                <input type="text" id="afCity" placeholder="San Francisco">
+                            </div>
+                            <div class="form-group flex-1">
+                                <label for="afState">State / Province</label>
+                                <input type="text" id="afState" placeholder="CA">
+                            </div>
+                        </div>
 
-            <br>
-            <br>
+                        <div class="form-row">
+                            <div class="form-group flex-1">
+                                <label for="afPostalCode">Postal / ZIP Code</label>
+                                <input type="text" id="afPostalCode" placeholder="94105">
+                            </div>
+                            <div class="form-group flex-1">
+                                <label for="afCountry">Country</label>
+                                <input type="text" id="afCountry" placeholder="United States">
+                            </div>
+                        </div>
 
-            <label for="model">
-                Model
-            </label>
+                        <div id="autofillStatus" class="status-banner hidden"></div>
 
-            <br>
+                        <div class="settings-actions">
+                            <button type="submit" class="btn btn-primary">Save Active Profile</button>
+                        </div>
+                    </form>
+                </aside>
 
-            <select
-                id="model"
-                style="width: 100%;"
-            >
-                <option value="">
-                    Select a model
-                </option>
-            </select>
+                <aside id="viewSettings" class="view">
+                    <header class="app-header">
+                        <button type="button" id="btnCloseSettings" class="icon-btn" aria-label="Back" title="Back">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="19" y1="12" x2="5" y2="12"></line>
+                                <polyline points="12 19 5 12 12 5"></polyline>
+                            </svg>
+                        </button>
+                        <span class="brand-name">Settings</span>
+                        <div style="width: 24px;"></div>
+                    </header>
 
-            <br>
-            <br>
+                    <form id="settingsForm" class="settings-body">
+                        <div class="form-group">
+                            <label for="settingTheme">Theme</label>
+                            <select id="settingTheme" class="form-select">
+                                <option value="graphite-dark">Graphite Dark (Dark Grey/Black)</option>
+                                <option value="clean-light">Clean Slate (Light Minimal)</option>
+                                <option value="indigo-dark">Deep Indigo Dark</option>
+                                <option value="lavender-light">Lavender Light</option>
+                            </select>
+                        </div>
 
-            <button id="fetchModels">
-                Fetch Models
-            </button>
+                        <div class="form-group">
+                            <label for="settingMaxSteps">Autonomous Step Limit</label>
+                            <input type="number" id="settingMaxSteps" min="1" max="999" value="20">
+                        </div>
 
-            <button id="saveAdvancedSettings">
-                Save Settings
-            </button>
+                        <div class="form-group">
+                            <label for="serverUrl">Open WebUI Server URL</label>
+                            <input type="url" id="serverUrl" required placeholder="https://openwebui.example.com">
+                        </div>
 
-            <br>
-            <br>
+                        <div class="form-group">
+                            <label for="apiKey">API Key</label>
+                            <input type="password" id="apiKey" placeholder="sk-..." autocomplete="off">
+                        </div>
 
-            <button id="closeAdvancedSettings">
-                ← Back
-            </button>
+                        <div class="form-group">
+                            <div class="label-inline">
+                                <label for="model">Vision Model</label>
+                                <button type="button" id="btnRefreshModels" class="btn-link">Refresh</button>
+                            </div>
+                            <input type="text" id="model" required placeholder="Gemma-4-E4B-Uncensored-HauhauCS-Aggressive-Q4_K_M">
+                        </div>
+
+                        <div id="settingsStatus" class="status-banner hidden"></div>
+
+                        <div class="settings-actions">
+                            <button type="submit" id="btnSaveConfig" class="btn btn-primary">Save</button>
+                            <button type="button" id="btnTestConfig" class="btn btn-secondary">Test</button>
+                        </div>
+                    </form>
+                </aside>
+            </div>
         </div>
 
-        <p id="settingsStatus"></p>
-
-        <hr>
-
-        <div id="result"></div>
-
-        <script
-            type="module"
-            src="src/popup.js"
-        ></script>
+        <script type="module" src="src/popup.js"></script>
     </body>
 </html>

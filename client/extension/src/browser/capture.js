@@ -1,16 +1,15 @@
-import browserAPI from "./api.js";
+import { BrowserAPI } from './api.js';
+import { ScreenshotRedactor } from '../redaction/redactor.js';
 
-async function captureVisibleTab() {
-    const dataUrl = await browserAPI.tabs.captureVisibleTab(
-        null,
-        {
-            format: "png"
-        }
-    );
+export class TabCapture {
+    static async captureAndRedact(sensitiveRegions = [], windowId) {
+        const rawDataUrl = await BrowserAPI.captureVisibleTab(windowId);
+        const dpr = typeof window !== 'undefined' && window.devicePixelRatio ? window.devicePixelRatio : 1;
 
-    return dataUrl;
+        return await ScreenshotRedactor.redactScreenshot(
+            rawDataUrl,
+            sensitiveRegions,
+            dpr
+        );
+    }
 }
-
-export {
-    captureVisibleTab
-};

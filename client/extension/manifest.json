@@ -1,19 +1,37 @@
 {
     "manifest_version": 3,
     "name": "KivoAI",
-    "version": "0.1.0",
-    "description": "Privacy-preserving browser AI agent",
-
+    "version": "1.0.6",
+    "description": "Your private AI assistant for the web. Browses with you while keeping personal details hidden.",
+    "icons": {
+        "16": "icons/icon16.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png",
+        "512": "icons/icon512.png"
+    },
     "permissions": [
         "activeTab",
-        "scripting",
-        "storage"
+        "storage",
+        "scripting"
     ],
-    "optional_host_permissions": [
-        "https://*/*"
-    ],
-
     "action": {
-        "default_popup": "popup.html"
+        "default_popup": "popup.html",
+        "default_title": "KivoAI Agent",
+        "default_icon": {
+            "16": "icons/icon16.png",
+            "48": "icons/icon48.png",
+            "128": "icons/icon128.png",
+            "512": "icons/icon512.png"
+        }
+    },
+    "options_ui": {
+        "page": "settings.html",
+        "open_in_tab": true
+    },
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "kivo-agent@wiktorolf.org",
+            "strict_min_version": "109.0"
+        }
     }
 }

@@ -1,61 +1,52 @@
 <!DOCTYPE html>
-<html>
+
+<html lang = "en">
     <head>
-        <meta charset="UTF-8">
-        <title>KivoAI Advanced Settings</title>
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+        <title>KivoAI Settings</title>
+        <link rel = "stylesheet" href = "settings.css">
     </head>
 
     <body>
-        <h2>KivoAI Advanced Settings</h2>
+        <div class = "container">
+            <div class = "header">
+                <span class = "logo-badge">K</span>
+                <h1>KivoAI Settings</h1>
+            </div>
+            <p class = "subtitle">Configure your local or remote Open WebUI vision inference endpoint.</p>
 
-        <h3>Open WebUI</h3>
+            <form id = "settingsForm">
+                <div class = "form-group">
+                    <label for = "serverUrl">Open WebUI Server URL</label>
+                    <input type = "url" id = "serverUrl" required placeholder = "https://openwebui.example.com">
+                    <span class = "help-text">The base URL of your Open WebUI deployment.</span>
+                </div>
 
-        <label for="serverUrl">
-            Server URL
-        </label>
+                <div class = "form-group">
+                    <label for = "apiKey">API Key</label>
+                    <input type = "password" id = "apiKey" placeholder = "sk-..." autocomplete = "off">
+                    <span class = "help-text">Credentials are stored locally and never transmitted in prompt payloads.</span>
+                </div>
 
-        <br>
+                <div class = "form-group">
+                    <div class = "label-row">
+                        <label for = "model">Vision Model</label>
+                        <button type = "button" id = "btnRefreshModels" class = "btn-text">Refresh Models</button>
+                    </div>
+                    <input type = "text" id = "model" required placeholder = "Gemma-4-E4B-Uncensored-HauhauCS-Aggressive-Q4_K_M">
+                    <span class = "help-text">Select or enter your vision-capable model identifier.</span>
+                </div>
 
-        <input
-            id="serverUrl"
-            type="url"
-            style="width: 400px;"
-        >
+                <div id = "statusMessage" class = "status-banner hidden"></div>
 
-        <br>
-        <br>
+                <div class = "actions">
+                    <button type = "submit" id = "btnSave" class = "btn primary">Save Configuration</button>
+                    <button type = "button" id = "btnTest" class = "btn secondary">Test Connection</button>
+                </div>
+            </form>
+        </div>
 
-        <label for="model">
-            Model
-        </label>
-
-        <br>
-
-        <select
-            id="model"
-            style="width: 400px;"
-        >
-            <option value="">
-                Select a model
-            </option>
-        </select>
-
-        <br>
-        <br>
-
-        <button id="fetchModels">
-            Fetch Models
-        </button>
-
-        <button id="saveAdvancedSettings">
-            Save Settings
-        </button>
-
-        <p id="settingsStatus"></p>
-
-        <script
-            type="module"
-            src="src/settings.js"
-        ></script>
+        <script type = "module" src = "src/settings.js"></script>
     </body>
 </html>

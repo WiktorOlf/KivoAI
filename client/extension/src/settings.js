@@ -1,83 +1,110 @@
-import browserAPI from "./browser/api.js";
-import { getConfig } from "./config.js";
-import { getModels } from "./browser/openwebui.js";
+import { ConfigManager } from './config.js';
+import { OpenWebUIClient } from './browser/openwebui.js';
 
-async function loadSettings() {
-    const config = await getConfig();
+const form = document.getElementById('settingsForm');
+const serverUrlInput = document.getElementById('serverUrl');
+const apiKeyInput = document.getElementById('apiKey');
+const modelInput = document.getElementById('model');
+const statusBanner = document.getElementById('statusMessage');
+const btnTest = document.getElementById('btnTest');
+const btnRefreshModels = document.getElementById('btnRefreshModels');
 
-    document.getElementById("serverUrl").value =
-    config.serverUrl;
-
-    document.getElementById("model").value =
-    config.model;
+function showMessage(type, message) {
+    statusBanner.className = `status-banner ${type}`;
+    statusBanner.textContent = message;
+    statusBanner.classList.remove('hidden');
 }
 
-document.getElementById("fetchModels").addEventListener(
-    "click",
-    async () => {
-        const status = document.getElementById("settingsStatus");
+function clearMessage() {
+    statusBanner.textContent = '';
+    statusBanner.classList.add('hidden');
+}
 
-        const serverUrl = document.getElementById("serverUrl").value.trim();
-
-        if (!serverUrl) {
-            status.textContent = "Enter an Open WebUI server URL.";
-            return;
-        }
-
-        let url;
-
-        try {
-            url = new URL(serverUrl);
-        } catch (error) {
-            status.textContent = "Invalid server URL.";
-            return;
-        }
-
-        const origin = `${url.protocol}//${url.host}/*`;
-
-        try {
-            const granted = await browserAPI.permissions.request({
-                origins: [
-                    origin
-                ]
-            });
-
-            if (!granted) {
-                status.textContent =
-                "Permission to access this server was denied.";
-
-            return;
-            }
-
-            const config = await getConfig();
-
-            status.textContent = "Fetching models...";
-
-            const models = await getModels(
-                serverUrl,
-                config.apiKey
-            );
-
-            const modelSelect = document.getElementById("model");
-
-            modelSelect.innerHTML = "";
-
-            for (const model of models) {
-                const option = document.createElement("option");
-
-                option.value = model.id;
-                option.textContent = model.name || model.id;
-
-                modelSelect.appendChild(option);
-            }
-
-            status.textContent =
-            `Found ${models.length} model(s).`;
-        } catch (error) {
-            status.textContent =
-            `Failed to fetch models: ${error.message}`;
-        }
+async function loadSettings() {
+    try {
+        const config = await ConfigManager.getConfig();
+        serverUrlInput.value = config.serverUrl || '';
+        apiKeyInput.value = config.apiKey || '';
+        modelInput.value = config.model || '';
+    } catch (err) {
+        showMessage('error', `Failed to load settings: ${err.message}`);
     }
-);
+}
 
-loadSettings();
+async function saveSettings(e) {
+    if (e) {
+        e.preventDefault();
+    }
+    clearMessage();
+
+    try {
+        await ConfigManager.saveConfig({
+            serverUrl: serverUrlInput.value,
+            apiKey: apiKeyInput.value,
+            model: modelInput.value
+        });
+        showMessage('success', 'Settings successfully saved to local storage.');
+    } catch (err) {
+        showMessage('error', `Save failed: ${err.message}`);
+    }
+}
+
+async function testConnection() {
+    clearMessage();
+    btnTest.disabled = true;
+
+    try {
+        const client = new OpenWebUIClient({
+            serverUrl: serverUrlInput.value,
+            apiKey: apiKeyInput.value,
+            model: modelInput.value
+        });
+
+        const result = await client.testConnection();
+        if (result.success) {
+            showMessage('success', result.message);
+        } else {
+            showMessage('error', result.message);
+        }
+    } catch (err) {
+        showMessage('error', err.message);
+    } finally {
+        btnTest.disabled = false;
+    }
+}
+
+async function refreshModels() {
+    clearMessage();
+    btnRefreshModels.disabled = true;
+
+    try {
+        const client = new OpenWebUIClient({
+            serverUrl: serverUrlInput.value,
+            apiKey: apiKeyInput.value
+        });
+
+        const models = await client.listModels();
+        if (models.length > 0) {
+            const vlModel = models.find((m) => m.toLowerCase().includes('vl'));
+            if (vlModel) {
+                modelInput.value = vlModel;
+            } else {
+                modelInput.value = models[0];
+            }
+            showMessage('success', `Discovered ${models.length} model(s) from Open WebUI.`);
+        } else {
+            showMessage('error', 'No models returned from Open WebUI.');
+        }
+    } catch (err) {
+        showMessage('error', `Failed to refresh models: ${err.message}`);
+    } finally {
+        btnRefreshModels.disabled = false;
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    loadSettings();
+    form.addEventListener('submit', saveSettings);
+    btnTest.addEventListener('click', testConnection);
+    btnRefreshModels.addEventListener('click', refreshModels);
+});
