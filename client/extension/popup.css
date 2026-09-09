@@ -126,7 +126,7 @@ body {
     position: relative;
     width: 360px;
     height: 560px;
-    overflow: hidden; /* Clips children strictly at 360px */
+    overflow: hidden;
 }
 
 .view-slider {
@@ -270,7 +270,6 @@ textarea:focus {
     border-color: var(--primary);
 }
 
-/* --- Profile Selector Bar --- */
 .profile-select-bar {
     display: flex;
     align-items: flex-end;
@@ -292,7 +291,6 @@ textarea:focus {
     color: var(--error) !important;
 }
 
-/* --- Conversational Answer Card --- */
 .answer-card {
     background-color: var(--bg-surface-subtle);
     border: 1px solid var(--border-color);
@@ -365,7 +363,6 @@ textarea:focus {
     margin-bottom: 2px;
 }
 
-/* --- Progress Card --- */
 .activity-card {
     background-color: var(--bg-surface);
     border: 1px solid var(--border-color);
@@ -590,4 +587,33 @@ input:focus, select:focus {
 
 .hidden {
     display: none !important;
+}
+
+.btn-voice {
+    width: 100% !important;
+    height: var(--btn-height, 36px);
+    min-height: var(--btn-height, 36px);
+    max-height: var(--btn-height, 36px);
+    flex: 0 0 auto !important;
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin: 0 0 8px 0 !important;
+    padding: 0 14px !important;
+    line-height: normal;
+}
+
+.btn-voice.recording {
+    background-color: rgba(239, 68, 68, 0.15) !important;
+    border-color: #ef4444 !important;
+    color: #ef4444 !important;
+    animation: voice-pulse 1.4s infinite ease-in-out;
+}
+
+@keyframes voice-pulse {
+    0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4); }
+    70% { box-shadow: 0 0 0 5px rgba(239, 68, 68, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
 }

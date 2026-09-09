@@ -74,47 +74,16 @@ export class OpenWebUIClient {
         return '';
     }
 
-    async chatAboutPage({ sanitizedScreenshot, sanitizedDom, userQuestion }) {
+    async transcribeAudio(audioBlob) {
         if (!this.serverUrl) throw new Error('Server URL is not configured.');
-        if (!this.model) throw new Error('Vision model is not selected.');
 
-        const endpoint = `${this.serverUrl}/api/chat/completions`;
-        const headers = { 'Content-Type': 'application/json' };
+        const endpoint = `${this.serverUrl}/api/v1/audio/transcriptions`;
+        const headers = {};
         if (this.apiKey) headers['Authorization'] = `Bearer ${this.apiKey}`;
 
-        const elementsSummary = (sanitizedDom.elements || [])
-            .slice(0, 50)
-            .map((el) => `[${el.index}] <${el.type}> "${el.label || el.text || ''}"`)
-            .join('\n');
-
-        const promptText = [
-            `Question: "${userQuestion}"`,
-            `Page Title: "${sanitizedDom.title || ''}"`,
-            `Page URL: "${sanitizedDom.url || ''}"`,
-            `Interactive Elements:\n${elementsSummary}`,
-            '',
-            'Answer the question directly and concisely based on the webpage information above.'
-        ].join('\n');
-
-        const imageUrl = sanitizedScreenshot && sanitizedScreenshot.startsWith('data:image/')
-            ? sanitizedScreenshot
-            : `data:image/jpeg;base64,${sanitizedScreenshot}`;
-
-        const payload = {
-            model: this.model,
-            messages: [
-                {
-                    role: 'user',
-                    content: [
-                        { type: 'text', text: promptText },
-                        { type: 'image_url', image_url: { url: imageUrl } }
-                    ]
-                }
-            ],
-            max_tokens: this.maxTokens,
-            temperature: 0.2,
-            stream: false
-        };
+        const formData = new FormData();
+        formData.append('file', audioBlob, 'recording.webm');
+        formData.append('model', 'whisper-1');
 
         const controller = new AbortController();
         const timer = setTimeout(() => controller.abort(), this.timeoutMs);
@@ -123,22 +92,17 @@ export class OpenWebUIClient {
             let res = await fetch(endpoint, {
                 method: 'POST',
                 headers,
-                body: JSON.stringify(payload),
+                body: formData,
                 signal: controller.signal
             });
 
-            if (!res.ok) {
-                const textFallbackPayload = {
-                    model: this.model,
-                    messages: [{ role: 'user', content: promptText }],
-                    max_tokens: this.maxTokens,
-                    temperature: 0.2,
-                    stream: false
-                };
-                res = await fetch(endpoint, {
+            // Endpoint fallback for alternative Open WebUI routing configurations
+            if (res.status === 404) {
+                const altEndpoint = `${this.serverUrl}/api/audio/transcriptions`;
+                res = await fetch(altEndpoint, {
                     method: 'POST',
                     headers,
-                    body: JSON.stringify(textFallbackPayload),
+                    body: formData,
                     signal: controller.signal
                 });
             }
@@ -147,25 +111,19 @@ export class OpenWebUIClient {
 
             if (!res.ok) {
                 const errText = await res.text().catch(() => '');
-                throw new Error(`Open WebUI HTTP ${res.status}: ${errText.substring(0, 120)}`);
+                throw new Error(`STT HTTP ${res.status}: ${errText.substring(0, 100)}`);
             }
 
             const data = await res.json();
-            const content = OpenWebUIClient.extractContent(data);
-
-            if (!content) {
-                throw new Error('Empty response from model. Please verify your Open WebUI model status.');
-            }
-
-            return content.replace(/<think>[\s\S]*?<\/think>/gi, '').trim();
+            return (data.text || data.transcription || '').trim();
         } catch (err) {
             clearTimeout(timer);
-            if (err.name === 'AbortError') throw new Error(`Request timed out after ${this.timeoutMs / 1000}s.`);
+            if (err.name === 'AbortError') throw new Error('Speech transcription timed out.');
             throw err;
         }
     }
 
-    async queryVisionAgent({ sanitizedScreenshot, sanitizedDom, userInstruction, history = [], currentStep = 1, maxSteps = 10 }) {
+    async queryVisionAgent({ sanitizedScreenshot, sanitizedDom, userInstruction, history = [], currentStep = 1, maxSteps = 20 }) {
         if (!this.serverUrl) throw new Error('Server URL is not configured in Settings.');
         if (!this.model) throw new Error('Vision model is not selected.');
 
@@ -176,8 +134,16 @@ export class OpenWebUIClient {
         const tokens = AutofillProfileManager.getAvailableTokens().join(', ');
 
         const systemPrompt = [
-            'You are KivoAI, an accurate autonomous web navigation agent.',
-            'Given the page screenshot and UI element list, output ONE raw JSON action to advance the user goal.',
+            'You are KivoAI, an autonomous web navigation and page assistant.',
+            'Given the user prompt, page screenshot, and indexed UI elements, output ONE raw JSON response.',
+            '',
+            '### DECISION LOGIC (CHOOSE ONE MODE):',
+            '1. INFORMATIONAL INQUIRIES / QUESTIONS:',
+            '   If the user asks an informational question, asks to summarize, or requests an explanation (e.g., "What is this page?", "Explain these options", "What documents do I need?"):',
+            '   -> Choose "action": "answer". Provide a clear, helpful Markdown explanation in "message". DO NOT trigger clicks or typing.',
+            '2. OPERATIONAL GOALS / TASKS:',
+            '   If the user provides an operational goal or task to perform on the page (e.g., "Sign in", "Fill shipping info", "Click search"):',
+            '   -> Choose a DOM action ("click", "type", "select", "hover", "press_key", "scroll", "wait", "finish") to advance the goal.',
             '',
             '### CRITICAL FORM & LOGIN RULES:',
             '1. DO NOT OVERWRITE FILLED FIELDS: If an input field already has text, shows "[FILLED]", or has user input, NEVER type into it unless explicitly asked to replace it.',
@@ -191,11 +157,11 @@ export class OpenWebUIClient {
             '### OUTPUT JSON FORMAT:',
             '{',
             '  "thought": "brief reasoning (1-2 sentences)",',
-            '  "action": "click" | "type" | "select" | "hover" | "press_key" | "scroll" | "wait" | "finish",',
-            '  "index": <integer index from list>,',
-            '  "text": "string to type",',
-            '  "key": "Enter" | "Tab",',
-            '  "message": "completion message"',
+            '  "action": "answer" | "click" | "type" | "select" | "hover" | "press_key" | "scroll" | "wait" | "finish",',
+            '  "index": <integer index from list, if acting on element>,',
+            '  "text": "string to type (can include {{tokens}})",',
+            '  "key": "Enter" | "Tab" | "Escape",',
+            '  "message": "formatted markdown explanation (for \'answer\') OR completion summary (for \'finish\')"',
             '}',
             '',
             'Return raw JSON only. No markdown fences.'
@@ -214,12 +180,12 @@ export class OpenWebUIClient {
             : '';
 
         const userPrompt = [
-            `User Goal: "${userInstruction}"`,
+            `User Prompt: "${userInstruction}"`,
             historySummary,
             `Current Page: "${sanitizedDom.title || ''}" (${sanitizedDom.url || ''})`,
             `Interactive Elements:\n${elementsSummary}`,
             '',
-            `Step ${currentStep} of ${maxSteps}. What is the next single JSON action?`
+            `Step ${currentStep} of ${maxSteps}. What is the next single JSON action or answer?`
         ].join('\n');
 
         const imageUrl = sanitizedScreenshot && sanitizedScreenshot.startsWith('data:image/')
@@ -247,7 +213,32 @@ export class OpenWebUIClient {
         const timer = setTimeout(() => controller.abort(), this.timeoutMs);
 
         try {
-            const res = await fetch(endpoint, { method: 'POST', headers, body: JSON.stringify(payload), signal: controller.signal });
+            let res = await fetch(endpoint, {
+                method: 'POST',
+                headers,
+                body: JSON.stringify(payload),
+                signal: controller.signal
+            });
+
+            if (!res.ok) {
+                const textFallbackPayload = {
+                    model: this.model,
+                    messages: [
+                        { role: 'system', content: systemPrompt },
+                        { role: 'user', content: userPrompt }
+                    ],
+                    max_tokens: this.maxTokens,
+                    temperature: this.temperature,
+                    stream: false
+                };
+                res = await fetch(endpoint, {
+                    method: 'POST',
+                    headers,
+                    body: JSON.stringify(textFallbackPayload),
+                    signal: controller.signal
+                });
+            }
+
             clearTimeout(timer);
 
             if (!res.ok) {
@@ -264,5 +255,28 @@ export class OpenWebUIClient {
             if (err.name === 'AbortError') throw new Error(`AI request timed out after ${this.timeoutMs / 1000}s.`);
             throw err;
         }
+    }
+
+    async chatAboutPage({ sanitizedScreenshot, sanitizedDom, userQuestion }) {
+        const rawOutput = await this.queryVisionAgent({
+            sanitizedScreenshot,
+            sanitizedDom,
+            userInstruction: userQuestion,
+            history: [],
+            currentStep: 1,
+            maxSteps: 1
+        });
+
+        try {
+            const cleaned = rawOutput.replace(/<think>[\s\S]*?<\/think>/gi, '').trim();
+            const firstBrace = cleaned.indexOf('{');
+            const lastBrace = cleaned.lastIndexOf('}');
+            if (firstBrace !== -1 && lastBrace !== -1) {
+                const parsed = JSON.parse(cleaned.substring(firstBrace, lastBrace + 1));
+                if (parsed.message) return parsed.message;
+            }
+        } catch (_) {}
+
+        return rawOutput.replace(/<think>[\s\S]*?<\/think>/gi, '').trim();
     }
 }

@@ -1,168 +1,185 @@
 import { ALLOWED_ACTIONS, SCROLL_DIRECTIONS, ALLOWED_KEYS, ACTION_CONSTRAINTS } from './schema.js';
 
+const VALID_ACTION_VALUES = Object.values(ALLOWED_ACTIONS);
+
 export class ActionValidator {
     static parseJson(rawOutput) {
         if (!rawOutput || typeof rawOutput !== 'string') {
-            throw new Error('Empty AI response received.');
+            throw new Error('Empty or invalid output received from model.');
         }
 
         let cleaned = rawOutput.replace(/<think>[\s\S]*?<\/think>/gi, '').trim();
 
-        if (cleaned.includes('```')) {
-            const matches = cleaned.match(/```(?:json)?\s*([\s\S]*?)\s*```/i);
-            if (matches && matches[1]) {
-                cleaned = matches[1].trim();
-            } else {
-                cleaned = cleaned.replace(/^```[a-z]*\s*/i, '').replace(/```\s*$/, '').trim();
-            }
-        }
+        cleaned = cleaned.replace(/^```(?:json)?\s*/i, '').replace(/\s*```$/, '').trim();
 
         const firstBrace = cleaned.indexOf('{');
         const lastBrace = cleaned.lastIndexOf('}');
-        if (firstBrace === -1 || lastBrace === -1 || lastBrace <= firstBrace) {
-            return {
-                action: ALLOWED_ACTIONS.ANSWER,
-                message: cleaned
-            };
+
+        if (firstBrace !== -1 && lastBrace !== -1 && lastBrace > firstBrace) {
+            cleaned = cleaned.substring(firstBrace, lastBrace + 1);
         }
 
         try {
-            return JSON.parse(cleaned.substring(firstBrace, lastBrace + 1));
+            return JSON.parse(cleaned);
         } catch (err) {
-            throw new Error(`Malformed JSON from AI: ${err.message}`);
+            throw new Error(`Failed to parse action JSON: ${err.message}. Raw: "${rawOutput.substring(0, 80)}..."`);
         }
     }
 
-    static validate(actionObj) {
-        if (!actionObj || typeof actionObj !== 'object' || Array.isArray(actionObj)) {
-            return { isValid: false, action: null, error: 'Action must be a valid JSON object.' };
+    static validate(action) {
+        if (!action || typeof action !== 'object' || Array.isArray(action)) {
+            return { isValid: false, error: 'Action payload must be a JSON object.' };
         }
 
-        let actionType = actionObj.action || actionObj.type;
-        if (typeof actionType === 'string') {
-            actionType = actionType.toLowerCase().trim();
-        }
+        const actionType = String(action.action || '').toLowerCase().trim();
 
-        if (actionType === 'input' || actionType === 'fill') {
-            actionType = ALLOWED_ACTIONS.TYPE;
-        }
-
-        if (!actionType || !Object.values(ALLOWED_ACTIONS).includes(actionType)) {
+        if (!VALID_ACTION_VALUES.includes(actionType)) {
             return {
                 isValid: false,
-                action: null,
-                error: `Unknown action type "${actionType}". Allowed actions: ${Object.values(ALLOWED_ACTIONS).join(', ')}.`
+                error: `Unknown action type "${action.action}". Allowed: ${VALID_ACTION_VALUES.join(', ')}`
             };
         }
 
-        const thought = typeof actionObj.thought === 'string'
-            ? actionObj.thought.trim().substring(0, ACTION_CONSTRAINTS.MAX_THOUGHT_LENGTH)
-            : typeof actionObj.reasoning === 'string'
-                ? actionObj.reasoning.trim().substring(0, ACTION_CONSTRAINTS.MAX_THOUGHT_LENGTH)
-                : undefined;
+        action.action = actionType;
 
-        const index = typeof actionObj.index === 'number'
-            ? actionObj.index
-            : (actionObj.index && !isNaN(parseInt(actionObj.index, 10)) ? parseInt(actionObj.index, 10) : undefined);
+        if (action.thought && typeof action.thought === 'string') {
+            action.thought = action.thought.slice(0, ACTION_CONSTRAINTS.MAX_THOUGHT_LENGTH);
+        }
 
-        const target = actionObj.target ? String(actionObj.target).trim().substring(0, ACTION_CONSTRAINTS.MAX_TARGET_LENGTH) : undefined;
+        if (action.target && typeof action.target === 'string') {
+            action.target = action.target.slice(0, ACTION_CONSTRAINTS.MAX_TARGET_LENGTH);
+        }
 
         switch (actionType) {
-            case ALLOWED_ACTIONS.CLICK:
-            case ALLOWED_ACTIONS.HOVER: {
-                if (!target && index === undefined) {
-                    return { isValid: false, action: null, error: `${actionType} requires an "index" or "target".` };
-                }
-                return { isValid: true, action: { thought, action: actionType, index, target }, error: null };
-            }
-
-            case ALLOWED_ACTIONS.TYPE: {
-                const textVal = actionObj.text !== undefined ? actionObj.text : actionObj.value;
-                if (textVal === undefined || textVal === null) {
-                    return { isValid: false, action: null, error: 'Type action requires a "text" or "value" property.' };
-                }
-                const text = String(textVal).substring(0, ACTION_CONSTRAINTS.MAX_INPUT_TEXT_LENGTH);
-                const clearFirst = actionObj.clearFirst !== undefined ? Boolean(actionObj.clearFirst) : true;
-
-                if (!target && index === undefined) {
-                    return { isValid: false, action: null, error: 'Type action requires an "index" or "target".`' };
-                }
-                return { isValid: true, action: { thought, action: ALLOWED_ACTIONS.TYPE, index, target, text, clearFirst }, error: null };
-            }
-
-            case ALLOWED_ACTIONS.SELECT: {
-                const selectVal = actionObj.value !== undefined ? actionObj.value : actionObj.text;
-                if (!selectVal) {
-                    return { isValid: false, action: null, error: 'Select action requires a "value" property.' };
-                }
-                if (!target && index === undefined) {
-                    return { isValid: false, action: null, error: 'Select action requires an "index" or "target".' };
-                }
-                return { isValid: true, action: { thought, action: ALLOWED_ACTIONS.SELECT, index, target, value: String(selectVal).trim() }, error: null };
-            }
-
-            case ALLOWED_ACTIONS.PRESS_KEY: {
-                const key = actionObj.key || actionObj.text;
-                if (!ALLOWED_KEYS.includes(key)) {
-                    return { isValid: false, action: null, error: `Unsupported key "${key}". Allowed: ${ALLOWED_KEYS.join(', ')}.` };
-                }
-                return { isValid: true, action: { thought, action: ALLOWED_ACTIONS.PRESS_KEY, key }, error: null };
-            }
-
-            case ALLOWED_ACTIONS.SCROLL: {
-                const direction = String(actionObj.direction || 'down').toLowerCase();
-                if (!SCROLL_DIRECTIONS.includes(direction)) {
-                    return { isValid: false, action: null, error: `Invalid scroll direction "${direction}".` };
-                }
-                const amount = Number(actionObj.amount || 600);
-                return {
-                    isValid: true,
-                    action: {
-                        thought,
-                        action: ALLOWED_ACTIONS.SCROLL,
-                        direction,
-                        amount: Math.min(Math.max(amount, ACTION_CONSTRAINTS.MIN_SCROLL), ACTION_CONSTRAINTS.MAX_SCROLL)
-                    },
-                    error: null
-                };
-            }
-
-            case ALLOWED_ACTIONS.WAIT: {
-                const duration = Number(actionObj.duration || 1000);
-                return {
-                    isValid: true,
-                    action: {
-                        thought,
-                        action: ALLOWED_ACTIONS.WAIT,
-                        duration: Math.min(Math.max(duration, ACTION_CONSTRAINTS.MIN_WAIT_MS), ACTION_CONSTRAINTS.MAX_WAIT_MS)
-                    },
-                    error: null
-                };
-            }
-
-            case ALLOWED_ACTIONS.NAVIGATE: {
-                const path = String(actionObj.path || '').trim();
-                if (!path.startsWith('/') && !path.startsWith('./') && !path.startsWith('#')) {
-                    return { isValid: false, action: null, error: 'Navigate path must start with /, ./, or #.' };
-                }
-                return { isValid: true, action: { thought, action: ALLOWED_ACTIONS.NAVIGATE, path }, error: null };
-            }
-
             case ALLOWED_ACTIONS.ANSWER: {
-                const msg = String(actionObj.message || actionObj.text || actionObj.answer || 'No explanation provided.');
-                return { isValid: true, action: { thought, action: ALLOWED_ACTIONS.ANSWER, message: msg }, error: null };
+                if (!action.message || typeof action.message !== 'string' || action.message.trim().length === 0) {
+                    return { isValid: false, error: '"answer" action requires a non-empty "message" string.' };
+                }
+                action.message = action.message.trim();
+                return { isValid: true, action };
             }
 
             case ALLOWED_ACTIONS.FINISH: {
-                return {
-                    isValid: true,
-                    action: { thought, action: ALLOWED_ACTIONS.FINISH, message: String(actionObj.message || 'Task complete.') },
-                    error: null
-                };
+                action.message = typeof action.message === 'string' ? action.message.trim() : 'Task complete.';
+                return { isValid: true, action };
+            }
+
+            case ALLOWED_ACTIONS.CLICK:
+            case ALLOWED_ACTIONS.HOVER: {
+                const hasValidIndex = typeof action.index === 'number' && Number.isInteger(action.index) && action.index > 0;
+                const hasValidTarget = typeof action.target === 'string' && action.target.trim().length > 0;
+
+                if (!hasValidIndex && !hasValidTarget) {
+                    return {
+                        isValid: false,
+                        error: `"${actionType}" requires either a positive integer "index" or a non-empty "target" string.`
+                    };
+                }
+                return { isValid: true, action };
+            }
+
+            case ALLOWED_ACTIONS.TYPE: {
+                const hasValidIndex = typeof action.index === 'number' && Number.isInteger(action.index) && action.index > 0;
+                const hasValidTarget = typeof action.target === 'string' && action.target.trim().length > 0;
+
+                if (!hasValidIndex && !hasValidTarget) {
+                    return {
+                        isValid: false,
+                        error: '"type" requires either a positive integer "index" or a non-empty "target" string.'
+                    };
+                }
+
+                if (action.value !== undefined && action.text === undefined) {
+                    action.text = String(action.value);
+                }
+
+                if (typeof action.text !== 'string') {
+                    action.text = '';
+                }
+
+                action.text = action.text.slice(0, ACTION_CONSTRAINTS.MAX_INPUT_TEXT_LENGTH);
+                return { isValid: true, action };
+            }
+
+            case ALLOWED_ACTIONS.SELECT: {
+                const hasValidIndex = typeof action.index === 'number' && Number.isInteger(action.index) && action.index > 0;
+                const hasValidTarget = typeof action.target === 'string' && action.target.trim().length > 0;
+
+                if (!hasValidIndex && !hasValidTarget) {
+                    return {
+                        isValid: false,
+                        error: '"select" requires either a positive integer "index" or a non-empty "target" string.'
+                    };
+                }
+
+                const selectVal = action.value !== undefined ? action.value : action.text;
+                if (selectVal === undefined || selectVal === null || String(selectVal).trim().length === 0) {
+                    return { isValid: false, error: '"select" requires an option "value" or "text" to select.' };
+                }
+
+                action.value = String(selectVal).trim();
+                return { isValid: true, action };
+            }
+
+            case ALLOWED_ACTIONS.PRESS_KEY: {
+                if (!action.key || typeof action.key !== 'string') {
+                    return { isValid: false, error: '"press_key" requires a valid "key" string.' };
+                }
+
+                const matchedKey = ALLOWED_KEYS.find(
+                    (k) => k.toLowerCase() === action.key.trim().toLowerCase()
+                );
+
+                if (!matchedKey) {
+                    return {
+                        isValid: false,
+                        error: `Unsupported key "${action.key}". Allowed: ${ALLOWED_KEYS.join(', ')}`
+                    };
+                }
+
+                action.key = matchedKey;
+                return { isValid: true, action };
+            }
+
+            case ALLOWED_ACTIONS.SCROLL: {
+                const direction = String(action.direction || '').toLowerCase().trim();
+                action.direction = SCROLL_DIRECTIONS.includes(direction) ? direction : 'down';
+
+                const parsedAmount = parseInt(action.amount, 10);
+                if (isNaN(parsedAmount)) {
+                    action.amount = 400; // sensible fallback
+                } else {
+                    action.amount = Math.min(
+                        Math.max(parsedAmount, ACTION_CONSTRAINTS.MIN_SCROLL),
+                        ACTION_CONSTRAINTS.MAX_SCROLL
+                    );
+                }
+                return { isValid: true, action };
+            }
+
+            case ALLOWED_ACTIONS.WAIT: {
+                const parsedDuration = parseInt(action.duration, 10);
+                if (isNaN(parsedDuration)) {
+                    action.duration = 1000;
+                } else {
+                    action.duration = Math.min(
+                        Math.max(parsedDuration, ACTION_CONSTRAINTS.MIN_WAIT_MS),
+                        ACTION_CONSTRAINTS.MAX_WAIT_MS
+                    );
+                }
+                return { isValid: true, action };
+            }
+
+            case ALLOWED_ACTIONS.NAVIGATE: {
+                if (!action.path || typeof action.path !== 'string' || action.path.trim().length === 0) {
+                    return { isValid: false, error: '"navigate" requires a non-empty "path" or URL string.' };
+                }
+                action.path = action.path.trim();
+                return { isValid: true, action };
             }
 
             default:
-                return { isValid: false, action: null, error: `Unsupported action "${actionType}".` };
+                return { isValid: false, error: `Unhandled action: ${action.action}` };
         }
     }
 }

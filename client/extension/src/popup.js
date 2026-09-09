@@ -13,6 +13,7 @@ const btnOpenSettings = document.getElementById('btnOpenSettings');
 const btnCloseSettings = document.getElementById('btnCloseSettings');
 const btnOpenAutofill = document.getElementById('btnOpenAutofill');
 const btnCloseAutofill = document.getElementById('btnCloseAutofill');
+const btnDictate = document.getElementById('btnDictate');
 
 const pageDomainEl = document.getElementById('pageDomain');
 const userInstructionEl = document.getElementById('userInstruction');
@@ -29,8 +30,8 @@ const actionPreview = document.getElementById('actionPreview');
 const actionBadge = document.getElementById('actionBadge');
 const actionText = document.getElementById('actionText');
 const errorBanner = document.getElementById('errorMessage');
-const btnAskPage = document.getElementById('btnAskPage');
-const btnRunAgent = document.getElementById('btnRunAgent');
+
+const btnSubmit = document.getElementById('btnSubmit');
 const btnStopAgent = document.getElementById('btnStopAgent');
 
 const autofillForm = document.getElementById('autofillForm');
@@ -65,6 +66,11 @@ const viewSlider = document.getElementById('viewSlider');
 let isAgentRunning = false;
 let shouldStopAgent = false;
 let currentLoadedProfileId = '';
+let mediaRecorder = null;
+let audioChunks = [];
+let isRecording = false;
+let audioContext = null;
+let vadInterval = null;
 
 function applyTheme(themeName) {
     document.documentElement.setAttribute('data-theme', themeName);
@@ -109,28 +115,70 @@ function addHistoryEntry(step, text) {
     actionHistoryList.scrollTop = actionHistoryList.scrollHeight;
 }
 
-function renderMarkdown(text) {
-    if (!text || typeof text !== 'string') return '';
+function renderMarkdownSafely(text, targetContainer) {
+    targetContainer.replaceChildren();
+    if (!text || typeof text !== 'string') return;
 
-    let clean = text
-        .replace(/&/g, '&amp;')
-        .replace(/</g, '&lt;')
-        .replace(/>/g, '&gt;');
+    function appendFormattedInline(parent, rawText) {
+        const inlineRegex = /(\*\*|__)(.*?)\1|(\*)(.*?)\3|(`)(.*?)\5/g;
+        let lastIndex = 0;
+        let match;
 
-    clean = clean.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-    clean = clean.replace(/__(.*?)__/g, '<strong>$1</strong>');
-    clean = clean.replace(/(^|[^\*])\*(?!\*)(.*?)\*/g, '$1<em>$2</em>');
-    clean = clean.replace(/`([^`]+)`/g, '<code>$1</code>');
-    clean = clean.replace(/^\s*[-*]\s+(.*)$/gm, '<li>$1</li>');
-    clean = clean.replace(/(<li>.*<\/li>)/s, '<ul>$1</ul>');
+        while ((match = inlineRegex.exec(rawText)) !== null) {
+            if (match.index > lastIndex) {
+                parent.appendChild(document.createTextNode(rawText.substring(lastIndex, match.index)));
+            }
 
-    const paragraphs = clean
-        .split(/\n\s*\n/)
-        .map((p) => p.trim())
-        .filter(Boolean)
-        .map((p) => (p.startsWith('<ul') || p.startsWith('<li') ? p : `<p>${p.replace(/\n/g, '<br>')}</p>`));
+            if (match[2] !== undefined) {
+                const strong = document.createElement('strong');
+                strong.textContent = match[2];
+                parent.appendChild(strong);
+            } else if (match[4] !== undefined) {
+                const em = document.createElement('em');
+                em.textContent = match[4];
+                parent.appendChild(em);
+            } else if (match[6] !== undefined) {
+                const code = document.createElement('code');
+                code.textContent = match[6];
+                parent.appendChild(code);
+            }
 
-    return paragraphs.join('');
+            lastIndex = inlineRegex.lastIndex;
+        }
+
+        if (lastIndex < rawText.length) {
+            parent.appendChild(document.createTextNode(rawText.substring(lastIndex)));
+        }
+    }
+
+    const lines = text.split('\n');
+    let currentList = null;
+
+    for (const rawLine of lines) {
+        const trimmed = rawLine.trim();
+
+        if (!trimmed) {
+            currentList = null;
+            continue;
+        }
+
+        if (/^[-*]\s+/.test(trimmed)) {
+            if (!currentList) {
+                currentList = document.createElement('ul');
+                targetContainer.appendChild(currentList);
+            }
+            const li = document.createElement('li');
+            appendFormattedInline(li, trimmed.replace(/^[-*]\s+/, ''));
+            currentList.appendChild(li);
+            continue;
+        }
+
+        currentList = null;
+
+        const p = document.createElement('p');
+        appendFormattedInline(p, trimmed);
+        targetContainer.appendChild(p);
+    }
 }
 
 function inPageScanner() {
@@ -399,58 +447,174 @@ function inPageExecutor(action) {
     }
 }
 
-async function askQuestionAboutPage() {
-    clearError();
-    const question = userInstructionEl.value.trim();
-    if (!question) {
-        showError('Please type a question in the box above.');
-        return;
-    }
+function setRecordingState(recording) {
+    isRecording = recording;
+    const btn = document.getElementById('btnDictate');
+    const label = document.getElementById('dictateLabel');
+    if (!btn) return;
 
-    btnAskPage.disabled = true;
-    btnRunAgent.disabled = true;
-    activitySpinner.classList.remove('hidden');
-    activityCurrentStep.textContent = 'Analyzing page visually...';
-
-    try {
-        const activeTab = await BrowserAPI.getActiveTab();
-        if (!activeTab?.id) throw new Error('No active browser tab found.');
-
-        const scanResult = await BrowserAPI.executeScript(activeTab.id, inPageScanner);
-        if (!scanResult) throw new Error('DOM inspection failed. Reload page.');
-
-        const redactedScreenshot = await TabCapture.captureAndRedact(scanResult.sensitiveRegions, activeTab.windowId);
-
-        activityCurrentStep.textContent = 'Formulating explanation...';
-        const config = await ConfigManager.getConfig();
-        const client = new OpenWebUIClient(config);
-
-        const explanation = await client.chatAboutPage({
-            sanitizedScreenshot: redactedScreenshot,
-            sanitizedDom: scanResult,
-            userQuestion: question
-        });
-
-        aiAnswerContent.innerHTML = renderMarkdown(explanation);
-        aiAnswerCard.classList.remove('hidden');
-        activityCurrentStep.textContent = 'Explanation ready.';
-    } catch (err) {
-        showError(err.message);
-    } finally {
-        btnAskPage.disabled = false;
-        btnRunAgent.disabled = false;
-        activitySpinner.classList.add('hidden');
+    if (recording) {
+        btn.classList.add('recording');
+        btn.title = 'Listening... (Will auto-submit when you stop talking)';
+        if (label) label.textContent = 'Listening... (Speak now)';
+    } else {
+        btn.classList.remove('recording');
+        btn.title = 'Dictate prompt';
+        if (label) label.textContent = 'Dictate Prompt';
     }
 }
 
-async function runAutonomousLoop() {
+function setupSilenceDetection(stream, onSilenceDetected) {
+    audioContext = new (window.AudioContext || window.webkitAudioContext)();
+    const source = audioContext.createMediaStreamSource(stream);
+    const analyser = audioContext.createAnalyser();
+    analyser.fftSize = 512;
+    source.connect(analyser);
+
+    const dataArray = new Uint8Array(analyser.frequencyBinCount);
+    let speechStarted = false;
+    let silenceStart = null;
+
+    const SPEECH_THRESHOLD = 14;
+    const SILENCE_DURATION_MS = 1500;
+    const MAX_WAIT_TO_SPEAK_MS = 8000;
+    const startTime = Date.now();
+
+    vadInterval = setInterval(() => {
+        if (!isRecording) {
+            cleanupVAD();
+            return;
+        }
+
+        analyser.getByteFrequencyData(dataArray);
+
+        let sum = 0;
+        for (let i = 0; i < dataArray.length; i++) {
+            sum += dataArray[i];
+        }
+        const averageVolume = sum / dataArray.length;
+
+        if (averageVolume > SPEECH_THRESHOLD) {
+            speechStarted = true;
+            silenceStart = null;
+        } else {
+            if (speechStarted) {
+                if (!silenceStart) {
+                    silenceStart = Date.now();
+                } else if (Date.now() - silenceStart > SILENCE_DURATION_MS) {
+                    cleanupVAD();
+                    onSilenceDetected();
+                }
+            } else if (Date.now() - startTime > MAX_WAIT_TO_SPEAK_MS) {
+                cleanupVAD();
+                onSilenceDetected();
+            }
+        }
+    }, 100);
+}
+
+function cleanupVAD() {
+    if (vadInterval) {
+        clearInterval(vadInterval);
+        vadInterval = null;
+    }
+    if (audioContext && audioContext.state !== 'closed') {
+        audioContext.close().catch(() => {});
+        audioContext = null;
+    }
+}
+
+async function toggleDictation() {
+    clearError();
+
+    if (isRecording) {
+        cleanupVAD();
+        if (mediaRecorder && mediaRecorder.state !== 'inactive') {
+            mediaRecorder.stop();
+        }
+        return;
+    }
+
+    try {
+        const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+        audioChunks = [];
+
+        const mimeType = MediaRecorder.isTypeSupported('audio/webm')
+            ? 'audio/webm'
+            : (MediaRecorder.isTypeSupported('audio/mp4') ? 'audio/mp4' : '');
+
+        mediaRecorder = mimeType ? new MediaRecorder(stream, { mimeType }) : new MediaRecorder(stream);
+
+        mediaRecorder.ondataavailable = (e) => {
+            if (e.data && e.data.size > 0) audioChunks.push(e.data);
+        };
+
+        mediaRecorder.onstop = async () => {
+            cleanupVAD();
+            stream.getTracks().forEach((t) => t.stop());
+            setRecordingState(false);
+
+            if (audioChunks.length === 0) return;
+
+            activityCurrentStep.textContent = 'Transcribing voice...';
+            activitySpinner.classList.remove('hidden');
+
+            try {
+                const audioBlob = new Blob(audioChunks, { type: mediaRecorder.mimeType || 'audio/webm' });
+                const config = await ConfigManager.getConfig();
+                const client = new OpenWebUIClient(config);
+
+                const transcribedText = await client.transcribeAudio(audioBlob);
+
+                if (transcribedText && transcribedText.trim().length > 0) {
+                    userInstructionEl.value = transcribedText;
+                    activityCurrentStep.textContent = `Recognized: "${transcribedText}"`;
+
+                    setTimeout(() => {
+                        runUnifiedLoop();
+                    }, 400);
+                } else {
+                    activityCurrentStep.textContent = 'No clear speech heard.';
+                    activitySpinner.classList.add('hidden');
+                }
+            } catch (err) {
+                showError(`Dictation failed: ${err.message}`);
+                activitySpinner.classList.add('hidden');
+            }
+        };
+
+        mediaRecorder.start();
+        setRecordingState(true);
+        activityCurrentStep.textContent = 'Listening... Speak your command.';
+
+        setupSilenceDetection(stream, () => {
+            if (mediaRecorder && mediaRecorder.state !== 'inactive') {
+                activityCurrentStep.textContent = 'Processing speech...';
+                mediaRecorder.stop();
+            }
+        });
+
+    } catch (err) {
+        cleanupVAD();
+        setRecordingState(false);
+        if (err.name === 'NotAllowedError' || err.message.includes('not allowed')) {
+            showError('Microphone permission required. Opening setup tab...');
+            const permUrl = (typeof browser !== 'undefined' ? browser : chrome).runtime.getURL('permission.html');
+            (typeof browser !== 'undefined' ? browser : chrome).tabs.create({ url: permUrl });
+        } else {
+            showError(`Microphone error: ${err.message}`);
+        }
+    }
+}
+
+async function runUnifiedLoop() {
     clearError();
     aiAnswerCard.classList.add('hidden');
     actionHistoryList.innerHTML = '';
 
     const instruction = userInstructionEl.value.trim();
     if (!instruction) {
-        showError('Please enter a goal for the agent.');
+        showError('Please enter a goal or ask a question.');
         return;
     }
 
@@ -461,8 +625,7 @@ async function runAutonomousLoop() {
 
     isAgentRunning = true;
     shouldStopAgent = false;
-    btnRunAgent.classList.add('hidden');
-    btnAskPage.classList.add('hidden');
+    btnSubmit.classList.add('hidden');
     btnStopAgent.classList.remove('hidden');
     activitySpinner.classList.remove('hidden');
     activityStepCounter.classList.remove('hidden');
@@ -472,7 +635,7 @@ async function runAutonomousLoop() {
     try {
         for (let step = 1; step <= maxSteps; step++) {
             if (shouldStopAgent) {
-                activityCurrentStep.textContent = 'Agent stopped by user.';
+                activityCurrentStep.textContent = 'Stopped by user.';
                 break;
             }
 
@@ -488,7 +651,7 @@ async function runAutonomousLoop() {
             activityCurrentStep.textContent = 'Redacting visual PII...';
             const redactedScreenshot = await TabCapture.captureAndRedact(scanResult.sensitiveRegions, activeTab.windowId);
 
-            activityCurrentStep.textContent = 'Deciding next action...';
+            activityCurrentStep.textContent = 'Deliberating...';
             const rawAiOutput = await client.queryVisionAgent({
                 sanitizedScreenshot: redactedScreenshot,
                 sanitizedDom: scanResult,
@@ -511,10 +674,10 @@ async function runAutonomousLoop() {
             }
 
             if (validAction.action === 'answer') {
-                aiAnswerContent.innerHTML = renderMarkdown(validAction.message);
+                renderMarkdownSafely(validAction.message, aiAnswerContent);
                 aiAnswerCard.classList.remove('hidden');
                 addHistoryEntry(step, `Answer: ${validAction.message.substring(0, 50)}...`);
-                activityCurrentStep.textContent = 'Answered question.';
+                activityCurrentStep.textContent = 'Explanation provided.';
                 break;
             }
 
@@ -546,8 +709,7 @@ async function runAutonomousLoop() {
         showError(err.message);
     } finally {
         isAgentRunning = false;
-        btnRunAgent.classList.remove('hidden');
-        btnAskPage.classList.remove('hidden');
+        btnSubmit.classList.remove('hidden');
         btnStopAgent.classList.add('hidden');
         activitySpinner.classList.add('hidden');
     }
@@ -556,7 +718,7 @@ async function runAutonomousLoop() {
 async function loadAutofillProfilesUI() {
     try {
         const { profiles, activeProfileId } = await AutofillProfileManager.getAllData();
-        profileSelector.innerHTML = '';
+        profileSelector.replaceChildren();
 
         for (const p of profiles) {
             const opt = document.createElement('option');
@@ -665,7 +827,6 @@ async function deleteCurrentProfile() {
     }
 }
 
-/* --- SETTINGS CONTROLLER --- */
 async function loadSettingsIntoForm() {
     try {
         const config = await ConfigManager.getConfig();
@@ -773,9 +934,24 @@ document.addEventListener('DOMContentLoaded', async () => {
     btnOpenAutofill.addEventListener('click', openAutofillView);
     btnCloseAutofill.addEventListener('click', closeAutofillView);
 
-    btnAskPage.addEventListener('click', askQuestionAboutPage);
-    btnRunAgent.addEventListener('click', runAutonomousLoop);
-    btnStopAgent.addEventListener('click', () => { shouldStopAgent = true; });
+    btnDictate.addEventListener('click', toggleDictation);
+
+    if (btnSubmit) {
+        btnSubmit.addEventListener('click', runUnifiedLoop);
+    }
+
+    if (btnStopAgent) {
+        btnStopAgent.addEventListener('click', () => {
+            shouldStopAgent = true;
+        });
+    }
+
+    userInstructionEl.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' && !e.shiftKey) {
+            e.preventDefault();
+            runUnifiedLoop();
+        }
+    });
 
     btnCloseAnswer.addEventListener('click', () => {
         aiAnswerCard.classList.add('hidden');
