@@ -1,0 +1,150 @@
+{
+    "extName": { "message": "KivoAI" },
+    "extDescription": { "message": "مساعد متصفح مستقل يمنح الأولوية للخصوصية ويعمل بالذكاء الاصطناعي المحلي." },
+
+    "promptLabel": { "message": "اطرح سؤالاً أو حدد هدفاً" },
+    "promptPlaceholder": { "message": "مثال: 'املأ هذا النموذج' أو 'ما هذه الصفحة؟'..." },
+    "btnDictate": { "message": "إملاء المطالبة" },
+    "btnSubmit": { "message": "إرسال" },
+    "btnStop": { "message": "إيقاف" },
+
+    "titleAutofill": { "message": "ملفات تعريف الملء التلقائي" },
+    "titleSettings": { "message": "الإعدادات" },
+    "titleDictatePrompt": { "message": "إملاء المطالبة" },
+    "titleAiExplanation": { "message": "تفسير الذكاء الاصطناعي" },
+    "titleBack": { "message": "رجوع" },
+
+    "btnDismiss": { "message": "تجاهل" },
+    "btnSteps": { "message": "الخطوات" },
+    "btnHide": { "message": "إخفاء" },
+
+    "statusConnecting": { "message": "جاري الاتصال بعلامة التبويب النشطة..." },
+    "statusReady": { "message": "جاهز" },
+    "statusTranscribing": { "message": "جاري تحويل الصوت إلى نص..." },
+    "statusSpeechShort": { "message": "الكلام قصير جداً أو فارغ." },
+    "statusDeliberating": { "message": "جاري التحليل..." },
+    "statusStopped": { "message": "تم الإيقاف بواسطة المستخدم." },
+    "statusInspecting": { "message": "جاري فحص حالة الصفحة..." },
+    "statusRedacting": { "message": "جاري إخفاء المعلومات الشخصية..." },
+    "statusExplanation": { "message": "تم تقديم التفسير." },
+    "statusNoSpeech": { "message": "لم يتم سماع كلام واضح." },
+    "statusListeningWait": { "message": "جاري الاستماع... انطق أمرك." },
+    "statusProcessingSpeech": { "message": "جاري معالجة الصوت..." },
+    "statusTaskFinished": { "message": "اكتملت المهمة!" },
+
+    "titleListening": { "message": "جاري الاستماع... (سيتم الإرسال تلقائياً عند التوقف عن التحدث)" },
+    "lblListening": { "message": "جاري الاستماع... (تحدث الآن)" },
+    "titleDictate": { "message": "إملاء المطالبة" },
+
+    "errNoInput": { "message": "الرجاء إدخال هدف أو طرح سؤال." },
+    "errMicRequired": { "message": "مطلوب إذن الميكروفون. جاري فتح علامة تبويب الإعداد..." },
+    "errDeleteOnlyProfile": { "message": "لا يمكن حذف ملف التعريف الوحيد المتبقي." },
+    "errNoModels": { "message": "لم يتم العثور على نماذج." },
+
+    "headerAutofill": { "message": "ملفات تعريف الملء التلقائي" },
+    "lblSelectProfile": { "message": "حدد ملف التعريف" },
+    "lblActiveProfile": { "message": " (نشط)" },
+    "titleNewProfile": { "message": "إضافة ملف تعريف جديد" },
+    "btnNewProfile": { "message": "+ جديد" },
+    "titleDeleteProfile": { "message": "حذف ملف التعريف الحالي" },
+    "btnDeleteProfile": { "message": "حذف" },
+    "lblNewProfileName": { "message": "ملف تعريف جديد" },
+    "msgEnterProfileDetails": { "message": "أدخل تفاصيل ملف التعريف وانقر على حفظ." },
+    "msgProfileRemoved": { "message": "تمت إزالة ملف التعريف." },
+    "msgProfileSaved": { "message": "تم حفظ ملف التعريف." },
+
+    "lblProfileName": { "message": "اسم ملف التعريف (تسمية)" },
+    "phProfileName": { "message": "مثال: شخصي، عمل، أحمد" },
+    "lblUsername": { "message": "اسم المستخدم / معرف المستخدم" },
+    "phUsername": { "message": "مثال: ahmad99" },
+    "lblFirstName": { "message": "الاسم الأول" },
+    "phFirstName": { "message": "أحمد" },
+    "lblMiddleName": { "message": "الاسم الأوسط" },
+    "phMiddleName": { "message": "محمد" },
+    "lblLastName": { "message": "اسم العائلة" },
+    "phLastName": { "message": "محمود" },
+    "lblEmail": { "message": "البريد الإلكتروني" },
+    "phEmail": { "message": "ahmad@example.com" },
+    "lblPhone": { "message": "الهاتف" },
+    "phPhone": { "message": "+971 50 123 4567" },
+    "lblAddress": { "message": "عنوان الشارع" },
+    "phAddress": { "message": "شارع السوق 123" },
+    "lblCity": { "message": "المدينة" },
+    "phCity": { "message": "دبي" },
+    "lblState": { "message": "الولاية / المقاطعة" },
+    "phState": { "message": "دبي" },
+    "lblZip": { "message": "الرمز البريدي" },
+    "phZip": { "message": "00000" },
+    "lblCountry": { "message": "البلد" },
+    "phCountry": { "message": "الإمارات العربية المتحدة" },
+    "btnSaveProfile": { "message": "حفظ ملف التعريف النشط" },
+
+    "headerSettings": { "message": "الإعدادات" },
+    "lblTheme": { "message": "المظهر" },
+    "themeGraphite": { "message": "جرافيت داكن (رمادي داكن/أسود)" },
+    "themeClean": { "message": "لوحة نظيفة (فاتح بسيط)" },
+    "themeIndigo": { "message": "نيلة داكنة عميقة" },
+    "themeLavender": { "message": "لافندر فاتح" },
+    "lblMaxSteps": { "message": "الحد الأقصى للخطوات المستقلة" },
+    "lblServerUrl": { "message": "رابط خادم Open WebUI" },
+    "phServerUrl": { "message": "https://openwebui.example.com" },
+    "lblApiKey": { "message": "مفتاح API" },
+    "phApiKey": { "message": "sk-..." },
+    "lblModel": { "message": "نموذج الرؤية (Vision Model)" },
+    "btnRefresh": { "message": "تحديث" },
+    "phModel": { "message": "Gemma 4" },
+    "btnSaveSettings": { "message": "حفظ" },
+    "btnTestSettings": { "message": "اختبار" },
+    "msgSettingsSaved": { "message": "تم حفظ الإعدادات." },
+
+    "stepCounter": {
+        "message": "الخطوة $1/$2",
+        "description": "Shows current step out of total max steps",
+        "placeholders": {
+            "current": { "content": "$1" },
+            "total": { "content": "$2" }
+        }
+    },
+    "statusExecuting": {
+        "message": "جاري تنفيذ: $1...",
+        "placeholders": {
+            "actionName": { "content": "$1" }
+        }
+    },
+    "statusRecognized": {
+        "message": "تم التعرف على: \"$1\"",
+        "placeholders": {
+            "text": { "content": "$1" }
+        }
+    },
+    "errDictation": {
+        "message": "فشل الإملاء: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errMicError": {
+        "message": "خطأ في الميكروفون: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errSaveFailed": {
+        "message": "فشل الحفظ: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errDeleteFailed": {
+        "message": "فشل الحذف: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "msgModelsFound": {
+        "message": "تم العثور على $1 نموذج (نماذج).",
+        "placeholders": {
+            "count": { "content": "$1" }
+        }
+    }
+}

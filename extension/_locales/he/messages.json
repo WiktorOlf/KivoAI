@@ -1,0 +1,150 @@
+{
+    "extName": { "message": "KivoAI" },
+    "extDescription": { "message": "עוזר דפדפן אוטונומי השומר על פרטיותך, מבוסס על בינה מלאכותית מקומית." },
+
+    "promptLabel": { "message": "שאל שאלה או הגדר יעד" },
+    "promptPlaceholder": { "message": "לדוגמה: 'מלא טופס זה' או 'מה הדף הזה עושה?'..." },
+    "btnDictate": { "message": "הכתב פקודה" },
+    "btnSubmit": { "message": "שלח" },
+    "btnStop": { "message": "עצור" },
+
+    "titleAutofill": { "message": "פרופילי השלמה אוטומטית" },
+    "titleSettings": { "message": "הגדרות" },
+    "titleDictatePrompt": { "message": "הכתב פקודה" },
+    "titleAiExplanation": { "message": "הסבר מבוסס AI" },
+    "titleBack": { "message": "חזור" },
+
+    "btnDismiss": { "message": "סגור" },
+    "btnSteps": { "message": "צעדים" },
+    "btnHide": { "message": "הסתר" },
+
+    "statusConnecting": { "message": "מתחבר ללשונית הפעילה..." },
+    "statusReady": { "message": "מוכן" },
+    "statusTranscribing": { "message": "ממיר דיבור לטקסט..." },
+    "statusSpeechShort": { "message": "הדיבור קצר מדי או ריק." },
+    "statusDeliberating": { "message": "מנתח..." },
+    "statusStopped": { "message": "הושרת על ידי המשתמש." },
+    "statusInspecting": { "message": "בודק את מצב הדף..." },
+    "statusRedacting": { "message": "מסתיר מידע אישי רגיש..." },
+    "statusExplanation": { "message": "הסבר סופק." },
+    "statusNoSpeech": { "message": "לא זוהה דיבור ברור." },
+    "statusListeningWait": { "message": "מאזין... אמור את הפקודה שלך." },
+    "statusProcessingSpeech": { "message": "מעבד דיבור..." },
+    "statusTaskFinished": { "message": "המשימה הושלמה!" },
+
+    "titleListening": { "message": "מאזין... (יישלח אוטומטית כשתפסיק לדבר)" },
+    "lblListening": { "message": "מאזין... (דבר כעת)" },
+    "titleDictate": { "message": "הכתב פקודה" },
+
+    "errNoInput": { "message": "אנא הזן יעד או שאל שאלה." },
+    "errMicRequired": { "message": "נדרשת הרשאת מיקרופון. פותח את לשונית ההגדרות..." },
+    "errDeleteOnlyProfile": { "message": "לא ניתן למחוק את הפרופיל היחיד שנותר." },
+    "errNoModels": { "message": "לא נמצאו מודלים." },
+
+    "headerAutofill": { "message": "פרופילי השלמה אוטומטית" },
+    "lblSelectProfile": { "message": "בחר פרופיל" },
+    "lblActiveProfile": { "message": " (פעיל)" },
+    "titleNewProfile": { "message": "הוסף פרופיל חדש" },
+    "btnNewProfile": { "message": "+ חדש" },
+    "titleDeleteProfile": { "message": "מחק פרופיל נוכחי" },
+    "btnDeleteProfile": { "message": "מחק" },
+    "lblNewProfileName": { "message": "פרופיל חדש" },
+    "msgEnterProfileDetails": { "message": "הזן את פרטי הפרופיל ולחץ על שמור." },
+    "msgProfileRemoved": { "message": "הפרופיל הוסר." },
+    "msgProfileSaved": { "message": "הפרופיל נשמר." },
+
+    "lblProfileName": { "message": "שם הפרופיל (תוית)" },
+    "phProfileName": { "message": "לדוגמה: אישי, עבודה, ישראל" },
+    "lblUsername": { "message": "שם משתמש / מזהה" },
+    "phUsername": { "message": "לדוגמה: israel99" },
+    "lblFirstName": { "message": "שם פרטי" },
+    "phFirstName": { "message": "ישראל" },
+    "lblMiddleName": { "message": "שם אמצעי" },
+    "phMiddleName": { "message": "כהן" },
+    "lblLastName": { "message": "שם משפחה" },
+    "phLastName": { "message": "ישראלי" },
+    "lblEmail": { "message": "אימייל" },
+    "phEmail": { "message": "israel@example.co.il" },
+    "lblPhone": { "message": "טלפון" },
+    "phPhone": { "message": "+972 50 123 4567" },
+    "lblAddress": { "message": "כתובת רחוב" },
+    "phAddress": { "message": "רחוב הרצל 1" },
+    "lblCity": { "message": "עיר" },
+    "phCity": { "message": "תל אביב" },
+    "lblState": { "message": "מדינה / מחוז" },
+    "phState": { "message": "מרכז" },
+    "lblZip": { "message": "מיקוד" },
+    "phZip": { "message": "61000" },
+    "lblCountry": { "message": "ארץ" },
+    "phCountry": { "message": "ישראל" },
+    "btnSaveProfile": { "message": "שמור פרופיל פעיל" },
+
+    "headerSettings": { "message": "הגדרות" },
+    "lblTheme": { "message": "ערכת נושא" },
+    "themeGraphite": { "message": "גרפיט כהה (אפור כהה/שחור)" },
+    "themeClean": { "message": "לוח נקי (בהיר מינימליסטי)" },
+    "themeIndigo": { "message": "אינדיגו עמוק כהה" },
+    "themeLavender": { "message": "לבנדר בהיר" },
+    "lblMaxSteps": { "message": "מגבלת צעדים אוטונומיים" },
+    "lblServerUrl": { "message": "כתובת שרת Open WebUI" },
+    "phServerUrl": { "message": "https://openwebui.example.co.il" },
+    "lblApiKey": { "message": "מפתח API" },
+    "phApiKey": { "message": "sk-..." },
+    "lblModel": { "message": "מודל ראייה (Vision Model)" },
+    "btnRefresh": { "message": "רענן" },
+    "phModel": { "message": "Gemma 4" },
+    "btnSaveSettings": { "message": "שמור" },
+    "btnTestSettings": { "message": "בדוק" },
+    "msgSettingsSaved": { "message": "ההגדרות נשמרו." },
+
+    "stepCounter": {
+        "message": "צעד $1/$2",
+        "description": "Shows current step out of total max steps",
+        "placeholders": {
+            "current": { "content": "$1" },
+            "total": { "content": "$2" }
+        }
+    },
+    "statusExecuting": {
+        "message": "מבצע: $1...",
+        "placeholders": {
+            "actionName": { "content": "$1" }
+        }
+    },
+    "statusRecognized": {
+        "message": "זוהה: \"$1\"",
+        "placeholders": {
+            "text": { "content": "$1" }
+        }
+    },
+    "errDictation": {
+        "message": "ההכתבה נכשלה: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errMicError": {
+        "message": "שגיאת מיקרופון: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errSaveFailed": {
+        "message": "השמירה נכשלה: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errDeleteFailed": {
+        "message": "המחיקה נכשלה: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "msgModelsFound": {
+        "message": "נמצאו $1 מודלים.",
+        "placeholders": {
+            "count": { "content": "$1" }
+        }
+    }
+}

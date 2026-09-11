@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>KivoAI Agent</title>
+        <title>KivoAI</title>
         <link rel="stylesheet" href="popup.css">
     </head>
 
@@ -17,13 +17,13 @@
                             <span class="brand-name">KivoAI</span>
                         </div>
                         <div class="header-actions">
-                            <button type="button" id="btnOpenAutofill" class="icon-btn" aria-label="Autofill Profiles" title="Autofill Profiles">
+                            <button type="button" id="btnOpenAutofill" class="icon-btn" aria-label="Autofill Profiles" title="Autofill Profiles" data-i18n-title="titleAutofill">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                                     <circle cx="12" cy="7" r="4"></circle>
                                 </svg>
                             </button>
-                            <button type="button" id="btnOpenSettings" class="icon-btn" aria-label="Open Settings" title="Settings">
+                            <button type="button" id="btnOpenSettings" class="icon-btn" aria-label="Open Settings" title="Settings" data-i18n-title="titleSettings">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <circle cx="12" cy="12" r="3"></circle>
                                     <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
@@ -34,34 +34,35 @@
 
                     <div class="page-chip">
                         <span class="chip-dot"></span>
-                        <span id="pageDomain" class="chip-text">Connecting to active tab...</span>
+                        <span id="pageDomain" class="chip-text" data-i18n="statusConnecting">Connecting to active tab...</span>
                     </div>
 
                     <div class="prompt-box">
                         <div class="label-inline">
-                            <label for="userInstruction" class="prompt-label">Ask a question or give a goal</label>
+                            <label for="userInstruction" class="prompt-label" data-i18n="promptLabel">Ask a question or give a goal</label>
                         </div>
                         <textarea
                             id="userInstruction"
                             rows="3"
+                            data-i18n-placeholder="promptPlaceholder"
                             placeholder="e.g. 'Fill out this form using my saved address', or 'What is this page?'..."
                         ></textarea>
                     </div>
 
-                    <button type="button" id="btnDictate" class="btn btn-secondary btn-voice" title="Dictate prompt">
+                    <button type="button" id="btnDictate" class="btn btn-secondary btn-voice" title="Dictate prompt" data-i18n-title="titleDictatePrompt">
                         <svg id="micIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
                             <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
                             <line x1="12" y1="19" x2="12" y2="23"></line>
                             <line x1="8" y1="23" x2="16" y2="23"></line>
                         </svg>
-                        <span id="dictateLabel">Dictate Prompt</span>
+                        <span id="dictateLabel" data-i18n="btnDictate">Dictate Prompt</span>
                     </button>
 
                     <div id="aiAnswerCard" class="answer-card hidden">
                         <div class="answer-header">
-                            <span class="answer-title">AI Explanation</span>
-                            <button type="button" id="btnCloseAnswer" class="btn-link">Dismiss</button>
+                            <span class="answer-title" data-i18n="titleAiExplanation">AI Explanation</span>
+                            <button type="button" id="btnCloseAnswer" class="btn-link" data-i18n="btnDismiss">Dismiss</button>
                         </div>
                         <div id="aiAnswerContent" class="answer-body"></div>
                     </div>
@@ -71,9 +72,9 @@
                             <div class="activity-status">
                                 <span id="activitySpinner" class="spinner hidden"></span>
                                 <span id="activityStepCounter" class="step-badge hidden">Step 1/10</span>
-                                <span id="activityCurrentStep" class="activity-label">Ready</span>
+                                <span id="activityCurrentStep" class="activity-label" data-i18n="statusReady">Ready</span>
                             </div>
-                            <button type="button" id="btnToggleDetails" class="btn-link">Steps</button>
+                            <button type="button" id="btnToggleDetails" class="btn-link" data-i18n="btnSteps">Steps</button>
                         </div>
 
                         <div id="activityDetails" class="activity-details collapsed">
@@ -90,158 +91,158 @@
 
                     <footer class="app-footer">
                         <button type="button" id="btnSubmit" class="btn btn-primary" style="flex: 1;">
-                            <span id="btnSubmitText">Submit</span>
+                            <span id="btnSubmitText" data-i18n="btnSubmit">Submit</span>
                         </button>
-                        <button type="button" id="btnStopAgent" class="btn btn-secondary hidden">
-                            <span id="btnStopAgent">Stop</span>
+                        <button type="button" id="btnStop" class="btn btn-secondary hidden">
+                            <span id="btnStopText" data-i18n="btnStop">Stop</span>
                         </button>
                     </footer>
                 </main>
 
                 <aside id="viewAutofill" class="view">
                     <header class="app-header">
-                        <button type="button" id="btnCloseAutofill" class="icon-btn" aria-label="Back" title="Back">
+                        <button type="button" id="btnCloseAutofill" class="icon-btn" aria-label="Back" title="Back" data-i18n-title="titleBack">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <line x1="19" y1="12" x2="5" y2="12"></line>
                                 <polyline points="12 19 5 12 12 5"></polyline>
                             </svg>
                         </button>
-                        <span class="brand-name">Autofill Profiles</span>
+                        <span class="brand-name" data-i18n="headerAutofill">Autofill Profiles</span>
                         <div style="width: 24px;"></div>
                     </header>
 
                     <form id="autofillForm" class="settings-body">
                         <div class="profile-select-bar">
                             <div class="form-group flex-1">
-                                <label for="profileSelector">Select Profile</label>
+                                <label for="profileSelector" data-i18n="lblSelectProfile">Select Profile</label>
                                 <select id="profileSelector"></select>
                             </div>
-                            <button type="button" id="btnNewProfile" class="btn btn-secondary btn-sm" title="Add new profile">+ New</button>
-                            <button type="button" id="btnDeleteProfile" class="btn btn-secondary btn-sm btn-danger-text" title="Delete current profile">Delete</button>
+                            <button type="button" id="btnNewProfile" class="btn btn-secondary btn-sm" title="Add new profile" data-i18n="btnNewProfile" data-i18n-title="titleNewProfile">+ New</button>
+                            <button type="button" id="btnDeleteProfile" class="btn btn-secondary btn-sm btn-danger-text" title="Delete current profile" data-i18n="btnDeleteProfile" data-i18n-title="titleDeleteProfile">Delete</button>
                         </div>
 
                         <div class="form-group">
-                            <label for="afProfileName">Profile Name (Label)</label>
-                            <input type="text" id="afProfileName" required placeholder="e.g. Personal, Work, Alex">
+                            <label for="afProfileName" data-i18n="lblProfileName">Profile Name (Label)</label>
+                            <input type="text" id="afProfileName" required placeholder="e.g. Personal, Work, Alex" data-i18n-placeholder="phProfileName">
                         </div>
 
                         <div class="form-group">
-                            <label for="afUsername">Username / User ID</label>
-                            <input type="text" id="afUsername" placeholder="e.g. jdoe99">
+                            <label for="afUsername" data-i18n="lblUsername">Username / User ID</label>
+                            <input type="text" id="afUsername" placeholder="e.g. jdoe99" data-i18n-placeholder="phUsername">
                         </div>
 
                         <div class="form-row">
                             <div class="form-group flex-1">
-                                <label for="afFirstName">First Name</label>
-                                <input type="text" id="afFirstName" placeholder="Jane">
+                                <label for="afFirstName" data-i18n="lblFirstName">First Name</label>
+                                <input type="text" id="afFirstName" placeholder="Jane" data-i18n-placeholder="phFirstName">
                             </div>
                             <div class="form-group flex-1">
-                                <label for="afMiddleName">Middle</label>
-                                <input type="text" id="afMiddleName" placeholder="Marie">
+                                <label for="afMiddleName" data-i18n="lblMiddleName">Middle</label>
+                                <input type="text" id="afMiddleName" placeholder="Marie" data-i18n-placeholder="phMiddleName">
                             </div>
                             <div class="form-group flex-1">
-                                <label for="afLastName">Last Name</label>
-                                <input type="text" id="afLastName" placeholder="Doe">
+                                <label for="afLastName" data-i18n="lblLastName">Last Name</label>
+                                <input type="text" id="afLastName" placeholder="Doe" data-i18n-placeholder="phLastName">
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group flex-1">
-                                <label for="afEmail">Email</label>
-                                <input type="email" id="afEmail" placeholder="jane@example.com">
+                                <label for="afEmail" data-i18n="lblEmail">Email</label>
+                                <input type="email" id="afEmail" placeholder="jane@example.com" data-i18n-placeholder="phEmail">
                             </div>
                             <div class="form-group flex-1">
-                                <label for="afPhone">Phone</label>
-                                <input type="tel" id="afPhone" placeholder="+1 555 0199">
+                                <label for="afPhone" data-i18n="lblPhone">Phone</label>
+                                <input type="tel" id="afPhone" placeholder="+1 555 0199" data-i18n-placeholder="phPhone">
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label for="afAddress1">Street Address</label>
-                            <input type="text" id="afAddress1" placeholder="123 Market Street">
+                            <label for="afAddress1" data-i18n="lblAddress">Street Address</label>
+                            <input type="text" id="afAddress1" placeholder="123 Market Street" data-i18n-placeholder="phAddress">
                         </div>
 
                         <div class="form-row">
                             <div class="form-group flex-1">
-                                <label for="afCity">City</label>
-                                <input type="text" id="afCity" placeholder="San Francisco">
+                                <label for="afCity" data-i18n="lblCity">City</label>
+                                <input type="text" id="afCity" placeholder="San Francisco" data-i18n-placeholder="phCity">
                             </div>
                             <div class="form-group flex-1">
-                                <label for="afState">State / Province</label>
-                                <input type="text" id="afState" placeholder="CA">
+                                <label for="afState" data-i18n="lblState">State / Province</label>
+                                <input type="text" id="afState" placeholder="CA" data-i18n-placeholder="phState">
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group flex-1">
-                                <label for="afPostalCode">Postal / ZIP Code</label>
-                                <input type="text" id="afPostalCode" placeholder="94105">
+                                <label for="afPostalCode" data-i18n="lblZip">Postal / ZIP Code</label>
+                                <input type="text" id="afPostalCode" placeholder="94105" data-i18n-placeholder="phZip">
                             </div>
                             <div class="form-group flex-1">
-                                <label for="afCountry">Country</label>
-                                <input type="text" id="afCountry" placeholder="United States">
+                                <label for="afCountry" data-i18n="lblCountry">Country</label>
+                                <input type="text" id="afCountry" placeholder="United States" data-i18n-placeholder="phCountry">
                             </div>
                         </div>
 
                         <div id="autofillStatus" class="status-banner hidden"></div>
 
                         <div class="settings-actions">
-                            <button type="submit" class="btn btn-primary">Save Active Profile</button>
+                            <button type="submit" class="btn btn-primary" data-i18n="btnSaveProfile">Save Active Profile</button>
                         </div>
                     </form>
                 </aside>
 
                 <aside id="viewSettings" class="view">
                     <header class="app-header">
-                        <button type="button" id="btnCloseSettings" class="icon-btn" aria-label="Back" title="Back">
+                        <button type="button" id="btnCloseSettings" class="icon-btn" aria-label="Back" title="Back" data-i18n-title="titleBack">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <line x1="19" y1="12" x2="5" y2="12"></line>
                                 <polyline points="12 19 5 12 12 5"></polyline>
                             </svg>
                         </button>
-                        <span class="brand-name">Settings</span>
+                        <span class="brand-name" data-i18n="headerSettings">Settings</span>
                         <div style="width: 24px;"></div>
                     </header>
 
                     <form id="settingsForm" class="settings-body">
                         <div class="form-group">
-                            <label for="settingTheme">Theme</label>
+                            <label for="settingTheme" data-i18n="lblTheme">Theme</label>
                             <select id="settingTheme" class="form-select">
-                                <option value="graphite-dark">Graphite Dark (Dark Grey/Black)</option>
-                                <option value="clean-light">Clean Slate (Light Minimal)</option>
-                                <option value="indigo-dark">Deep Indigo Dark</option>
-                                <option value="lavender-light">Lavender Light</option>
+                                <option value="graphite-dark" data-i18n="themeGraphite">Graphite Dark (Dark Grey/Black)</option>
+                                <option value="clean-light" data-i18n="themeClean">Clean Slate (Light Minimal)</option>
+                                <option value="indigo-dark" data-i18n="themeIndigo">Deep Indigo Dark</option>
+                                <option value="lavender-light" data-i18n="themeLavender">Lavender Light</option>
                             </select>
                         </div>
 
                         <div class="form-group">
-                            <label for="settingMaxSteps">Autonomous Step Limit</label>
+                            <label for="settingMaxSteps" data-i18n="lblMaxSteps">Autonomous Step Limit</label>
                             <input type="number" id="settingMaxSteps" min="1" max="999" value="20">
                         </div>
 
                         <div class="form-group">
-                            <label for="serverUrl">Open WebUI Server URL</label>
-                            <input type="url" id="serverUrl" required placeholder="https://openwebui.example.com">
+                            <label for="serverUrl" data-i18n="lblServerUrl">Open WebUI Server URL</label>
+                            <input type="url" id="serverUrl" required placeholder="https://openwebui.example.com" data-i18n-placeholder="phServerUrl">
                         </div>
 
                         <div class="form-group">
-                            <label for="apiKey">API Key</label>
-                            <input type="password" id="apiKey" placeholder="sk-..." autocomplete="off">
+                            <label for="apiKey" data-i18n="lblApiKey">API Key</label>
+                            <input type="password" id="apiKey" placeholder="sk-..." autocomplete="off" data-i18n-placeholder="phApiKey">
                         </div>
 
                         <div class="form-group">
                             <div class="label-inline">
-                                <label for="model">Vision Model</label>
-                                <button type="button" id="btnRefreshModels" class="btn-link">Refresh</button>
+                                <label for="model" data-i18n="lblModel">Vision Model</label>
+                                <button type="button" id="btnRefreshModels" class="btn-link" data-i18n="btnRefresh">Refresh</button>
                             </div>
-                            <input type="text" id="model" required placeholder="Gemma 4">
+                            <input type="text" id="model" required placeholder="Gemma 4" data-i18n-placeholder="phModel">
                         </div>
 
                         <div id="settingsStatus" class="status-banner hidden"></div>
 
                         <div class="settings-actions">
-                            <button type="submit" id="btnSaveConfig" class="btn btn-primary">Save</button>
-                            <button type="button" id="btnTestConfig" class="btn btn-secondary">Test</button>
+                            <button type="submit" id="btnSaveConfig" class="btn btn-primary" data-i18n="btnSaveSettings">Save</button>
+                            <button type="button" id="btnTestConfig" class="btn btn-secondary" data-i18n="btnTestSettings">Test</button>
                         </div>
                     </form>
                 </aside>

@@ -32,7 +32,7 @@ const actionText = document.getElementById('actionText');
 const errorBanner = document.getElementById('errorMessage');
 
 const btnSubmit = document.getElementById('btnSubmit');
-const btnStopAgent = document.getElementById('btnStopAgent');
+const btnStop = document.getElementById('btnStop');
 
 const autofillForm = document.getElementById('autofillForm');
 const profileSelector = document.getElementById('profileSelector');
@@ -113,6 +113,39 @@ function addHistoryEntry(step, text) {
     item.textContent = `${step}. ${text}`;
     actionHistoryList.appendChild(item);
     actionHistoryList.scrollTop = actionHistoryList.scrollHeight;
+}
+
+function getMessage(key, substitutions = null, fallback = '') {
+    if (typeof substitutions === 'string') {
+        fallback = substitutions;
+        substitutions = null;
+    }
+    const api = typeof browser !== 'undefined' ? browser : chrome;
+    if (api && api.i18n) {
+        const msg = api.i18n.getMessage(key, substitutions);
+        if (msg) return msg;
+    }
+    return fallback;
+}
+
+function localizeHtml() {
+    document.querySelectorAll('[data-i18n]').forEach((el) => {
+        const key = el.getAttribute('data-i18n');
+        const translated = getMessage(key);
+        if (translated) el.textContent = translated;
+    });
+
+    document.querySelectorAll('[data-i18n-placeholder]').forEach((el) => {
+        const key = el.getAttribute('data-i18n-placeholder');
+        const translated = getMessage(key);
+        if (translated) el.setAttribute('placeholder', translated);
+    });
+
+    document.querySelectorAll('[data-i18n-title]').forEach((el) => {
+        const key = el.getAttribute('data-i18n-title');
+        const translated = getMessage(key);
+        if (translated) el.setAttribute('title', translated);
+    });
 }
 
 function renderMarkdownSafely(text, targetContainer) {
@@ -455,12 +488,12 @@ function setRecordingState(recording) {
 
     if (recording) {
         btn.classList.add('recording');
-        btn.title = 'Listening... (Will auto-submit when you stop talking)';
-        if (label) label.textContent = 'Listening... (Speak now)';
+        btn.title = getMessage('titleListening', 'Listening... (Will auto-submit when you stop talking)');
+        if (label) label.textContent = getMessage('lblListening', 'Listening... (Speak now)');
     } else {
         btn.classList.remove('recording');
-        btn.title = 'Dictate prompt';
-        if (label) label.textContent = 'Dictate Prompt';
+        btn.title = getMessage('titleDictate', 'Dictate prompt');
+        if (label) label.textContent = getMessage('btnDictate', 'Dictate Prompt');
     }
 }
 
@@ -556,7 +589,7 @@ async function toggleDictation() {
 
             if (audioChunks.length === 0) return;
 
-            activityCurrentStep.textContent = 'Transcribing voice...';
+            activityCurrentStep.textContent = getMessage('statusTranscribing', 'Transcribing voice...');
             activitySpinner.classList.remove('hidden');
 
             try {
@@ -568,28 +601,28 @@ async function toggleDictation() {
 
                 if (transcribedText && transcribedText.trim().length > 0) {
                     userInstructionEl.value = transcribedText;
-                    activityCurrentStep.textContent = `Recognized: "${transcribedText}"`;
+                    activityCurrentStep.textContent = getMessage('statusRecognized', [transcribedText], `Recognized: "${transcribedText}"`);
 
                     setTimeout(() => {
                         runUnifiedLoop();
                     }, 400);
                 } else {
-                    activityCurrentStep.textContent = 'No clear speech heard.';
+                    activityCurrentStep.textContent = getMessage('statusNoSpeech', 'No clear speech heard.');
                     activitySpinner.classList.add('hidden');
                 }
             } catch (err) {
-                showError(`Dictation failed: ${err.message}`);
+                showError(getMessage('errDictation', [err.message], `Dictation failed: ${err.message}`));
                 activitySpinner.classList.add('hidden');
             }
         };
 
         mediaRecorder.start();
         setRecordingState(true);
-        activityCurrentStep.textContent = 'Listening... Speak your command.';
+        activityCurrentStep.textContent = getMessage('statusListeningWait', 'Listening... Speak your command.');
 
         setupSilenceDetection(stream, () => {
             if (mediaRecorder && mediaRecorder.state !== 'inactive') {
-                activityCurrentStep.textContent = 'Processing speech...';
+                activityCurrentStep.textContent = getMessage('statusProcessingSpeech', 'Processing speech...');
                 mediaRecorder.stop();
             }
         });
@@ -598,11 +631,11 @@ async function toggleDictation() {
         cleanupVAD();
         setRecordingState(false);
         if (err.name === 'NotAllowedError' || err.message.includes('not allowed')) {
-            showError('Microphone permission required. Opening setup tab...');
+            showError(getMessage('errMicRequired', 'Microphone permission required. Opening setup tab...'));
             const permUrl = (typeof browser !== 'undefined' ? browser : chrome).runtime.getURL('permission.html');
             (typeof browser !== 'undefined' ? browser : chrome).tabs.create({ url: permUrl });
         } else {
-            showError(`Microphone error: ${err.message}`);
+            showError(getMessage('errMicError', [err.message], `Microphone error: ${err.message}`));
         }
     }
 }
@@ -614,7 +647,7 @@ async function runUnifiedLoop() {
 
     const instruction = userInstructionEl.value.trim();
     if (!instruction) {
-        showError('Please enter a goal or ask a question.');
+        showError(getMessage('errNoInput', 'Please enter a goal or ask a question.'));
         return;
     }
 
@@ -626,7 +659,7 @@ async function runUnifiedLoop() {
     isAgentRunning = true;
     shouldStopAgent = false;
     btnSubmit.classList.add('hidden');
-    btnStopAgent.classList.remove('hidden');
+    btnStop.classList.remove('hidden');
     activitySpinner.classList.remove('hidden');
     activityStepCounter.classList.remove('hidden');
 
@@ -635,12 +668,12 @@ async function runUnifiedLoop() {
     try {
         for (let step = 1; step <= maxSteps; step++) {
             if (shouldStopAgent) {
-                activityCurrentStep.textContent = 'Stopped by user.';
+                activityCurrentStep.textContent = getMessage('statusStopped', 'Stopped by user.');
                 break;
             }
 
-            activityStepCounter.textContent = `Step ${step}/${maxSteps}`;
-            activityCurrentStep.textContent = 'Inspecting page state...';
+            activityStepCounter.textContent = getMessage('stepCounter', [step.toString(), maxSteps.toString()], `Step ${step}/${maxSteps}`);
+            activityCurrentStep.textContent = getMessage('statusInspecting', 'Inspecting page state...');
 
             const activeTab = await BrowserAPI.getActiveTab();
             if (!activeTab?.id) throw new Error('No active browser tab found.');
@@ -648,10 +681,10 @@ async function runUnifiedLoop() {
             const scanResult = await BrowserAPI.executeScript(activeTab.id, inPageScanner);
             if (!scanResult) throw new Error('DOM inspection failed. Reload page.');
 
-            activityCurrentStep.textContent = 'Redacting visual PII...';
+            activityCurrentStep.textContent = getMessage('statusRedacting', 'Redacting visual PII...');
             const redactedScreenshot = await TabCapture.captureAndRedact(scanResult.sensitiveRegions, activeTab.windowId);
 
-            activityCurrentStep.textContent = 'Deliberating...';
+            activityCurrentStep.textContent = getMessage('statusDeliberating', 'Deliberating...');
             const rawAiOutput = await client.queryVisionAgent({
                 sanitizedScreenshot: redactedScreenshot,
                 sanitizedDom: scanResult,
@@ -677,7 +710,7 @@ async function runUnifiedLoop() {
                 renderMarkdownSafely(validAction.message, aiAnswerContent);
                 aiAnswerCard.classList.remove('hidden');
                 addHistoryEntry(step, `Answer: ${validAction.message.substring(0, 50)}...`);
-                activityCurrentStep.textContent = 'Explanation provided.';
+                activityCurrentStep.textContent = getMessage('statusExplanation', 'Explanation provided.');
                 break;
             }
 
@@ -689,11 +722,11 @@ async function runUnifiedLoop() {
 
             if (validAction.action === 'finish') {
                 addHistoryEntry(step, `Complete: ${validAction.message}`);
-                activityCurrentStep.textContent = validAction.message || 'Task finished!';
+                activityCurrentStep.textContent = validAction.message || getMessage('statusTaskFinished', 'Task finished!');
                 break;
             }
 
-            activityCurrentStep.textContent = `Executing: ${validAction.action}...`;
+            activityCurrentStep.textContent = getMessage('statusExecuting', [validAction.action], `Executing: ${validAction.action}...`);
             const execResult = await BrowserAPI.executeScript(activeTab.id, inPageExecutor, [validAction]);
 
             if (!execResult || !execResult.success) {
@@ -710,7 +743,7 @@ async function runUnifiedLoop() {
     } finally {
         isAgentRunning = false;
         btnSubmit.classList.remove('hidden');
-        btnStopAgent.classList.add('hidden');
+        btnStop.classList.add('hidden');
         activitySpinner.classList.add('hidden');
     }
 }
@@ -723,7 +756,7 @@ async function loadAutofillProfilesUI() {
         for (const p of profiles) {
             const opt = document.createElement('option');
             opt.value = p.id;
-            opt.textContent = p.profileName + (p.id === activeProfileId ? ' (Active)' : '');
+            opt.textContent = p.profileName + (p.id === activeProfileId ? getMessage('lblActiveProfile', ' (Active)') : '');
             if (p.id === activeProfileId) opt.selected = true;
             profileSelector.appendChild(opt);
         }
@@ -780,11 +813,11 @@ async function saveCurrentProfile(e) {
 
         await AutofillProfileManager.saveProfile(profileToSave);
         await AutofillProfileManager.setActiveProfileId(profileToSave.id);
-        showAutofillStatus('success', 'Profile saved.');
+        showAutofillStatus('success', getMessage('msgProfileSaved', 'Profile saved.'));
         await loadAutofillProfilesUI();
         setTimeout(() => closeAutofillView(), 500);
     } catch (err) {
-        showAutofillStatus('error', `Save failed: ${err.message}`);
+        showAutofillStatus('error', getMessage('errSaveFailed', [err.message], `Save failed: ${err.message}`));
     }
 }
 
@@ -804,26 +837,26 @@ function createNewProfile() {
     populateProfileFields({
         ...EMPTY_PROFILE,
         id: newId,
-        profileName: 'New Profile'
+        profileName: getMessage('lblNewProfileName', 'New Profile')
     });
     afProfileName.focus();
-    showAutofillStatus('success', 'Enter profile details and click Save.');
+    showAutofillStatus('success', getMessage('msgEnterProfileDetails', 'Enter profile details and click Save.'));
 }
 
 async function deleteCurrentProfile() {
     if (!currentLoadedProfileId) return;
     const { profiles } = await AutofillProfileManager.getAllData();
     if (profiles.length <= 1) {
-        showAutofillStatus('error', 'Cannot delete the only remaining profile.');
+        showAutofillStatus('error', getMessage('errDeleteOnlyProfile', 'Cannot delete the only remaining profile.'));
         return;
     }
 
     try {
         await AutofillProfileManager.deleteProfile(currentLoadedProfileId);
-        showAutofillStatus('success', 'Profile removed.');
+        showAutofillStatus('success', getMessage('msgProfileRemoved', 'Profile removed.'));
         await loadAutofillProfilesUI();
     } catch (err) {
-        showAutofillStatus('error', `Delete failed: ${err.message}`);
+        showAutofillStatus('error', getMessage('errDeleteFailed', [err.message], `Delete failed: ${err.message}`));
     }
 }
 
@@ -863,10 +896,10 @@ async function saveSettings(e) {
             maxTokens: 3000
         });
         applyTheme(settingTheme.value);
-        showSettingsStatus('success', 'Settings saved.');
+        showSettingsStatus('success', getMessage('msgSettingsSaved', 'Settings saved.'));
         setTimeout(() => closeSettingsView(), 500);
     } catch (err) {
-        showSettingsStatus('error', `Save failed: ${err.message}`);
+        showSettingsStatus('error', getMessage('errSaveFailed', [err.message], `Save failed: ${err.message}`));
     }
 }
 
@@ -902,9 +935,9 @@ async function refreshModels() {
         if (models.length > 0) {
             const vlModel = models.find((m) => m.toLowerCase().includes('vl'));
             modelInput.value = vlModel || models[0];
-            showSettingsStatus('success', `Found ${models.length} model(s).`);
+            showSettingsStatus('success', getMessage('msgModelsFound', [models.length.toString()], `Found ${models.length} model(s).`));
         } else {
-            showSettingsStatus('error', 'No models found.');
+            showSettingsStatus('error', getMessage('errNoModels', 'No models found.'));
         }
     } catch (err) {
         showSettingsStatus('error', err.message);
@@ -914,6 +947,7 @@ async function refreshModels() {
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
+    localizeHtml();
     viewSlider.setAttribute('data-active-view', 'main');
     const config = await ConfigManager.getConfig();
     applyTheme(config.theme);
@@ -923,10 +957,10 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (tab && tab.url && !tab.url.startsWith('about:') && !tab.url.startsWith('chrome:')) {
             pageDomainEl.textContent = new URL(tab.url).hostname;
         } else {
-            pageDomainEl.textContent = 'Ready';
+            pageDomainEl.textContent = getMessage('statusReady', 'Ready');
         }
     } catch {
-        pageDomainEl.textContent = 'Ready';
+        pageDomainEl.textContent = getMessage('statusReady', 'Ready');
     }
 
     btnOpenSettings.addEventListener('click', openSettingsView);
@@ -940,8 +974,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         btnSubmit.addEventListener('click', runUnifiedLoop);
     }
 
-    if (btnStopAgent) {
-        btnStopAgent.addEventListener('click', () => {
+    if (btnStop) {
+        btnStop.addEventListener('click', () => {
             shouldStopAgent = true;
         });
     }
@@ -959,7 +993,9 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     btnToggleDetails.addEventListener('click', () => {
         activityDetails.classList.toggle('collapsed');
-        btnToggleDetails.textContent = activityDetails.classList.contains('collapsed') ? 'Steps' : 'Hide';
+        btnToggleDetails.textContent = activityDetails.classList.contains('collapsed')
+            ? getMessage('btnSteps', 'Steps')
+            : getMessage('btnHide', 'Hide');
     });
 
     profileSelector.addEventListener('change', handleProfileSelectionChange);

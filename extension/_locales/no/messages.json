@@ -1,0 +1,150 @@
+{
+    "extName": { "message": "KivoAI" },
+    "extDescription": { "message": "En personvernfokusert, autonom nettleserassistent drevet av lokal KI." },
+
+    "promptLabel": { "message": "Still et spørsmål eller angi et mål" },
+    "promptPlaceholder": { "message": "f.eks. 'Fyll ut dette skjemaet' eller 'Hva er denne siden?'..." },
+    "btnDictate": { "message": "Diktér kommando" },
+    "btnSubmit": { "message": "Send inn" },
+    "btnStop": { "message": "Stopp" },
+
+    "titleAutofill": { "message": "Autofyll-profiler" },
+    "titleSettings": { "message": "Innstillinger" },
+    "titleDictatePrompt": { "message": "Diktér kommando" },
+    "titleAiExplanation": { "message": "KI-forklaring" },
+    "titleBack": { "message": "Tilbake" },
+
+    "btnDismiss": { "message": "Lukk" },
+    "btnSteps": { "message": "Trinn" },
+    "btnHide": { "message": "Skjul" },
+
+    "statusConnecting": { "message": "Kobler til aktiv fane..." },
+    "statusReady": { "message": "Klar" },
+    "statusTranscribing": { "message": "Transkriberer tale..." },
+    "statusSpeechShort": { "message": "Talen er for kort eller tom." },
+    "statusDeliberating": { "message": "Analyserer..." },
+    "statusStopped": { "message": "Stoppet av bruker." },
+    "statusInspecting": { "message": "Inspeiserer sidetilstand..." },
+    "statusRedacting": { "message": "Skjuler personopplysninger..." },
+    "statusExplanation": { "message": "Forklaring levert." },
+    "statusNoSpeech": { "message": "Ingen tydelig tale oppdaget." },
+    "statusListeningWait": { "message": "Lytter... Si kommandoen din." },
+    "statusProcessingSpeech": { "message": "Behandler tale..." },
+    "statusTaskFinished": { "message": "Oppgave fullført!" },
+
+    "titleListening": { "message": "Lytter... (Sendes automatisk når du slutter å snakke)" },
+    "lblListening": { "message": "Lytter... (Snakk nå)" },
+    "titleDictate": { "message": "Diktér kommando" },
+
+    "errNoInput": { "message": "Vennligst skriv inn et mål eller still et spørsmål." },
+    "errMicRequired": { "message": "Mikrofontillatelse kreves. Åpner innstillingstabben..." },
+    "errDeleteOnlyProfile": { "message": "Kan ikke slette den eneste gjenværende profilen." },
+    "errNoModels": { "message": "Ingen modeller funnet." },
+
+    "headerAutofill": { "message": "Autofyll-profiler" },
+    "lblSelectProfile": { "message": "Velg profil" },
+    "lblActiveProfile": { "message": " (Aktiv)" },
+    "titleNewProfile": { "message": "Legg til ny profil" },
+    "btnNewProfile": { "message": "+ Ny" },
+    "titleDeleteProfile": { "message": "Slett gjeldende profil" },
+    "btnDeleteProfile": { "message": "Slett" },
+    "lblNewProfileName": { "message": "Ny profil" },
+    "msgEnterProfileDetails": { "message": "Skriv inn profildetaljer og klikk Lagre." },
+    "msgProfileRemoved": { "message": "Profil fjernet." },
+    "msgProfileSaved": { "message": "Profil lagret." },
+
+    "lblProfileName": { "message": "Profilnavn (Etikett)" },
+    "phProfileName": { "message": "f.eks. Personlig, Arbeid, Alex" },
+    "lblUsername": { "message": "Brukernavn / ID" },
+    "phUsername": { "message": "f.eks. ola99" },
+    "lblFirstName": { "message": "Fornavn" },
+    "phFirstName": { "message": "Ola" },
+    "lblMiddleName": { "message": "Mellomnavn" },
+    "phMiddleName": { "message": "Johan" },
+    "lblLastName": { "message": "Etternavn" },
+    "phLastName": { "message": "Nordmann" },
+    "lblEmail": { "message": "E-post" },
+    "phEmail": { "message": "ola@eksempel.no" },
+    "lblPhone": { "message": "Telefon" },
+    "phPhone": { "message": "+47 912 34 567" },
+    "lblAddress": { "message": "Gateadresse" },
+    "phAddress": { "message": "Karl Johans gate 1" },
+    "lblCity": { "message": "Sted" },
+    "phCity": { "message": "Oslo" },
+    "lblState": { "message": "Fylke" },
+    "phState": { "message": "Oslo" },
+    "lblZip": { "message": "Postnummer" },
+    "phZip": { "message": "0154" },
+    "lblCountry": { "message": "Land" },
+    "phCountry": { "message": "Norge" },
+    "btnSaveProfile": { "message": "Lagre aktiv profil" },
+
+    "headerSettings": { "message": "Innstillinger" },
+    "lblTheme": { "message": "Tema" },
+    "themeGraphite": { "message": "Mørk grafitt (Mørk grå/Svart)" },
+    "themeClean": { "message": "Ren tavle (Lys minimal)" },
+    "themeIndigo": { "message": "Dyp indigo mørk" },
+    "themeLavender": { "message": "Lys lavendel" },
+    "lblMaxSteps": { "message": "Grense for autonome trinn" },
+    "lblServerUrl": { "message": "Open WebUI-serverens URL" },
+    "phServerUrl": { "message": "https://openwebui.eksempel.no" },
+    "lblApiKey": { "message": "API-nøkkel" },
+    "phApiKey": { "message": "sk-..." },
+    "lblModel": { "message": "Visjonsmodell (Vision Model)" },
+    "btnRefresh": { "message": "Oppdater" },
+    "phModel": { "message": "Gemma 4" },
+    "btnSaveSettings": { "message": "Lagre" },
+    "btnTestSettings": { "message": "Test" },
+    "msgSettingsSaved": { "message": "Innstillinger lagret." },
+
+    "stepCounter": {
+        "message": "Trinn $1/$2",
+        "description": "Shows current step out of total max steps",
+        "placeholders": {
+            "current": { "content": "$1" },
+            "total": { "content": "$2" }
+        }
+    },
+    "statusExecuting": {
+        "message": "Utfører: $1...",
+        "placeholders": {
+            "actionName": { "content": "$1" }
+        }
+    },
+    "statusRecognized": {
+        "message": "Gjenkjent: \"$1\"",
+        "placeholders": {
+            "text": { "content": "$1" }
+        }
+    },
+    "errDictation": {
+        "message": "Diktering mislyktes: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errMicError": {
+        "message": "Mikrofonfeil: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errSaveFailed": {
+        "message": "Lagring mislyktes: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errDeleteFailed": {
+        "message": "Sletting mislyktes: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "msgModelsFound": {
+        "message": "Fant $1 modell(er).",
+        "placeholders": {
+            "count": { "content": "$1" }
+        }
+    }
+}

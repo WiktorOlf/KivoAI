@@ -1,0 +1,150 @@
+{
+    "extName": { "message": "KivoAI" },
+    "extDescription": { "message": "Yerel yapay zeka ile güçlendirilmiş, gizlilik odaklı otonom tarayıcı asistanı." },
+
+    "promptLabel": { "message": "Bir soru sorun veya bir hedef belirleyin" },
+    "promptPlaceholder": { "message": "örn. 'Bu formu doldur' veya 'Bu sayfa ne hakkında?'..." },
+    "btnDictate": { "message": "İstemi Sesle Yazdır" },
+    "btnSubmit": { "message": "Gönder" },
+    "btnStop": { "message": "Durdur" },
+
+    "titleAutofill": { "message": "Otomatik Doldurma Profilleri" },
+    "titleSettings": { "message": "Ayarlar" },
+    "titleDictatePrompt": { "message": "İstemi sesle yazdır" },
+    "titleAiExplanation": { "message": "Yapay Zeka Açıklaması" },
+    "titleBack": { "message": "Geri" },
+
+    "btnDismiss": { "message": "Kapat" },
+    "btnSteps": { "message": "Adımlar" },
+    "btnHide": { "message": "Gizle" },
+
+    "statusConnecting": { "message": "Etkin sekmeye bağlanıyor..." },
+    "statusReady": { "message": "Hazır" },
+    "statusTranscribing": { "message": "Ses metne dönüştürülüyor..." },
+    "statusSpeechShort": { "message": "Konuşma çok kısa veya boş." },
+    "statusDeliberating": { "message": "Analiz ediliyor..." },
+    "statusStopped": { "message": "Kullanıcı tarafından durduruldu." },
+    "statusInspecting": { "message": "Sayfa durumu inceleniyor..." },
+    "statusRedacting": { "message": "Kişisel veriler (PII) gizleniyor..." },
+    "statusExplanation": { "message": "Açıklama sağlandı." },
+    "statusNoSpeech": { "message": "Net bir konuşma duyulmadı." },
+    "statusListeningWait": { "message": "Dinleniyor... Komutunuzu söyleyin." },
+    "statusProcessingSpeech": { "message": "Konuşma işleniyor..." },
+    "statusTaskFinished": { "message": "Görev tamamlandı!" },
+
+    "titleListening": { "message": "Dinleniyor... (Konuşmayı bıraktığınızda otomatik olarak gönderilecektir)" },
+    "lblListening": { "message": "Dinleniyor... (Şimdi konuşun)" },
+    "titleDictate": { "message": "İstemi sesle yazdır" },
+
+    "errNoInput": { "message": "Lütfen bir hedef girin veya bir soru sorun." },
+    "errMicRequired": { "message": "Mikrofon izni gerekiyor. Kurulum sekmesi açılıyor..." },
+    "errDeleteOnlyProfile": { "message": "Kalan tek profil silinemez." },
+    "errNoModels": { "message": "Model bulunamadı." },
+
+    "headerAutofill": { "message": "Otomatik Doldurma Profilleri" },
+    "lblSelectProfile": { "message": "Profil Seç" },
+    "lblActiveProfile": { "message": " (Aktif)" },
+    "titleNewProfile": { "message": "Yeni profil ekle" },
+    "btnNewProfile": { "message": "+ Yeni" },
+    "titleDeleteProfile": { "message": "Mevcut profili sil" },
+    "btnDeleteProfile": { "message": "Sil" },
+    "lblNewProfileName": { "message": "Yeni Profil" },
+    "msgEnterProfileDetails": { "message": "Profil ayrıntılarını girin ve Kaydet'e tıklayın." },
+    "msgProfileRemoved": { "message": "Profil kaldırıldı." },
+    "msgProfileSaved": { "message": "Profil kaydedildi." },
+
+    "lblProfileName": { "message": "Profil Adı (Etiket)" },
+    "phProfileName": { "message": "örn. Kişisel, İş, Can" },
+    "lblUsername": { "message": "Kullanıcı Adı / Kullanıcı Kimliği" },
+    "phUsername": { "message": "örn. ahmet99" },
+    "lblFirstName": { "message": "Ad" },
+    "phFirstName": { "message": "Ayşe" },
+    "lblMiddleName": { "message": "İkinci Ad" },
+    "phMiddleName": { "message": "Fatma" },
+    "lblLastName": { "message": "Soyad" },
+    "phLastName": { "message": "Yılmaz" },
+    "lblEmail": { "message": "E-posta" },
+    "phEmail": { "message": "ayse@ornek.com" },
+    "lblPhone": { "message": "Telefon" },
+    "phPhone": { "message": "+90 555 123 4567" },
+    "lblAddress": { "message": "Adres" },
+    "phAddress": { "message": "Atatürk Cad. No:123" },
+    "lblCity": { "message": "Şehir" },
+    "phCity": { "message": "İstanbul" },
+    "lblState": { "message": "İl / Eyalet" },
+    "phState": { "message": "İstanbul" },
+    "lblZip": { "message": "Posta Kodu" },
+    "phZip": { "message": "34000" },
+    "lblCountry": { "message": "Ülke" },
+    "phCountry": { "message": "Türkiye" },
+    "btnSaveProfile": { "message": "Aktif Profili Kaydet" },
+
+    "headerSettings": { "message": "Ayarlar" },
+    "lblTheme": { "message": "Tema" },
+    "themeGraphite": { "message": "Koyu Grafit (Koyu Gri/Siyah)" },
+    "themeClean": { "message": "Temiz Sayfa (Açık Minimal)" },
+    "themeIndigo": { "message": "Derin İndigo Koyu" },
+    "themeLavender": { "message": "Açık Lavanta" },
+    "lblMaxSteps": { "message": "Otonom Adım Sınırı" },
+    "lblServerUrl": { "message": "Open WebUI Sunucu URL'si" },
+    "phServerUrl": { "message": "https://openwebui.ornek.com" },
+    "lblApiKey": { "message": "API Anahtarı" },
+    "phApiKey": { "message": "sk-..." },
+    "lblModel": { "message": "Görüntü Modeli (Vision Model)" },
+    "btnRefresh": { "message": "Yenile" },
+    "phModel": { "message": "Gemma 4" },
+    "btnSaveSettings": { "message": "Kaydet" },
+    "btnTestSettings": { "message": "Test Et" },
+    "msgSettingsSaved": { "message": "Ayarlar kaydedildi." },
+
+    "stepCounter": {
+        "message": "Adım $1/$2",
+        "description": "Shows current step out of total max steps",
+        "placeholders": {
+            "current": { "content": "$1" },
+            "total": { "content": "$2" }
+        }
+    },
+    "statusExecuting": {
+        "message": "Yürütülüyor: $1...",
+        "placeholders": {
+            "actionName": { "content": "$1" }
+        }
+    },
+    "statusRecognized": {
+        "message": "Algılanan: \"$1\"",
+        "placeholders": {
+            "text": { "content": "$1" }
+        }
+    },
+    "errDictation": {
+        "message": "Sesle yazma başarısız oldu: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errMicError": {
+        "message": "Mikrofon hatası: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errSaveFailed": {
+        "message": "Kaydetme başarısız: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errDeleteFailed": {
+        "message": "Silme başarısız: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "msgModelsFound": {
+        "message": "$1 model bulundu.",
+        "placeholders": {
+            "count": { "content": "$1" }
+        }
+    }
+}

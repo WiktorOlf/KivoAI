@@ -1,0 +1,150 @@
+{
+    "extName": { "message": "KivoAI" },
+    "extDescription": { "message": "Assistente browser autonomo incentrato sulla privacy, basato su intelligenza artificiale locale." },
+
+    "promptLabel": { "message": "Fai una domanda o imposta un obiettivo" },
+    "promptPlaceholder": { "message": "es. 'Compila questo modulo' o 'Di cosa parla questa pagina?'..." },
+    "btnDictate": { "message": "Detta comando" },
+    "btnSubmit": { "message": "Invia" },
+    "btnStop": { "message": "Ferma" },
+
+    "titleAutofill": { "message": "Profili di compilazione automatica" },
+    "titleSettings": { "message": "Impostazioni" },
+    "titleDictatePrompt": { "message": "Detta comando" },
+    "titleAiExplanation": { "message": "Spiegazione IA" },
+    "titleBack": { "message": "Indietro" },
+
+    "btnDismiss": { "message": "Chiudi" },
+    "btnSteps": { "message": "Passaggi" },
+    "btnHide": { "message": "Nascondi" },
+
+    "statusConnecting": { "message": "Connessione alla scheda attiva..." },
+    "statusReady": { "message": "Pronto" },
+    "statusTranscribing": { "message": "Trascrizione della voce..." },
+    "statusSpeechShort": { "message": "Audio troppo breve o vuoto." },
+    "statusDeliberating": { "message": "Analisi in corso..." },
+    "statusStopped": { "message": "Interrotto dall'utente." },
+    "statusInspecting": { "message": "Ispezione dello stato della pagina..." },
+    "statusRedacting": { "message": "Oscuramento dei dati personali (PII)..." },
+    "statusExplanation": { "message": "Spiegazione fornita." },
+    "statusNoSpeech": { "message": "Nessuna voce chiara rilevata." },
+    "statusListeningWait": { "message": "In ascolto... Pronuncia il tuo comando." },
+    "statusProcessingSpeech": { "message": "Elaborazione della voce..." },
+    "statusTaskFinished": { "message": "Attività completata!" },
+
+    "titleListening": { "message": "In ascolto... (L'invio sarà automatico quando smetti di parlare)" },
+    "lblListening": { "message": "In ascolto... (Parla ora)" },
+    "titleDictate": { "message": "Detta comando" },
+
+    "errNoInput": { "message": "Inserisci un obiettivo o fai una domanda." },
+    "errMicRequired": { "message": "È richiesta l'autorizzazione per il microfono. Apertura della scheda di configurazione..." },
+    "errDeleteOnlyProfile": { "message": "Impossibile eliminare l'unico profilo rimanente." },
+    "errNoModels": { "message": "Nessun modello trovato." },
+
+    "headerAutofill": { "message": "Profili di compilazione automatica" },
+    "lblSelectProfile": { "message": "Seleziona profilo" },
+    "lblActiveProfile": { "message": " (Attivo)" },
+    "titleNewProfile": { "message": "Aggiungi nuovo profilo" },
+    "btnNewProfile": { "message": "+ Nuovo" },
+    "titleDeleteProfile": { "message": "Elimina il profilo corrente" },
+    "btnDeleteProfile": { "message": "Elimina" },
+    "lblNewProfileName": { "message": "Nuovo profilo" },
+    "msgEnterProfileDetails": { "message": "Inserisci i dettagli del profilo e clicca su Salva." },
+    "msgProfileRemoved": { "message": "Profilo rimosso." },
+    "msgProfileSaved": { "message": "Profilo salvato." },
+
+    "lblProfileName": { "message": "Nome del profilo (Etichetta)" },
+    "phProfileName": { "message": "es. Personale, Lavoro, Alex" },
+    "lblUsername": { "message": "Nome utente / ID utente" },
+    "phUsername": { "message": "es. mrossi99" },
+    "lblFirstName": { "message": "Nome" },
+    "phFirstName": { "message": "Mario" },
+    "lblMiddleName": { "message": "Secondo nome" },
+    "phMiddleName": { "message": "Luigi" },
+    "lblLastName": { "message": "Cognome" },
+    "phLastName": { "message": "Rossi" },
+    "lblEmail": { "message": "Email" },
+    "phEmail": { "message": "mario@esempio.it" },
+    "lblPhone": { "message": "Telefono" },
+    "phPhone": { "message": "+39 333 123 4567" },
+    "lblAddress": { "message": "Indirizzo" },
+    "phAddress": { "message": "Via Roma 123" },
+    "lblCity": { "message": "Città" },
+    "phCity": { "message": "Roma" },
+    "lblState": { "message": "Stato / Provincia" },
+    "phState": { "message": "RM" },
+    "lblZip": { "message": "CAP" },
+    "phZip": { "message": "00100" },
+    "lblCountry": { "message": "Nazione" },
+    "phCountry": { "message": "Italia" },
+    "btnSaveProfile": { "message": "Salva profilo attivo" },
+
+    "headerSettings": { "message": "Impostazioni" },
+    "lblTheme": { "message": "Tema" },
+    "themeGraphite": { "message": "Grafite scuro (Grigio scuro/Nero)" },
+    "themeClean": { "message": "Sfondo pulito (Chiaro minimale)" },
+    "themeIndigo": { "message": "Indaco profondo scuro" },
+    "themeLavender": { "message": "Lavanda chiaro" },
+    "lblMaxSteps": { "message": "Limite di passaggi autonomi" },
+    "lblServerUrl": { "message": "URL del server Open WebUI" },
+    "phServerUrl": { "message": "https://openwebui.esempio.it" },
+    "lblApiKey": { "message": "Chiave API" },
+    "phApiKey": { "message": "sk-..." },
+    "lblModel": { "message": "Modello di visione" },
+    "btnRefresh": { "message": "Aggiorna" },
+    "phModel": { "message": "Gemma 4" },
+    "btnSaveSettings": { "message": "Salva" },
+    "btnTestSettings": { "message": "Test" },
+    "msgSettingsSaved": { "message": "Impostazioni salvate." },
+
+    "stepCounter": {
+        "message": "Passaggio $1/$2",
+        "description": "Shows current step out of total max steps",
+        "placeholders": {
+            "current": { "content": "$1" },
+            "total": { "content": "$2" }
+        }
+    },
+    "statusExecuting": {
+        "message": "Esecuzione di: $1...",
+        "placeholders": {
+            "actionName": { "content": "$1" }
+        }
+    },
+    "statusRecognized": {
+        "message": "Riconosciuto: \"$1\"",
+        "placeholders": {
+            "text": { "content": "$1" }
+        }
+    },
+    "errDictation": {
+        "message": "Dettatura non riuscita: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errMicError": {
+        "message": "Errore del microfono: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errSaveFailed": {
+        "message": "Salvataggio non riuscito: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errDeleteFailed": {
+        "message": "Eliminazione non riuscita: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "msgModelsFound": {
+        "message": "Trovato/i $1 modello/i.",
+        "placeholders": {
+            "count": { "content": "$1" }
+        }
+    }
+}

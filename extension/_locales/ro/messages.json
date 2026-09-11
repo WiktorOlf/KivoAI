@@ -1,0 +1,150 @@
+{
+    "extName": { "message": "KivoAI" },
+    "extDescription": { "message": "Un asistent de browser autonom, axat pe confidențialitate, alimentat de inteligență artificială locală." },
+
+    "promptLabel": { "message": "Puneți o întrebare sau stabiliți un obiectiv" },
+    "promptPlaceholder": { "message": "de ex. 'Completează acest formular' sau 'Despre ce este această pagină?'..." },
+    "btnDictate": { "message": "Dictați comanda" },
+    "btnSubmit": { "message": "Trimite" },
+    "btnStop": { "message": "Oprește" },
+
+    "titleAutofill": { "message": "Profiluri de completare automată" },
+    "titleSettings": { "message": "Setări" },
+    "titleDictatePrompt": { "message": "Dictați comanda" },
+    "titleAiExplanation": { "message": "Explicație AI" },
+    "titleBack": { "message": "Înapoi" },
+
+    "btnDismiss": { "message": "Închide" },
+    "btnSteps": { "message": "Pași" },
+    "btnHide": { "message": "Ascunde" },
+
+    "statusConnecting": { "message": "Se conectează la fila activă..." },
+    "statusReady": { "message": "Pregătit" },
+    "statusTranscribing": { "message": "Se transcrie vocea..." },
+    "statusSpeechShort": { "message": "Vorbirea este prea scurtă sau goală." },
+    "statusDeliberating": { "message": "Se analizează..." },
+    "statusStopped": { "message": "Oprit de utilizator." },
+    "statusInspecting": { "message": "Se inspectează starea paginii..." },
+    "statusRedacting": { "message": "Se ascund datele cu caracter personal..." },
+    "statusExplanation": { "message": "Explicație furnizată." },
+    "statusNoSpeech": { "message": "Nu s-a auzit nicio voce clară." },
+    "statusListeningWait": { "message": "Ascult... Rostiți comanda." },
+    "statusProcessingSpeech": { "message": "Se procesează vorbirea..." },
+    "statusTaskFinished": { "message": "Sarcină finalizată!" },
+
+    "titleListening": { "message": "Ascult... (Se va trimite automat când încetați să vorbiți)" },
+    "lblListening": { "message": "Ascult... (Vorbiți acum)" },
+    "titleDictate": { "message": "Dictați comanda" },
+
+    "errNoInput": { "message": "Vă rugăm să introduceți un obiectiv sau să puneți o întrebare." },
+    "errMicRequired": { "message": "Este necesară permisiunea pentru microfon. Se deschide fila de setări..." },
+    "errDeleteOnlyProfile": { "message": "Nu se poate șterge singurul profil rămas." },
+    "errNoModels": { "message": "Nu s-a găsit niciun model." },
+
+    "headerAutofill": { "message": "Profiluri de completare automată" },
+    "lblSelectProfile": { "message": "Selectați profilul" },
+    "lblActiveProfile": { "message": " (Activ)" },
+    "titleNewProfile": { "message": "Adăugați un profil nou" },
+    "btnNewProfile": { "message": "+ Nou" },
+    "titleDeleteProfile": { "message": "Ștergeți profilul curent" },
+    "btnDeleteProfile": { "message": "Șterge" },
+    "lblNewProfileName": { "message": "Profil nou" },
+    "msgEnterProfileDetails": { "message": "Introduceți detaliile profilului și faceți clic pe Salvare." },
+    "msgProfileRemoved": { "message": "Profil șters." },
+    "msgProfileSaved": { "message": "Profil salvat." },
+
+    "lblProfileName": { "message": "Nume profil (Etichetă)" },
+    "phProfileName": { "message": "de ex. Personal, Serviciu, Andrei" },
+    "lblUsername": { "message": "Nume de utilizator / ID" },
+    "phUsername": { "message": "de ex. andrei99" },
+    "lblFirstName": { "message": "Prenume" },
+    "phFirstName": { "message": "Andrei" },
+    "lblMiddleName": { "message": "Al doilea prenume" },
+    "phMiddleName": { "message": "Cristian" },
+    "lblLastName": { "message": "Nume de familie" },
+    "phLastName": { "message": "Popescu" },
+    "lblEmail": { "message": "E-mail" },
+    "phEmail": { "message": "andrei@exemplu.ro" },
+    "lblPhone": { "message": "Telefon" },
+    "phPhone": { "message": "+40 712 345 678" },
+    "lblAddress": { "message": "Adresă" },
+    "phAddress": { "message": "Str. Victoriei nr. 1" },
+    "lblCity": { "message": "Oraș" },
+    "phCity": { "message": "București" },
+    "lblState": { "message": "Județ / Stat" },
+    "phState": { "message": "București" },
+    "lblZip": { "message": "Cod poștal" },
+    "phZip": { "message": "010011" },
+    "lblCountry": { "message": "Țară" },
+    "phCountry": { "message": "România" },
+    "btnSaveProfile": { "message": "Salvează profilul activ" },
+
+    "headerSettings": { "message": "Setări" },
+    "lblTheme": { "message": "Temă" },
+    "themeGraphite": { "message": "Grafit întunecat (Gri închis/Negru)" },
+    "themeClean": { "message": "Foaie albă (Deschis minimal)" },
+    "themeIndigo": { "message": "Indigo profund întunecat" },
+    "themeLavender": { "message": "Lavandă deschisă" },
+    "lblMaxSteps": { "message": "Limită de pași autonomi" },
+    "lblServerUrl": { "message": "URL server Open WebUI" },
+    "phServerUrl": { "message": "https://openwebui.exemplu.ro" },
+    "lblApiKey": { "message": "Cheie API" },
+    "phApiKey": { "message": "sk-..." },
+    "lblModel": { "message": "Model de viziune (Vision Model)" },
+    "btnRefresh": { "message": "Actualizează" },
+    "phModel": { "message": "Gemma 4" },
+    "btnSaveSettings": { "message": "Salvează" },
+    "btnTestSettings": { "message": "Testează" },
+    "msgSettingsSaved": { "message": "Setări salvate." },
+
+    "stepCounter": {
+        "message": "Pasul $1/$2",
+        "description": "Shows current step out of total max steps",
+        "placeholders": {
+            "current": { "content": "$1" },
+            "total": { "content": "$2" }
+        }
+    },
+    "statusExecuting": {
+        "message": "Se execută: $1...",
+        "placeholders": {
+            "actionName": { "content": "$1" }
+        }
+    },
+    "statusRecognized": {
+        "message": "Recunoscut: \"$1\"",
+        "placeholders": {
+            "text": { "content": "$1" }
+        }
+    },
+    "errDictation": {
+        "message": "Dictarea a eșuat: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errMicError": {
+        "message": "Eroare de microfon: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errSaveFailed": {
+        "message": "Salvarea a eșuat: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errDeleteFailed": {
+        "message": "Ștergerea a eșuat: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "msgModelsFound": {
+        "message": "S-a(u) găsit $1 model(e).",
+        "placeholders": {
+            "count": { "content": "$1" }
+        }
+    }
+}

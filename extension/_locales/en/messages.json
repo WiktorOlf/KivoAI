@@ -1,0 +1,150 @@
+{
+    "extName": { "message": "KivoAI" },
+    "extDescription": { "message": "Privacy-first autonomous browser assistant powered by local AI." },
+
+    "promptLabel": { "message": "Ask a question or give a goal" },
+    "promptPlaceholder": { "message": "e.g. 'Fill out this form' or 'What is this page?'..." },
+    "btnDictate": { "message": "Dictate Prompt" },
+    "btnSubmit": { "message": "Submit" },
+    "btnStop": { "message": "Stop" },
+
+    "titleAutofill": { "message": "Autofill Profiles" },
+    "titleSettings": { "message": "Settings" },
+    "titleDictatePrompt": { "message": "Dictate prompt" },
+    "titleAiExplanation": { "message": "AI Explanation" },
+    "titleBack": { "message": "Back" },
+
+    "btnDismiss": { "message": "Dismiss" },
+    "btnSteps": { "message": "Steps" },
+    "btnHide": { "message": "Hide" },
+
+    "statusConnecting": { "message": "Connecting to active tab..." },
+    "statusReady": { "message": "Ready" },
+    "statusTranscribing": { "message": "Transcribing voice..." },
+    "statusSpeechShort": { "message": "Speech too short or empty." },
+    "statusDeliberating": { "message": "Deliberating..." },
+    "statusStopped": { "message": "Stopped by user." },
+    "statusInspecting": { "message": "Inspecting page state..." },
+    "statusRedacting": { "message": "Redacting visual PII..." },
+    "statusExplanation": { "message": "Explanation provided." },
+    "statusNoSpeech": { "message": "No clear speech heard." },
+    "statusListeningWait": { "message": "Listening... Speak your command." },
+    "statusProcessingSpeech": { "message": "Processing speech..." },
+    "statusTaskFinished": { "message": "Task finished!" },
+
+    "titleListening": { "message": "Listening... (Will auto-submit when you stop talking)" },
+    "lblListening": { "message": "Listening... (Speak now)" },
+    "titleDictate": { "message": "Dictate prompt" },
+
+    "errNoInput": { "message": "Please enter a goal or ask a question." },
+    "errMicRequired": { "message": "Microphone permission required. Opening setup tab..." },
+    "errDeleteOnlyProfile": { "message": "Cannot delete the only remaining profile." },
+    "errNoModels": { "message": "No models found." },
+
+    "headerAutofill": { "message": "Autofill Profiles" },
+    "lblSelectProfile": { "message": "Select Profile" },
+    "lblActiveProfile": { "message": " (Active)" },
+    "titleNewProfile": { "message": "Add new profile" },
+    "btnNewProfile": { "message": "+ New" },
+    "titleDeleteProfile": { "message": "Delete current profile" },
+    "btnDeleteProfile": { "message": "Delete" },
+    "lblNewProfileName": { "message": "New Profile" },
+    "msgEnterProfileDetails": { "message": "Enter profile details and click Save." },
+    "msgProfileRemoved": { "message": "Profile removed." },
+    "msgProfileSaved": { "message": "Profile saved." },
+
+    "lblProfileName": { "message": "Profile Name (Label)" },
+    "phProfileName": { "message": "e.g. Personal, Work, Alex" },
+    "lblUsername": { "message": "Username / User ID" },
+    "phUsername": { "message": "e.g. jdoe99" },
+    "lblFirstName": { "message": "First Name" },
+    "phFirstName": { "message": "Jane" },
+    "lblMiddleName": { "message": "Middle" },
+    "phMiddleName": { "message": "Marie" },
+    "lblLastName": { "message": "Last Name" },
+    "phLastName": { "message": "Doe" },
+    "lblEmail": { "message": "Email" },
+    "phEmail": { "message": "jane@example.com" },
+    "lblPhone": { "message": "Phone" },
+    "phPhone": { "message": "+1 555 0199" },
+    "lblAddress": { "message": "Street Address" },
+    "phAddress": { "message": "123 Market Street" },
+    "lblCity": { "message": "City" },
+    "phCity": { "message": "San Francisco" },
+    "lblState": { "message": "State / Province" },
+    "phState": { "message": "CA" },
+    "lblZip": { "message": "Postal / ZIP Code" },
+    "phZip": { "message": "94105" },
+    "lblCountry": { "message": "Country" },
+    "phCountry": { "message": "United States" },
+    "btnSaveProfile": { "message": "Save Active Profile" },
+
+    "headerSettings": { "message": "Settings" },
+    "lblTheme": { "message": "Theme" },
+    "themeGraphite": { "message": "Graphite Dark (Dark Grey/Black)" },
+    "themeClean": { "message": "Clean Slate (Light Minimal)" },
+    "themeIndigo": { "message": "Deep Indigo Dark" },
+    "themeLavender": { "message": "Lavender Light" },
+    "lblMaxSteps": { "message": "Autonomous Step Limit" },
+    "lblServerUrl": { "message": "Open WebUI Server URL" },
+    "phServerUrl": { "message": "https://openwebui.example.com" },
+    "lblApiKey": { "message": "API Key" },
+    "phApiKey": { "message": "sk-..." },
+    "lblModel": { "message": "Vision Model" },
+    "btnRefresh": { "message": "Refresh" },
+    "phModel": { "message": "Gemma 4" },
+    "btnSaveSettings": { "message": "Save" },
+    "btnTestSettings": { "message": "Test" },
+    "msgSettingsSaved": { "message": "Settings saved." },
+
+    "stepCounter": {
+        "message": "Step $1/$2",
+        "description": "Shows current step out of total max steps",
+        "placeholders": {
+            "current": { "content": "$1" },
+            "total": { "content": "$2" }
+        }
+    },
+    "statusExecuting": {
+        "message": "Executing: $1...",
+        "placeholders": {
+            "actionName": { "content": "$1" }
+        }
+    },
+    "statusRecognized": {
+        "message": "Recognized: \"$1\"",
+        "placeholders": {
+            "text": { "content": "$1" }
+        }
+    },
+    "errDictation": {
+        "message": "Dictation failed: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errMicError": {
+        "message": "Microphone error: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errSaveFailed": {
+        "message": "Save failed: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errDeleteFailed": {
+        "message": "Delete failed: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "msgModelsFound": {
+        "message": "Found $1 model(s).",
+        "placeholders": {
+            "count": { "content": "$1" }
+        }
+    }
+}

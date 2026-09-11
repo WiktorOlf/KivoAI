@@ -1,0 +1,150 @@
+{
+    "extName": { "message": "KivoAI" },
+    "extDescription": { "message": "Autonoms pārlūka asistents ar uzsvaru uz privātumu, ko darbina vietējais mākslīgais intelekts." },
+
+    "promptLabel": { "message": "Uzdodiet jautājumu vai norādiet mērķi" },
+    "promptPlaceholder": { "message": "piem., 'Aizpildi šo veidlapu' vai 'Kas šī ir par lapu?'..." },
+    "btnDictate": { "message": "Diktēt komandu" },
+    "btnSubmit": { "message": "Iesniegt" },
+    "btnStop": { "message": "Apturēt" },
+
+    "titleAutofill": { "message": "Automātiskās aizpildīšanas profili" },
+    "titleSettings": { "message": "Iestatījumi" },
+    "titleDictatePrompt": { "message": "Diktēt komandu" },
+    "titleAiExplanation": { "message": "AI skaidrojums" },
+    "titleBack": { "message": "Atpakaļ" },
+
+    "btnDismiss": { "message": "Aizvērt" },
+    "btnSteps": { "message": "Solīši" },
+    "btnHide": { "message": "Paslēpt" },
+
+    "statusConnecting": { "message": "Savienojas ar aktīvo cilni..." },
+    "statusReady": { "message": "Gatavs" },
+    "statusTranscribing": { "message": "Transkribē balsi..." },
+    "statusSpeechShort": { "message": "Balss ir pārāk īsa vai tukša." },
+    "statusDeliberating": { "message": "Analizē..." },
+    "statusStopped": { "message": "Lietotājs apturējis." },
+    "statusInspecting": { "message": "Pārbauda lapas stāvokli..." },
+    "statusRedacting": { "message": "Slēpj personas datus..." },
+    "statusExplanation": { "message": "Skaidrojums sniegts." },
+    "statusNoSpeech": { "message": "Nav sadzirdēta skaidra runa." },
+    "statusListeningWait": { "message": "Klausos... Izsakiet savu komandu." },
+    "statusProcessingSpeech": { "message": "Apstrādā runu..." },
+    "statusTaskFinished": { "message": "Uzdevums pabeigts!" },
+
+    "titleListening": { "message": "Klausos... (Tiks nosūtīts automātiski, kad beigsiet runāt)" },
+    "lblListening": { "message": "Klausos... (Runājiet tagad)" },
+    "titleDictate": { "message": "Diktēt komandu" },
+
+    "errNoInput": { "message": "Lūdzu, ievadiet mērķi vai uzdodiet jautājumu." },
+    "errMicRequired": { "message": "Nepieciešama mikrofona atļauja. Atver iestatījumu cilni..." },
+    "errDeleteOnlyProfile": { "message": "Nevar dzēst vienīgo atlikušo profilu." },
+    "errNoModels": { "message": "Modeļi nav atrasti." },
+
+    "headerAutofill": { "message": "Automātiskās aizpildīšanas profili" },
+    "lblSelectProfile": { "message": "Izvēlēties profilu" },
+    "lblActiveProfile": { "message": " (Aktīvs)" },
+    "titleNewProfile": { "message": "Pievienot jaunu profilu" },
+    "btnNewProfile": { "message": "+ Jauns" },
+    "titleDeleteProfile": { "message": "Dzēst pašreizējo profilu" },
+    "btnDeleteProfile": { "message": "Dzēst" },
+    "lblNewProfileName": { "message": "Jauns profils" },
+    "msgEnterProfileDetails": { "message": "Ievadiet profila datus un noklikšķiniet uz Saglabāt." },
+    "msgProfileRemoved": { "message": "Profils noņemts." },
+    "msgProfileSaved": { "message": "Profils saglabāts." },
+
+    "lblProfileName": { "message": "Profila nosaukums (Etiķete)" },
+    "phProfileName": { "message": "piem., Personīgais, Darbs, Jānis" },
+    "lblUsername": { "message": "Lietotājvārds / ID" },
+    "phUsername": { "message": "piem., janis99" },
+    "lblFirstName": { "message": "Vārds" },
+    "phFirstName": { "message": "Jānis" },
+    "lblMiddleName": { "message": "Otrais vārds" },
+    "phMiddleName": { "message": "Pēteris" },
+    "lblLastName": { "message": "Uzvārds" },
+    "phLastName": { "message": "Bērziņš" },
+    "lblEmail": { "message": "E-pasts" },
+    "phEmail": { "message": "janis@piemers.lv" },
+    "lblPhone": { "message": "Tālrunis" },
+    "phPhone": { "message": "+371 20123456" },
+    "lblAddress": { "message": "Ielas adrese" },
+    "phAddress": { "message": "Brīvības iela 1" },
+    "lblCity": { "message": "Pilsēta" },
+    "phCity": { "message": "Rīga" },
+    "lblState": { "message": "Novads / Valsts daļa" },
+    "phState": { "message": "Rīga" },
+    "lblZip": { "message": "Pasta indekss" },
+    "phZip": { "message": "LV-1010" },
+    "lblCountry": { "message": "Valsts" },
+    "phCountry": { "message": "Latvija" },
+    "btnSaveProfile": { "message": "Saglabāt aktīvo profilu" },
+
+    "headerSettings": { "message": "Iestatījumi" },
+    "lblTheme": { "message": "Tēma" },
+    "themeGraphite": { "message": "Tumšais grafīts (Tumši pelēks/Melns)" },
+    "themeClean": { "message": "Tīra lapa (Gaiša minimāla)" },
+    "themeIndigo": { "message": "Dziļais indigo tumšais" },
+    "themeLavender": { "message": "Gaišā lavanda" },
+    "lblMaxSteps": { "message": "Autonomo soļu limits" },
+    "lblServerUrl": { "message": "Open WebUI servera URL" },
+    "phServerUrl": { "message": "https://openwebui.piemers.lv" },
+    "lblApiKey": { "message": "API atslēga" },
+    "phApiKey": { "message": "sk-..." },
+    "lblModel": { "message": "Vīzijas modelis (Vision Model)" },
+    "btnRefresh": { "message": "Atsvaidzināt" },
+    "phModel": { "message": "Gemma 4" },
+    "btnSaveSettings": { "message": "Saglabāt" },
+    "btnTestSettings": { "message": "Testēt" },
+    "msgSettingsSaved": { "message": "Iestatījumi saglabāti." },
+
+    "stepCounter": {
+        "message": "Solis $1/$2",
+        "description": "Shows current step out of total max steps",
+        "placeholders": {
+            "current": { "content": "$1" },
+            "total": { "content": "$2" }
+        }
+    },
+    "statusExecuting": {
+        "message": "Izpilda: $1...",
+        "placeholders": {
+            "actionName": { "content": "$1" }
+        }
+    },
+    "statusRecognized": {
+        "message": "Atpazīts: \"$1\"",
+        "placeholders": {
+            "text": { "content": "$1" }
+        }
+    },
+    "errDictation": {
+        "message": "Diktēšana neizdevās: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errMicError": {
+        "message": "Mikrofona kļūda: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errSaveFailed": {
+        "message": "Saglabāšana neizdevās: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errDeleteFailed": {
+        "message": "Dzēšana neizdevās: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "msgModelsFound": {
+        "message": "Atrasti $1 modelis(-ši).",
+        "placeholders": {
+            "count": { "content": "$1" }
+        }
+    }
+}

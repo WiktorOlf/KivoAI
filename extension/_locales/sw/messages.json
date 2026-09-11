@@ -1,0 +1,150 @@
+{
+    "extName": { "message": "KivoAI" },
+    "extDescription": { "message": "Msaidizi wa kivinjari wa kujitegemea anayetanguliza faragha, anayeendeshwa na AI ya ndani." },
+
+    "promptLabel": { "message": "Uliza swali au weka lengo" },
+    "promptPlaceholder": { "message": "mf. 'Jaza fomu hii' au 'Ukurasa huu unahusu nini?'..." },
+    "btnDictate": { "message": "Tamka Agizo" },
+    "btnSubmit": { "message": "Wasilisha" },
+    "btnStop": { "message": "Simamisha" },
+
+    "titleAutofill": { "message": "Profaili za Kujaza Kiotomatiki" },
+    "titleSettings": { "message": "Mipangilio" },
+    "titleDictatePrompt": { "message": "Tamka agizo" },
+    "titleAiExplanation": { "message": "Ufafanuzi wa AI" },
+    "titleBack": { "message": "Rudi" },
+
+    "btnDismiss": { "message": "Funga" },
+    "btnSteps": { "message": "Hatua" },
+    "btnHide": { "message": "Ficha" },
+
+    "statusConnecting": { "message": "Inaunganisha kwenye kichupo kinachotumika..." },
+    "statusReady": { "message": "Tayari" },
+    "statusTranscribing": { "message": "Inanakili sauti..." },
+    "statusSpeechShort": { "message": "Sauti ni fupi mno au tupu." },
+    "statusDeliberating": { "message": "Inachanganua..." },
+    "statusStopped": { "message": "Imesimamishwa na mtumiaji." },
+    "statusInspecting": { "message": "Inakagua hali ya ukurasa..." },
+    "statusRedacting": { "message": "Inaficha taarifa binafsi (PII)..." },
+    "statusExplanation": { "message": "Ufafanuzi umetolewa." },
+    "statusNoSpeech": { "message": "Hakuna sauti iliyosikika vizuri." },
+    "statusListeningWait": { "message": "Inasikiliza... Tamka amri yako." },
+    "statusProcessingSpeech": { "message": "Inachakata sauti..." },
+    "statusTaskFinished": { "message": "Kazi imekamilika!" },
+
+    "titleListening": { "message": "Inasikiliza... (Itawasilisha kiotomatiki ukimaliza kuongea)" },
+    "lblListening": { "message": "Inasikiliza... (Ongea sasa)" },
+    "titleDictate": { "message": "Tamka agizo" },
+
+    "errNoInput": { "message": "Tafadhali weka lengo au uliza swali." },
+    "errMicRequired": { "message": "Ruhusa ya maikrofoni inahitajika. Inafungua kichupo cha mipangilio..." },
+    "errDeleteOnlyProfile": { "message": "Huwezi kufuta profaili pekee iliyosalia." },
+    "errNoModels": { "message": "Hakuna modeli zilizopatikana." },
+
+    "headerAutofill": { "message": "Profaili za Kujaza Kiotomatiki" },
+    "lblSelectProfile": { "message": "Chagua Profaili" },
+    "lblActiveProfile": { "message": " (Inayotumika)" },
+    "titleNewProfile": { "message": "Ongeza profaili mpya" },
+    "btnNewProfile": { "message": "+ Mpya" },
+    "titleDeleteProfile": { "message": "Futa profaili ya sasa" },
+    "btnDeleteProfile": { "message": "Futa" },
+    "lblNewProfileName": { "message": "Profaili Mpya" },
+    "msgEnterProfileDetails": { "message": "Ingiza maelezo ya profaili kisha bofya Hifadhi." },
+    "msgProfileRemoved": { "message": "Profaili imeondolewa." },
+    "msgProfileSaved": { "message": "Profaili imehifadhiwa." },
+
+    "lblProfileName": { "message": "Jina la Profaili (Lebo)" },
+    "phProfileName": { "message": "mf. Binafsi, Kazi, Alex" },
+    "lblUsername": { "message": "Jina la Mtumiaji / Kitambulisho" },
+    "phUsername": { "message": "mf. jdoe99" },
+    "lblFirstName": { "message": "Jina la Kwanza" },
+    "phFirstName": { "message": "Amina" },
+    "lblMiddleName": { "message": "Jina la Kati" },
+    "phMiddleName": { "message": "Baraka" },
+    "lblLastName": { "message": "Jina la Ukoo" },
+    "phLastName": { "message": "Juma" },
+    "lblEmail": { "message": "Barua Pepe" },
+    "phEmail": { "message": "amina@mfano.co.tz" },
+    "lblPhone": { "message": "Simu" },
+    "phPhone": { "message": "+255 700 123456" },
+    "lblAddress": { "message": "Anwani ya Mtaa" },
+    "phAddress": { "message": "123 Mtaa wa Uhuru" },
+    "lblCity": { "message": "Jiji" },
+    "phCity": { "message": "Dar es Salaam" },
+    "lblState": { "message": "Mkoa / Jimbo" },
+    "phState": { "message": "Dar es Salaam" },
+    "lblZip": { "message": "Msimbo wa Posta" },
+    "phZip": { "message": "11101" },
+    "lblCountry": { "message": "Nchi" },
+    "phCountry": { "message": "Tanzania" },
+    "btnSaveProfile": { "message": "Hifadhi Profaili Inayotumika" },
+
+    "headerSettings": { "message": "Mipangilio" },
+    "lblTheme": { "message": "Mandhari" },
+    "themeGraphite": { "message": "Giza la Grafiti (Kijivu Giza/Nyeusi)" },
+    "themeClean": { "message": "Safi na Nyeupe (Nyeupe Ndogo)" },
+    "themeIndigo": { "message": "Giza la Indigo" },
+    "themeLavender": { "message": "Nuru ya Lavenda" },
+    "lblMaxSteps": { "message": "Kikomo cha Hatua za Kujitegemea" },
+    "lblServerUrl": { "message": "URL ya Seva ya Open WebUI" },
+    "phServerUrl": { "message": "https://openwebui.mfano.com" },
+    "lblApiKey": { "message": "Ufunguo wa API" },
+    "phApiKey": { "message": "sk-..." },
+    "lblModel": { "message": "Modeli ya Maono (Vision Model)" },
+    "btnRefresh": { "message": "Onyesha upya" },
+    "phModel": { "message": "Gemma 4" },
+    "btnSaveSettings": { "message": "Hifadhi" },
+    "btnTestSettings": { "message": "Jaribu" },
+    "msgSettingsSaved": { "message": "Mipangilio imehifadhiwa." },
+
+    "stepCounter": {
+        "message": "Hatua $1/$2",
+        "description": "Shows current step out of total max steps",
+        "placeholders": {
+            "current": { "content": "$1" },
+            "total": { "content": "$2" }
+        }
+    },
+    "statusExecuting": {
+        "message": "Inatekeleza: $1...",
+        "placeholders": {
+            "actionName": { "content": "$1" }
+        }
+    },
+    "statusRecognized": {
+        "message": "Imetambuliwa: \"$1\"",
+        "placeholders": {
+            "text": { "content": "$1" }
+        }
+    },
+    "errDictation": {
+        "message": "Kutamka kumeshindikana: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errMicError": {
+        "message": "Hitilafu ya maikrofoni: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errSaveFailed": {
+        "message": "Kuhifadhi kumeshindikana: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errDeleteFailed": {
+        "message": "Kufuta kumeshindikana: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "msgModelsFound": {
+        "message": "Imepata modeli $1.",
+        "placeholders": {
+            "count": { "content": "$1" }
+        }
+    }
+}

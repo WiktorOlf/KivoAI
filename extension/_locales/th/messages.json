@@ -1,0 +1,150 @@
+{
+    "extName": { "message": "KivoAI" },
+    "extDescription": { "message": "ผู้ช่วยเบราว์เซอร์อัตโนมัติที่เน้นความเป็นส่วนตัว ทำงานด้วย AI ภายในเครื่อง" },
+
+    "promptLabel": { "message": "ถามคำถามหรือกำหนดเป้าหมาย" },
+    "promptPlaceholder": { "message": "เช่น 'กรอกแบบฟอร์มนี้' หรือ 'หน้านี้คืออะไร?'..." },
+    "btnDictate": { "message": "พูดคำสั่ง" },
+    "btnSubmit": { "message": "ส่ง" },
+    "btnStop": { "message": "หยุด" },
+
+    "titleAutofill": { "message": "โปรไฟล์ป้อนอัตโนมัติ" },
+    "titleSettings": { "message": "การตั้งค่า" },
+    "titleDictatePrompt": { "message": "พูดคำสั่ง" },
+    "titleAiExplanation": { "message": "คำอธิบายจาก AI" },
+    "titleBack": { "message": "กลับ" },
+
+    "btnDismiss": { "message": "ปิด" },
+    "btnSteps": { "message": "ขั้นตอน" },
+    "btnHide": { "message": "ซ่อน" },
+
+    "statusConnecting": { "message": "กำลังเชื่อมต่อกับแท็บที่ใช้งานอยู่..." },
+    "statusReady": { "message": "พร้อมใช้งาน" },
+    "statusTranscribing": { "message": "กำลังถอดเสียง..." },
+    "statusSpeechShort": { "message": "เสียงพูดสั้นเกินไปหรือไม่มีเสียง" },
+    "statusDeliberating": { "message": "กำลังวิเคราะห์..." },
+    "statusStopped": { "message": "ถูกหยุดโดยผู้ใช้" },
+    "statusInspecting": { "message": "กำลังตรวจสอบสถานะหน้าเว็บ..." },
+    "statusRedacting": { "message": "กำลังปกปิดข้อมูลส่วนบุคคล..." },
+    "statusExplanation": { "message": "ให้คำอธิบายแล้ว" },
+    "statusNoSpeech": { "message": "ไม่ได้ยินเสียงพูดที่ชัดเจน" },
+    "statusListeningWait": { "message": "กำลังฟัง... พูดคำสั่งของคุณได้เลย" },
+    "statusProcessingSpeech": { "message": "กำลังประมวลผลเสียง..." },
+    "statusTaskFinished": { "message": "งานเสร็จสมบูรณ์!" },
+
+    "titleListening": { "message": "กำลังฟัง... (จะส่งคำสั่งอัตโนมัติเมื่อคุณหยุดพูด)" },
+    "lblListening": { "message": "กำลังฟัง... (พูดได้เลย)" },
+    "titleDictate": { "message": "พูดคำสั่ง" },
+
+    "errNoInput": { "message": "โปรดระบุเป้าหมายหรือถามคำถาม" },
+    "errMicRequired": { "message": "ต้องใช้สิทธิ์ไมโครโฟน กำลังเปิดแท็บการตั้งค่า..." },
+    "errDeleteOnlyProfile": { "message": "ไม่สามารถลบโปรไฟล์ที่เหลืออยู่เพียงอันเดียวได้" },
+    "errNoModels": { "message": "ไม่พบโมเดล" },
+
+    "headerAutofill": { "message": "โปรไฟล์ป้อนอัตโนมัติ" },
+    "lblSelectProfile": { "message": "เลือกโปรไฟล์" },
+    "lblActiveProfile": { "message": " (กำลังใช้งาน)" },
+    "titleNewProfile": { "message": "เพิ่มโปรไฟล์ใหม่" },
+    "btnNewProfile": { "message": "+ สร้างใหม่" },
+    "titleDeleteProfile": { "message": "ลบโปรไฟล์ปัจจุบัน" },
+    "btnDeleteProfile": { "message": "ลบ" },
+    "lblNewProfileName": { "message": "โปรไฟล์ใหม่" },
+    "msgEnterProfileDetails": { "message": "กรอกรายละเอียดโปรไฟล์แล้วคลิกบันทึก" },
+    "msgProfileRemoved": { "message": "ลบโปรไฟล์แล้ว" },
+    "msgProfileSaved": { "message": "บันทึกโปรไฟล์แล้ว" },
+
+    "lblProfileName": { "message": "ชื่อโปรไฟล์ (ป้ายกำกับ)" },
+    "phProfileName": { "message": "เช่น ส่วนตัว, ที่ทำงาน, สมชาย" },
+    "lblUsername": { "message": "ชื่อผู้ใช้ / รหัสผู้ใช้" },
+    "phUsername": { "message": "เช่น somchai99" },
+    "lblFirstName": { "message": "ชื่อ" },
+    "phFirstName": { "message": "สมชาย" },
+    "lblMiddleName": { "message": "ชื่อกลาง" },
+    "phMiddleName": { "message": "-" },
+    "lblLastName": { "message": "นามสกุล" },
+    "phLastName": { "message": "ใจดี" },
+    "lblEmail": { "message": "อีเมล" },
+    "phEmail": { "message": "somchai@example.com" },
+    "lblPhone": { "message": "เบอร์โทรศัพท์" },
+    "phPhone": { "message": "+66 81 234 5678" },
+    "lblAddress": { "message": "ที่อยู่" },
+    "phAddress": { "message": "123 ถ.สุขุมวิท" },
+    "lblCity": { "message": "เมือง / อำเภอ" },
+    "phCity": { "message": "กรุงเทพมหานคร" },
+    "lblState": { "message": "รัฐ / จังหวัด" },
+    "phState": { "message": "กทม." },
+    "lblZip": { "message": "รหัสไปรษณีย์" },
+    "phZip": { "message": "10110" },
+    "lblCountry": { "message": "ประเทศ" },
+    "phCountry": { "message": "ประเทศไทย" },
+    "btnSaveProfile": { "message": "บันทึกโปรไฟล์ที่ใช้งานอยู่" },
+
+    "headerSettings": { "message": "การตั้งค่า" },
+    "lblTheme": { "message": "ธีม" },
+    "themeGraphite": { "message": "กราไฟต์ดาร์ก (เทาเข้ม/ดำ)" },
+    "themeClean": { "message": "คลีนสเลต (สว่างมินิมอล)" },
+    "themeIndigo": { "message": "ดีปอินดิโกดาร์ก" },
+    "themeLavender": { "message": "ลาเวนเดอร์ไลท์" },
+    "lblMaxSteps": { "message": "ขีดจำกัดขั้นตอนอัตโนมัติ" },
+    "lblServerUrl": { "message": "URL ของเซิร์ฟเวอร์ Open WebUI" },
+    "phServerUrl": { "message": "https://openwebui.example.com" },
+    "lblApiKey": { "message": "API Key" },
+    "phApiKey": { "message": "sk-..." },
+    "lblModel": { "message": "โมเดล Vision" },
+    "btnRefresh": { "message": "รีเฟรช" },
+    "phModel": { "message": "Gemma 4" },
+    "btnSaveSettings": { "message": "บันทึก" },
+    "btnTestSettings": { "message": "ทดสอบ" },
+    "msgSettingsSaved": { "message": "บันทึกการตั้งค่าแล้ว" },
+
+    "stepCounter": {
+        "message": "ขั้นตอนที่ $1/$2",
+        "description": "Shows current step out of total max steps",
+        "placeholders": {
+            "current": { "content": "$1" },
+            "total": { "content": "$2" }
+        }
+    },
+    "statusExecuting": {
+        "message": "กำลังดำเนินการ: $1...",
+        "placeholders": {
+            "actionName": { "content": "$1" }
+        }
+    },
+    "statusRecognized": {
+        "message": "ตรวจพบ: \"$1\"",
+        "placeholders": {
+            "text": { "content": "$1" }
+        }
+    },
+    "errDictation": {
+        "message": "การรับคำบอกล้มเหลว: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errMicError": {
+        "message": "ข้อผิดพลาดของไมโครโฟน: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errSaveFailed": {
+        "message": "การบันทึกล้มเหลว: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errDeleteFailed": {
+        "message": "การลบล้มเหลว: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "msgModelsFound": {
+        "message": "พบโมเดล $1 รายการ",
+        "placeholders": {
+            "count": { "content": "$1" }
+        }
+    }
+}

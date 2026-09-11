@@ -1,0 +1,150 @@
+{
+    "extName": { "message": "KivoAI" },
+    "extDescription": { "message": "En privatlivsfokuseret, autonom browserassistent drevet af lokal kunstig intelligens." },
+
+    "promptLabel": { "message": "Stil et spørgsmål eller angiv et mål" },
+    "promptPlaceholder": { "message": "f.eks. 'Udfyld denne formular' eller 'Hvad er denne side?'..." },
+    "btnDictate": { "message": "Dikter kommando" },
+    "btnSubmit": { "message": "Indsend" },
+    "btnStop": { "message": "Stop" },
+
+    "titleAutofill": { "message": "Aut udfyld-profiler" },
+    "titleSettings": { "message": "Indstillinger" },
+    "titleDictatePrompt": { "message": "Dikter kommando" },
+    "titleAiExplanation": { "message": "KI-forklaring" },
+    "titleBack": { "message": "Tilbage" },
+
+    "btnDismiss": { "message": "Luk" },
+    "btnSteps": { "message": "Trin" },
+    "btnHide": { "message": "Skjul" },
+
+    "statusConnecting": { "message": "Opretter forbindelse til aktiv fane..." },
+    "statusReady": { "message": "Klar" },
+    "statusTranscribing": { "message": "Transskriberer tale..." },
+    "statusSpeechShort": { "message": "Talen er for kort eller tom." },
+    "statusDeliberating": { "message": "Analyserer..." },
+    "statusStopped": { "message": "Stoppet af bruger." },
+    "statusInspecting": { "message": "Inspicerer sidetilstand..." },
+    "statusRedacting": { "message": "Slører personlige oplysninger..." },
+    "statusExplanation": { "message": "Forklaring givet." },
+    "statusNoSpeech": { "message": "Ingen tydelig tale registreret." },
+    "statusListeningWait": { "message": "Lytter... Sig din kommando." },
+    "statusProcessingSpeech": { "message": "Behandler tale..." },
+    "statusTaskFinished": { "message": "Opgave fuldført!" },
+
+    "titleListening": { "message": "Lytter... (Sendes automatisk, når du holder op med at tale)" },
+    "lblListening": { "message": "Lytter... (Tal nu)" },
+    "titleDictate": { "message": "Dikter kommando" },
+
+    "errNoInput": { "message": "Indtast venligst et mål eller stil et spørgsmål." },
+    "errMicRequired": { "message": "Mikrofontilladelse påkrævet. Åbner indstillingsfane..." },
+    "errDeleteOnlyProfile": { "message": "Kan ikke slette den eneste tilbageværende profil." },
+    "errNoModels": { "message": "Ingen modeller fundet." },
+
+    "headerAutofill": { "message": "Autofyld-profiler" },
+    "lblSelectProfile": { "message": "Vælg profil" },
+    "lblActiveProfile": { "message": " (Aktiv)" },
+    "titleNewProfile": { "message": "Tilføj ny profil" },
+    "btnNewProfile": { "message": "+ Ny" },
+    "titleDeleteProfile": { "message": "Slet aktuel profil" },
+    "btnDeleteProfile": { "message": "Slet" },
+    "lblNewProfileName": { "message": "Ny profil" },
+    "msgEnterProfileDetails": { "message": "Indtast profildetaljer og klik på Gem." },
+    "msgProfileRemoved": { "message": "Profil fjernet." },
+    "msgProfileSaved": { "message": "Profil gemt." },
+
+    "lblProfileName": { "message": "Profilnavn (Etiket)" },
+    "phProfileName": { "message": "f.eks. Personlig, Arbejde, Alex" },
+    "lblUsername": { "message": "Brugernavn / ID" },
+    "phUsername": { "message": "f.eks. jensen99" },
+    "lblFirstName": { "message": "Fornavn" },
+    "phFirstName": { "message": "Jens" },
+    "lblMiddleName": { "message": "Mellemnavn" },
+    "phMiddleName": { "message": "Peter" },
+    "lblLastName": { "message": "Efternavn" },
+    "phLastName": { "message": "Jensen" },
+    "lblEmail": { "message": "E-mail" },
+    "phEmail": { "message": "jens@eksempel.dk" },
+    "lblPhone": { "message": "Telefon" },
+    "phPhone": { "message": "+45 12 34 56 78" },
+    "lblAddress": { "message": "Gadeadresse" },
+    "phAddress": { "message": "Hovedgaden 123" },
+    "lblCity": { "message": "By" },
+    "phCity": { "message": "København" },
+    "lblState": { "message": "Region / Stat" },
+    "phState": { "message": "Hovedstaden" },
+    "lblZip": { "message": "Postnummer" },
+    "phZip": { "message": "1050" },
+    "lblCountry": { "message": "Land" },
+    "phCountry": { "message": "Danmark" },
+    "btnSaveProfile": { "message": "Gem aktiv profil" },
+
+    "headerSettings": { "message": "Indstillinger" },
+    "lblTheme": { "message": "Tema" },
+    "themeGraphite": { "message": "Mørk grafit (Mørkegrå/Sort)" },
+    "themeClean": { "message": "Ren tavle (Lyst minimalt)" },
+    "themeIndigo": { "message": "Dyb indigo mørk" },
+    "themeLavender": { "message": "Lys lavendel" },
+    "lblMaxSteps": { "message": "Grænse for autonome trin" },
+    "lblServerUrl": { "message": "Open WebUI-server-URL" },
+    "phServerUrl": { "message": "https://openwebui.eksempel.dk" },
+    "lblApiKey": { "message": "API-nøgle" },
+    "phApiKey": { "message": "sk-..." },
+    "lblModel": { "message": "Vision-model" },
+    "btnRefresh": { "message": "Opdater" },
+    "phModel": { "message": "Gemma 4" },
+    "btnSaveSettings": { "message": "Gem" },
+    "btnTestSettings": { "message": "Test" },
+    "msgSettingsSaved": { "message": "Indstillinger gemt." },
+
+    "stepCounter": {
+        "message": "Trin $1/$2",
+        "description": "Shows current step out of total max steps",
+        "placeholders": {
+            "current": { "content": "$1" },
+            "total": { "content": "$2" }
+        }
+    },
+    "statusExecuting": {
+        "message": "Udfører: $1...",
+        "placeholders": {
+            "actionName": { "content": "$1" }
+        }
+    },
+    "statusRecognized": {
+        "message": "Genkendt: \"$1\"",
+        "placeholders": {
+            "text": { "content": "$1" }
+        }
+    },
+    "errDictation": {
+        "message": "Diktering mislykkedes: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errMicError": {
+        "message": "Mikrofonfejl: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errSaveFailed": {
+        "message": "Kunne ikke gemme: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errDeleteFailed": {
+        "message": "Kunne ikke slette: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "msgModelsFound": {
+        "message": "Fandt $1 model(ler).",
+        "placeholders": {
+            "count": { "content": "$1" }
+        }
+    }
+}

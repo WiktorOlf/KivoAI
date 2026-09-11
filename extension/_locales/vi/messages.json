@@ -1,0 +1,150 @@
+{
+    "extName": { "message": "KivoAI" },
+    "extDescription": { "message": "Trợ lý trình duyệt tự động ưu tiên quyền riêng tư, được trang bị AI cục bộ." },
+
+    "promptLabel": { "message": "Đặt câu hỏi hoặc đưa ra mục tiêu" },
+    "promptPlaceholder": { "message": "vd: 'Điền vào biểu mẫu này' hoặc 'Trang này nói về cái gì?'..." },
+    "btnDictate": { "message": "Đọc yêu cầu" },
+    "btnSubmit": { "message": "Gửi" },
+    "btnStop": { "message": "Dừng" },
+
+    "titleAutofill": { "message": "Hồ sơ tự động điền" },
+    "titleSettings": { "message": "Cài đặt" },
+    "titleDictatePrompt": { "message": "Đọc yêu cầu" },
+    "titleAiExplanation": { "message": "AI Giải thích" },
+    "titleBack": { "message": "Quay lại" },
+
+    "btnDismiss": { "message": "Đóng" },
+    "btnSteps": { "message": "Các bước" },
+    "btnHide": { "message": "Ẩn" },
+
+    "statusConnecting": { "message": "Đang kết nối với thẻ hiện tại..." },
+    "statusReady": { "message": "Sẵn sàng" },
+    "statusTranscribing": { "message": "Đang chuyển lời nói thành văn bản..." },
+    "statusSpeechShort": { "message": "Giọng nói quá ngắn hoặc không có âm thanh." },
+    "statusDeliberating": { "message": "Đang phân tích..." },
+    "statusStopped": { "message": "Đã dừng bởi người dùng." },
+    "statusInspecting": { "message": "Đang kiểm tra trạng thái trang..." },
+    "statusRedacting": { "message": "Đang che thông tin cá nhân..." },
+    "statusExplanation": { "message": "Đã cung cấp lời giải thích." },
+    "statusNoSpeech": { "message": "Không nghe rõ giọng nói." },
+    "statusListeningWait": { "message": "Đang nghe... Hãy nói lệnh của bạn." },
+    "statusProcessingSpeech": { "message": "Đang xử lý giọng nói..." },
+    "statusTaskFinished": { "message": "Đã hoàn thành công việc!" },
+
+    "titleListening": { "message": "Đang nghe... (Sẽ tự động gửi khi bạn ngừng nói)" },
+    "lblListening": { "message": "Đang nghe... (Hãy nói ngay bây giờ)" },
+    "titleDictate": { "message": "Đọc yêu cầu" },
+
+    "errNoInput": { "message": "Vui lòng nhập mục tiêu hoặc đặt câu hỏi." },
+    "errMicRequired": { "message": "Cần cấp quyền sử dụng micrô. Đang mở thẻ cài đặt..." },
+    "errDeleteOnlyProfile": { "message": "Không thể xóa hồ sơ duy nhất còn lại." },
+    "errNoModels": { "message": "Không tìm thấy mô hình nào." },
+
+    "headerAutofill": { "message": "Hồ sơ tự động điền" },
+    "lblSelectProfile": { "message": "Chọn hồ sơ" },
+    "lblActiveProfile": { "message": " (Đang hoạt động)" },
+    "titleNewProfile": { "message": "Thêm hồ sơ mới" },
+    "btnNewProfile": { "message": "+ Mới" },
+    "titleDeleteProfile": { "message": "Xóa hồ sơ hiện tại" },
+    "btnDeleteProfile": { "message": "Xóa" },
+    "lblNewProfileName": { "message": "Hồ sơ mới" },
+    "msgEnterProfileDetails": { "message": "Nhập thông tin hồ sơ và nhấp vào Lưu." },
+    "msgProfileRemoved": { "message": "Đã xóa hồ sơ." },
+    "msgProfileSaved": { "message": "Đã lưu hồ sơ." },
+
+    "lblProfileName": { "message": "Tên hồ sơ (Nhãn)" },
+    "phProfileName": { "message": "vd: Cá nhân, Công việc, Alex" },
+    "lblUsername": { "message": "Tên người dùng / ID" },
+    "phUsername": { "message": "vd: nguyenvana99" },
+    "lblFirstName": { "message": "Tên" },
+    "phFirstName": { "message": "An" },
+    "lblMiddleName": { "message": "Tên đệm" },
+    "phMiddleName": { "message": "Văn" },
+    "lblLastName": { "message": "Họ" },
+    "phLastName": { "message": "Nguyễn" },
+    "lblEmail": { "message": "Email" },
+    "phEmail": { "message": "an.nguyen@example.com" },
+    "lblPhone": { "message": "Số điện thoại" },
+    "phPhone": { "message": "+84 90 123 4567" },
+    "lblAddress": { "message": "Địa chỉ đường" },
+    "phAddress": { "message": "123 Đường Lê Lợi" },
+    "lblCity": { "message": "Thành phố" },
+    "phCity": { "message": "Hồ Chí Minh" },
+    "lblState": { "message": "Tỉnh / Thành phố" },
+    "phState": { "message": "TP.HCM" },
+    "lblZip": { "message": "Mã bưu chính" },
+    "phZip": { "message": "700000" },
+    "lblCountry": { "message": "Quốc gia" },
+    "phCountry": { "message": "Việt Nam" },
+    "btnSaveProfile": { "message": "Lưu hồ sơ hiện tại" },
+
+    "headerSettings": { "message": "Cài đặt" },
+    "lblTheme": { "message": "Giao diện" },
+    "themeGraphite": { "message": "Than chì tối (Xám đậm/Đen)" },
+    "themeClean": { "message": "Sạch sẽ (Sáng tối giản)" },
+    "themeIndigo": { "message": "Chàm thẫm tối" },
+    "themeLavender": { "message": "Tím nhạt sáng" },
+    "lblMaxSteps": { "message": "Giới hạn số bước tự động" },
+    "lblServerUrl": { "message": "URL máy chủ Open WebUI" },
+    "phServerUrl": { "message": "https://openwebui.example.com" },
+    "lblApiKey": { "message": "Khóa API" },
+    "phApiKey": { "message": "sk-..." },
+    "lblModel": { "message": "Mô hình thị giác (Vision Model)" },
+    "btnRefresh": { "message": "Làm mới" },
+    "phModel": { "message": "Gemma 4" },
+    "btnSaveSettings": { "message": "Lưu" },
+    "btnTestSettings": { "message": "Kiểm tra" },
+    "msgSettingsSaved": { "message": "Đã lưu cài đặt." },
+
+    "stepCounter": {
+        "message": "Bước $1/$2",
+        "description": "Shows current step out of total max steps",
+        "placeholders": {
+            "current": { "content": "$1" },
+            "total": { "content": "$2" }
+        }
+    },
+    "statusExecuting": {
+        "message": "Đang thực thi: $1...",
+        "placeholders": {
+            "actionName": { "content": "$1" }
+        }
+    },
+    "statusRecognized": {
+        "message": "Đã nhận dạng: \"$1\"",
+        "placeholders": {
+            "text": { "content": "$1" }
+        }
+    },
+    "errDictation": {
+        "message": "Lỗi đọc chính tả: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errMicError": {
+        "message": "Lỗi micrô: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errSaveFailed": {
+        "message": "Lưu thất bại: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errDeleteFailed": {
+        "message": "Xóa thất bại: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "msgModelsFound": {
+        "message": "Tìm thấy $1 mô hình.",
+        "placeholders": {
+            "count": { "content": "$1" }
+        }
+    }
+}

@@ -1,0 +1,150 @@
+{
+    "extName": { "message": "KivoAI" },
+    "extDescription": { "message": "由本地 AI 驱动，隐私优先的自律型浏览器助手。" },
+
+    "promptLabel": { "message": "提出问题或设定目标" },
+    "promptPlaceholder": { "message": "例如：“填写此表单”或“这个页面是什么？”..." },
+    "btnDictate": { "message": "语音输入" },
+    "btnSubmit": { "message": "提交" },
+    "btnStop": { "message": "停止" },
+
+    "titleAutofill": { "message": "自动填充配置文件" },
+    "titleSettings": { "message": "设置" },
+    "titleDictatePrompt": { "message": "语音输入提示词" },
+    "titleAiExplanation": { "message": "AI 解释" },
+    "titleBack": { "message": "返回" },
+
+    "btnDismiss": { "message": "关闭" },
+    "btnSteps": { "message": "步骤" },
+    "btnHide": { "message": "隐藏" },
+
+    "statusConnecting": { "message": "正在连接当前标签页..." },
+    "statusReady": { "message": "就绪" },
+    "statusTranscribing": { "message": "正在转录语音..." },
+    "statusSpeechShort": { "message": "语音太短或无声音。" },
+    "statusDeliberating": { "message": "正在分析..." },
+    "statusStopped": { "message": "已由用户停止。" },
+    "statusInspecting": { "message": "正在检查页面状态..." },
+    "statusRedacting": { "message": "正在遮蔽敏感信息..." },
+    "statusExplanation": { "message": "已提供解释。" },
+    "statusNoSpeech": { "message": "未检测到清晰的语音。" },
+    "statusListeningWait": { "message": "正在聆听... 请说出您的指令。" },
+    "statusProcessingSpeech": { "message": "正在处理语音..." },
+    "statusTaskFinished": { "message": "任务完成！" },
+
+    "titleListening": { "message": "正在聆听...（停止说话后将自动提交）" },
+    "lblListening": { "message": "正在聆听...（请说话）" },
+    "titleDictate": { "message": "语音输入" },
+
+    "errNoInput": { "message": "请输入目标或提出问题。" },
+    "errMicRequired": { "message": "需要麦克风权限。正在打开设置标签页..." },
+    "errDeleteOnlyProfile": { "message": "无法删除仅存的配置文件。" },
+    "errNoModels": { "message": "未找到任何模型。" },
+
+    "headerAutofill": { "message": "自动填充配置文件" },
+    "lblSelectProfile": { "message": "选择配置文件" },
+    "lblActiveProfile": { "message": "（使用中）" },
+    "titleNewProfile": { "message": "添加新配置文件" },
+    "btnNewProfile": { "message": "+ 新建" },
+    "titleDeleteProfile": { "message": "删除当前配置文件" },
+    "btnDeleteProfile": { "message": "删除" },
+    "lblNewProfileName": { "message": "新配置文件" },
+    "msgEnterProfileDetails": { "message": "输入配置文件详细信息，然后点击保存。" },
+    "msgProfileRemoved": { "message": "配置文件已删除。" },
+    "msgProfileSaved": { "message": "配置文件已保存。" },
+
+    "lblProfileName": { "message": "配置文件名称（标签）" },
+    "phProfileName": { "message": "例如：个人，工作，Alex" },
+    "lblUsername": { "message": "用户名 / 用户 ID" },
+    "phUsername": { "message": "例如：zhangsan99" },
+    "lblFirstName": { "message": "名字" },
+    "phFirstName": { "message": "三" },
+    "lblMiddleName": { "message": "中间名" },
+    "phMiddleName": { "message": "（留空或填写）" },
+    "lblLastName": { "message": "姓氏" },
+    "phLastName": { "message": "张" },
+    "lblEmail": { "message": "电子邮件" },
+    "phEmail": { "message": "zhangsan@example.com" },
+    "lblPhone": { "message": "电话" },
+    "phPhone": { "message": "+86 138 0000 0000" },
+    "lblAddress": { "message": "街道地址" },
+    "phAddress": { "message": "长安街 1 号" },
+    "lblCity": { "message": "城市" },
+    "phCity": { "message": "北京市" },
+    "lblState": { "message": "省/市/自治区" },
+    "phState": { "message": "北京" },
+    "lblZip": { "message": "邮政编码" },
+    "phZip": { "message": "100000" },
+    "lblCountry": { "message": "国家/地区" },
+    "phCountry": { "message": "中国" },
+    "btnSaveProfile": { "message": "保存当前配置文件" },
+
+    "headerSettings": { "message": "设置" },
+    "lblTheme": { "message": "主题" },
+    "themeGraphite": { "message": "深石墨色 (深灰/黑)" },
+    "themeClean": { "message": "纯净白 (浅色极简)" },
+    "themeIndigo": { "message": "深靛蓝" },
+    "themeLavender": { "message": "浅淡紫" },
+    "lblMaxSteps": { "message": "自律操作步数上限" },
+    "lblServerUrl": { "message": "Open WebUI 服务器 URL" },
+    "phServerUrl": { "message": "https://openwebui.example.com" },
+    "lblApiKey": { "message": "API 密钥" },
+    "phApiKey": { "message": "sk-..." },
+    "lblModel": { "message": "视觉模型 (Vision Model)" },
+    "btnRefresh": { "message": "刷新" },
+    "phModel": { "message": "Gemma 4" },
+    "btnSaveSettings": { "message": "保存" },
+    "btnTestSettings": { "message": "测试" },
+    "msgSettingsSaved": { "message": "设置已保存。" },
+
+    "stepCounter": {
+        "message": "第 $1/$2 步",
+        "description": "Shows current step out of total max steps",
+        "placeholders": {
+            "current": { "content": "$1" },
+            "total": { "content": "$2" }
+        }
+    },
+    "statusExecuting": {
+        "message": "正在执行: $1...",
+        "placeholders": {
+            "actionName": { "content": "$1" }
+        }
+    },
+    "statusRecognized": {
+        "message": "已识别: \"$1\"",
+        "placeholders": {
+            "text": { "content": "$1" }
+        }
+    },
+    "errDictation": {
+        "message": "语音输入失败: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errMicError": {
+        "message": "麦克风错误: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errSaveFailed": {
+        "message": "保存失败: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errDeleteFailed": {
+        "message": "删除失败: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "msgModelsFound": {
+        "message": "找到 $1 个模型。",
+        "placeholders": {
+            "count": { "content": "$1" }
+        }
+    }
+}

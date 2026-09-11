@@ -1,0 +1,150 @@
+{
+    "extName": { "message": "KivoAI" },
+    "extDescription": { "message": "స్థానిక AI ద్వారా ఆధారితమైన, గోప్యతకు ప్రాధాన్యత ఇచ్చే స్వయంప్రతిపత్త బ్రౌజర్ అసిస్టెంట్." },
+
+    "promptLabel": { "message": "ఒక ప్రశ్న అడగండి లేదా ఒక లక్ష్యాన్ని ఇవ్వండి" },
+    "promptPlaceholder": { "message": "ఉదా. 'ఈ ఫారమ్‌ను పూరించండి' లేదా 'ఈ పేజీ ఏమిటి?'..." },
+    "btnDictate": { "message": "వాయిస్ ప్రాంప్ట్ ఇవ్వండి" },
+    "btnSubmit": { "message": "సమర్పించండి" },
+    "btnStop": { "message": "ఆపండి" },
+
+    "titleAutofill": { "message": "ఆటోఫిల్ ప్రొఫైల్‌లు" },
+    "titleSettings": { "message": "సెట్టింగ్‌లు" },
+    "titleDictatePrompt": { "message": "ప్రాంప్ట్‌ను డిక్టేట్ చేయండి" },
+    "titleAiExplanation": { "message": "AI వివరణ" },
+    "titleBack": { "message": "వెనుకకు" },
+
+    "btnDismiss": { "message": "తీసివేయండి" },
+    "btnSteps": { "message": "దశలు" },
+    "btnHide": { "message": "దాచండి" },
+
+    "statusConnecting": { "message": "సక్రియ ట్యాబ్‌కు కనెక్ట్ అవుతోంది..." },
+    "statusReady": { "message": "సిద్ధంగా ఉంది" },
+    "statusTranscribing": { "message": "వాయిస్‌ని టెక్స్ట్‌గా మారుస్తోంది..." },
+    "statusSpeechShort": { "message": "వాయిస్ చాలా చిన్నది లేదా ఖాళీగా ఉంది." },
+    "statusDeliberating": { "message": "విశ్లేషిస్తోంది..." },
+    "statusStopped": { "message": "వినియోగదారు ద్వారా నిలిపివేయబడింది." },
+    "statusInspecting": { "message": "పేజీ స్థితిని తనిఖీ చేస్తోంది..." },
+    "statusRedacting": { "message": "వ్యక్తిగత సమాచారాన్ని (PII) దాచుతోంది..." },
+    "statusExplanation": { "message": "వివరణ అందించబడింది." },
+    "statusNoSpeech": { "message": "స్పష్టమైన మాటలు వినబడలేదు." },
+    "statusListeningWait": { "message": "వింటున్నాను... మీ కమాండ్ చెప్పండి." },
+    "statusProcessingSpeech": { "message": "మాటలను ప్రాసెస్ చేస్తోంది..." },
+    "statusTaskFinished": { "message": "పని పూర్తయింది!" },
+
+    "titleListening": { "message": "వింటున్నాను... (మీరు మాట్లాడటం ఆపగానే ఆటోమేటిక్‌గా సమర్పించబడుతుంది)" },
+    "lblListening": { "message": "వింటున్నాను... (ఇప్పుడు మాట్లాడండి)" },
+    "titleDictate": { "message": "ప్రాంప్ట్‌ను డిక్టేట్ చేయండి" },
+
+    "errNoInput": { "message": "దయచేసి ఒక లక్ష్యాన్ని నమోదు చేయండి లేదా ఒక ప్రశ్న అడగండి." },
+    "errMicRequired": { "message": "మైక్రోఫోన్ అనుమతి అవసరం. సెటప్ ట్యాబ్ తెరవబడుతోంది..." },
+    "errDeleteOnlyProfile": { "message": "మిగిలి ఉన్న ఒకేఒక్క ప్రొఫైల్‌ను తొలగించలేము." },
+    "errNoModels": { "message": "ఎలాంటి మోడల్స్ కనుగొనబడలేదు." },
+
+    "headerAutofill": { "message": "ఆటోఫిల్ ప్రొఫైల్‌లు" },
+    "lblSelectProfile": { "message": "ప్రొఫైల్‌ను ఎంచుకోండి" },
+    "lblActiveProfile": { "message": " (యాక్టివ్)" },
+    "titleNewProfile": { "message": "కొత్త ప్రొఫైల్‌ను జోడించండి" },
+    "btnNewProfile": { "message": "+ కొత్తది" },
+    "titleDeleteProfile": { "message": "ప్రస్తుత ప్రొఫైల్‌ను తొలగించండి" },
+    "btnDeleteProfile": { "message": "తొలగించండి" },
+    "lblNewProfileName": { "message": "కొత్త ప్రొఫైల్" },
+    "msgEnterProfileDetails": { "message": "ప్రొఫైల్ వివరాలను నమోదు చేసి, సేవ్ క్లిక్ చేయండి." },
+    "msgProfileRemoved": { "message": "ప్రొఫైల్ తీసివేయబడింది." },
+    "msgProfileSaved": { "message": "ప్రొఫైల్ సేవ్ చేయబడింది." },
+
+    "lblProfileName": { "message": "ప్రొఫైల్ పేరు (లేబుల్)" },
+    "phProfileName": { "message": "ఉదా. వ్యక్తిగతం, ఆఫీసు, రామ్" },
+    "lblUsername": { "message": "యూజర్‌నేమ్ / యూజర్ ID" },
+    "phUsername": { "message": "ఉదా. ram99" },
+    "lblFirstName": { "message": "మొదటి పేరు" },
+    "phFirstName": { "message": "రామ్" },
+    "lblMiddleName": { "message": "మధ్య పేరు" },
+    "phMiddleName": { "message": "కుమార్" },
+    "lblLastName": { "message": "చివరి పేరు" },
+    "phLastName": { "message": "శర్మ" },
+    "lblEmail": { "message": "ఇమెయిల్" },
+    "phEmail": { "message": "ram@example.com" },
+    "lblPhone": { "message": "ఫోన్" },
+    "phPhone": { "message": "+91 98765 43210" },
+    "lblAddress": { "message": "వీధి చిరునామా" },
+    "phAddress": { "message": "123 మెయిన్ స్ట్రీట్" },
+    "lblCity": { "message": "నగరం" },
+    "phCity": { "message": "హైదరాబాద్" },
+    "lblState": { "message": "రాష్ట్రం" },
+    "phState": { "message": "తెలంగాణ" },
+    "lblZip": { "message": "పిన్ కోడ్" },
+    "phZip": { "message": "500001" },
+    "lblCountry": { "message": "దేశం" },
+    "phCountry": { "message": "భారతదేశం" },
+    "btnSaveProfile": { "message": "యాక్టివ్ ప్రొఫైల్‌ను సేవ్ చేయండి" },
+
+    "headerSettings": { "message": "సెట్టింగ్‌లు" },
+    "lblTheme": { "message": "థీమ్" },
+    "themeGraphite": { "message": "గ్రాఫైట్ డార్క్ (ముదురు బూడిద/నలుపు)" },
+    "themeClean": { "message": "క్లీన్ స్లేట్ (తేలికపాటి/మినిమల్)" },
+    "themeIndigo": { "message": "డీప్ ఇండిగో డార్క్" },
+    "themeLavender": { "message": "లావెండర్ లైట్" },
+    "lblMaxSteps": { "message": "అటానమస్ స్టెప్ లిమిట్" },
+    "lblServerUrl": { "message": "Open WebUI సర్వర్ URL" },
+    "phServerUrl": { "message": "https://openwebui.example.com" },
+    "lblApiKey": { "message": "API కీ" },
+    "phApiKey": { "message": "sk-..." },
+    "lblModel": { "message": "విజన్ మోడల్" },
+    "btnRefresh": { "message": "రీఫ్రెష్ చేయండి" },
+    "phModel": { "message": "Gemma 4" },
+    "btnSaveSettings": { "message": "సేవ్ చేయండి" },
+    "btnTestSettings": { "message": "టెస్ట్ చేయండి" },
+    "msgSettingsSaved": { "message": "సెట్టింగ్‌లు సేవ్ చేయబడ్డాయి." },
+
+    "stepCounter": {
+        "message": "దశ $1/$2",
+        "description": "Shows current step out of total max steps",
+        "placeholders": {
+            "current": { "content": "$1" },
+            "total": { "content": "$2" }
+        }
+    },
+    "statusExecuting": {
+        "message": "అమలు చేస్తోంది: $1...",
+        "placeholders": {
+            "actionName": { "content": "$1" }
+        }
+    },
+    "statusRecognized": {
+        "message": "గుర్తించబడింది: \"$1\"",
+        "placeholders": {
+            "text": { "content": "$1" }
+        }
+    },
+    "errDictation": {
+        "message": "డిక్టేషన్ విఫలమైంది: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errMicError": {
+        "message": "మైక్రోఫోన్ లోపం: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errSaveFailed": {
+        "message": "సేవ్ చేయడం విఫలమైంది: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errDeleteFailed": {
+        "message": "తొలగించడం విఫలమైంది: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "msgModelsFound": {
+        "message": "$1 మోడల్(లు) కనుగొనబడ్డాయి.",
+        "placeholders": {
+            "count": { "content": "$1" }
+        }
+    }
+}

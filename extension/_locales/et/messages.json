@@ -1,0 +1,150 @@
+{
+    "extName": { "message": "KivoAI" },
+    "extDescription": { "message": "Privaatsusele keskendunud autonoomne brauseriassistent, mida toidab kohalik tehisintellekt." },
+
+    "promptLabel": { "message": "Esita küsimus või sea eesmärk" },
+    "promptPlaceholder": { "message": "nt 'Täida see vorm' või 'Mis leht see on?'..." },
+    "btnDictate": { "message": "Dikteeri käsklus" },
+    "btnSubmit": { "message": "Saada" },
+    "btnStop": { "message": "Peata" },
+
+    "titleAutofill": { "message": "Automaattäite profiilid" },
+    "titleSettings": { "message": "Seaded" },
+    "titleDictatePrompt": { "message": "Dikteeri käsklus" },
+    "titleAiExplanation": { "message": "AI selgitus" },
+    "titleBack": { "message": "Tagasi" },
+
+    "btnDismiss": { "message": "Sulge" },
+    "btnSteps": { "message": "Sammud" },
+    "btnHide": { "message": "Peida" },
+
+    "statusConnecting": { "message": "Ühendumine aktiivse vahelehega..." },
+    "statusReady": { "message": "Valmis" },
+    "statusTranscribing": { "message": "Kõne transkribeerimine..." },
+    "statusSpeechShort": { "message": "Kõne on liiga lühike või tühi." },
+    "statusDeliberating": { "message": "Analüüsimine..." },
+    "statusStopped": { "message": "Kasutaja peatatud." },
+    "statusInspecting": { "message": "Lehe oleku kontrollimine..." },
+    "statusRedacting": { "message": "Isikuandmete varjamine..." },
+    "statusExplanation": { "message": "Selgitus esitatud." },
+    "statusNoSpeech": { "message": "Selget kõnet ei tuvastatud." },
+    "statusListeningWait": { "message": "Kuulan... Ütle oma käsklus." },
+    "statusProcessingSpeech": { "message": "Kõne töötlemine..." },
+    "statusTaskFinished": { "message": "Ülesanne on valmis!" },
+
+    "titleListening": { "message": "Kuulan... (Saadetakse automaatselt, kui lõpetad rääkimise)" },
+    "lblListening": { "message": "Kuulan... (Räägi nüüd)" },
+    "titleDictate": { "message": "Dikteeri käsklus" },
+
+    "errNoInput": { "message": "Palun sisesta eesmärk või esita küsimus." },
+    "errMicRequired": { "message": "Nõutav on mikrofoni luba. Seadete vahelehe avamine..." },
+    "errDeleteOnlyProfile": { "message": "Ainsat järelejäänud profiili ei saa kustutada." },
+    "errNoModels": { "message": "Mudeleid ei leitud." },
+
+    "headerAutofill": { "message": "Automaattäite profiilid" },
+    "lblSelectProfile": { "message": "Vali profiil" },
+    "lblActiveProfile": { "message": " (Aktiivne)" },
+    "titleNewProfile": { "message": "Lisa uus profiil" },
+    "btnNewProfile": { "message": "+ Uus" },
+    "titleDeleteProfile": { "message": "Kustuta praegune profiil" },
+    "btnDeleteProfile": { "message": "Kustuta" },
+    "lblNewProfileName": { "message": "Uus profiil" },
+    "msgEnterProfileDetails": { "message": "Sisesta profiili andmed ja klõpsa Salvesta." },
+    "msgProfileRemoved": { "message": "Profiil eemaldatud." },
+    "msgProfileSaved": { "message": "Profiil salvestatud." },
+
+    "lblProfileName": { "message": "Profiili nimi (Silt)" },
+    "phProfileName": { "message": "nt Isiklik, Töö, Alex" },
+    "lblUsername": { "message": "Kasutajanimi / ID" },
+    "phUsername": { "message": "nt juhan99" },
+    "lblFirstName": { "message": "Eesnimi" },
+    "phFirstName": { "message": "Juhan" },
+    "lblMiddleName": { "message": "Keskmine nimi" },
+    "phMiddleName": { "message": "Jüri" },
+    "lblLastName": { "message": "Perekonnanimi" },
+    "phLastName": { "message": "Tamm" },
+    "lblEmail": { "message": "E-post" },
+    "phEmail": { "message": "juhan@näide.ee" },
+    "lblPhone": { "message": "Telefon" },
+    "phPhone": { "message": "+372 555 12345" },
+    "lblAddress": { "message": "Tänavatase" },
+    "phAddress": { "message": "Vabaduse väljak 1" },
+    "lblCity": { "message": "Linn" },
+    "phCity": { "message": "Tallinn" },
+    "lblState": { "message": "Maakond" },
+    "phState": { "message": "Harjumaa" },
+    "lblZip": { "message": "Postiindeks" },
+    "phZip": { "message": "10141" },
+    "lblCountry": { "message": "Riik" },
+    "phCountry": { "message": "Eesti" },
+    "btnSaveProfile": { "message": "Salvesta aktiivne profiil" },
+
+    "headerSettings": { "message": "Seaded" },
+    "lblTheme": { "message": "Teema" },
+    "themeGraphite": { "message": "Tume grafiit (Tumehall/Must)" },
+    "themeClean": { "message": "Puhas leht (Hele minimalistlik)" },
+    "themeIndigo": { "message": "Sügav indigo tume" },
+    "themeLavender": { "message": "Hele lavendel" },
+    "lblMaxSteps": { "message": "Autonoomsete sammude piirang" },
+    "lblServerUrl": { "message": "Open WebUI serveri URL" },
+    "phServerUrl": { "message": "https://openwebui.näide.ee" },
+    "lblApiKey": { "message": "API võti" },
+    "phApiKey": { "message": "sk-..." },
+    "lblModel": { "message": "Visioonimudel (Vision Model)" },
+    "btnRefresh": { "message": "Värskenda" },
+    "phModel": { "message": "Gemma 4" },
+    "btnSaveSettings": { "message": "Salvesta" },
+    "btnTestSettings": { "message": "Testi" },
+    "msgSettingsSaved": { "message": "Seaded salvestatud." },
+
+    "stepCounter": {
+        "message": "Samm $1/$2",
+        "description": "Shows current step out of total max steps",
+        "placeholders": {
+            "current": { "content": "$1" },
+            "total": { "content": "$2" }
+        }
+    },
+    "statusExecuting": {
+        "message": "Täitmine: $1...",
+        "placeholders": {
+            "actionName": { "content": "$1" }
+        }
+    },
+    "statusRecognized": {
+        "message": "Tuvastatud: \"$1\"",
+        "placeholders": {
+            "text": { "content": "$1" }
+        }
+    },
+    "errDictation": {
+        "message": "Dikteerimine ebaõnnestus: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errMicError": {
+        "message": "Mikrofoni viga: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errSaveFailed": {
+        "message": "Salvestamine ebaõnnestus: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errDeleteFailed": {
+        "message": "Kustutamine ebaõnnestus: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "msgModelsFound": {
+        "message": "Leiti $1 mudel(it).",
+        "placeholders": {
+            "count": { "content": "$1" }
+        }
+    }
+}

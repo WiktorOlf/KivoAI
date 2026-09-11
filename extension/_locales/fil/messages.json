@@ -1,0 +1,150 @@
+{
+    "extName": { "message": "KivoAI" },
+    "extDescription": { "message": "Isang privacy-first at awtonomong katulong sa browser na pinapagana ng lokal na AI." },
+
+    "promptLabel": { "message": "Magtanong o magtakda ng layunin" },
+    "promptPlaceholder": { "message": "hal. 'Punan ang form na ito' o 'Tungkol saan ang pahinang ito?'..." },
+    "btnDictate": { "message": "Idikta ang Utos" },
+    "btnSubmit": { "message": "Isumite" },
+    "btnStop": { "message": "Itigil" },
+
+    "titleAutofill": { "message": "Mga Profile sa Auto-fill" },
+    "titleSettings": { "message": "Mga Setting" },
+    "titleDictatePrompt": { "message": "Idikta ang Utos" },
+    "titleAiExplanation": { "message": "Paliwanag ng AI" },
+    "titleBack": { "message": "Bumalik" },
+
+    "btnDismiss": { "message": "Isara" },
+    "btnSteps": { "message": "Mga Hakbang" },
+    "btnHide": { "message": "Itago" },
+
+    "statusConnecting": { "message": "Kumokonekta sa aktibong tab..." },
+    "statusReady": { "message": "Handa na" },
+    "statusTranscribing": { "message": "Isinasalin ang boses..." },
+    "statusSpeechShort": { "message": "Masyadong maikli o walang boses." },
+    "statusDeliberating": { "message": "Sinusuri..." },
+    "statusStopped": { "message": "Itinigil ng gumagamit." },
+    "statusInspecting": { "message": "Sinusuri ang estado ng pahina..." },
+    "statusRedacting": { "message": "Itinatago ang personal na impormasyon..." },
+    "statusExplanation": { "message": "Naibigay na ang paliwanag." },
+    "statusNoSpeech": { "message": "Walang malinaw na boses na narinig." },
+    "statusListeningWait": { "message": "Nakikinig... Sabihin ang iyong utos." },
+    "statusProcessingSpeech": { "message": "Pinoproseso ang boses..." },
+    "statusTaskFinished": { "message": "Tapos na ang gawain!" },
+
+    "titleListening": { "message": "Nakikinig... (Kusang ipapadala kapag tumigil ka sa pagsasalita)" },
+    "lblListening": { "message": "Nakikinig... (Magsalita na)" },
+    "titleDictate": { "message": "Idikta ang Utos" },
+
+    "errNoInput": { "message": "Mangyaring maglagay ng layunin o magtanong." },
+    "errMicRequired": { "message": "Kailangan ang pahintulot sa mikropono. Binubuksan ang tab ng setting..." },
+    "errDeleteOnlyProfile": { "message": "Hindi maaaring burahin ang nag-iisa at natitirang profile." },
+    "errNoModels": { "message": "Walang nakitang modelo." },
+
+    "headerAutofill": { "message": "Mga Profile sa Auto-fill" },
+    "lblSelectProfile": { "message": "Pumili ng Profile" },
+    "lblActiveProfile": { "message": " (Aktibo)" },
+    "titleNewProfile": { "message": "Magdagdag ng Bagong Profile" },
+    "btnNewProfile": { "message": "+ Bago" },
+    "titleDeleteProfile": { "message": "Burahin ang Kasalukuyang Profile" },
+    "btnDeleteProfile": { "message": "Burahin" },
+    "lblNewProfileName": { "message": "Bagong Profile" },
+    "msgEnterProfileDetails": { "message": "Ilagay ang mga detalye ng profile at i-click ang I-save." },
+    "msgProfileRemoved": { "message": "Naalis na ang profile." },
+    "msgProfileSaved": { "message": "Nai-save na ang profile." },
+
+    "lblProfileName": { "message": "Pangalan ng Profile (Label)" },
+    "phProfileName": { "message": "hal. Personal, Trabaho, Juan" },
+    "lblUsername": { "message": "Username / User ID" },
+    "phUsername": { "message": "hal. juan99" },
+    "lblFirstName": { "message": "Pangalan" },
+    "phFirstName": { "message": "Juan" },
+    "lblMiddleName": { "message": "Gitnang Pangalan" },
+    "phMiddleName": { "message": "Dela" },
+    "lblLastName": { "message": "Apelyido" },
+    "phLastName": { "message": "Cruz" },
+    "lblEmail": { "message": "Email" },
+    "phEmail": { "message": "juan@example.ph" },
+    "lblPhone": { "message": "Telepono" },
+    "phPhone": { "message": "+63 912 345 6789" },
+    "lblAddress": { "message": "Address ng Kalye" },
+    "phAddress": { "message": "123 Kalye Rizal" },
+    "lblCity": { "message": "Lungsod" },
+    "phCity": { "message": "Maynila" },
+    "lblState": { "message": "Lalawigan / Estado" },
+    "phState": { "message": "Metro Manila" },
+    "lblZip": { "message": "Zip Code" },
+    "phZip": { "message": "1000" },
+    "lblCountry": { "message": "Bansa" },
+    "phCountry": { "message": "Pilipinas" },
+    "btnSaveProfile": { "message": "I-save ang Aktibong Profile" },
+
+    "headerSettings": { "message": "Mga Setting" },
+    "lblTheme": { "message": "Tema" },
+    "themeGraphite": { "message": "Madilim na Graphite (Madilim na Gray/Itim)" },
+    "themeClean": { "message": "Malinis na Slate (Maliwanag at Minimal)" },
+    "themeIndigo": { "message": "Malalim na Indigo (Madilim)" },
+    "themeLavender": { "message": "Maliwanag na Lavender" },
+    "lblMaxSteps": { "message": "Limitasyon sa Awtonomong Hakbang" },
+    "lblServerUrl": { "message": "Open WebUI Server URL" },
+    "phServerUrl": { "message": "https://openwebui.example.ph" },
+    "lblApiKey": { "message": "API Key" },
+    "phApiKey": { "message": "sk-..." },
+    "lblModel": { "message": "Vision Model" },
+    "btnRefresh": { "message": "I-refresh" },
+    "phModel": { "message": "Gemma 4" },
+    "btnSaveSettings": { "message": "I-save" },
+    "btnTestSettings": { "message": "Subukan" },
+    "msgSettingsSaved": { "message": "Nai-save na ang mga setting." },
+
+    "stepCounter": {
+        "message": "Hakbang $1/$2",
+        "description": "Shows current step out of total max steps",
+        "placeholders": {
+            "current": { "content": "$1" },
+            "total": { "content": "$2" }
+        }
+    },
+    "statusExecuting": {
+        "message": "Isinasagawa: $1...",
+        "placeholders": {
+            "actionName": { "content": "$1" }
+        }
+    },
+    "statusRecognized": {
+        "message": "Nakilala: \"$1\"",
+        "placeholders": {
+            "text": { "content": "$1" }
+        }
+    },
+    "errDictation": {
+        "message": "Nabigo ang pagdidikta: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errMicError": {
+        "message": "Mali sa mikropono: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errSaveFailed": {
+        "message": "Nabigong i-save: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errDeleteFailed": {
+        "message": "Nabigong burahin: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "msgModelsFound": {
+        "message": "May nakitang $1 modelo.",
+        "placeholders": {
+            "count": { "content": "$1" }
+        }
+    }
+}

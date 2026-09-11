@@ -1,0 +1,149 @@
+{
+    "extName": { "message": "KivoAI" },
+    "extDescription": { "message": "Adatvédelem-központú, autonóm böngészőasszisztens helyi mesterséges intelligenciával." },
+
+    "promptLabel": { "message": "Tegyél fel egy kérdést, vagy adj meg egy célt" },
+    "promptPlaceholder": { "message": "pl. 'Töltsd ki ezt az űrlapot' vagy 'Mi ez az oldal?'..." },
+    "btnDictate": { "message": "Parancs diktálása" },
+    "btnSubmit": { "message": "Küldés" },
+    "btnStop": { "message": "Leállítás" },
+
+    "titleAutofill": { "message": "Automatikus kitöltési profilok" },
+    "titleSettings": { "message": "Beállítások" },
+    "titleDictatePrompt": { "message": "Parancs diktálása" },
+    "titleAiExplanation": { "message": "MI magyarázat" },
+    "titleBack": { "message": "Vissza" },
+
+    "btnDismiss": { "message": "Bezárás" },
+    "btnSteps": { "message": "Lépések" },
+    "btnHide": { "message": "Elrejtés" },
+
+    "statusConnecting": { "message": "Csatlakozás az aktív laphoz..." },
+    "statusReady": { "message": "Kész" },
+    "statusTranscribing": { "message": "Beszéd átírása..." },
+    "statusSpeechShort": { "message": "A beszéd túl rövid vagy üres." },
+    "statusDeliberating": { "message": "Elemzés..." },
+    "statusStopped": { "message": "A felhasználó által leállítva." },
+    "statusInspecting": { "message": "Oldal állapotának vizsgálata..." },
+    "statusRedacting": { "message": "Személyes adatok elrejtése..." },
+    "statusExplanation": { "message": "Magyarázat megadva." },
+    "statusNoSpeech": { "message": "Nem hallatszott tiszta beszéd." },
+    "statusListeningWait": { "message": "Hallgatom... Mondd ki a parancsot." },
+    "statusProcessingSpeech": { "message": "Beszéd feldolgozása..." },
+    "statusTaskFinished": { "message": "Feladat kész!" },
+
+    "titleListening": { "message": "Hallgatom... (Automatikusan elküldésre kerül, amikor abbahagyod a beszédet)" },
+    "lblListening": { "message": "Hallgatom... (Beszélj most)" },
+    "titleDictate": { "message": "Parancs diktálása" },
+
+    "errNoInput": { "message": "Kérlek, adj meg egy célt vagy tegyél fel egy kérdést." },
+    "errMicRequired": { "message": "Mikrofon engedély szükséges. Beállítások lap megnyitása..." },
+    "errNoModels": { "message": "Nem található modell." },
+
+    "headerAutofill": { "message": "Automatikus kitöltési profilok" },
+    "lblSelectProfile": { "message": "Profil kiválasztása" },
+    "lblActiveProfile": { "message": " (Aktív)" },
+    "titleNewProfile": { "message": "Új profil hozzáadása" },
+    "btnNewProfile": { "message": "+ Új" },
+    "titleDeleteProfile": { "message": "Jelenlegi profil törlése" },
+    "btnDeleteProfile": { "message": "Törlés" },
+    "lblNewProfileName": { "message": "Új profil" },
+    "msgEnterProfileDetails": { "message": "Add meg a profil adatait, majd kattints a Mentés gombra." },
+    "msgProfileRemoved": { "message": "Profil eltávolítva." },
+    "msgProfileSaved": { "message": "Profil mentve." },
+
+    "lblProfileName": { "message": "Profil neve (Címke)" },
+    "phProfileName": { "message": "pl. Személyes, Munka, Anna" },
+    "lblUsername": { "message": "Felhasználónév / Azonosító" },
+    "phUsername": { "message": "pl. kovacs99" },
+    "lblFirstName": { "message": "Keresztnév" },
+    "phFirstName": { "message": "Anna" },
+    "lblMiddleName": { "message": "Középső név" },
+    "phMiddleName": { "message": "Mária" },
+    "lblLastName": { "message": "Vezetéknév" },
+    "phLastName": { "message": "Kovács" },
+    "lblEmail": { "message": "E-mail" },
+    "phEmail": { "message": "anna@ pelda.hu" },
+    "lblPhone": { "message": "Telefonszám" },
+    "phPhone": { "message": "+36 30 123 4567" },
+    "lblAddress": { "message": "Utca, házszám" },
+    "phAddress": { "message": "Fő utca 1." },
+    "lblCity": { "message": "Város" },
+    "phCity": { "message": "Budapest" },
+    "lblState": { "message": "Megye / Állam" },
+    "phState": { "message": "Budapest" },
+    "lblZip": { "message": "Irányítószám" },
+    "phZip": { "message": "1011" },
+    "lblCountry": { "message": "Ország" },
+    "phCountry": { "message": "Magyarország" },
+    "btnSaveProfile": { "message": "Aktív profil mentése" },
+
+    "headerSettings": { "message": "Beállítások" },
+    "lblTheme": { "message": "Téma" },
+    "themeGraphite": { "message": "Sötét grafit (Sötétszürke/Fekete)" },
+    "themeClean": { "message": "Tiszta lap (Világos minimál)" },
+    "themeIndigo": { "message": "Mély indigó sötét" },
+    "themeLavender": { "message": "Világos levendula" },
+    "lblMaxSteps": { "message": "Autonóm lépések korlátja" },
+    "lblServerUrl": { "message": "Open WebUI szerver URL" },
+    "phServerUrl": { "message": "https://openwebui.pelda.hu" },
+    "lblApiKey": { "message": "API-kulcs" },
+    "phApiKey": { "message": "sk-..." },
+    "lblModel": { "message": "Látásmodell (Vision Model)" },
+    "btnRefresh": { "message": "Frissítés" },
+    "phModel": { "message": "Gemma 4" },
+    "btnSaveSettings": { "message": "Mentés" },
+    "btnTestSettings": { "message": "Tesztelés" },
+    "msgSettingsSaved": { "message": "Beállítások mentve." },
+
+    "stepCounter": {
+        "message": "$1/$2. lépés",
+        "description": "Shows current step out of total max steps",
+        "placeholders": {
+            "current": { "content": "$1" },
+            "total": { "content": "$2" }
+        }
+    },
+    "statusExecuting": {
+        "message": "Végrehajtás: $1...",
+        "placeholders": {
+            "actionName": { "content": "$1" }
+        }
+    },
+    "statusRecognized": {
+        "message": "Felismerve: \"$1\"",
+        "placeholders": {
+            "text": { "content": "$1" }
+        }
+    },
+    "errDictation": {
+        "message": "A diktálás sikertelen: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errMicError": {
+        "message": "Mikrofonhiba: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errSaveFailed": {
+        "message": "A mentés sikertelen: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errDeleteFailed": {
+        "message": "A törlés sikertelen: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "msgModelsFound": {
+        "message": "$1 modell található.",
+        "placeholders": {
+            "count": { "content": "$1" }
+        }
+    }
+}

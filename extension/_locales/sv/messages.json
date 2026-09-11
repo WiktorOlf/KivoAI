@@ -1,0 +1,150 @@
+{
+    "extName": { "message": "KivoAI" },
+    "extDescription": { "message": "En integritetsfokuserad, autonom webbläsarassistent som drivs av lokal AI." },
+
+    "promptLabel": { "message": "Ställ en fråga eller ange ett mål" },
+    "promptPlaceholder": { "message": "t.ex. 'Fyll i det här formuläret' eller 'Vad är den här sidan?'..." },
+    "btnDictate": { "message": "Diktera kommando" },
+    "btnSubmit": { "message": "Skicka" },
+    "btnStop": { "message": "Stoppa" },
+
+    "titleAutofill": { "message": "Autofyllprofiler" },
+    "titleSettings": { "message": "Inställningar" },
+    "titleDictatePrompt": { "message": "Diktera kommando" },
+    "titleAiExplanation": { "message": "AI-förklaring" },
+    "titleBack": { "message": "Tillbaka" },
+
+    "btnDismiss": { "message": "Stäng" },
+    "btnSteps": { "message": "Steg" },
+    "btnHide": { "message": "Dölj" },
+
+    "statusConnecting": { "message": "Ansluter till aktiv flik..." },
+    "statusReady": { "message": "Klar" },
+    "statusTranscribing": { "message": "Transkriberar tal..." },
+    "statusSpeechShort": { "message": "Talet är för kort eller tomt." },
+    "statusDeliberating": { "message": "Analyserar..." },
+    "statusStopped": { "message": "Stoppad av användaren." },
+    "statusInspecting": { "message": "Inspekterar sidans tillstånd..." },
+    "statusRedacting": { "message": "Döljer personliga uppgifter..." },
+    "statusExplanation": { "message": "Förklaring tillhandahållen." },
+    "statusNoSpeech": { "message": "Inget tydligt tal upptäckt." },
+    "statusListeningWait": { "message": "Lyssnar... Säg ditt kommando." },
+    "statusProcessingSpeech": { "message": "Bearbetar tal..." },
+    "statusTaskFinished": { "message": "Uppgiften slutförd!" },
+
+    "titleListening": { "message": "Lyssnar... (Skickas automatiskt när du slutar tala)" },
+    "lblListening": { "message": "Lyssnar... (Tala nu)" },
+    "titleDictate": { "message": "Diktera kommando" },
+
+    "errNoInput": { "message": "Ange ett mål eller ställ en fråga." },
+    "errMicRequired": { "message": "Mikrofontillstånd krävs. Öppnar inställningsfliken..." },
+    "errDeleteOnlyProfile": { "message": "Kan inte radera den enda återstående profilen." },
+    "errNoModels": { "message": "Inga modeller hittades." },
+
+    "headerAutofill": { "message": "Autofyllprofiler" },
+    "lblSelectProfile": { "message": "Välj profil" },
+    "lblActiveProfile": { "message": " (Aktiv)" },
+    "titleNewProfile": { "message": "Lägg till ny profil" },
+    "btnNewProfile": { "message": "+ Ny" },
+    "titleDeleteProfile": { "message": "Radera aktuell profil" },
+    "btnDeleteProfile": { "message": "Radera" },
+    "lblNewProfileName": { "message": "Ny profil" },
+    "msgEnterProfileDetails": { "message": "Ange profildetaljer och klicka på Spara." },
+    "msgProfileRemoved": { "message": "Profil borttagen." },
+    "msgProfileSaved": { "message": "Profil sparad." },
+
+    "lblProfileName": { "message": "Profilnamn (Etikett)" },
+    "phProfileName": { "message": "t.ex. Personligt, Arbete, Alex" },
+    "lblUsername": { "message": "Användarnamn / ID" },
+    "phUsername": { "message": "t.ex. alex99" },
+    "lblFirstName": { "message": "Förnamn" },
+    "phFirstName": { "message": "Alexander" },
+    "lblMiddleName": { "message": "Mellannamn" },
+    "phMiddleName": { "message": "Johan" },
+    "lblLastName": { "message": "Efternamn" },
+    "phLastName": { "message": "Andersson" },
+    "lblEmail": { "message": "E-post" },
+    "phEmail": { "message": "alexander@exempel.se" },
+    "lblPhone": { "message": "Telefon" },
+    "phPhone": { "message": "+46 70 123 45 67" },
+    "lblAddress": { "message": "Gatuadress" },
+    "phAddress": { "message": "Drottninggatan 1" },
+    "lblCity": { "message": "Stad" },
+    "phCity": { "message": "Stockholm" },
+    "lblState": { "message": "Län / Delstat" },
+    "phState": { "message": "Stockholms län" },
+    "lblZip": { "message": "Postnummer" },
+    "phZip": { "message": "111 51" },
+    "lblCountry": { "message": "Land" },
+    "phCountry": { "message": "Sverige" },
+    "btnSaveProfile": { "message": "Spara aktiv profil" },
+
+    "headerSettings": { "message": "Inställningar" },
+    "lblTheme": { "message": "Tema" },
+    "themeGraphite": { "message": "Mörk grafit (Mörkgrå/Svart)" },
+    "themeClean": { "message": "Ren tavla (Ljus minimal)" },
+    "themeIndigo": { "message": "Djup indigo mörk" },
+    "themeLavender": { "message": "Ljus lavendel" },
+    "lblMaxSteps": { "message": "Gräns för autonoma steg" },
+    "lblServerUrl": { "message": "Open WebUI-serverns URL" },
+    "phServerUrl": { "message": "https://openwebui.exempel.se" },
+    "lblApiKey": { "message": "API-nyckel" },
+    "phApiKey": { "message": "sk-..." },
+    "lblModel": { "message": " Visionsmodell (Vision Model)" },
+    "btnRefresh": { "message": "Uppdatera" },
+    "phModel": { "message": "Gemma 4" },
+    "btnSaveSettings": { "message": "Spara" },
+    "btnTestSettings": { "message": "Testa" },
+    "msgSettingsSaved": { "message": "Inställningar sparade." },
+
+    "stepCounter": {
+        "message": "Steg $1/$2",
+        "description": "Shows current step out of total max steps",
+        "placeholders": {
+            "current": { "content": "$1" },
+            "total": { "content": "$2" }
+        }
+    },
+    "statusExecuting": {
+        "message": "Utför: $1...",
+        "placeholders": {
+            "actionName": { "content": "$1" }
+        }
+    },
+    "statusRecognized": {
+        "message": "Kändes igen: \"$1\"",
+        "placeholders": {
+            "text": { "content": "$1" }
+        }
+    },
+    "errDictation": {
+        "message": "Diktering misslyckades: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errMicError": {
+        "message": "Mikrofonfel: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errSaveFailed": {
+        "message": "Kunde inte spara: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errDeleteFailed": {
+        "message": "Kunde inte radera: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "msgModelsFound": {
+        "message": "Hittade $1 modell(er).",
+        "placeholders": {
+            "count": { "content": "$1" }
+        }
+    }
+}

@@ -1,0 +1,150 @@
+{
+    "extName": { "message": "KivoAI" },
+    "extDescription": { "message": "دستیار مرورگر خودکار با اولویت حریم خصوصی، قدرت گرفته از هوش مصنوعی محلی." },
+
+    "promptLabel": { "message": "سوالی بپرسید یا هدفی تعیین کنید" },
+    "promptPlaceholder": { "message": "مثال: 'این فرم را پر کن' یا 'این صفحه درباره چیست؟'..." },
+    "btnDictate": { "message": "دیکته کردن دستور" },
+    "btnSubmit": { "message": "ارسال" },
+    "btnStop": { "message": "توقف" },
+
+    "titleAutofill": { "message": "پروفایل‌های تکمیل خودکار" },
+    "titleSettings": { "message": "تنظیمات" },
+    "titleDictatePrompt": { "message": "دیکته کردن دستور" },
+    "titleAiExplanation": { "message": "توضیحات هوش مصنوعی" },
+    "titleBack": { "message": "بازگشت" },
+
+    "btnDismiss": { "message": "بستن" },
+    "btnSteps": { "message": "مراحل" },
+    "btnHide": { "message": "مخفی کردن" },
+
+    "statusConnecting": { "message": "در حال اتصال به تب فعال..." },
+    "statusReady": { "message": "آماده" },
+    "statusTranscribing": { "message": "در حال تبدیل صدا به متن..." },
+    "statusSpeechShort": { "message": "صدا خیلی کوتاه یا خالی است." },
+    "statusDeliberating": { "message": "در حال بررسی..." },
+    "statusStopped": { "message": "توسط کاربر متوقف شد." },
+    "statusInspecting": { "message": "در حال بررسی وضعیت صفحه..." },
+    "statusRedacting": { "message": "در حال مخفی‌سازی اطلاعات شخصی..." },
+    "statusExplanation": { "message": "توضیحات ارائه شد." },
+    "statusNoSpeech": { "message": "هیچ صدای واضحی شنیده نشد." },
+    "statusListeningWait": { "message": "در حال گوش دادن... دستور خود را بگویید." },
+    "statusProcessingSpeech": { "message": "در حال پردازش صدا..." },
+    "statusTaskFinished": { "message": "کار انجام شد!" },
+
+    "titleListening": { "message": "در حال گوش دادن... (پس از توقف صحبت، خودکار ارسال می‌شود)" },
+    "lblListening": { "message": "در حال گوش دادن... (حالا صحبت کنید)" },
+    "titleDictate": { "message": "دیکته کردن دستور" },
+
+    "errNoInput": { "message": "لطفاً هدفی وارد کنید یا سوالی بپرسید." },
+    "errMicRequired": { "message": "دسترسی به میکروفون نیاز است. در حال باز کردن تب تنظیمات..." },
+    "errDeleteOnlyProfile": { "message": "تنها پروفایل باقیمانده را نمی‌توان حذف کرد." },
+    "errNoModels": { "message": "هیچ مدلی یافت نشد." },
+
+    "headerAutofill": { "message": "پروفایل‌های تکمیل خودکار" },
+    "lblSelectProfile": { "message": "انتخاب پروفایل" },
+    "lblActiveProfile": { "message": " (فعال)" },
+    "titleNewProfile": { "message": "افزودن پروفایل جدید" },
+    "btnNewProfile": { "message": "+ جدید" },
+    "titleDeleteProfile": { "message": "حذف پروفایل فعلی" },
+    "btnDeleteProfile": { "message": "حذف" },
+    "lblNewProfileName": { "message": "پروفایل جدید" },
+    "msgEnterProfileDetails": { "message": "جزئیات پروفایل را وارد کرده و روی ذخیره کلیک کنید." },
+    "msgProfileRemoved": { "message": "پروفایل حذف شد." },
+    "msgProfileSaved": { "message": "پروفایل ذخیره شد." },
+
+    "lblProfileName": { "message": "نام پروفایل (برچسب)" },
+    "phProfileName": { "message": "مثال: شخصی، کاری، علی" },
+    "lblUsername": { "message": "نام کاربری / شناسه کاربر" },
+    "phUsername": { "message": "مثال: alireza99" },
+    "lblFirstName": { "message": "نام" },
+    "phFirstName": { "message": "علی" },
+    "lblMiddleName": { "message": "نام میانی" },
+    "phMiddleName": { "message": "رضا" },
+    "lblLastName": { "message": "نام خانوادگی" },
+    "phLastName": { "message": "احمدی" },
+    "lblEmail": { "message": "ایمیل" },
+    "phEmail": { "message": "ali@example.com" },
+    "lblPhone": { "message": "تلفن" },
+    "phPhone": { "message": "+98 912 345 6789" },
+    "lblAddress": { "message": "آدرس" },
+    "phAddress": { "message": "خیابان اصلی، پلاک ۱۲۳" },
+    "lblCity": { "message": "شهر" },
+    "phCity": { "message": "تهران" },
+    "lblState": { "message": "استان / ایالت" },
+    "phState": { "message": "تهران" },
+    "lblZip": { "message": "کد پستی" },
+    "phZip": { "message": "1234567890" },
+    "lblCountry": { "message": "کشور" },
+    "phCountry": { "message": "ایران" },
+    "btnSaveProfile": { "message": "ذخیره پروفایل فعال" },
+
+    "headerSettings": { "message": "تنظیمات" },
+    "lblTheme": { "message": "پوسته (Theme)" },
+    "themeGraphite": { "message": "گرافیت تیره (خاکستری تیره/مشکی)" },
+    "themeClean": { "message": "ساده (روشن و مینیمال)" },
+    "themeIndigo": { "message": "نیلی تیره" },
+    "themeLavender": { "message": "اسطوخودوس روشن" },
+    "lblMaxSteps": { "message": "حداکثر مراحل خودکار" },
+    "lblServerUrl": { "message": "آدرس سرور Open WebUI" },
+    "phServerUrl": { "message": "https://openwebui.example.com" },
+    "lblApiKey": { "message": "کلید API" },
+    "phApiKey": { "message": "sk-..." },
+    "lblModel": { "message": "مدل بینایی (Vision Model)" },
+    "btnRefresh": { "message": "بروزرسانی" },
+    "phModel": { "message": "Gemma 4" },
+    "btnSaveSettings": { "message": "ذخیره" },
+    "btnTestSettings": { "message": "تست" },
+    "msgSettingsSaved": { "message": "تنظیمات ذخیره شد." },
+
+    "stepCounter": {
+        "message": "مرحله $1 از $2",
+        "description": "Shows current step out of total max steps",
+        "placeholders": {
+            "current": { "content": "$1" },
+            "total": { "content": "$2" }
+        }
+    },
+    "statusExecuting": {
+        "message": "در حال اجرا: $1...",
+        "placeholders": {
+            "actionName": { "content": "$1" }
+        }
+    },
+    "statusRecognized": {
+        "message": "تشخیص داده شد: \"$1\"",
+        "placeholders": {
+            "text": { "content": "$1" }
+        }
+    },
+    "errDictation": {
+        "message": "خطا در ضبط صدا: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errMicError": {
+        "message": "خطای میکروفون: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errSaveFailed": {
+        "message": "خطا در ذخیره‌سازی: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errDeleteFailed": {
+        "message": "خطا در حذف: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "msgModelsFound": {
+        "message": "$1 مدل یافت شد.",
+        "placeholders": {
+            "count": { "content": "$1" }
+        }
+    }
+}

@@ -1,0 +1,150 @@
+{
+    "extName": { "message": "KivoAI" },
+    "extDescription": { "message": "Pembantu pelayar autonomi yang mengutamakan privasi, dikuasakan oleh AI tempatan." },
+
+    "promptLabel": { "message": "Tanya soalan atau tetapkan matlamat" },
+    "promptPlaceholder": { "message": "cth. 'Isi borang ini' atau 'Apakah halaman ini?'..." },
+    "btnDictate": { "message": "Imlak Arahan" },
+    "btnSubmit": { "message": "Hantar" },
+    "btnStop": { "message": "Berhenti" },
+
+    "titleAutofill": { "message": "Profil Isian Otomatik" },
+    "titleSettings": { "message": "Tetapan" },
+    "titleDictatePrompt": { "message": "Imlak arahan" },
+    "titleAiExplanation": { "message": "Penjelasan AI" },
+    "titleBack": { "message": "Kembali" },
+
+    "btnDismiss": { "message": "Tutup" },
+    "btnSteps": { "message": "Langkah" },
+    "btnHide": { "message": "Sembunyi" },
+
+    "statusConnecting": { "message": "Menyambung ke tab aktif..." },
+    "statusReady": { "message": "Bersedia" },
+    "statusTranscribing": { "message": "Mentranskripsi suara..." },
+    "statusSpeechShort": { "message": "Pertuturan terlalu pendek atau kosong." },
+    "statusDeliberating": { "message": "Menganalisis..." },
+    "statusStopped": { "message": "Dihentikan oleh pengguna." },
+    "statusInspecting": { "message": "Memeriksa status halaman..." },
+    "statusRedacting": { "message": "Menyembunyikan maklumat peribadi (PII)..." },
+    "statusExplanation": { "message": "Penjelasan disediakan." },
+    "statusNoSpeech": { "message": "Tiada pertuturan jelas kedengaran." },
+    "statusListeningWait": { "message": "Mendengar... Sebutkan arahan anda." },
+    "statusProcessingSpeech": { "message": "Memproses pertuturan..." },
+    "statusTaskFinished": { "message": "Tugas selesai!" },
+
+    "titleListening": { "message": "Mendengar... (Akan dihantar automatik apabila anda berhenti bercakap)" },
+    "lblListening": { "message": "Mendengar... (Bercakap sekarang)" },
+    "titleDictate": { "message": "Imlak arahan" },
+
+    "errNoInput": { "message": "Sila masukkan matlamat atau tanya soalan." },
+    "errMicRequired": { "message": "Kebenaran mikrofon diperlukan. Membuka tab tetapan..." },
+    "errDeleteOnlyProfile": { "message": "Tidak boleh memadam profil tunggal yang tinggal." },
+    "errNoModels": { "message": "Tiada model ditemui." },
+
+    "headerAutofill": { "message": "Profil Isian Otomatik" },
+    "lblSelectProfile": { "message": "Pilih Profil" },
+    "lblActiveProfile": { "message": " (Aktif)" },
+    "titleNewProfile": { "message": "Tambah profil baharu" },
+    "btnNewProfile": { "message": "+ Baharu" },
+    "titleDeleteProfile": { "message": "Padam profil semasa" },
+    "btnDeleteProfile": { "message": "Padam" },
+    "lblNewProfileName": { "message": "Profil Baharu" },
+    "msgEnterProfileDetails": { "message": "Masukkan butiran profil dan klik Simpan." },
+    "msgProfileRemoved": { "message": "Profil dibuang." },
+    "msgProfileSaved": { "message": "Profil disimpan." },
+
+    "lblProfileName": { "message": "Nama Profil (Label)" },
+    "phProfileName": { "message": "cth. Peribadi, Kerja, Ali" },
+    "lblUsername": { "message": "Nama Pengguna / ID" },
+    "phUsername": { "message": "cth. ali99" },
+    "lblFirstName": { "message": "Nama Pertama" },
+    "phFirstName": { "message": "Ali" },
+    "lblMiddleName": { "message": "Nama Tengah" },
+    "phMiddleName": { "message": "Bin" },
+    "lblLastName": { "message": "Nama Keluarga" },
+    "phLastName": { "message": "Hassan" },
+    "lblEmail": { "message": "E-mel" },
+    "phEmail": { "message": "ali@contoh.com" },
+    "lblPhone": { "message": "Telefon" },
+    "phPhone": { "message": "+60 12 345 6789" },
+    "lblAddress": { "message": "Alamat Jalan" },
+    "phAddress": { "message": "123 Jalan Ampang" },
+    "lblCity": { "message": "Bandar" },
+    "phCity": { "message": "Kuala Lumpur" },
+    "lblState": { "message": "Negeri" },
+    "phState": { "message": "Wilayah Persekutuan" },
+    "lblZip": { "message": "Poskod" },
+    "phZip": { "message": "50450" },
+    "lblCountry": { "message": "Negara" },
+    "phCountry": { "message": "Malaysia" },
+    "btnSaveProfile": { "message": "Simpan Profil Aktif" },
+
+    "headerSettings": { "message": "Tetapan" },
+    "lblTheme": { "message": "Tema" },
+    "themeGraphite": { "message": "Grafit Gelap (Kelabu Gelap/Hitam)" },
+    "themeClean": { "message": "Bersih (Cerah Minimal)" },
+    "themeIndigo": { "message": "Indigo Gelap" },
+    "themeLavender": { "message": "Lavender Cerah" },
+    "lblMaxSteps": { "message": "Had Langkah Autonomi" },
+    "lblServerUrl": { "message": "URL Pelayan Open WebUI" },
+    "phServerUrl": { "message": "https://openwebui.contoh.com" },
+    "lblApiKey": { "message": "Kunci API" },
+    "phApiKey": { "message": "sk-..." },
+    "lblModel": { "message": "Model Visi (Vision Model)" },
+    "btnRefresh": { "message": "Segar semula" },
+    "phModel": { "message": "Gemma 4" },
+    "btnSaveSettings": { "message": "Simpan" },
+    "btnTestSettings": { "message": "Uji" },
+    "msgSettingsSaved": { "message": "Tetapan disimpan." },
+
+    "stepCounter": {
+        "message": "Langkah $1/$2",
+        "description": "Shows current step out of total max steps",
+        "placeholders": {
+            "current": { "content": "$1" },
+            "total": { "content": "$2" }
+        }
+    },
+    "statusExecuting": {
+        "message": "Melaksanakan: $1...",
+        "placeholders": {
+            "actionName": { "content": "$1" }
+        }
+    },
+    "statusRecognized": {
+        "message": "Dikesan: \"$1\"",
+        "placeholders": {
+            "text": { "content": "$1" }
+        }
+    },
+    "errDictation": {
+        "message": "Pengimlakan gagal: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errMicError": {
+        "message": "Ralat mikrofon: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errSaveFailed": {
+        "message": "Gagal menyimpan: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errDeleteFailed": {
+        "message": "Gagal memadam: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "msgModelsFound": {
+        "message": "Ditemui $1 model.",
+        "placeholders": {
+            "count": { "content": "$1" }
+        }
+    }
+}

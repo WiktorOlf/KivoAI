@@ -1,0 +1,150 @@
+{
+    "extName": { "message": "KivoAI" },
+    "extDescription": { "message": "Un assistent de navegador autònom centrat en la privadesa, impulsat per IA local." },
+
+    "promptLabel": { "message": "Fes una pregunta o estableix un objectiu" },
+    "promptPlaceholder": { "message": "p.ex. 'Omple aquest formulari' o 'Quina és aquesta pàgina?'..." },
+    "btnDictate": { "message": "Dita la instrucció" },
+    "btnSubmit": { "message": "Envia" },
+    "btnStop": { "message": "Atura" },
+
+    "titleAutofill": { "message": "Perfils d'emplenament automàtic" },
+    "titleSettings": { "message": "Configuració" },
+    "titleDictatePrompt": { "message": "Dita la instrucció" },
+    "titleAiExplanation": { "message": "Explicació de la IA" },
+    "titleBack": { "message": "Enrere" },
+
+    "btnDismiss": { "message": "Tanca" },
+    "btnSteps": { "message": "Passos" },
+    "btnHide": { "message": "Amaga" },
+
+    "statusConnecting": { "message": "S'està connectant a la pestanya activa..." },
+    "statusReady": { "message": "Llest" },
+    "statusTranscribing": { "message": "S'està transcribint la veu..." },
+    "statusSpeechShort": { "message": "La veu és massa curta o buida." },
+    "statusDeliberating": { "message": "S'està analitzant..." },
+    "statusStopped": { "message": "Aturat per l'usuari." },
+    "statusInspecting": { "message": "S'està inspeccionant l'estat de la pàgina..." },
+    "statusRedacting": { "message": "S'estan ocultant les dades personals (PII)..." },
+    "statusExplanation": { "message": "Explicació proporcionada." },
+    "statusNoSpeech": { "message": "No s'ha detectat cap veu clara." },
+    "statusListeningWait": { "message": "S'està escoltant... Digues la teva ordre." },
+    "statusProcessingSpeech": { "message": "S'està processant la veu..." },
+    "statusTaskFinished": { "message": "Tasca completada!" },
+
+    "titleListening": { "message": "S'està escoltant... (S'enviarà automàticament quan deixis de parlar)" },
+    "lblListening": { "message": "S'està escoltant... (Parla ara)" },
+    "titleDictate": { "message": "Dita la instrucció" },
+
+    "errNoInput": { "message": "Si us plau, introdueix un objectiu o fes una pregunta." },
+    "errMicRequired": { "message": "Cal permís de micròfon. S'està obrint la pestanya de configuració..." },
+    "errDeleteOnlyProfile": { "message": "No es pot suprimir l'únic perfil restant." },
+    "errNoModels": { "message": "No s'ha trobat cap model." },
+
+    "headerAutofill": { "message": "Perfils d'emplenament automàtic" },
+    "lblSelectProfile": { "message": "Selecciona el perfil" },
+    "lblActiveProfile": { "message": " (Actiu)" },
+    "titleNewProfile": { "message": "Afegeix un perfil nou" },
+    "btnNewProfile": { "message": "+ Nou" },
+    "titleDeleteProfile": { "message": "Suprimeix el perfil actual" },
+    "btnDeleteProfile": { "message": "Suprimeix" },
+    "lblNewProfileName": { "message": "Perfil nou" },
+    "msgEnterProfileDetails": { "message": "Introdueix els detalls del perfil i fes clic a Desa." },
+    "msgProfileRemoved": { "message": "Perfil suprimit." },
+    "msgProfileSaved": { "message": "Perfil desat." },
+
+    "lblProfileName": { "message": "Nom del perfil (Etiqueta)" },
+    "phProfileName": { "message": "p.ex. Personal, Feina, Àlex" },
+    "lblUsername": { "message": "Nom d'usuari / ID" },
+    "phUsername": { "message": "p.ex. aguilera99" },
+    "lblFirstName": { "message": "Nom" },
+    "phFirstName": { "message": "Anna" },
+    "lblMiddleName": { "message": "Segon nom" },
+    "phMiddleName": { "message": "Maria" },
+    "lblLastName": { "message": "Cognom" },
+    "phLastName": { "message": "Garcia" },
+    "lblEmail": { "message": "Correu electrònic" },
+    "phEmail": { "message": "anna@example.cat" },
+    "lblPhone": { "message": "Telèfon" },
+    "phPhone": { "message": "+34 600 123 456" },
+    "lblAddress": { "message": "Adreça" },
+    "phAddress": { "message": "Carrer Gran de Gràcia 123" },
+    "lblCity": { "message": "Ciutat" },
+    "phCity": { "message": "Barcelona" },
+    "lblState": { "message": "Província / Comtat" },
+    "phState": { "message": "Barcelona" },
+    "lblZip": { "message": "Codi postal" },
+    "phZip": { "message": "08012" },
+    "lblCountry": { "message": "País" },
+    "phCountry": { "message": "Espanya" },
+    "btnSaveProfile": { "message": "Desa el perfil actiu" },
+
+    "headerSettings": { "message": "Configuració" },
+    "lblTheme": { "message": "Tema" },
+    "themeGraphite": { "message": "Grafit fosc (Gris fosc/Negre)" },
+    "themeClean": { "message": "Pissarra neta (Clar minimalista)" },
+    "themeIndigo": { "message": "Indi fosc profund" },
+    "themeLavender": { "message": "Lavanda clar" },
+    "lblMaxSteps": { "message": "Límit de passos autònoms" },
+    "lblServerUrl": { "message": "URL del servidor Open WebUI" },
+    "phServerUrl": { "message": "https://openwebui.example.cat" },
+    "lblApiKey": { "message": "Clau API" },
+    "phApiKey": { "message": "sk-..." },
+    "lblModel": { "message": "Model de visió (Vision Model)" },
+    "btnRefresh": { "message": "Actualitza" },
+    "phModel": { "message": "Gemma 4" },
+    "btnSaveSettings": { "message": "Desa" },
+    "btnTestSettings": { "message": "Prova" },
+    "msgSettingsSaved": { "message": "Configuració desada." },
+
+    "stepCounter": {
+        "message": "Pas $1/$2",
+        "description": "Shows current step out of total max steps",
+        "placeholders": {
+            "current": { "content": "$1" },
+            "total": { "content": "$2" }
+        }
+    },
+    "statusExecuting": {
+        "message": "S'està executant: $1...",
+        "placeholders": {
+            "actionName": { "content": "$1" }
+        }
+    },
+    "statusRecognized": {
+        "message": "Reconegut: \"$1\"",
+        "placeholders": {
+            "text": { "content": "$1" }
+        }
+    },
+    "errDictation": {
+        "message": "Error de dictat: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errMicError": {
+        "message": "Error de micròfon: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errSaveFailed": {
+        "message": "No s'ha pogut desar: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errDeleteFailed": {
+        "message": "No s'ha pogut suprimir: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "msgModelsFound": {
+        "message": "S'ha(n) trobat $1 model(s).",
+        "placeholders": {
+            "count": { "content": "$1" }
+        }
+    }
+}

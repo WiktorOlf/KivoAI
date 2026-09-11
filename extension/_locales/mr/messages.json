@@ -1,0 +1,150 @@
+{
+    "extName": { "message": "KivoAI" },
+    "extDescription": { "message": "स्थानिक AI द्वारे समर्थित, गोपनीयतेला प्राधान्य देणारा स्वायत्त ब्राउझर असिस्टंट." },
+
+    "promptLabel": { "message": "प्रश्न विचारा किंवा एखादे ध्येय सांगा" },
+    "promptPlaceholder": { "message": "उदा. 'हा फॉर्म भरा' किंवा 'हे पेज काय आहे?'..." },
+    "btnDictate": { "message": "प्रॉम्प्ट बोलून लिहा" },
+    "btnSubmit": { "message": "सबमिट करा" },
+    "btnStop": { "message": "थांबा" },
+
+    "titleAutofill": { "message": "ऑटोफिल प्रोफाईल्स" },
+    "titleSettings": { "message": "सेटिंग्ज" },
+    "titleDictatePrompt": { "message": "प्रॉम्प्ट बोलून लिहा" },
+    "titleAiExplanation": { "message": "AI स्पष्टीकरण" },
+    "titleBack": { "message": "मागे" },
+
+    "btnDismiss": { "message": "बंद करा" },
+    "btnSteps": { "message": "पायऱ्या" },
+    "btnHide": { "message": "लपवा" },
+
+    "statusConnecting": { "message": "सक्रिय टॅबशी कनेक्ट करत आहे..." },
+    "statusReady": { "message": "तयार" },
+    "statusTranscribing": { "message": "आवाजाचे मजकुरात रूपांतर करत आहे..." },
+    "statusSpeechShort": { "message": "आवाज खूप लहान किंवा रिकामा आहे." },
+    "statusDeliberating": { "message": "विश्लेषण करत आहे..." },
+    "statusStopped": { "message": "वापरकर्त्याद्वारे थांबवले." },
+    "statusInspecting": { "message": "पेजची स्थिती तपासत आहे..." },
+    "statusRedacting": { "message": "खाजगी माहिती (PII) लपवत आहे..." },
+    "statusExplanation": { "message": "स्पष्टीकरण दिले आहे." },
+    "statusNoSpeech": { "message": "स्पष्ट आवाज ऐकू आला नाही." },
+    "statusListeningWait": { "message": "ऐकत आहे... तुमची कमांड सांगा." },
+    "statusProcessingSpeech": { "message": "आवाजावर प्रक्रिया करत आहे..." },
+    "statusTaskFinished": { "message": "काम पूर्ण झाले!" },
+
+    "titleListening": { "message": "ऐकत आहे... (तुम्ही बोलणे थांबवल्यावर आपोआप सबमिट होईल)" },
+    "lblListening": { "message": "ऐकत आहे... (आता बोला)" },
+    "titleDictate": { "message": "प्रॉम्प्ट बोलून लिहा" },
+
+    "errNoInput": { "message": "कृपया एखादे ध्येय एंटर करा किंवा प्रश्न विचारा." },
+    "errMicRequired": { "message": "मायक्रोफोनची परवानगी आवश्यक आहे. सेटअप टॅब उघडत आहे..." },
+    "errDeleteOnlyProfile": { "message": "एकमेव उरलेली प्रोफाईल हटवता येत नाही." },
+    "errNoModels": { "message": "कोणतेही मॉडेल्स आढळले नाहीत." },
+
+    "headerAutofill": { "message": "ऑटोफिल प्रोफाईल्स" },
+    "lblSelectProfile": { "message": "प्रोफाईल निवडा" },
+    "lblActiveProfile": { "message": " (सक्रिय)" },
+    "titleNewProfile": { "message": "नवीन प्रोफाईल जोडा" },
+    "btnNewProfile": { "message": "+ नवीन" },
+    "titleDeleteProfile": { "message": "सध्याची प्रोफाईल हटवा" },
+    "btnDeleteProfile": { "message": "हटवा" },
+    "lblNewProfileName": { "message": "नवीन प्रोफाईल" },
+    "msgEnterProfileDetails": { "message": "प्रोफाईल तपशील एंटर करा आणि सेव्हवर क्लिक करा." },
+    "msgProfileRemoved": { "message": "प्रोफाईल हटवली." },
+    "msgProfileSaved": { "message": "प्रोफाईल सेव्ह केली." },
+
+    "lblProfileName": { "message": "प्रोफाईलचे नाव (लेबल)" },
+    "phProfileName": { "message": "उदा. वैयक्तिक, काम, राज" },
+    "lblUsername": { "message": "वापरकर्तानाव / युजर आयडी" },
+    "phUsername": { "message": "उदा. raj99" },
+    "lblFirstName": { "message": "पहिले नाव" },
+    "phFirstName": { "message": "राज" },
+    "lblMiddleName": { "message": "मधले नाव" },
+    "phMiddleName": { "message": "कुमार" },
+    "lblLastName": { "message": "आडनाव" },
+    "phLastName": { "message": "पाटील" },
+    "lblEmail": { "message": "ईमेल" },
+    "phEmail": { "message": "raj@example.com" },
+    "lblPhone": { "message": "फोन" },
+    "phPhone": { "message": "+91 98765 43210" },
+    "lblAddress": { "message": "रस्त्याचा पत्ता" },
+    "phAddress": { "message": "१२३ मुख्य रस्ता" },
+    "lblCity": { "message": "शहर" },
+    "phCity": { "message": "पुणे" },
+    "lblState": { "message": "राज्य / प्रांत" },
+    "phState": { "message": "महाराष्ट्र" },
+    "lblZip": { "message": "पिन कोड" },
+    "phZip": { "message": "४११००१" },
+    "lblCountry": { "message": "देश" },
+    "phCountry": { "message": "भारत" },
+    "btnSaveProfile": { "message": "सक्रिय प्रोफाईल सेव्ह करा" },
+
+    "headerSettings": { "message": "सेटिंग्ज" },
+    "lblTheme": { "message": "थीम" },
+    "themeGraphite": { "message": "ग्राफाईट डार्क (गडद करडा/काळा)" },
+    "themeClean": { "message": "क्लीन स्लेट (हलका/किमान)" },
+    "themeIndigo": { "message": "डीप इंडिगो डार्क" },
+    "themeLavender": { "message": "लॅव्हेंडर लाईट" },
+    "lblMaxSteps": { "message": "स्वायत्त पायऱ्यांची मर्यादा" },
+    "lblServerUrl": { "message": "Open WebUI सर्व्हर URL" },
+    "phServerUrl": { "message": "https://openwebui.example.com" },
+    "lblApiKey": { "message": "API की (Key)" },
+    "phApiKey": { "message": "sk-..." },
+    "lblModel": { "message": "व्हिजन मॉडेल" },
+    "btnRefresh": { "message": "रिफ्रेश करा" },
+    "phModel": { "message": "Gemma 4" },
+    "btnSaveSettings": { "message": "सेव्ह करा" },
+    "btnTestSettings": { "message": "टेस्ट करा" },
+    "msgSettingsSaved": { "message": "सेटिंग्ज सेव्ह केल्या." },
+
+    "stepCounter": {
+        "message": "पायरी $1/$2",
+        "description": "Shows current step out of total max steps",
+        "placeholders": {
+            "current": { "content": "$1" },
+            "total": { "content": "$2" }
+        }
+    },
+    "statusExecuting": {
+        "message": "अंमलबजावणी करत आहे: $1...",
+        "placeholders": {
+            "actionName": { "content": "$1" }
+        }
+    },
+    "statusRecognized": {
+        "message": "ओळखले: \"$1\"",
+        "placeholders": {
+            "text": { "content": "$1" }
+        }
+    },
+    "errDictation": {
+        "message": "डिक्टेशन अयशस्वी: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errMicError": {
+        "message": "मायक्रोफोन एरर: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errSaveFailed": {
+        "message": "सेव्ह करणे अयशस्वी: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errDeleteFailed": {
+        "message": "हटवणे अयशस्वी: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "msgModelsFound": {
+        "message": "$1 मॉडेल सापडले.",
+        "placeholders": {
+            "count": { "content": "$1" }
+        }
+    }
+}

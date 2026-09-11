@@ -1,0 +1,150 @@
+{
+    "extName": { "message": "KivoAI" },
+    "extDescription": { "message": "સ્થાનિક AI દ્વારા સંચાલિત, ગોપનીયતાને પ્રાધાન્ય આપતું સ્વાયત્ત બ્રાઉઝર આસિસ્ટન્ટ." },
+
+    "promptLabel": { "message": "પ્રશ્ન પૂછો અથવા લક્ષ્ય આપો" },
+    "promptPlaceholder": { "message": "દા.ત. 'આ ફોર્મ ભરો' અથવા 'આ પેજ શું છે?'..." },
+    "btnDictate": { "message": "પ્રૉમ્પ્ટ બોલીને લખાવો" },
+    "btnSubmit": { "message": "સબમિટ કરો" },
+    "btnStop": { "message": "રોકો" },
+
+    "titleAutofill": { "message": "ઑટોફિલ પ્રોફાઇલ્સ" },
+    "titleSettings": { "message": "સેટિંગ્સ" },
+    "titleDictatePrompt": { "message": "પ્રૉમ્પ્ટ બોલીને લખાવો" },
+    "titleAiExplanation": { "message": "AI સમજૂતી" },
+    "titleBack": { "message": "પાછા જાઓ" },
+
+    "btnDismiss": { "message": "બંધ કરો" },
+    "btnSteps": { "message": "પગલાં" },
+    "btnHide": { "message": "છુપાવો" },
+
+    "statusConnecting": { "message": "સક્રિય ટૅબ સાથે કનેક્ટ થઈ રહ્યું છે..." },
+    "statusReady": { "message": "તૈયાર" },
+    "statusTranscribing": { "message": "અવાજને ટેક્સ્ટમાં બદલી રહ્યું છે..." },
+    "statusSpeechShort": { "message": "અવાજ ખૂબ ટૂંકો અથવા ખાલી છે." },
+    "statusDeliberating": { "message": "વિશ્લેષણ કરી રહ્યું છે..." },
+    "statusStopped": { "message": "વપરાશકર્તા દ્વારા રોકવામાં આવ્યું." },
+    "statusInspecting": { "message": "પેજની સ્થિતિ તપાસી રહ્યું છે..." },
+    "statusRedacting": { "message": "વ્યક્તિગત માહિતી (PII) છુપાવી રહ્યું છે..." },
+    "statusExplanation": { "message": "સમજૂતી આપવામાં આવી." },
+    "statusNoSpeech": { "message": "કોઈ સ્પષ્ટ અવાજ સંભળાયો નથી." },
+    "statusListeningWait": { "message": "સાંભળી રહ્યું છે... તમારો આદેશ બોલો." },
+    "statusProcessingSpeech": { "message": "અવાજ પર પ્રક્રિયા થઈ રહી છે..." },
+    "statusTaskFinished": { "message": "કાર્ય પૂર્ણ થયું!" },
+
+    "titleListening": { "message": "સાંભળી રહ્યું છે... (જ્યારે તમે બોલવાનું બંધ કરશો ત્યારે આપમેળે સબમિટ થશે)" },
+    "lblListening": { "message": "સાંભળી રહ્યું છે... (હવે બોલો)" },
+    "titleDictate": { "message": "પ્રૉમ્પ્ટ બોલીને લખાવો" },
+
+    "errNoInput": { "message": "કૃપા કરીને લક્ષ્ય દાખલ કરો અથવા પ્રશ્ન પૂછો." },
+    "errMicRequired": { "message": "માઇક્રોફોનની પરવાનગી જરૂરી છે. સેટઅપ ટૅબ ખોલી રહ્યું છે..." },
+    "errDeleteOnlyProfile": { "message": "બાકી રહેલી એકમાત્ર પ્રોફાઇલ કાઢી શકાતી નથી." },
+    "errNoModels": { "message": "કોઈ મોડેલ મળ્યાં નથી." },
+
+    "headerAutofill": { "message": "ઑટોફિલ પ્રોફાઇલ્સ" },
+    "lblSelectProfile": { "message": "પ્રોફાઇલ પસંદ કરો" },
+    "lblActiveProfile": { "message": " (સક્રિય)" },
+    "titleNewProfile": { "message": "નવી પ્રોફાઇલ ઉમેરો" },
+    "btnNewProfile": { "message": "+ નવી" },
+    "titleDeleteProfile": { "message": "વર્તમાન પ્રોફાઇલ કાઢી નાખો" },
+    "btnDeleteProfile": { "message": "કાઢી નાખો" },
+    "lblNewProfileName": { "message": "નવી પ્રોફાઇલ" },
+    "msgEnterProfileDetails": { "message": "પ્રોફાઇલની વિગતો દાખલ કરો અને સાચવો પર ક્લિક કરો." },
+    "msgProfileRemoved": { "message": "પ્રોફાઇલ દૂર કરવામાં આવી." },
+    "msgProfileSaved": { "message": "પ્રોફાઇલ સાચવવામાં આવી." },
+
+    "lblProfileName": { "message": "પ્રોફાઇલનું નામ (લેબલ)" },
+    "phProfileName": { "message": "દા.ત. વ્યક્તિગત, કામ, રાહુલ" },
+    "lblUsername": { "message": "વપરાશકર્તા નામ / યુઝર ID" },
+    "phUsername": { "message": "દા.ત. rahul99" },
+    "lblFirstName": { "message": "પહેલું નામ" },
+    "phFirstName": { "message": "રાહુલ" },
+    "lblMiddleName": { "message": "વચલું નામ" },
+    "phMiddleName": { "message": "કુમાર" },
+    "lblLastName": { "message": "છેલ્લું નામ (અટક)" },
+    "phLastName": { "message": "પટેલ" },
+    "lblEmail": { "message": "ઇમેઇલ" },
+    "phEmail": { "message": "rahul@example.com" },
+    "lblPhone": { "message": "ફોન" },
+    "phPhone": { "message": "+91 98765 43210" },
+    "lblAddress": { "message": "શેરીનું સરનામું" },
+    "phAddress": { "message": "123 મુખ્ય માર્ગ" },
+    "lblCity": { "message": "શહેર" },
+    "phCity": { "message": "અમદાવાદ" },
+    "lblState": { "message": "રાજ્ય" },
+    "phState": { "message": "ગુજરાત" },
+    "lblZip": { "message": "પિન કોડ" },
+    "phZip": { "message": "380001" },
+    "lblCountry": { "message": "દેશ" },
+    "phCountry": { "message": "ભારત" },
+    "btnSaveProfile": { "message": "સક્રિય પ્રોફાઇલ સાચવો" },
+
+    "headerSettings": { "message": "સેટિંગ્સ" },
+    "lblTheme": { "message": "થીમ" },
+    "themeGraphite": { "message": "ગ્રેફાઇટ ડાર્ક (ઘેરો ભૂરો/કાળો)" },
+    "themeClean": { "message": "ક્લીન સ્લેટ (આછો ન્યૂનતમ)" },
+    "themeIndigo": { "message": "ડીપ ઇન્ડિગો ડાર્ક" },
+    "themeLavender": { "message": "લવંડર લાઇટ" },
+    "lblMaxSteps": { "message": "સ્વાયત્ત પગલાંની મર્યાદા" },
+    "lblServerUrl": { "message": "Open WebUI સર્વર URL" },
+    "phServerUrl": { "message": "https://openwebui.example.com" },
+    "lblApiKey": { "message": "API કી" },
+    "phApiKey": { "message": "sk-..." },
+    "lblModel": { "message": "વિઝન મોડેલ" },
+    "btnRefresh": { "message": "રિફ્રેશ કરો" },
+    "phModel": { "message": "Gemma 4" },
+    "btnSaveSettings": { "message": "સાચવો" },
+    "btnTestSettings": { "message": "પરીક્ષણ કરો" },
+    "msgSettingsSaved": { "message": "સેટિંગ્સ સાચવવામાં આવ્યા." },
+
+    "stepCounter": {
+        "message": "પગલું $1/$2",
+        "description": "Shows current step out of total max steps",
+        "placeholders": {
+            "current": { "content": "$1" },
+            "total": { "content": "$2" }
+        }
+    },
+    "statusExecuting": {
+        "message": "ચલાવી રહ્યું છે: $1...",
+        "placeholders": {
+            "actionName": { "content": "$1" }
+        }
+    },
+    "statusRecognized": {
+        "message": "ઓળખાયેલ: \"$1\"",
+        "placeholders": {
+            "text": { "content": "$1" }
+        }
+    },
+    "errDictation": {
+        "message": "ડિક્ટેશન નિષ્ફળ: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errMicError": {
+        "message": "માઇક્રોફોન ભૂલ: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errSaveFailed": {
+        "message": "સાચવવામાં નિષ્ફળ: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errDeleteFailed": {
+        "message": "કાઢી નાખવામાં નિષ્ફળ: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "msgModelsFound": {
+        "message": "$1 મોડેલ મળ્યાં.",
+        "placeholders": {
+            "count": { "content": "$1" }
+        }
+    }
+}

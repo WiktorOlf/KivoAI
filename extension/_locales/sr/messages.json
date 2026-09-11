@@ -1,0 +1,150 @@
+{
+    "extName": { "message": "KivoAI" },
+    "extDescription": { "message": "Autonomni pomoćnik u pretraživaču sa fokusom na privatnost, pokretan lokalnom veštačkom inteligencijom." },
+
+    "promptLabel": { "message": "Postavite pitanje ili zadajte cilj" },
+    "promptPlaceholder": { "message": "npr. 'Popuni ovaj obrazac' ili 'Šta je ova stranica?'..." },
+    "btnDictate": { "message": "Diktiraj komandu" },
+    "btnSubmit": { "message": "Pošalji" },
+    "btnStop": { "message": "Zaustavi" },
+
+    "titleAutofill": { "message": "Profili za automatsko popunjavanje" },
+    "titleSettings": { "message": "Podešavanja" },
+    "titleDictatePrompt": { "message": "Diktiraj komandu" },
+    "titleAiExplanation": { "message": "AI objašnjenje" },
+    "titleBack": { "message": "Nazad" },
+
+    "btnDismiss": { "message": "Zatvori" },
+    "btnSteps": { "message": "Koraci" },
+    "btnHide": { "message": "Sakrij" },
+
+    "statusConnecting": { "message": "Povezivanje sa aktivnom karticom..." },
+    "statusReady": { "message": "Spremno" },
+    "statusTranscribing": { "message": "Pretvaranje govora u tekst..." },
+    "statusSpeechShort": { "message": "Govor je prekratak ili prazan." },
+    "statusDeliberating": { "message": "Analiziranje..." },
+    "statusStopped": { "message": "Zaustavio korisnik." },
+    "statusInspecting": { "message": "Provera stanja stranice..." },
+    "statusRedacting": { "message": "Skrivanje ličnih podataka..." },
+    "statusExplanation": { "message": "Objašnjenje pruženo." },
+    "statusNoSpeech": { "message": "Nije detektovan jasan govor." },
+    "statusListeningWait": { "message": "Slušam... Izgovorite svoju komandu." },
+    "statusProcessingSpeech": { "message": "Obrada govora..." },
+    "statusTaskFinished": { "message": "Zadatak završen!" },
+
+    "titleListening": { "message": "Slušam... (Automatski će se poslati kada prestanete da govorite)" },
+    "lblListening": { "message": "Slušam... (Govorite sada)" },
+    "titleDictate": { "message": "Diktiraj komandu" },
+
+    "errNoInput": { "message": "Molimo unesite cilj ili postavite pitanje." },
+    "errMicRequired": { "message": "Potrebna je dozvola za mikrofon. Otvaranje kartice podešavanja..." },
+    "errDeleteOnlyProfile": { "message": "Nije moguće izbrisati jedini preostali profil." },
+    "errNoModels": { "message": "Nisu pronađeni modeli." },
+
+    "headerAutofill": { "message": "Profili za automatsko popunjavanje" },
+    "lblSelectProfile": { "message": "Izaberi profil" },
+    "lblActiveProfile": { "message": " (Aktivan)" },
+    "titleNewProfile": { "message": "Dodaj novi profil" },
+    "btnNewProfile": { "message": "+ Novi" },
+    "titleDeleteProfile": { "message": "Izbriši trenutni profil" },
+    "btnDeleteProfile": { "message": "Izbriši" },
+    "lblNewProfileName": { "message": "Novi profil" },
+    "msgEnterProfileDetails": { "message": "Unesite detalje profila i kliknite Sačuvaj." },
+    "msgProfileRemoved": { "message": "Profil uklonjen." },
+    "msgProfileSaved": { "message": "Profil sačuvan." },
+
+    "lblProfileName": { "message": "Naziv profila (Oznaka)" },
+    "phProfileName": { "message": "npr. Lično, Posao, Stefan" },
+    "lblUsername": { "message": "Korisničko ime / ID" },
+    "phUsername": { "message": "npr. stefan99" },
+    "lblFirstName": { "message": "Ime" },
+    "phFirstName": { "message": "Stefan" },
+    "lblMiddleName": { "message": "Srednje ime" },
+    "phMiddleName": { "message": "Milan" },
+    "lblLastName": { "message": "Prezime" },
+    "phLastName": { "message": "Petrović" },
+    "lblEmail": { "message": "E-pošta" },
+    "phEmail": { "message": "stefan@primer.rs" },
+    "lblPhone": { "message": "Telefon" },
+    "phPhone": { "message": "+381 60 123 4567" },
+    "lblAddress": { "message": "Adresa ulice" },
+    "phAddress": { "message": "Kneza Miloša 1" },
+    "lblCity": { "message": "Grad" },
+    "phCity": { "message": "Beograd" },
+    "lblState": { "message": "Okrug / Pokrajina" },
+    "phState": { "message": "Beograd" },
+    "lblZip": { "message": "Poštanski broj" },
+    "phZip": { "message": "11000" },
+    "lblCountry": { "message": "Zemlja" },
+    "phCountry": { "message": "Srbija" },
+    "btnSaveProfile": { "message": "Sačuvaj aktivni profil" },
+
+    "headerSettings": { "message": "Podešavanja" },
+    "lblTheme": { "message": "Tema" },
+    "themeGraphite": { "message": "Tamni grafit (Tamnosiva/Crna)" },
+    "themeClean": { "message": "Čist list (Svetla minimalna)" },
+    "themeIndigo": { "message": "Duboki indigo tamni" },
+    "themeLavender": { "message": "Svetla lavanda" },
+    "lblMaxSteps": { "message": "Ograničenje autonomnih koraka" },
+    "lblServerUrl": { "message": "URL Open WebUI servera" },
+    "phServerUrl": { "message": "https://openwebui.primer.rs" },
+    "lblApiKey": { "message": "API ključ" },
+    "phApiKey": { "message": "sk-..." },
+    "lblModel": { "message": "Vizuelni model (Vision Model)" },
+    "btnRefresh": { "message": "Osveži" },
+    "phModel": { "message": "Gemma 4" },
+    "btnSaveSettings": { "message": "Sačuvaj" },
+    "btnTestSettings": { "message": "Testiraj" },
+    "msgSettingsSaved": { "message": "Podešavanja sačuvana." },
+
+    "stepCounter": {
+        "message": "Korak $1/$2",
+        "description": "Shows current step out of total max steps",
+        "placeholders": {
+            "current": { "content": "$1" },
+            "total": { "content": "$2" }
+        }
+    },
+    "statusExecuting": {
+        "message": "Izvršavanje: $1...",
+        "placeholders": {
+            "actionName": { "content": "$1" }
+        }
+    },
+    "statusRecognized": {
+        "message": "Prepoznato: \"$1\"",
+        "placeholders": {
+            "text": { "content": "$1" }
+        }
+    },
+    "errDictation": {
+        "message": "Diktiranje nije uspelo: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errMicError": {
+        "message": "Greška mikrofona: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errSaveFailed": {
+        "message": "Čuvanje nije uspelo: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errDeleteFailed": {
+        "message": "Brisanje nije uspelo: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "msgModelsFound": {
+        "message": "Pronađen(i) $1 model(i).",
+        "placeholders": {
+            "count": { "content": "$1" }
+        }
+    }
+}

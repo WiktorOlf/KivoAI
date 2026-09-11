@@ -1,0 +1,150 @@
+{
+    "extName": { "message": "KivoAI" },
+    "extDescription": { "message": "Автономний браузерний асистент із пріоритетом конфіденційності, що працює на базі локального ШІ." },
+
+    "promptLabel": { "message": "Поставте запитання або вкажіть ціль" },
+    "promptPlaceholder": { "message": "напр., 'Заповни цю форму' або 'Що це за сторінка?'..." },
+    "btnDictate": { "message": "Продиктувати запит" },
+    "btnSubmit": { "message": "Надіслати" },
+    "btnStop": { "message": "Зупинити" },
+
+    "titleAutofill": { "message": "Профілі автозаповнення" },
+    "titleSettings": { "message": "Налаштування" },
+    "titleDictatePrompt": { "message": "Продиктувати запит" },
+    "titleAiExplanation": { "message": "Пояснення ШІ" },
+    "titleBack": { "message": "Назад" },
+
+    "btnDismiss": { "message": "Закрити" },
+    "btnSteps": { "message": "Кроки" },
+    "btnHide": { "message": "Приховати" },
+
+    "statusConnecting": { "message": "Підключення до активної вкладки..." },
+    "statusReady": { "message": "Готово" },
+    "statusTranscribing": { "message": "Розпізнавання голосу..." },
+    "statusSpeechShort": { "message": "Голосове повідомлення занадто коротке або порожнє." },
+    "statusDeliberating": { "message": "Аналіз..." },
+    "statusStopped": { "message": "Зупинено користувачем." },
+    "statusInspecting": { "message": "Перевірка стану сторінки..." },
+    "statusRedacting": { "message": "Приховування особистих даних..." },
+    "statusExplanation": { "message": "Пояснення надано." },
+    "statusNoSpeech": { "message": "Чіткого мовлення не розпізнано." },
+    "statusListeningWait": { "message": "Слухаю... Вимовте вашу команду." },
+    "statusProcessingSpeech": { "message": "Обробка мовлення..." },
+    "statusTaskFinished": { "message": "Завдання завершено!" },
+
+    "titleListening": { "message": "Слухаю... (Буде надіслано автоматично, коли ви припините говорити)" },
+    "lblListening": { "message": "Слухаю... (Говоріть зараз)" },
+    "titleDictate": { "message": "Продиктувати запит" },
+
+    "errNoInput": { "message": "Будь ласка, введіть ціль або поставте запитання." },
+    "errMicRequired": { "message": "Потрібен дозвіл на використання мікрофона. Відкривається вкладка налаштувань..." },
+    "errDeleteOnlyProfile": { "message": "Неможливо видалити єдиний профіль, що залишився." },
+    "errNoModels": { "message": "Моделі не знайдено." },
+
+    "headerAutofill": { "message": "Профілі автозаповнення" },
+    "lblSelectProfile": { "message": "Виберіть профіль" },
+    "lblActiveProfile": { "message": " (Активний)" },
+    "titleNewProfile": { "message": "Додати новий профіль" },
+    "btnNewProfile": { "message": "+ Новий" },
+    "titleDeleteProfile": { "message": "Видалити поточний профіль" },
+    "btnDeleteProfile": { "message": "Видалити" },
+    "lblNewProfileName": { "message": "Новий профіль" },
+    "msgEnterProfileDetails": { "message": "Введіть дані профілю та натисніть 'Зберегти'." },
+    "msgProfileRemoved": { "message": "Профіль видалено." },
+    "msgProfileSaved": { "message": "Профіль збережено." },
+
+    "lblProfileName": { "message": "Назва профілю (Мітка)" },
+    "phProfileName": { "message": "напр., Особистий, Робота, Олексій" },
+    "lblUsername": { "message": "Ім'я користувача / ID" },
+    "phUsername": { "message": "напр., olex99" },
+    "lblFirstName": { "message": "Ім'я" },
+    "phFirstName": { "message": "Олена" },
+    "lblMiddleName": { "message": "По батькові" },
+    "phMiddleName": { "message": "Іванівна" },
+    "lblLastName": { "message": "Прізвище" },
+    "phLastName": { "message": "Коваленко" },
+    "lblEmail": { "message": "Ел. пошта" },
+    "phEmail": { "message": "olena@example.com" },
+    "lblPhone": { "message": "Телефон" },
+    "phPhone": { "message": "+380 50 123 4567" },
+    "lblAddress": { "message": "Адреса (вулиця, будинок)" },
+    "phAddress": { "message": "вул. Хрещатик, буд. 1" },
+    "lblCity": { "message": "Місто" },
+    "phCity": { "message": "Київ" },
+    "lblState": { "message": "Область / Штат" },
+    "phState": { "message": "Київська область" },
+    "lblZip": { "message": "Поштовий індекс" },
+    "phZip": { "message": "01001" },
+    "lblCountry": { "message": "Країна" },
+    "phCountry": { "message": "Україна" },
+    "btnSaveProfile": { "message": "Зберегти активний профіль" },
+
+    "headerSettings": { "message": "Налаштування" },
+    "lblTheme": { "message": "Тема" },
+    "themeGraphite": { "message": "Темний графіт (Темно-сірий/Чорний)" },
+    "themeClean": { "message": "Чистий аркуш (Світла мінімалістична)" },
+    "themeIndigo": { "message": "Глибокий індиго (Темна)" },
+    "themeLavender": { "message": "Світла лаванда" },
+    "lblMaxSteps": { "message": "Ліміт автономних кроків" },
+    "lblServerUrl": { "message": "URL-адреса сервера Open WebUI" },
+    "phServerUrl": { "message": "https://openwebui.example.com" },
+    "lblApiKey": { "message": "API-ключ" },
+    "phApiKey": { "message": "sk-..." },
+    "lblModel": { "message": "Vision-модель" },
+    "btnRefresh": { "message": "Оновити" },
+    "phModel": { "message": "Gemma 4" },
+    "btnSaveSettings": { "message": "Зберегти" },
+    "btnTestSettings": { "message": "Перевірити" },
+    "msgSettingsSaved": { "message": "Налаштування збережено." },
+
+    "stepCounter": {
+        "message": "Крок $1/$2",
+        "description": "Shows current step out of total max steps",
+        "placeholders": {
+            "current": { "content": "$1" },
+            "total": { "content": "$2" }
+        }
+    },
+    "statusExecuting": {
+        "message": "Виконання: $1...",
+        "placeholders": {
+            "actionName": { "content": "$1" }
+        }
+    },
+    "statusRecognized": {
+        "message": "Розпізнано: \"$1\"",
+        "placeholders": {
+            "text": { "content": "$1" }
+        }
+    },
+    "errDictation": {
+        "message": "Помилка диктування: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errMicError": {
+        "message": "Помилка мікрофона: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errSaveFailed": {
+        "message": "Помилка збереження: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errDeleteFailed": {
+        "message": "Помилка видалення: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "msgModelsFound": {
+        "message": "Знайдено $1 модель(ей).",
+        "placeholders": {
+            "count": { "content": "$1" }
+        }
+    }
+}

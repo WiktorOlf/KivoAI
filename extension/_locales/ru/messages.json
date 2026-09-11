@@ -1,0 +1,150 @@
+{
+    "extName": { "message": "KivoAI" },
+    "extDescription": { "message": "Автономный браузерный ассистент с приоритетом конфиденциальности, работающий на базе локального ИИ." },
+
+    "promptLabel": { "message": "Задайте вопрос или укажите цель" },
+    "promptPlaceholder": { "message": "напр., 'Заполни эту форму' или 'Что это за страница?'..." },
+    "btnDictate": { "message": "Продиктовать запрос" },
+    "btnSubmit": { "message": "Отправить" },
+    "btnStop": { "message": "Остановить" },
+
+    "titleAutofill": { "message": "Профили автозаполнения" },
+    "titleSettings": { "message": "Настройки" },
+    "titleDictatePrompt": { "message": "Продиктовать запрос" },
+    "titleAiExplanation": { "message": "Объяснение ИИ" },
+    "titleBack": { "message": "Назад" },
+
+    "btnDismiss": { "message": "Закрыть" },
+    "btnSteps": { "message": "Шаги" },
+    "btnHide": { "message": "Скрыть" },
+
+    "statusConnecting": { "message": "Подключение к активной вкладке..." },
+    "statusReady": { "message": "Готов" },
+    "statusTranscribing": { "message": "Расшифровка голоса..." },
+    "statusSpeechShort": { "message": "Речь слишком короткая или отсутствует." },
+    "statusDeliberating": { "message": "Анализ..." },
+    "statusStopped": { "message": "Остановлено пользователем." },
+    "statusInspecting": { "message": "Проверка состояния страницы..." },
+    "statusRedacting": { "message": "Скрытие личных данных..." },
+    "statusExplanation": { "message": "Объяснение предоставлено." },
+    "statusNoSpeech": { "message": "Четкая речь не распознана." },
+    "statusListeningWait": { "message": "Слушаю... Произнесите команду." },
+    "statusProcessingSpeech": { "message": "Обработка речи..." },
+    "statusTaskFinished": { "message": "Задача завершена!" },
+
+    "titleListening": { "message": "Слушаю... (Будет отправлено автоматически, когда вы закончите говорить)" },
+    "lblListening": { "message": "Слушаю... (Говорите)" },
+    "titleDictate": { "message": "Продиктовать запрос" },
+
+    "errNoInput": { "message": "Пожалуйста, введите цель или задайте вопрос." },
+    "errMicRequired": { "message": "Требуется разрешение на использование микрофона. Открытие вкладки настроек..." },
+    "errDeleteOnlyProfile": { "message": "Невозможно удалить единственный оставшийся профиль." },
+    "errNoModels": { "message": "Модели не найдены." },
+
+    "headerAutofill": { "message": "Профили автозаполнения" },
+    "lblSelectProfile": { "message": "Выберите профиль" },
+    "lblActiveProfile": { "message": " (Активен)" },
+    "titleNewProfile": { "message": "Добавить новый профиль" },
+    "btnNewProfile": { "message": "+ Новый" },
+    "titleDeleteProfile": { "message": "Удалить текущий профиль" },
+    "btnDeleteProfile": { "message": "Удалить" },
+    "lblNewProfileName": { "message": "Новый профиль" },
+    "msgEnterProfileDetails": { "message": "Введите данные профиля и нажмите «Сохранить»." },
+    "msgProfileRemoved": { "message": "Профиль удален." },
+    "msgProfileSaved": { "message": "Профиль сохранен." },
+
+    "lblProfileName": { "message": "Имя профиля (Метка)" },
+    "phProfileName": { "message": "напр., Личный, Работа, Алекс" },
+    "lblUsername": { "message": "Имя пользователя / ID" },
+    "phUsername": { "message": "напр., ivan99" },
+    "lblFirstName": { "message": "Имя" },
+    "phFirstName": { "message": "Иван" },
+    "lblMiddleName": { "message": "Отчество" },
+    "phMiddleName": { "message": "Иванович" },
+    "lblLastName": { "message": "Фамилия" },
+    "phLastName": { "message": "Иванов" },
+    "lblEmail": { "message": "Эл. почта" },
+    "phEmail": { "message": "ivan@example.com" },
+    "lblPhone": { "message": "Телефон" },
+    "phPhone": { "message": "+7 999 123 45 67" },
+    "lblAddress": { "message": "Адрес (улица, дом)" },
+    "phAddress": { "message": "ул. Ленина, д. 1" },
+    "lblCity": { "message": "Город" },
+    "phCity": { "message": "Москва" },
+    "lblState": { "message": "Штат / Область" },
+    "phState": { "message": "МО" },
+    "lblZip": { "message": "Почтовый индекс" },
+    "phZip": { "message": "101000" },
+    "lblCountry": { "message": "Страна" },
+    "phCountry": { "message": "Россия" },
+    "btnSaveProfile": { "message": "Сохранить активный профиль" },
+
+    "headerSettings": { "message": "Настройки" },
+    "lblTheme": { "message": "Тема" },
+    "themeGraphite": { "message": "Тёмный графит (Темно-серый/Черный)" },
+    "themeClean": { "message": "Чистый лист (Светлая минималистичная)" },
+    "themeIndigo": { "message": "Глубокий индиго (Тёмная)" },
+    "themeLavender": { "message": "Светлая лаванда" },
+    "lblMaxSteps": { "message": "Лимит автономных шагов" },
+    "lblServerUrl": { "message": "URL сервера Open WebUI" },
+    "phServerUrl": { "message": "https://openwebui.example.com" },
+    "lblApiKey": { "message": "API-ключ" },
+    "phApiKey": { "message": "sk-..." },
+    "lblModel": { "message": "Vision-модель" },
+    "btnRefresh": { "message": "Обновить" },
+    "phModel": { "message": "Gemma 4" },
+    "btnSaveSettings": { "message": "Сохранить" },
+    "btnTestSettings": { "message": "Проверить" },
+    "msgSettingsSaved": { "message": "Настройки сохранены." },
+
+    "stepCounter": {
+        "message": "Шаг $1/$2",
+        "description": "Shows current step out of total max steps",
+        "placeholders": {
+            "current": { "content": "$1" },
+            "total": { "content": "$2" }
+        }
+    },
+    "statusExecuting": {
+        "message": "Выполнение: $1...",
+        "placeholders": {
+            "actionName": { "content": "$1" }
+        }
+    },
+    "statusRecognized": {
+        "message": "Распознано: \"$1\"",
+        "placeholders": {
+            "text": { "content": "$1" }
+        }
+    },
+    "errDictation": {
+        "message": "Ошибка диктовки: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errMicError": {
+        "message": "Ошибка микрофона: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errSaveFailed": {
+        "message": "Ошибка сохранения: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errDeleteFailed": {
+        "message": "Ошибка удаления: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "msgModelsFound": {
+        "message": "Найдено $1 модель(ей).",
+        "placeholders": {
+            "count": { "content": "$1" }
+        }
+    }
+}

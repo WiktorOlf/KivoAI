@@ -1,0 +1,150 @@
+{
+    "extName": { "message": "KivoAI" },
+    "extDescription": { "message": "Een privacy-first autonome browserassistent aangedreven door lokale AI." },
+
+    "promptLabel": { "message": "Stel een vraag of geef een doel op" },
+    "promptPlaceholder": { "message": "bijv. 'Vul dit formulier in' of 'Wat is deze pagina?'..." },
+    "btnDictate": { "message": "Dicteer opdracht" },
+    "btnSubmit": { "message": "Verzenden" },
+    "btnStop": { "message": "Stoppen" },
+
+    "titleAutofill": { "message": "Profielen voor automatisch invullen" },
+    "titleSettings": { "message": "Instellingen" },
+    "titleDictatePrompt": { "message": "Dicteer opdracht" },
+    "titleAiExplanation": { "message": "AI-uitleg" },
+    "titleBack": { "message": "Terug" },
+
+    "btnDismiss": { "message": "Sluiten" },
+    "btnSteps": { "message": "Stappen" },
+    "btnHide": { "message": "Verbergen" },
+
+    "statusConnecting": { "message": "Verbinden met actief tabblad..." },
+    "statusReady": { "message": "Klaar" },
+    "statusTranscribing": { "message": "Spraak transcriberen..." },
+    "statusSpeechShort": { "message": "Spraak te kort of leeg." },
+    "statusDeliberating": { "message": "Analyseren..." },
+    "statusStopped": { "message": "Gestopt door gebruiker." },
+    "statusInspecting": { "message": "Paginastatus inspecteren..." },
+    "statusRedacting": { "message": "Persoonlijke gegevens (PII) onleesbaar maken..." },
+    "statusExplanation": { "message": "Uitleg gegeven." },
+    "statusNoSpeech": { "message": "Geen duidelijke spraak gehoord." },
+    "statusListeningWait": { "message": "Aan het luisteren... Spreek uw opdracht uit." },
+    "statusProcessingSpeech": { "message": "Spraak verwerken..." },
+    "statusTaskFinished": { "message": "Taak voltooid!" },
+
+    "titleListening": { "message": "Aan het luisteren... (Wordt automatisch verzonden als u stopt met spreken)" },
+    "lblListening": { "message": "Aan het luisteren... (Spreek nu)" },
+    "titleDictate": { "message": "Dicteer opdracht" },
+
+    "errNoInput": { "message": "Voer een doel in of stel een vraag." },
+    "errMicRequired": { "message": "Microfoontoegang vereist. Instellingentabblad openen..." },
+    "errDeleteOnlyProfile": { "message": "Kan het enige overgebleven profiel niet verwijderen." },
+    "errNoModels": { "message": "Geen modellen gevonden." },
+
+    "headerAutofill": { "message": "Profielen voor automatisch invullen" },
+    "lblSelectProfile": { "message": "Selecteer profiel" },
+    "lblActiveProfile": { "message": " (Actief)" },
+    "titleNewProfile": { "message": "Nieuw profiel toevoegen" },
+    "btnNewProfile": { "message": "+ Nieuw" },
+    "titleDeleteProfile": { "message": "Huidig profiel verwijderen" },
+    "btnDeleteProfile": { "message": "Verwijderen" },
+    "lblNewProfileName": { "message": "Nieuw profiel" },
+    "msgEnterProfileDetails": { "message": "Voer profielgegevens in en klik op Opslaan." },
+    "msgProfileRemoved": { "message": "Profiel verwijderd." },
+    "msgProfileSaved": { "message": "Profiel opgeslagen." },
+
+    "lblProfileName": { "message": "Profielnaam (Label)" },
+    "phProfileName": { "message": "bijv. Persoonlijk, Werk, Alex" },
+    "lblUsername": { "message": "Gebruikersnaam / Gebruikers-ID" },
+    "phUsername": { "message": "bijv. janssen99" },
+    "lblFirstName": { "message": "Voornaam" },
+    "phFirstName": { "message": "Jan" },
+    "lblMiddleName": { "message": "Tussenvoegsel / Tweede naam" },
+    "phMiddleName": { "message": "van" },
+    "lblLastName": { "message": "Achternaam" },
+    "phLastName": { "message": "Janssen" },
+    "lblEmail": { "message": "E-mailadres" },
+    "phEmail": { "message": "jan@voorbeeld.nl" },
+    "lblPhone": { "message": "Telefoonnummer" },
+    "phPhone": { "message": "+31 6 12345678" },
+    "lblAddress": { "message": "Straat en huisnummer" },
+    "phAddress": { "message": "Hoofdstraat 123" },
+    "lblCity": { "message": "Plaats" },
+    "phCity": { "message": "Amsterdam" },
+    "lblState": { "message": "Provincie" },
+    "phState": { "message": "Noord-Holland" },
+    "lblZip": { "message": "Postcode" },
+    "phZip": { "message": "1011 AA" },
+    "lblCountry": { "message": "Land" },
+    "phCountry": { "message": "Nederland" },
+    "btnSaveProfile": { "message": "Actief profiel opslaan" },
+
+    "headerSettings": { "message": "Instellingen" },
+    "lblTheme": { "message": "Thema" },
+    "themeGraphite": { "message": "Grafiet Donker (Donkergrijs/Zwart)" },
+    "themeClean": { "message": "Schone Lei (Licht Minimalistisch)" },
+    "themeIndigo": { "message": "Diep Indigo Donker" },
+    "themeLavender": { "message": "Lavendel Licht" },
+    "lblMaxSteps": { "message": "Limiet voor autonome stappen" },
+    "lblServerUrl": { "message": "Open WebUI Server-URL" },
+    "phServerUrl": { "message": "https://openwebui.voorbeeld.nl" },
+    "lblApiKey": { "message": "API-sleutel" },
+    "phApiKey": { "message": "sk-..." },
+    "lblModel": { "message": "Visiemodel (Vision Model)" },
+    "btnRefresh": { "message": "Vernieuwen" },
+    "phModel": { "message": "Gemma 4" },
+    "btnSaveSettings": { "message": "Opslaan" },
+    "btnTestSettings": { "message": "Testen" },
+    "msgSettingsSaved": { "message": "Instellingen opgeslagen." },
+
+    "stepCounter": {
+        "message": "Stap $1/$2",
+        "description": "Shows current step out of total max steps",
+        "placeholders": {
+            "current": { "content": "$1" },
+            "total": { "content": "$2" }
+        }
+    },
+    "statusExecuting": {
+        "message": "Uitvoeren: $1...",
+        "placeholders": {
+            "actionName": { "content": "$1" }
+        }
+    },
+    "statusRecognized": {
+        "message": "Herkend: \"$1\"",
+        "placeholders": {
+            "text": { "content": "$1" }
+        }
+    },
+    "errDictation": {
+        "message": "Dicteren mislukt: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errMicError": {
+        "message": "Microfoonfout: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errSaveFailed": {
+        "message": "Opslaan mislukt: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errDeleteFailed": {
+        "message": "Verwijderen mislukt: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "msgModelsFound": {
+        "message": "$1 model(len) gevonden.",
+        "placeholders": {
+            "count": { "content": "$1" }
+        }
+    }
+}

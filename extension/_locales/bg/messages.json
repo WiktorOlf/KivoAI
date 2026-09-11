@@ -1,0 +1,150 @@
+{
+    "extName": { "message": "KivoAI" },
+    "extDescription": { "message": "Автономен браузърен асистент с фокус върху поверителността, задвижван от локален изкуствен интелект." },
+
+    "promptLabel": { "message": "Задайте въпрос или задайте цел" },
+    "promptPlaceholder": { "message": "напр. 'Попълни този формуляр' или 'Каква е тази страница?'..." },
+    "btnDictate": { "message": "Диктуване на заявка" },
+    "btnSubmit": { "message": "Изпращане" },
+    "btnStop": { "message": "Спиране" },
+
+    "titleAutofill": { "message": "Профили за автоматично попълване" },
+    "titleSettings": { "message": "Настройки" },
+    "titleDictatePrompt": { "message": "Диктуване на заявка" },
+    "titleAiExplanation": { "message": "Обяснение от ИИ" },
+    "titleBack": { "message": "Назад" },
+
+    "btnDismiss": { "message": "Затваряне" },
+    "btnSteps": { "message": "Стъпки" },
+    "btnHide": { "message": "Скриване" },
+
+    "statusConnecting": { "message": "Свързване с активния раздел..." },
+    "statusReady": { "message": "Готов" },
+    "statusTranscribing": { "message": "Транскрибиране на речта..." },
+    "statusSpeechShort": { "message": "Речта е твърде кратка или празна." },
+    "statusDeliberating": { "message": "Анализиране..." },
+    "statusStopped": { "message": "Спряно от потребителя." },
+    "statusInspecting": { "message": "Инспектиране на състоянието на страницата..." },
+    "statusRedacting": { "message": "Скриване на лични данни..." },
+    "statusExplanation": { "message": "Предоставено е обяснение." },
+    "statusNoSpeech": { "message": "Няма разпозната ясна реч." },
+    "statusListeningWait": { "message": "Слушам... Кажете своята команда." },
+    "statusProcessingSpeech": { "message": "Обработка на речта..." },
+    "statusTaskFinished": { "message": "Задачата е завършена!" },
+
+    "titleListening": { "message": "Слушам... (Ще се изпрати автоматично, когато спрете да говорите)" },
+    "lblListening": { "message": "Слушам... (Говорете сега)" },
+    "titleDictate": { "message": "Диктуване на заявка" },
+
+    "errNoInput": { "message": "Моля, въведете цел или задайте въпрос." },
+    "errMicRequired": { "message": "Изисква се разрешение за микрофона. Отваряне на раздела с настройки..." },
+    "errDeleteOnlyProfile": { "message": "Невъзможно е изтриването на единствения останал профил." },
+    "errNoModels": { "message": "Ня намерени модели." },
+
+    "headerAutofill": { "message": "Профили за автоматично попълване" },
+    "lblSelectProfile": { "message": "Изберете профил" },
+    "lblActiveProfile": { "message": " (Активен)" },
+    "titleNewProfile": { "message": "Добавяне на нов профил" },
+    "btnNewProfile": { "message": "+ Нов" },
+    "titleDeleteProfile": { "message": "Изтриване на текущия профил" },
+    "btnDeleteProfile": { "message": "Изтриване" },
+    "lblNewProfileName": { "message": "Нов профил" },
+    "msgEnterProfileDetails": { "message": "Въведете детайлите на профила и щракнете върху Запис." },
+    "msgProfileRemoved": { "message": "Профилът е премахнат." },
+    "msgProfileSaved": { "message": "Профилът е запазен." },
+
+    "lblProfileName": { "message": "Име на профила (Етикет)" },
+    "phProfileName": { "message": "напр. Личен, Работа, Алекс" },
+    "lblUsername": { "message": "Потребителско име / ID" },
+    "phUsername": { "message": "напр. ivan99" },
+    "lblFirstName": { "message": "Име" },
+    "phFirstName": { "message": "Иван" },
+    "lblMiddleName": { "message": "Презиме" },
+    "phMiddleName": { "message": "Иванов" },
+    "lblLastName": { "message": "Фамилия" },
+    "phLastName": { "message": "Петров" },
+    "lblEmail": { "message": "Имейл" },
+    "phEmail": { "message": "ivan@example.com" },
+    "lblPhone": { "message": "Телефон" },
+    "phPhone": { "message": "+359 88 123 4567" },
+    "lblAddress": { "message": "Адрес (улица, номер)" },
+    "phAddress": { "message": "ул. Александър Батенберг 1" },
+    "lblCity": { "message": "Град" },
+    "phCity": { "message": "София" },
+    "lblState": { "message": "Област / Щат" },
+    "phState": { "message": "София-град" },
+    "lblZip": { "message": "Пощенски код" },
+    "phZip": { "message": "1000" },
+    "lblCountry": { "message": "Държава" },
+    "phCountry": { "message": "България" },
+    "btnSaveProfile": { "message": "Запазване на активния профил" },
+
+    "headerSettings": { "message": "Настройки" },
+    "lblTheme": { "message": "Тема" },
+    "themeGraphite": { "message": "Тъмен графит (Тъмно сив/Черен)" },
+    "themeClean": { "message": "Чист лист (Светъл минималистичен)" },
+    "themeIndigo": { "message": "Дълбок индиго (Тъмен)" },
+    "themeLavender": { "message": "Светла лавандула" },
+    "lblMaxSteps": { "message": "Лимит на автономните стъпки" },
+    "lblServerUrl": { "message": "URL адрес на Open WebUI сървъра" },
+    "phServerUrl": { "message": "https://openwebui.example.com" },
+    "lblApiKey": { "message": "API ключ" },
+    "phApiKey": { "message": "sk-..." },
+    "lblModel": { "message": "Визуален модел (Vision Model)" },
+    "btnRefresh": { "message": "Обновяване" },
+    "phModel": { "message": "Gemma 4" },
+    "btnSaveSettings": { "message": "Запазване" },
+    "btnTestSettings": { "message": "Тестване" },
+    "msgSettingsSaved": { "message": "Настройките са запазени." },
+
+    "stepCounter": {
+        "message": "Стъпка $1/$2",
+        "description": "Shows current step out of total max steps",
+        "placeholders": {
+            "current": { "content": "$1" },
+            "total": { "content": "$2" }
+        }
+    },
+    "statusExecuting": {
+        "message": "Изпълнение: $1...",
+        "placeholders": {
+            "actionName": { "content": "$1" }
+        }
+    },
+    "statusRecognized": {
+        "message": "Разпознато: \"$1\"",
+        "placeholders": {
+            "text": { "content": "$1" }
+        }
+    },
+    "errDictation": {
+        "message": "Грешка при диктуване: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errMicError": {
+        "message": "Грешка в микрофона: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errSaveFailed": {
+        "message": "Неуспешно запазване: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errDeleteFailed": {
+        "message": "Неуспешно изтриване: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "msgModelsFound": {
+        "message": "Намерени са $1 модел(а).",
+        "placeholders": {
+            "count": { "content": "$1" }
+        }
+    }
+}

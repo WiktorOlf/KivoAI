@@ -1,0 +1,150 @@
+{
+    "extName": { "message": "KivoAI" },
+    "extDescription": { "message": "Autonómny asistent prehliadača s dôrazom na súkromie, poháňaný lokálnou umelou inteligenciou." },
+
+    "promptLabel": { "message": "Položte otázku alebo zadajte cieľ" },
+    "promptPlaceholder": { "message": "napr. 'Vyplň tento formulár' alebo 'Čo je to za stránku?'..." },
+    "btnDictate": { "message": "Diktovať príkaz" },
+    "btnSubmit": { "message": "Odoslať" },
+    "btnStop": { "message": "Zastaviť" },
+
+    "titleAutofill": { "message": "Profily pre automatické dopĺňanie" },
+    "titleSettings": { "message": "Nastavenia" },
+    "titleDictatePrompt": { "message": "Diktovať príkaz" },
+    "titleAiExplanation": { "message": "Vysvetlenie od AI" },
+    "titleBack": { "message": "Späť" },
+
+    "btnDismiss": { "message": "Zatvoriť" },
+    "btnSteps": { "message": "Kroky" },
+    "btnHide": { "message": "Skryť" },
+
+    "statusConnecting": { "message": "Pripájanie k aktívnej karte..." },
+    "statusReady": { "message": "Pripravené" },
+    "statusTranscribing": { "message": "Prepisovanie hlasu..." },
+    "statusSpeechShort": { "message": "Hlas je príliš krátky alebo prázdny." },
+    "statusDeliberating": { "message": "Analýza..." },
+    "statusStopped": { "message": "Zastavené používateľom." },
+    "statusInspecting": { "message": "Kontrola stavu stránky..." },
+    "statusRedacting": { "message": "Skrývanie osobných údajov..." },
+    "statusExplanation": { "message": "Vysvetlenie poskytnuté." },
+    "statusNoSpeech": { "message": "Nebula zachytená žiadna zreteľná reč." },
+    "statusListeningWait": { "message": "Počúvam... Vyslovte svoj príkaz." },
+    "statusProcessingSpeech": { "message": "Spracovanie reči..." },
+    "statusTaskFinished": { "message": "Úloha dokončená!" },
+
+    "titleListening": { "message": "Počúvam... (Po skončení rozprávania sa automaticky odošle)" },
+    "lblListening": { "message": "Počúvam... (Hovorte teraz)" },
+    "titleDictate": { "message": "Diktovať príkaz" },
+
+    "errNoInput": { "message": "Zadajte prosím cieľ alebo položte otázku." },
+    "errMicRequired": { "message": "Vyžaduje sa povolenie pre mikrofón. Otvára sa karta nastavení..." },
+    "errDeleteOnlyProfile": { "message": "Nie je možné vymazať jediný zostávajúci profil." },
+    "errNoModels": { "message": "Nenašli sa žiadne modely." },
+
+    "headerAutofill": { "message": "Profily pre automatické dopĺňanie" },
+    "lblSelectProfile": { "message": "Vybrať profil" },
+    "lblActiveProfile": { "message": " (Aktívny)" },
+    "titleNewProfile": { "message": "Pridať nový profil" },
+    "btnNewProfile": { "message": "+ Nový" },
+    "titleDeleteProfile": { "message": "Vymazať aktuálny profil" },
+    "btnDeleteProfile": { "message": "Vymazať" },
+    "lblNewProfileName": { "message": "Nový profil" },
+    "msgEnterProfileDetails": { "message": "Zadajte podrobnosti profilu a kliknite na Uložiť." },
+    "msgProfileRemoved": { "message": "Profil odstránený." },
+    "msgProfileSaved": { "message": "Profil uložený." },
+
+    "lblProfileName": { "message": "Názov profilu (Štítok)" },
+    "phProfileName": { "message": "napr. Osobné, Práca, Peter" },
+    "lblUsername": { "message": "Používateľské meno / ID" },
+    "phUsername": { "message": "npr. peter99" },
+    "lblFirstName": { "message": "Meno" },
+    "phFirstName": { "message": "Peter" },
+    "lblMiddleName": { "message": "Stredné meno" },
+    "phMiddleName": { "message": "Ján" },
+    "lblLastName": { "message": "Priezvisko" },
+    "phLastName": { "message": "Kováč" },
+    "lblEmail": { "message": "E-mail" },
+    "phEmail": { "message": "peter@priklad.sk" },
+    "lblPhone": { "message": "Telefón" },
+    "phPhone": { "message": "+421 901 234 567" },
+    "lblAddress": { "message": "Ulica a číslo" },
+    "phAddress": { "message": "Hlavná 1" },
+    "lblCity": { "message": "Mesto" },
+    "phCity": { "message": "Bratislava" },
+    "lblState": { "message": "Kraj / Štát" },
+    "phState": { "message": "Bratislavský kraj" },
+    "lblZip": { "message": "PSČ" },
+    "phZip": { "message": "811 01" },
+    "lblCountry": { "message": "Krajina" },
+    "phCountry": { "message": "Slovensko" },
+    "btnSaveProfile": { "message": "Uložiť aktívny profil" },
+
+    "headerSettings": { "message": "Nastavenia" },
+    "lblTheme": { "message": "Téma" },
+    "themeGraphite": { "message": "Tmavý grafit (Tmavosivá/Čierna)" },
+    "themeClean": { "message": "Čistý list (Svetlý minimálny)" },
+    "themeIndigo": { "message": "Hlboké indigo tmavé" },
+    "themeLavender": { "message": "Svetlá levanduľa" },
+    "lblMaxSteps": { "message": "Limit autonómnych krokov" },
+    "lblServerUrl": { "message": "URL adresa servera Open WebUI" },
+    "phServerUrl": { "message": "https://openwebui.priklad.sk" },
+    "lblApiKey": { "message": "API kľúč" },
+    "phApiKey": { "message": "sk-..." },
+    "lblModel": { "message": "Vizuálny model (Vision Model)" },
+    "btnRefresh": { "message": "Obnoviť" },
+    "phModel": { "message": "Gemma 4" },
+    "btnSaveSettings": { "message": "Uložiť" },
+    "btnTestSettings": { "message": "Testovať" },
+    "msgSettingsSaved": { "message": "Nastavenia uložené." },
+
+    "stepCounter": {
+        "message": "Krok $1/$2",
+        "description": "Shows current step out of total max steps",
+        "placeholders": {
+            "current": { "content": "$1" },
+            "total": { "content": "$2" }
+        }
+    },
+    "statusExecuting": {
+        "message": "Vykonáva sa: $1...",
+        "placeholders": {
+            "actionName": { "content": "$1" }
+        }
+    },
+    "statusRecognized": {
+        "message": "Rozpoznané: \"$1\"",
+        "placeholders": {
+            "text": { "content": "$1" }
+        }
+    },
+    "errDictation": {
+        "message": "Diktovanie zlyhalo: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errMicError": {
+        "message": "Chyba mikrofónu: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errSaveFailed": {
+        "message": "Uloženie zlyhalo: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errDeleteFailed": {
+        "message": "Vymazanie zlyhalo: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "msgModelsFound": {
+        "message": "Nájdených $1 model(ov).",
+        "placeholders": {
+            "count": { "content": "$1" }
+        }
+    }
+}

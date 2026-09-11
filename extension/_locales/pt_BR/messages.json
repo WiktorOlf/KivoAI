@@ -1,0 +1,150 @@
+{
+    "extName": { "message": "KivoAI" },
+    "extDescription": { "message": "Assistente de navegador autônomo focado em privacidade, desenvolvido com IA local." },
+
+    "promptLabel": { "message": "Faça uma pergunta ou defina um objetivo" },
+    "promptPlaceholder": { "message": "ex. 'Preencha este formulário' ou 'O que é esta página?'..." },
+    "btnDictate": { "message": "Ditar Instrução" },
+    "btnSubmit": { "message": "Enviar" },
+    "btnStop": { "message": "Parar" },
+
+    "titleAutofill": { "message": "Perfis de Preenchimento Automático" },
+    "titleSettings": { "message": "Configurações" },
+    "titleDictatePrompt": { "message": "Ditar instrução" },
+    "titleAiExplanation": { "message": "Explicação da IA" },
+    "titleBack": { "message": "Voltar" },
+
+    "btnDismiss": { "message": "Fechar" },
+    "btnSteps": { "message": "Passos" },
+    "btnHide": { "message": "Ocultar" },
+
+    "statusConnecting": { "message": "Conectando à aba ativa..." },
+    "statusReady": { "message": "Pronto" },
+    "statusTranscribing": { "message": "Transcrevendo voz..." },
+    "statusSpeechShort": { "message": "Fala muito curta ou vazia." },
+    "statusDeliberating": { "message": "Analisando..." },
+    "statusStopped": { "message": "Interrompido pelo usuário." },
+    "statusInspecting": { "message": "Inspecionando o estado da página..." },
+    "statusRedacting": { "message": "Ocultando informações pessoais..." },
+    "statusExplanation": { "message": "Explicação fornecida." },
+    "statusNoSpeech": { "message": "Nenhuma fala clara detectada." },
+    "statusListeningWait": { "message": "Ouvindo... Fale seu comando." },
+    "statusProcessingSpeech": { "message": "Processando fala..." },
+    "statusTaskFinished": { "message": "Tarefa concluída!" },
+
+    "titleListening": { "message": "Ouvindo... (Será enviado automaticamente quando você parar de falar)" },
+    "lblListening": { "message": "Ouvindo... (Fale agora)" },
+    "titleDictate": { "message": "Ditar instrução" },
+
+    "errNoInput": { "message": "Por favor, insira um objetivo ou faça uma pergunta." },
+    "errMicRequired": { "message": "Permissão de microfone necessária. Abrindo aba de configuração..." },
+    "errDeleteOnlyProfile": { "message": "Não é possível excluir o único perfil restante." },
+    "errNoModels": { "message": "Nenhum modelo encontrado." },
+
+    "headerAutofill": { "message": "Perfis de Preenchimento Automático" },
+    "lblSelectProfile": { "message": "Selecionar Perfil" },
+    "lblActiveProfile": { "message": " (Ativo)" },
+    "titleNewProfile": { "message": "Adicionar novo perfil" },
+    "btnNewProfile": { "message": "+ Novo" },
+    "titleDeleteProfile": { "message": "Excluir perfil atual" },
+    "btnDeleteProfile": { "message": "Excluir" },
+    "lblNewProfileName": { "message": "Novo Perfil" },
+    "msgEnterProfileDetails": { "message": "Insira os detalhes do perfil e clique em Salvar." },
+    "msgProfileRemoved": { "message": "Perfil removido." },
+    "msgProfileSaved": { "message": "Perfil salvo." },
+
+    "lblProfileName": { "message": "Nome do Perfil (Rótulo)" },
+    "phProfileName": { "message": "ex. Pessoal, Trabalho, Alex" },
+    "lblUsername": { "message": "Nome de Usuário / ID" },
+    "phUsername": { "message": "ex. msilva99" },
+    "lblFirstName": { "message": "Nome" },
+    "phFirstName": { "message": "Maria" },
+    "lblMiddleName": { "message": "Nome do Meio" },
+    "phMiddleName": { "message": "Luiza" },
+    "lblLastName": { "message": "Sobrenome" },
+    "phLastName": { "message": "Silva" },
+    "lblEmail": { "message": "E-mail" },
+    "phEmail": { "message": "maria@exemplo.com.br" },
+    "lblPhone": { "message": "Telefone" },
+    "phPhone": { "message": "+55 11 99999-0000" },
+    "lblAddress": { "message": "Endereço" },
+    "phAddress": { "message": "Rua Principal 123" },
+    "lblCity": { "message": "Cidade" },
+    "phCity": { "message": "São Paulo" },
+    "lblState": { "message": "Estado / Província" },
+    "phState": { "message": "SP" },
+    "lblZip": { "message": "CEP" },
+    "phZip": { "message": "01000-000" },
+    "lblCountry": { "message": "País" },
+    "phCountry": { "message": "Brasil" },
+    "btnSaveProfile": { "message": "Salvar Perfil Ativo" },
+
+    "headerSettings": { "message": "Configurações" },
+    "lblTheme": { "message": "Tema" },
+    "themeGraphite": { "message": "Grafite Escuro (Cinza Escuro/Preto)" },
+    "themeClean": { "message": "Lousa Limpa (Claro e Minimalista)" },
+    "themeIndigo": { "message": "Índigo Profundo Escuro" },
+    "themeLavender": { "message": "Lavanda Claro" },
+    "lblMaxSteps": { "message": "Limite de Passos Autônomos" },
+    "lblServerUrl": { "message": "URL do Servidor Open WebUI" },
+    "phServerUrl": { "message": "https://openwebui.exemplo.com.br" },
+    "lblApiKey": { "message": "Chave de API" },
+    "phApiKey": { "message": "sk-..." },
+    "lblModel": { "message": "Modelo de Visão" },
+    "btnRefresh": { "message": "Atualizar" },
+    "phModel": { "message": "Gemma 4" },
+    "btnSaveSettings": { "message": "Salvar" },
+    "btnTestSettings": { "message": "Testar" },
+    "msgSettingsSaved": { "message": "Configurações salvas." },
+
+    "stepCounter": {
+        "message": "Passo $1/$2",
+        "description": "Shows current step out of total max steps",
+        "placeholders": {
+            "current": { "content": "$1" },
+            "total": { "content": "$2" }
+        }
+    },
+    "statusExecuting": {
+        "message": "Executando: $1...",
+        "placeholders": {
+            "actionName": { "content": "$1" }
+        }
+    },
+    "statusRecognized": {
+        "message": "Reconhecido: \"$1\"",
+        "placeholders": {
+            "text": { "content": "$1" }
+        }
+    },
+    "errDictation": {
+        "message": "Falha no ditado: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errMicError": {
+        "message": "Erro de microfone: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errSaveFailed": {
+        "message": "Falha ao salvar: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errDeleteFailed": {
+        "message": "Falha ao excluir: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "msgModelsFound": {
+        "message": "$1 modelo(s) encontrado(s).",
+        "placeholders": {
+            "count": { "content": "$1" }
+        }
+    }
+}

@@ -1,0 +1,150 @@
+{
+    "extName": { "message": "KivoAI" },
+    "extDescription": { "message": "Autonominis naršyklės padėjėjas, orientuotas į privatumą ir veikiantis vietinio dirbtinio intelektoido pagrindu." },
+
+    "promptLabel": { "message": "Pateikite klausimą arba nustatykite tikslą" },
+    "promptPlaceholder": { "message": "pvz., 'Užpildyk šią formą' arba 'Apie ką šis puslapis?'..." },
+    "btnDictate": { "message": "Diktuoti komandą" },
+    "btnSubmit": { "message": "Pateikti" },
+    "btnStop": { "message": "Sustabdyti" },
+
+    "titleAutofill": { "message": "Automatinio pildymo profiliai" },
+    "titleSettings": { "message": "Nustatymai" },
+    "titleDictatePrompt": { "message": "Diktuoti komandą" },
+    "titleAiExplanation": { "message": "DI paaiškinimas" },
+    "titleBack": { "message": "Atgal" },
+
+    "btnDismiss": { "message": "Uždaryti" },
+    "btnSteps": { "message": "Žingsniai" },
+    "btnHide": { "message": "Slėpti" },
+
+    "statusConnecting": { "message": "Jungiamasi prie aktyvaus skirtuko..." },
+    "statusReady": { "message": "Paruošta" },
+    "statusTranscribing": { "message": "Verčiama kalba..." },
+    "statusSpeechShort": { "message": "Kalba per trumpa arba tuščia." },
+    "statusDeliberating": { "message": "Analizuojama..." },
+    "statusStopped": { "message": "Sustabdyta vartotojo." },
+    "statusInspecting": { "message": "Tikrinama puslapio būsena..." },
+    "statusRedacting": { "message": "Slopinami asmens duomenys..." },
+    "statusExplanation": { "message": "Paaiškinimas pateiktas." },
+    "statusNoSpeech": { "message": "Negirdėti aiškios kalbos." },
+    "statusListeningWait": { "message": "Klausausi... Ištarkite savo komandą." },
+    "statusProcessingSpeech": { "message": "Apdorojama kalba..." },
+    "statusTaskFinished": { "message": "Užduotis baigta!" },
+
+    "titleListening": { "message": "Klausausi... (Bus išsiųsta automatiškai nustojus kalbėti)" },
+    "lblListening": { "message": "Klausausi... (Kalbėkite dabar)" },
+    "titleDictate": { "message": "Diktuoti komandą" },
+
+    "errNoInput": { "message": "Įveskite tikslą arba užduokite klausimą." },
+    "errMicRequired": { "message": "Reikalingas mikrofono leidimas. Atidaromas nustatymų skirtukas..." },
+    "errDeleteOnlyProfile": { "message": "Negalima ištrinti vienintelio likusio profilio." },
+    "errNoModels": { "message": "Modelių nerasta." },
+
+    "headerAutofill": { "message": "Automatinio pildymo profiliai" },
+    "lblSelectProfile": { "message": "Pasirinkti profilį" },
+    "lblActiveProfile": { "message": " (Aktyvus)" },
+    "titleNewProfile": { "message": "Pridėti naują profilį" },
+    "btnNewProfile": { "message": "+ Naujas" },
+    "titleDeleteProfile": { "message": "Ištrinti esamą profilį" },
+    "btnDeleteProfile": { "message": "Ištrinti" },
+    "lblNewProfileName": { "message": "Naujas profilis" },
+    "msgEnterProfileDetails": { "message": "Įveskite profilio duomenis ir spustelėkite Išsaugoti." },
+    "msgProfileRemoved": { "message": "Profilis pašalintas." },
+    "msgProfileSaved": { "message": "Profilis išsaugotas." },
+
+    "lblProfileName": { "message": "Profilio pavadinimas (Etiketė)" },
+    "phProfileName": { "message": "pvz., Asmeninis, Darbas, Lukas" },
+    "lblUsername": { "message": "Naudotojo vardas / ID" },
+    "phUsername": { "message": "pvz., lukas99" },
+    "lblFirstName": { "message": "Vardas" },
+    "phFirstName": { "message": "Lukas" },
+    "lblMiddleName": { "message": "Antrasis vardas" },
+    "phMiddleName": { "message": "Juozo" },
+    "lblLastName": { "message": "Pavardė" },
+    "phLastName": { "message": "Petrauskas" },
+    "lblEmail": { "message": "El. paštas" },
+    "phEmail": { "message": "lukas@pavyzdys.lt" },
+    "lblPhone": { "message": "Telefonas" },
+    "phPhone": { "message": "+370 612 34567" },
+    "lblAddress": { "message": "Gatvės adresas" },
+    "phAddress": { "message": "Gedimino pr. 1" },
+    "lblCity": { "message": "Miestas" },
+    "phCity": { "message": "Vilnius" },
+    "lblState": { "message": "Apskritis / Valstija" },
+    "phState": { "message": "Vilniaus m. sav." },
+    "lblZip": { "message": "Pašto kodas" },
+    "phZip": { "message": "01103" },
+    "lblCountry": { "message": "Šalis" },
+    "phCountry": { "message": "Lietuva" },
+    "btnSaveProfile": { "message": "Išsaugoti aktyvų profilį" },
+
+    "headerSettings": { "message": "Nustatymai" },
+    "lblTheme": { "message": "Tema" },
+    "themeGraphite": { "message": "Tamsus grafitas (Tamsiai pilka/Juoda)" },
+    "themeClean": { "message": "Švarus lapas (Šviesi minimalistiška)" },
+    "themeIndigo": { "message": "Gilus tamsus indigo" },
+    "themeLavender": { "message": "Šviesi levanda" },
+    "lblMaxSteps": { "message": "Autonominių žingsnių limitas" },
+    "lblServerUrl": { "message": "„Open WebUI“ serverio URL" },
+    "phServerUrl": { "message": "https://openwebui.pavyzdys.lt" },
+    "lblApiKey": { "message": "API raktas" },
+    "phApiKey": { "message": "sk-..." },
+    "lblModel": { "message": "Vizualinis modelis (Vision Model)" },
+    "btnRefresh": { "message": "Atnaujinti" },
+    "phModel": { "message": "Gemma 4" },
+    "btnSaveSettings": { "message": "Išsaugoti" },
+    "btnTestSettings": { "message": "Testuoti" },
+    "msgSettingsSaved": { "message": "Nustatymai išsaugoti." },
+
+    "stepCounter": {
+        "message": "Žingsnis $1/$2",
+        "description": "Shows current step out of total max steps",
+        "placeholders": {
+            "current": { "content": "$1" },
+            "total": { "content": "$2" }
+        }
+    },
+    "statusExecuting": {
+        "message": "Vykdoma: $1...",
+        "placeholders": {
+            "actionName": { "content": "$1" }
+        }
+    },
+    "statusRecognized": {
+        "message": "Atpažinta: \"$1\"",
+        "placeholders": {
+            "text": { "content": "$1" }
+        }
+    },
+    "errDictation": {
+        "message": "Diktojerimas nepavyko: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errMicError": {
+        "message": "Mikrofono klaida: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errSaveFailed": {
+        "message": "Nepavyko išsaugoti: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errDeleteFailed": {
+        "message": "Nepavyko ištrinti: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "msgModelsFound": {
+        "message": "Rasta modelių: $1.",
+        "placeholders": {
+            "count": { "content": "$1" }
+        }
+    }
+}

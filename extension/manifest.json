@@ -1,8 +1,9 @@
 {
     "manifest_version": 3,
-    "name": "KivoAI",
-    "version": "1.2",
-    "description": "Your private AI assistant for the web. Browses with you while keeping personal details hidden.",
+    "name": "__MSG_extName__",
+    "version": "1.3",
+    "description": "__MSG_extDescription__",
+    "default_locale": "en",
     "icons": {
         "16": "icons/icon16.png",
         "48": "icons/icon48.png",

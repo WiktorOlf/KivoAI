@@ -1,0 +1,150 @@
+{
+    "extName": { "message": "KivoAI" },
+    "extDescription": { "message": "로컬 AI 기반의 개인정보 보호 최우선 자율 브라우저 어시스턴트입니다." },
+
+    "promptLabel": { "message": "질문하거나 목표를 설정하세요" },
+    "promptPlaceholder": { "message": "예: '이 양식 작성해 줘' 또는 '이 페이지는 뭐야?'..." },
+    "btnDictate": { "message": "프롬프트 음성 입력" },
+    "btnSubmit": { "message": "제출" },
+    "btnStop": { "message": "중지" },
+
+    "titleAutofill": { "message": "자동 완성 프로필" },
+    "titleSettings": { "message": "설정" },
+    "titleDictatePrompt": { "message": "프롬프트 음성 입력" },
+    "titleAiExplanation": { "message": "AI 설명" },
+    "titleBack": { "message": "뒤로" },
+
+    "btnDismiss": { "message": "닫기" },
+    "btnSteps": { "message": "단계" },
+    "btnHide": { "message": "숨기기" },
+
+    "statusConnecting": { "message": "활성 탭에 연결 중..." },
+    "statusReady": { "message": "준비 완료" },
+    "statusTranscribing": { "message": "음성 텍스트 변환 중..." },
+    "statusSpeechShort": { "message": "음성이 너무 짧거나 비어 있습니다." },
+    "statusDeliberating": { "message": "분석 중..." },
+    "statusStopped": { "message": "사용자가 중지했습니다." },
+    "statusInspecting": { "message": "페이지 상태 검사 중..." },
+    "statusRedacting": { "message": "개인 식별 정보(PII) 숨기는 중..." },
+    "statusExplanation": { "message": "설명이 제공되었습니다." },
+    "statusNoSpeech": { "message": "명확한 음성이 감지되지 않았습니다." },
+    "statusListeningWait": { "message": "듣는 중... 명령을 말해주세요." },
+    "statusProcessingSpeech": { "message": "음성 처리 중..." },
+    "statusTaskFinished": { "message": "작업 완료!" },
+
+    "titleListening": { "message": "듣는 중... (말을 멈추면 자동으로 제출됩니다)" },
+    "lblListening": { "message": "듣는 중... (지금 말씀하세요)" },
+    "titleDictate": { "message": "프롬프트 음성 입력" },
+
+    "errNoInput": { "message": "목표를 입력하거나 질문해 주세요." },
+    "errMicRequired": { "message": "마이크 권한이 필요합니다. 설정 탭을 엽니다..." },
+    "errDeleteOnlyProfile": { "message": "하나 남은 프로필은 삭제할 수 없습니다." },
+    "errNoModels": { "message": "모델을 찾을 수 없습니다." },
+
+    "headerAutofill": { "message": "자동 완성 프로필" },
+    "lblSelectProfile": { "message": "프로필 선택" },
+    "lblActiveProfile": { "message": " (사용 중)" },
+    "titleNewProfile": { "message": "새 프로필 추가" },
+    "btnNewProfile": { "message": "+ 새로 만들기" },
+    "titleDeleteProfile": { "message": "현재 프로필 삭제" },
+    "btnDeleteProfile": { "message": "삭제" },
+    "lblNewProfileName": { "message": "새 프로필" },
+    "msgEnterProfileDetails": { "message": "프로필 세부 정보를 입력하고 저장을 클릭하세요." },
+    "msgProfileRemoved": { "message": "프로필이 삭제되었습니다." },
+    "msgProfileSaved": { "message": "프로필이 저장되었습니다." },
+
+    "lblProfileName": { "message": "프로필 이름(라벨)" },
+    "phProfileName": { "message": "예: 개인용, 업무용, Alex" },
+    "lblUsername": { "message": "사용자 이름 / 사용자 ID" },
+    "phUsername": { "message": "예: kildong99" },
+    "lblFirstName": { "message": "이름" },
+    "phFirstName": { "message": "길동" },
+    "lblMiddleName": { "message": "중간 이름" },
+    "phMiddleName": { "message": "(생략 가능)" },
+    "lblLastName": { "message": "성" },
+    "phLastName": { "message": "홍" },
+    "lblEmail": { "message": "이메일" },
+    "phEmail": { "message": "gildong@example.com" },
+    "lblPhone": { "message": "전화번호" },
+    "phPhone": { "message": "010-1234-5678" },
+    "lblAddress": { "message": "도로명 주소" },
+    "phAddress": { "message": "세종대로 123" },
+    "lblCity": { "message": "시/도" },
+    "phCity": { "message": "서울특별시" },
+    "lblState": { "message": "구/군" },
+    "phState": { "message": "중구" },
+    "lblZip": { "message": "우편번호" },
+    "phZip": { "message": "04524" },
+    "lblCountry": { "message": "국가" },
+    "phCountry": { "message": "대한민국" },
+    "btnSaveProfile": { "message": "사용 중인 프로필 저장" },
+
+    "headerSettings": { "message": "설정" },
+    "lblTheme": { "message": "테마" },
+    "themeGraphite": { "message": "흑연 다크 (다크 그레이/블랙)" },
+    "themeClean": { "message": "클린 슬레이트 (라이트/미니멀)" },
+    "themeIndigo": { "message": "딥 인디고 다크" },
+    "themeLavender": { "message": "라벤더 라이트" },
+    "lblMaxSteps": { "message": "자율 단계 제한" },
+    "lblServerUrl": { "message": "Open WebUI 서버 URL" },
+    "phServerUrl": { "message": "https://openwebui.example.com" },
+    "lblApiKey": { "message": "API 키" },
+    "phApiKey": { "message": "sk-..." },
+    "lblModel": { "message": "비전 모델" },
+    "btnRefresh": { "message": "새로고침" },
+    "phModel": { "message": "Gemma 4" },
+    "btnSaveSettings": { "message": "저장" },
+    "btnTestSettings": { "message": "테스트" },
+    "msgSettingsSaved": { "message": "설정이 저장되었습니다." },
+
+    "stepCounter": {
+        "message": "$1/$2 단계",
+        "description": "Shows current step out of total max steps",
+        "placeholders": {
+            "current": { "content": "$1" },
+            "total": { "content": "$2" }
+        }
+    },
+    "statusExecuting": {
+        "message": "실행 중: $1...",
+        "placeholders": {
+            "actionName": { "content": "$1" }
+        }
+    },
+    "statusRecognized": {
+        "message": "인식됨: \"$1\"",
+        "placeholders": {
+            "text": { "content": "$1" }
+        }
+    },
+    "errDictation": {
+        "message": "음성 입력 실패: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errMicError": {
+        "message": "마이크 오류: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errSaveFailed": {
+        "message": "저장 실패: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errDeleteFailed": {
+        "message": "삭제 실패: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "msgModelsFound": {
+        "message": "$1개의 모델을 찾았습니다.",
+        "placeholders": {
+            "count": { "content": "$1" }
+        }
+    }
+}

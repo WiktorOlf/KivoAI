@@ -1,0 +1,150 @@
+{
+    "extName": { "message": "KivoAI" },
+    "extDescription": { "message": "Ένας αυτόνομoς βοηθός περιηγητή με έμφαση στην ιδιωτικότητα, υποστηριζόμενος από τοπική τεχνητή νοημοσύνη." },
+
+    "promptLabel": { "message": "Κάντε μια ερώτηση ή ορίστε έναν στόχο" },
+    "promptPlaceholder": { "message": "π.χ. 'Συμπλήρωσε αυτή τη φόρμα' ή 'Τι είναι αυτή η σελίδα;'..." },
+    "btnDictate": { "message": "Υπαγόρευση εντολής" },
+    "btnSubmit": { "message": "Υποβολή" },
+    "btnStop": { "message": "Διακοπή" },
+
+    "titleAutofill": { "message": "Προφίλ αυτόματης συμπλήρωσης" },
+    "titleSettings": { "message": "Ρυθμίσεις" },
+    "titleDictatePrompt": { "message": "Υπαγόρευση εντολής" },
+    "titleAiExplanation": { "message": "Εξήγηση AI" },
+    "titleBack": { "message": "Πίσω" },
+
+    "btnDismiss": { "message": "Κλείσιμο" },
+    "btnSteps": { "message": "Βήματα" },
+    "btnHide": { "message": "Απόκρυψη" },
+
+    "statusConnecting": { "message": "Σύνδεση στην ενεργή καρτέλα..." },
+    "statusReady": { "message": "Έτοιμο" },
+    "statusTranscribing": { "message": "Μεταγραφή ομιλίας..." },
+    "statusSpeechShort": { "message": "Η ομιλία είναι πολύ σύντομη ή κενή." },
+    "statusDeliberating": { "message": "Ανάλυση..." },
+    "statusStopped": { "message": "Διακόπηκε από τον χρήστη." },
+    "statusInspecting": { "message": "Έλεγχος κατάστασης σελίδας..." },
+    "statusRedacting": { "message": "Απόκρυψη προσωπικών δεδομένων..." },
+    "statusExplanation": { "message": "Παρεχόμενη εξήγηση." },
+    "statusNoSpeech": { "message": "Δεν εντοπίστηκε καθαρή ομιλία." },
+    "statusListeningWait": { "message": "Ακούω... Εκφωνήστε την εντολή σας." },
+    "statusProcessingSpeech": { "message": "Επεξεργασία ομιλίας..." },
+    "statusTaskFinished": { "message": "Η εργασία ολοκληρώθηκε!" },
+
+    "titleListening": { "message": "Ακούω... (Θα υποβληθεί αυτόματα όταν σταματήσετε να μιλάτε)" },
+    "lblListening": { "message": "Ακούω... (Μιλήστε τώρα)" },
+    "titleDictate": { "message": "Υπαγόρευση εντολής" },
+
+    "errNoInput": { "message": "Εισαγάγετε έναν στόχο ή κάντε μια ερώτηση." },
+    "errMicRequired": { "message": "Απαιτείται άδεια μικροφώνου. Άνοιγμα καρτέλας ρυθμίσεων..." },
+    "errDeleteOnlyProfile": { "message": "Δεν είναι δυνατή η διαγραφή του μοναδικού εναπομείναντος προφίλ." },
+    "errNoModels": { "message": "Δεν βρέθηκαν μοντέλα." },
+
+    "headerAutofill": { "message": "Προφίλ αυτόματης συμπλήρωσης" },
+    "lblSelectProfile": { "message": "Επιλογή προφίλ" },
+    "lblActiveProfile": { "message": " (Ενεργό)" },
+    "titleNewProfile": { "message": "Προσθήκη νέου προφίλ" },
+    "btnNewProfile": { "message": "+ Νέο" },
+    "titleDeleteProfile": { "message": "Διαγραφή τρέχοντος προφίλ" },
+    "btnDeleteProfile": { "message": "Διαγραφή" },
+    "lblNewProfileName": { "message": "Νέο προφίλ" },
+    "msgEnterProfileDetails": { "message": "Εισαγάγετε τα στοιχεία του προφίλ και κάντε κλικ στην Αποθήκευση." },
+    "msgProfileRemoved": { "message": "Το προφίλ αφαιρέθηκε." },
+    "msgProfileSaved": { "message": "Το προφίλ αποθηκεύτηκε." },
+
+    "lblProfileName": { "message": "Όνομα προφίλ (Ετικέτα)" },
+    "phProfileName": { "message": "π.χ. Προσωπικό, Εργασία, Άλεξ" },
+    "lblUsername": { "message": "Όνομα χρήστη / ID" },
+    "phUsername": { "message": "π.χ. nnikolaou99" },
+    "lblFirstName": { "message": "Όνομα" },
+    "phFirstName": { "message": "Νίκος" },
+    "lblMiddleName": { "message": "Μεσαίο όνομα" },
+    "phMiddleName": { "message": "Γεώργιος" },
+    "lblLastName": { "message": "Επώνυμο" },
+    "phLastName": { "message": "Νικολάου" },
+    "lblEmail": { "message": "Email" },
+    "phEmail": { "message": "nikos@example.gr" },
+    "lblPhone": { "message": "Τηλέφωνο" },
+    "phPhone": { "message": "+30 691 234 5678" },
+    "lblAddress": { "message": "Διεύθυνση οδού" },
+    "phAddress": { "message": "Πανεπιστημίου 123" },
+    "lblCity": { "message": "Πόλη" },
+    "phCity": { "message": "Αθήνα" },
+    "lblState": { "message": "Νομός / Περιφέρεια" },
+    "phState": { "message": "Αττικής" },
+    "lblZip": { "message": "Ταχυδρομικός Κώδικας" },
+    "phZip": { "message": "10564" },
+    "lblCountry": { "message": "Χώρα" },
+    "phCountry": { "message": "Ελλάδα" },
+    "btnSaveProfile": { "message": "Αποθήκευση ενεργού προφίλ" },
+
+    "headerSettings": { "message": "Ρυθμίσεις" },
+    "lblTheme": { "message": "Θέμα" },
+    "themeGraphite": { "message": "Σκούρο γραφίτη (Σκούρο γκρι/Μαύρο)" },
+    "themeClean": { "message": "Καθαρή πλάκα (Ανοιχτό μινιμαλιστικό)" },
+    "themeIndigo": { "message": "Βαθύ σκούρο ındigo" },
+    "themeLavender": { "message": "Ανοιχτή λεβάντα" },
+    "lblMaxSteps": { "message": "Όριο αυτόνομων βημάτων" },
+    "lblServerUrl": { "message": "URL διακομιστή Open WebUI" },
+    "phServerUrl": { "message": "https://openwebui.example.gr" },
+    "lblApiKey": { "message": "Κλειδί API" },
+    "phApiKey": { "message": "sk-..." },
+    "lblModel": { "message": "Μοντέλο όρασης (Vision Model)" },
+    "btnRefresh": { "message": "Ανανέωση" },
+    "phModel": { "message": "Gemma 4" },
+    "btnSaveSettings": { "message": "Αποθήκευση" },
+    "btnTestSettings": { "message": "Δοκιμή" },
+    "msgSettingsSaved": { "message": "Οι ρυθμίσεις αποθηκεύτηκαν." },
+
+    "stepCounter": {
+        "message": "Βήμα $1/$2",
+        "description": "Shows current step out of total max steps",
+        "placeholders": {
+            "current": { "content": "$1" },
+            "total": { "content": "$2" }
+        }
+    },
+    "statusExecuting": {
+        "message": "Εκτέλεση: $1...",
+        "placeholders": {
+            "actionName": { "content": "$1" }
+        }
+    },
+    "statusRecognized": {
+        "message": "Αναγνωρίστηκε: \"$1\"",
+        "placeholders": {
+            "text": { "content": "$1" }
+        }
+    },
+    "errDictation": {
+        "message": "Αποτυχία υπαγόρευσης: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errMicError": {
+        "message": "Σφάλμα μικροφώνου: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errSaveFailed": {
+        "message": "Αποτυχία αποθήκευσης: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errDeleteFailed": {
+        "message": "Αποτυχία διαγραφής: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "msgModelsFound": {
+        "message": "Βρέθηκαν $1 μοντέλο(-α).",
+        "placeholders": {
+            "count": { "content": "$1" }
+        }
+    }
+}

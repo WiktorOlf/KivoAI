@@ -1,0 +1,150 @@
+{
+    "extName": { "message": "KivoAI" },
+    "extDescription": { "message": "লোকাল এআই (Local AI) দ্বারা চালিত, গোপনীয়তা-প্রথম স্বয়ংক্রিয় ব্রাউজার সহকারী।" },
+
+    "promptLabel": { "message": "একটি প্রশ্ন জিজ্ঞাসা করুন বা একটি লক্ষ্য দিন" },
+    "promptPlaceholder": { "message": "যেমন 'এই ফর্মটি পূরণ করুন' বা 'এই পেজটি কী?'..." },
+    "btnDictate": { "message": "ভয়েস প্রম্পট দিন" },
+    "btnSubmit": { "message": "জমা দিন" },
+    "btnStop": { "message": "থামান" },
+
+    "titleAutofill": { "message": "অটোফিল প্রোফাইল" },
+    "titleSettings": { "message": "সেটিংস" },
+    "titleDictatePrompt": { "message": "ভয়েস প্রম্পট দিন" },
+    "titleAiExplanation": { "message": "এআই (AI) ব্যাখ্যা" },
+    "titleBack": { "message": "পিছনে" },
+
+    "btnDismiss": { "message": "বাতিল করুন" },
+    "btnSteps": { "message": "ধাপসমূহ" },
+    "btnHide": { "message": "লুকান" },
+
+    "statusConnecting": { "message": "সক্রিয় ট্যাবের সাথে সংযুক্ত হচ্ছে..." },
+    "statusReady": { "message": "প্রস্তুত" },
+    "statusTranscribing": { "message": "ভয়েস টেক্সটে রূপান্তর করা হচ্ছে..." },
+    "statusSpeechShort": { "message": "কথা খুব ছোট বা খালি।" },
+    "statusDeliberating": { "message": "বিশ্লেষণ করা হচ্ছে..." },
+    "statusStopped": { "message": "ব্যবহারকারী দ্বারা থামানো হয়েছে।" },
+    "statusInspecting": { "message": "পেজের অবস্থা পরিদর্শন করা হচ্ছে..." },
+    "statusRedacting": { "message": "গোপনীয় তথ্য (PII) আড়াল করা হচ্ছে..." },
+    "statusExplanation": { "message": "ব্যাখ্যা প্রদান করা হয়েছে।" },
+    "statusNoSpeech": { "message": "কোনো স্পষ্ট কথা শোনা যায়নি।" },
+    "statusListeningWait": { "message": "শুনছি... আপনার কমান্ড বলুন।" },
+    "statusProcessingSpeech": { "message": "কথা প্রসেস করা হচ্ছে..." },
+    "statusTaskFinished": { "message": "কাজ শেষ!" },
+
+    "titleListening": { "message": "শুনছি... (আপনি কথা বলা থামালে স্বয়ংক্রিয়ভাবে জমা হবে)" },
+    "lblListening": { "message": "শুনছি... (এখন কথা বলুন)" },
+    "titleDictate": { "message": "ভয়েস প্রম্পট দিন" },
+
+    "errNoInput": { "message": "অনুগ্রহ করে একটি লক্ষ্য লিখুন বা একটি প্রশ্ন জিজ্ঞাসা করুন।" },
+    "errMicRequired": { "message": "মাইক্রোফোনের অনুমতি প্রয়োজন। সেটআপ ট্যাব খোলা হচ্ছে..." },
+    "errDeleteOnlyProfile": { "message": "একমাত্র অবশিষ্ট প্রোফাইলটি মুছে ফেলা যাবে না।" },
+    "errNoModels": { "message": "কোনো মডেল পাওয়া যায়নি।" },
+
+    "headerAutofill": { "message": "অটোফিল প্রোফাইল" },
+    "lblSelectProfile": { "message": "প্রোফাইল নির্বাচন করুন" },
+    "lblActiveProfile": { "message": " (সক্রিয়)" },
+    "titleNewProfile": { "message": "নতুন প্রোফাইল যোগ করুন" },
+    "btnNewProfile": { "message": "+ নতুন" },
+    "titleDeleteProfile": { "message": "বর্তমান প্রোফাইল মুছুন" },
+    "btnDeleteProfile": { "message": "মুছুন" },
+    "lblNewProfileName": { "message": "নতুন প্রোফাইল" },
+    "msgEnterProfileDetails": { "message": "প্রোফাইলের বিবরণ লিখুন এবং সেভ (Save) ক্লিক করুন।" },
+    "msgProfileRemoved": { "message": "প্রোফাইল সরানো হয়েছে।" },
+    "msgProfileSaved": { "message": "প্রোফাইল সেভ করা হয়েছে।" },
+
+    "lblProfileName": { "message": "প্রোফাইলের নাম (লেবেল)" },
+    "phProfileName": { "message": "যেমন ব্যক্তিগত, কাজ, অ্যালেক্স" },
+    "lblUsername": { "message": "ব্যবহারকারীর নাম / ইউজার আইডি" },
+    "phUsername": { "message": "যেমন jdoe99" },
+    "lblFirstName": { "message": "নামের প্রথমাংশ" },
+    "phFirstName": { "message": "রহিম" },
+    "lblMiddleName": { "message": "মধ্য নাম" },
+    "phMiddleName": { "message": "মিয়া" },
+    "lblLastName": { "message": "পদবি" },
+    "phLastName": { "message": "আহমেদ" },
+    "lblEmail": { "message": "ইমেইল" },
+    "phEmail": { "message": "rahim@example.com" },
+    "lblPhone": { "message": "ফোন" },
+    "phPhone": { "message": "+880 171 000 0000" },
+    "lblAddress": { "message": "রাস্তার ঠিকানা" },
+    "phAddress": { "message": "১২৩ মেইন স্ট্রিট" },
+    "lblCity": { "message": "শহর" },
+    "phCity": { "message": "ঢাকা" },
+    "lblState": { "message": "রাজ্য / প্রদেশ" },
+    "phState": { "message": "ঢাকা" },
+    "lblZip": { "message": "পোস্টাল / জিপ কোড" },
+    "phZip": { "message": "১২০০" },
+    "lblCountry": { "message": "দেশ" },
+    "phCountry": { "message": "বাংলাদেশ" },
+    "btnSaveProfile": { "message": "সক্রিয় প্রোফাইল সেভ করুন" },
+
+    "headerSettings": { "message": "সেটিংস" },
+    "lblTheme": { "message": "থিম" },
+    "themeGraphite": { "message": "গ্রাফাইট ডার্ক (গাঢ় ধূসর/কালো)" },
+    "themeClean": { "message": "ক্লিন স্লেট (হালকা/মিনিমাল)" },
+    "themeIndigo": { "message": "ডিপ ইন্ডিগো ডার্ক" },
+    "themeLavender": { "message": "ল্যাভেন্ডার লাইট" },
+    "lblMaxSteps": { "message": "স্বয়ংক্রিয় ধাপের সীমা" },
+    "lblServerUrl": { "message": "Open WebUI সার্ভার URL" },
+    "phServerUrl": { "message": "https://openwebui.example.com" },
+    "lblApiKey": { "message": "API কী (Key)" },
+    "phApiKey": { "message": "sk-..." },
+    "lblModel": { "message": "ভিশন মডেল" },
+    "btnRefresh": { "message": "রিফ্রেশ" },
+    "phModel": { "message": "Gemma 4" },
+    "btnSaveSettings": { "message": "সেভ করুন" },
+    "btnTestSettings": { "message": "টেস্ট" },
+    "msgSettingsSaved": { "message": "সেটিংস সেভ করা হয়েছে।" },
+
+    "stepCounter": {
+        "message": "ধাপ $1/$2",
+        "description": "Shows current step out of total max steps",
+        "placeholders": {
+            "current": { "content": "$1" },
+            "total": { "content": "$2" }
+        }
+    },
+    "statusExecuting": {
+        "message": "সম্পাদন করা হচ্ছে: $1...",
+        "placeholders": {
+            "actionName": { "content": "$1" }
+        }
+    },
+    "statusRecognized": {
+        "message": "শনাক্ত করা হয়েছে: \"$1\"",
+        "placeholders": {
+            "text": { "content": "$1" }
+        }
+    },
+    "errDictation": {
+        "message": "ভয়েস প্রম্পট ব্যর্থ হয়েছে: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errMicError": {
+        "message": "মাইক্রোফোন ত্রুটি: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errSaveFailed": {
+        "message": "সেভ করতে ব্যর্থ হয়েছে: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errDeleteFailed": {
+        "message": "মুছতে ব্যর্থ হয়েছে: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "msgModelsFound": {
+        "message": "$1 টি মডেল পাওয়া গেছে।",
+        "placeholders": {
+            "count": { "content": "$1" }
+        }
+    }
+}

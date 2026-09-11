@@ -1,0 +1,150 @@
+{
+    "extName": { "message": "KivoAI" },
+    "extDescription": { "message": "Yksityisyyttä kunnioittava, paikalliseen tekoälyyn perustuva autonominen selainavustaja." },
+
+    "promptLabel": { "message": "Esitä kysymys tai aseta tavoite" },
+    "promptPlaceholder": { "message": "esim. 'Täytä tämä lomake' tai 'Mikä tämä sivu on?'..." },
+    "btnDictate": { "message": "Sanele komento" },
+    "btnSubmit": { "message": "Lähetä" },
+    "btnStop": { "message": "Lopeta" },
+
+    "titleAutofill": { "message": "Automaattisen täytön profiilit" },
+    "titleSettings": { "message": "Asetukset" },
+    "titleDictatePrompt": { "message": "Sanele komento" },
+    "titleAiExplanation": { "message": "Tekoälyn selitys" },
+    "titleBack": { "message": "Takaisin" },
+
+    "btnDismiss": { "message": "Sulje" },
+    "btnSteps": { "message": "Vaiheet" },
+    "btnHide": { "message": "Piilota" },
+
+    "statusConnecting": { "message": "Yhdistetään aktiiviseen välilehteen..." },
+    "statusReady": { "message": "Valmis" },
+    "statusTranscribing": { "message": "Tunnistetaan puhetta..." },
+    "statusSpeechShort": { "message": "Puhe oli liian lyhyt tai tyhjä." },
+    "statusDeliberating": { "message": "Analysoidaan..." },
+    "statusStopped": { "message": "Käyttäjän pysäyttämä." },
+    "statusInspecting": { "message": "Tarkastellaan sivun tilaa..." },
+    "statusRedacting": { "message": "Piilotetaan henkilötietoja..." },
+    "statusExplanation": { "message": "Selitys annettu." },
+    "statusNoSpeech": { "message": "Selkeää puhetta ei havaittu." },
+    "statusListeningWait": { "message": "Kuunnellaan... Sano komentosi." },
+    "statusProcessingSpeech": { "message": "Käsitellään puhetta..." },
+    "statusTaskFinished": { "message": "Tehtävä valmis!" },
+
+    "titleListening": { "message": "Kuunnellaan... (Lähetetään automaattisesti, kun lopetat puhumisen)" },
+    "lblListening": { "message": "Kuunnellaan... (Puhu nyt)" },
+    "titleDictate": { "message": "Sanele komento" },
+
+    "errNoInput": { "message": "Syötä tavoite tai esitä kysymys." },
+    "errMicRequired": { "message": "Mikrofonin käyttöoikeus vaaditaan. Avataan asetusvälilehti..." },
+    "errDeleteOnlyProfile": { "message": "Ainoaa jäljellä olevaa profiilia ei voi poistaa." },
+    "errNoModels": { "message": "Malleja ei löytynyt." },
+
+    "headerAutofill": { "message": "Automaattisen täytön profiilit" },
+    "lblSelectProfile": { "message": "Valitse profiili" },
+    "lblActiveProfile": { "message": " (Aktiivinen)" },
+    "titleNewProfile": { "message": "Lisää uusi profiili" },
+    "btnNewProfile": { "message": "+ Uusi" },
+    "titleDeleteProfile": { "message": "Poista nykyinen profiili" },
+    "btnDeleteProfile": { "message": "Poista" },
+    "lblNewProfileName": { "message": "Uusi profiili" },
+    "msgEnterProfileDetails": { "message": "Syötä profiilin tiedot ja napsauta Tallenna." },
+    "msgProfileRemoved": { "message": "Profiili poistettu." },
+    "msgProfileSaved": { "message": "Profiili tallennettu." },
+
+    "lblProfileName": { "message": "Profiilin nimi (Tunniste)" },
+    "phProfileName": { "message": "esim. Henkilökohtainen, Työ, Alex" },
+    "lblUsername": { "message": "Käyttäjätunnus / ID" },
+    "phUsername": { "message": "esim. matti99" },
+    "lblFirstName": { "message": "Etunimi" },
+    "phFirstName": { "message": "Matti" },
+    "lblMiddleName": { "message": "Toinen nimi" },
+    "phMiddleName": { "message": "Juhani" },
+    "lblLastName": { "message": "Sukunimi" },
+    "phLastName": { "message": "Virtanen" },
+    "lblEmail": { "message": "Sähköposti" },
+    "phEmail": { "message": "matti@esimerkki.fi" },
+    "lblPhone": { "message": "Puhelinnumero" },
+    "phPhone": { "message": "+358 40 123 4567" },
+    "lblAddress": { "message": "Katuosoite" },
+    "phAddress": { "message": "Mannerheimintie 123" },
+    "lblCity": { "message": "Kaupunki" },
+    "phCity": { "message": "Helsinki" },
+    "lblState": { "message": "Maakunta / Osavaltio" },
+    "phState": { "message": "Uusimaa" },
+    "lblZip": { "message": "Postinumero" },
+    "phZip": { "message": "00100" },
+    "lblCountry": { "message": "Maa" },
+    "phCountry": { "message": "Suomi" },
+    "btnSaveProfile": { "message": "Tallenna aktiivinen profiili" },
+
+    "headerSettings": { "message": "Asetukset" },
+    "lblTheme": { "message": "Teema" },
+    "themeGraphite": { "message": "Tumma grafiitti (Tummanharmaa/Musta)" },
+    "themeClean": { "message": "Puhdas (Vaalea minimalistinen)" },
+    "themeIndigo": { "message": "Syvä tumma indigo" },
+    "themeLavender": { "message": "Vaalea laventeli" },
+    "lblMaxSteps": { "message": "Autonomisten vaiheiden raja" },
+    "lblServerUrl": { "message": "Open WebUI -palvelimen URL" },
+    "phServerUrl": { "message": "https://openwebui.esimerkki.fi" },
+    "lblApiKey": { "message": "API-avain" },
+    "phApiKey": { "message": "sk-..." },
+    "lblModel": { "message": "Näkömalli (Vision Model)" },
+    "btnRefresh": { "message": "Päivitä" },
+    "phModel": { "message": "Gemma 4" },
+    "btnSaveSettings": { "message": "Tallenna" },
+    "btnTestSettings": { "message": "Testaa" },
+    "msgSettingsSaved": { "message": "Asetukset tallennettu." },
+
+    "stepCounter": {
+        "message": "Vaihe $1/$2",
+        "description": "Shows current step out of total max steps",
+        "placeholders": {
+            "current": { "content": "$1" },
+            "total": { "content": "$2" }
+        }
+    },
+    "statusExecuting": {
+        "message": "Suoritetaan: $1...",
+        "placeholders": {
+            "actionName": { "content": "$1" }
+        }
+    },
+    "statusRecognized": {
+        "message": "Tunnistettu: \"$1\"",
+        "placeholders": {
+            "text": { "content": "$1" }
+        }
+    },
+    "errDictation": {
+        "message": "Sanelu epäonnistui: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errMicError": {
+        "message": "Mikrofonivirhe: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errSaveFailed": {
+        "message": "Tallennus epäonnistui: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errDeleteFailed": {
+        "message": "Poisto epäonnistui: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "msgModelsFound": {
+        "message": "Löytyi $1 malli(a).",
+        "placeholders": {
+            "count": { "content": "$1" }
+        }
+    }
+}

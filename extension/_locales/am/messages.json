@@ -1,0 +1,150 @@
+{
+    "extName": { "message": "KivoAI" },
+    "extDescription": { "message": "በస్థానిక አርቴፊሻል ኢንተለጀንስ (AI) የሚሰራ፣ ግላዊነትን ቅድሚያ የሚሰጥ ራስን በራስ የሚያስተዳድር የድር አሳሽ ረዳት።" },
+
+    "promptLabel": { "message": "ጥያቄ ይጠይቁ ወይም ግብ ያስቀምጡ" },
+    "promptPlaceholder": { "message": "ምሳሌ፦ 'ይህንን ፎርም ሙላ' ወይም 'ይህ ገጽ ምን ይላል?'..." },
+    "btnDictate": { "message": "ትዕዛዝ በድምፅ ይናገሩ" },
+    "btnSubmit": { "message": "ላክ" },
+    "btnStop": { "message": "አቁም" },
+
+    "titleAutofill": { "message": "ራስ-ሰር መሙያ መገለጫዎች" },
+    "titleSettings": { "message": "ማስተካከያዎች" },
+    "titleDictatePrompt": { "message": "ትዕዛዝ በድምፅ ይናገሩ" },
+    "titleAiExplanation": { "message": "የAI ማብራሪያ" },
+    "titleBack": { "message": "ተመለስ" },
+
+    "btnDismiss": { "message": "ዝጋ" },
+    "btnSteps": { "message": "ዕርምጃዎች" },
+    "btnHide": { "message": "ደብቅ" },
+
+    "statusConnecting": { "message": "ከንቁ ትር (tab) ጋር በመገናኘት ላይ..." },
+    "statusReady": { "message": "ዝግጁ" },
+    "statusTranscribing": { "message": "ድምፅ ወደ ጽሑፍ በመቀየር ላይ..." },
+    "statusSpeechShort": { "message": "ንግግሩ በጣም አጭር ነው ወይም ባዶ ነው።" },
+    "statusDeliberating": { "message": "በመተንተን ላይ..." },
+    "statusStopped": { "message": "በተጠቃሚው ቆሟል።" },
+    "statusInspecting": { "message": "የገጹን ሁኔታ በመፈተሽ ላይ..." },
+    "statusRedacting": { "message": "የግል መረጃዎችን በመደበቅ ላይ..." },
+    "statusExplanation": { "message": "ማብራሪያ ተሰጥቷል።" },
+    "statusNoSpeech": { "message": "ግልጽ ንግግር አልተሰማም።" },
+    "statusListeningWait": { "message": "እያዳመጥኩ ነው... ትዕዛዝዎን ይናገሩ።" },
+    "statusProcessingSpeech": { "message": "ድምፅን በማስተናገድ ላይ..." },
+    "statusTaskFinished": { "message": "ሥራው ተጠናቋል!" },
+
+    "titleListening": { "message": "እያዳመጥኩ ነው... (ንግግርዎን ሲያቆሙ በራሱ ይላካል)" },
+    "lblListening": { "message": "እያዳመጥኩ ነው... (አሁን ይናገሩ)" },
+    "titleDictate": { "message": "ትዕዛዝ በድምፅ ይናገሩ" },
+
+    "errNoInput": { "message": "እባክዎ ግብ ያስገቡ ወይም ጥያቄ ይጠይቁ።" },
+    "errMicRequired": { "message": "የማይክሮፎን ፈቃድ ያስፈልጋል። የማስተካከያ ትርን በመክፈት ላይ..." },
+    "errDeleteOnlyProfile": { "message": "የቀረውን ብቸኛ መገለጫ መሰረዝ አይቻልም።" },
+    "errNoModels": { "message": "ምንም ሞዴሎች አልተገኙም።" },
+
+    "headerAutofill": { "message": "ራስ-ሰር መሙያ መገለጫዎች" },
+    "lblSelectProfile": { "message": "መገለጫ ይምረጡ" },
+    "lblActiveProfile": { "message": " (ንቁ)" },
+    "titleNewProfile": { "message": "አዲስ መገለጫ ጨምር" },
+    "btnNewProfile": { "message": "+ አዲስ" },
+    "titleDeleteProfile": { "message": "አሁን ያለውን መገለጫ ሰርዝ" },
+    "btnDeleteProfile": { "message": "ሰርዝ" },
+    "lblNewProfileName": { "message": "አዲስ መገለጫ" },
+    "msgEnterProfileDetails": { "message": "የመገለጫ ዝርዝሮችን ያስገቡ እና 'አስቀምጥ' የሚለውን ይጫኑ።" },
+    "msgProfileRemoved": { "message": "መገለጫው ተወግዷል።" },
+    "msgProfileSaved": { "message": "መገለጫው ተቀምጧል።" },
+
+    "lblProfileName": { "message": "የመገለጫ ስም (መለያ)" },
+    "phProfileName": { "message": "ምሳሌ፦ የግል፣ ሥራ፣ ከበደ" },
+    "lblUsername": { "message": "የተጠቃሚ ስም / መታወቂያ" },
+    "phUsername": { "message": "ምሳሌ፦ kebede99" },
+    "lblFirstName": { "message": "የስም መጠሪያ" },
+    "phFirstName": { "message": "ከበደ" },
+    "lblMiddleName": { "message": "የአባት ስም" },
+    "phMiddleName": { "message": "ታደሰ" },
+    "lblLastName": { "message": "የአያት ስም" },
+    "phLastName": { "message": "መኰንን" },
+    "lblEmail": { "message": "ኢሜይል" },
+    "phEmail": { "message": "kebede@example.com" },
+    "lblPhone": { "message": "ስልክ ቁጥር" },
+    "phPhone": { "message": "+251 91 234 5678" },
+    "lblAddress": { "message": "የጎዳና አድራሻ" },
+    "phAddress": { "message": "ቦሌ መንገድ 123" },
+    "lblCity": { "message": "ከተማ" },
+    "phCity": { "message": "አዲስ አበባ" },
+    "lblState": { "message": "ክልል / ክፍለ ከተማ" },
+    "phState": { "message": "አዲስ አበባ" },
+    "lblZip": { "message": "ፖስታ ቁጥር" },
+    "phZip": { "message": "1000" },
+    "lblCountry": { "message": "ሀገር" },
+    "phCountry": { "message": "ኢትዮጵያ" },
+    "btnSaveProfile": { "message": "ንቁ መገለጫውን አስቀምጥ" },
+
+    "headerSettings": { "message": "ማስተካከያዎች" },
+    "lblTheme": { "message": "ገጽታ (Theme)" },
+    "themeGraphite": { "message": "ግራፋይት ጥቁር (ጥቁር ግራጫ/ጥቁር)" },
+    "themeClean": { "message": "ንጹህ ነጭ (ብርሃናማ ዝቅተኛ)" },
+    "themeIndigo": { "message": "ጥልቅ ኢንዲጎ ጥቁር" },
+    "themeLavender": { "message": "ክፍት ላቫንደር" },
+    "lblMaxSteps": { "message": "ራስ-ሰር ዕርምጃዎች ገደብ" },
+    "lblServerUrl": { "message": "የOpen WebUI ሰርቨር ዩአርኤል (URL)" },
+    "phServerUrl": { "message": "https://openwebui.example.com" },
+    "lblApiKey": { "message": "የኤፒአይ ቁልፍ (API Key)" },
+    "phApiKey": { "message": "sk-..." },
+    "lblModel": { "message": "የእይታ ሞዴል (Vision Model)" },
+    "btnRefresh": { "message": "አድስ" },
+    "phModel": { "message": "Gemma 4" },
+    "btnSaveSettings": { "message": "አስቀምጥ" },
+    "btnTestSettings": { "message": "ፈትን" },
+    "msgSettingsSaved": { "message": "ማስተካከያዎች ተቀምጠዋል።" },
+
+    "stepCounter": {
+        "message": "ዕርምጃ $1/$2",
+        "description": "Shows current step out of total max steps",
+        "placeholders": {
+            "current": { "content": "$1" },
+            "total": { "content": "$2" }
+        }
+    },
+    "statusExecuting": {
+        "message": "በማከናወን ላይ: $1...",
+        "placeholders": {
+            "actionName": { "content": "$1" }
+        }
+    },
+    "statusRecognized": {
+        "message": "ታውቋል፦ \"$1\"",
+        "placeholders": {
+            "text": { "content": "$1" }
+        }
+    },
+    "errDictation": {
+        "message": "የድምፅ ትዕዛዝ አልተሳካም: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errMicError": {
+        "message": "የማይክሮፎን ስህተት: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errSaveFailed": {
+        "message": "ማስቀመጥ አልተሳካም: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errDeleteFailed": {
+        "message": "መሰረዝ አልተሳካም: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "msgModelsFound": {
+        "message": "$1 ሞዴል(ዎች) ተገኝተዋል።",
+        "placeholders": {
+            "count": { "content": "$1" }
+        }
+    }
+}

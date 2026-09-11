@@ -1,0 +1,150 @@
+{
+    "extName": { "message": "KivoAI" },
+    "extDescription": { "message": "一個注重隱私、由本地人工智慧驅動的自主瀏覽器助理。" },
+
+    "promptLabel": { "message": "提出問題或設定目標" },
+    "promptPlaceholder": { "message": "例如：「填寫此表單」或「這是什麼頁面？」..." },
+    "btnDictate": { "message": "語音輸入指令" },
+    "btnSubmit": { "message": "送出" },
+    "btnStop": { "message": "停止" },
+
+    "titleAutofill": { "message": "自動填寫個人資料" },
+    "titleSettings": { "message": "設定" },
+    "titleDictatePrompt": { "message": "語音輸入指令" },
+    "titleAiExplanation": { "message": "AI 解釋" },
+    "titleBack": { "message": "返回" },
+
+    "btnDismiss": { "message": "關閉" },
+    "btnSteps": { "message": "步驟" },
+    "btnHide": { "message": "隱藏" },
+
+    "statusConnecting": { "message": "正在連線至使用中的分頁..." },
+    "statusReady": { "message": "就緒" },
+    "statusTranscribing": { "message": "正在轉錄語音..." },
+    "statusSpeechShort": { "message": "語音太短或無聲。" },
+    "statusDeliberating": { "message": "正在分析..." },
+    "statusStopped": { "message": "已被使用者停止。" },
+    "statusInspecting": { "message": "正在檢查頁面狀態..." },
+    "statusRedacting": { "message": "正在遮蔽個人隱私資料 (PII)..." },
+    "statusExplanation": { "message": "已提供解釋。" },
+    "statusNoSpeech": { "message": "未偵測到清晰的語音。" },
+    "statusListeningWait": { "message": "正在聆聽... 請說出您的指令。" },
+    "statusProcessingSpeech": { "message": "正在處理語音..." },
+    "statusTaskFinished": { "message": "任務已完成！" },
+
+    "titleListening": { "message": "正在聆聽...（停止說話時將自動送出）" },
+    "lblListening": { "message": "正在聆聽...（請開始說話）" },
+    "titleDictate": { "message": "語音輸入指令" },
+
+    "errNoInput": { "message": "請輸入目標或提出問題。" },
+    "errMicRequired": { "message": "需要麥克風權限。正在開啟設定分頁..." },
+    "errDeleteOnlyProfile": { "message": "無法刪除唯一的剩餘個人資料。" },
+    "errNoModels": { "message": "找不到任何模型。" },
+
+    "headerAutofill": { "message": "自動填寫個人資料" },
+    "lblSelectProfile": { "message": "選擇個人資料" },
+    "lblActiveProfile": { "message": "（使用中）" },
+    "titleNewProfile": { "message": "新增個人資料" },
+    "btnNewProfile": { "message": "+ 新增" },
+    "titleDeleteProfile": { "message": "刪除目前的個人資料" },
+    "btnDeleteProfile": { "message": "刪除" },
+    "lblNewProfileName": { "message": "新個人資料" },
+    "msgEnterProfileDetails": { "message": "請輸入個人資料細節並點擊儲存。" },
+    "msgProfileRemoved": { "message": "個人資料已移除。" },
+    "msgProfileSaved": { "message": "個人資料已儲存。" },
+
+    "lblProfileName": { "message": "個人資料名稱（標籤）" },
+    "phProfileName": { "message": "例如：個人、工作、小明" },
+    "lblUsername": { "message": "使用者名稱 / ID" },
+    "phUsername": { "message": "例如：ming99" },
+    "lblFirstName": { "message": "名字" },
+    "phFirstName": { "message": "大同" },
+    "lblMiddleName": { "message": "中間名" },
+    "phMiddleName": { "message": "志" },
+    "lblLastName": { "message": "姓氏" },
+    "phLastName": { "message": "王" },
+    "lblEmail": { "message": "電子郵件" },
+    "phEmail": { "message": "wang@example.com.tw" },
+    "lblPhone": { "message": "電話號碼" },
+    "phPhone": { "message": "+886 912 345 678" },
+    "lblAddress": { "message": "街道地址" },
+    "phAddress": { "message": "忠孝東路四段1號" },
+    "lblCity": { "message": "城市" },
+    "phCity": { "message": "台北市" },
+    "lblState": { "message": "縣市 / 州" },
+    "phState": { "message": "大安區" },
+    "lblZip": { "message": "郵遞區號" },
+    "phZip": { "message": "106" },
+    "lblCountry": { "message": "國家" },
+    "phCountry": { "message": "台灣" },
+    "btnSaveProfile": { "message": "儲存使用的個人資料" },
+
+    "headerSettings": { "message": "設定" },
+    "lblTheme": { "message": "佈景主題" },
+    "themeGraphite": { "message": "深色石墨（深灰/黑色）" },
+    "themeClean": { "message": "淨白簡約（淺色極簡）" },
+    "themeIndigo": { "message": "深邃靛藍（深色）" },
+    "themeLavender": { "message": "淺色薰衣草" },
+    "lblMaxSteps": { "message": "自主步驟上限" },
+    "lblServerUrl": { "message": "Open WebUI 伺服器網址 (URL)" },
+    "phServerUrl": { "message": "https://openwebui.example.com.tw" },
+    "lblApiKey": { "message": "API 金鑰" },
+    "phApiKey": { "message": "sk-..." },
+    "lblModel": { "message": "視覺模型 (Vision Model)" },
+    "btnRefresh": { "message": "重新整理" },
+    "phModel": { "message": "Gemma 4" },
+    "btnSaveSettings": { "message": "儲存" },
+    "btnTestSettings": { "message": "測試" },
+    "msgSettingsSaved": { "message": "設定已儲存。" },
+
+    "stepCounter": {
+        "message": "步驟 $1/$2",
+        "description": "Shows current step out of total max steps",
+        "placeholders": {
+            "current": { "content": "$1" },
+            "total": { "content": "$2" }
+        }
+    },
+    "statusExecuting": {
+        "message": "正在執行：$1...",
+        "placeholders": {
+            "actionName": { "content": "$1" }
+        }
+    },
+    "statusRecognized": {
+        "message": "已辨識：「$1」",
+        "placeholders": {
+            "text": { "content": "$1" }
+        }
+    },
+    "errDictation": {
+        "message": "語音輸入失敗：$1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errMicError": {
+        "message": "麥克風錯誤：$1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errSaveFailed": {
+        "message": "儲存失敗：$1",
+            "placeholders": {
+        "error": { "content": "$1" }
+        }
+    },
+    "errDeleteFailed": {
+        "message": "刪除失敗：$1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "msgModelsFound": {
+        "message": "已找到 $1 個模型。",
+        "placeholders": {
+            "count": { "content": "$1" }
+        }
+    }
+}

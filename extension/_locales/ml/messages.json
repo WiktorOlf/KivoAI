@@ -1,0 +1,150 @@
+{
+    "extName": { "message": "KivoAI" },
+    "extDescription": { "message": "പ്രാദേശിക AI-യുടെ സഹായത്തോടെ പ്രവർത്തിക്കുന്ന, സ്വകാര്യതയ്ക്ക് മുൻഗണന നൽകുന്ന സ്വയംഭരണ ബ്രൗസർ അസിസ്റ്റന്റ്." },
+
+    "promptLabel": { "message": "ഒരു ചോദ്യം ചോദിക്കുക അല്ലെങ്കിൽ ലക്ഷ്യം നൽകുക" },
+    "promptPlaceholder": { "message": "ഉദാ: 'ഈ ഫോം പൂരിപ്പിക്കുക' അല്ലെങ്കിൽ 'എന്താണ് ഈ പേജ്?'..." },
+    "btnDictate": { "message": "വോയ്സ് പ്രോംപ്റ്റ് നൽകുക" },
+    "btnSubmit": { "message": "സമർപ്പിക്കുക" },
+    "btnStop": { "message": "നിർത്തുക" },
+
+    "titleAutofill": { "message": "ഓട്ടോഫിൽ പ്രൊഫൈലുകൾ" },
+    "titleSettings": { "message": "ക്രമീകരണങ്ങൾ" },
+    "titleDictatePrompt": { "message": "വോയ്സ് പ്രോംപ്റ്റ് നൽകുക" },
+    "titleAiExplanation": { "message": "AI വിശദീകരണം" },
+    "titleBack": { "message": "തിരികെ" },
+
+    "btnDismiss": { "message": "ഒഴിവാക്കുക" },
+    "btnSteps": { "message": "പടികൾ" },
+    "btnHide": { "message": "മറയ്ക്കുക" },
+
+    "statusConnecting": { "message": "സജീവമായ ടാബുമായി ബന്ധിപ്പിക്കുന്നു..." },
+    "statusReady": { "message": "തയ്യാറാണ്" },
+    "statusTranscribing": { "message": "ശബ്ദം ടെക്സ്റ്റാക്കി മാറ്റുന്നു..." },
+    "statusSpeechShort": { "message": "സംഭാഷണം വളരെ ചെറുതാണ് അല്ലെങ്കിൽ ശൂന്യമാണ്." },
+    "statusDeliberating": { "message": "വിലയിരുത്തുന്നു..." },
+    "statusStopped": { "message": "ഉപയോക്താവ് നിർത്തി." },
+    "statusInspecting": { "message": "പേജിന്റെ അവസ്ഥ പരിശോധിക്കുന്നു..." },
+    "statusRedacting": { "message": "വ്യക്തിവിവരങ്ങൾ (PII) മറയ്ക്കുന്നു..." },
+    "statusExplanation": { "message": "വിശദീകരണം നൽകിയിട്ടുണ്ട്." },
+    "statusNoSpeech": { "message": "വ്യക്തമായ ശബ്ദം കേട്ടില്ല." },
+    "statusListeningWait": { "message": "കേൾക്കുന്നു... നിങ്ങളുടെ കമാൻഡ് പറയുക." },
+    "statusProcessingSpeech": { "message": "ശബ്ദം പ്രോസസ്സ് ചെയ്യുന്നു..." },
+    "statusTaskFinished": { "message": "പ്രവർത്തനം പൂർത്തിയായി!" },
+
+    "titleListening": { "message": "കേൾക്കുന്നു... (സംസാരിക്കുന്നത് നിർത്തുമ്പോൾ സ്വയം സമർപ്പിക്കപ്പെടും)" },
+    "lblListening": { "message": "കേൾക്കുന്നു... (ഇപ്പോൾ സംസാരിക്കുക)" },
+    "titleDictate": { "message": "വോയ്സ് പ്രോംപ്റ്റ് നൽകുക" },
+
+    "errNoInput": { "message": "ദയവായി ഒരു ലക്ഷ്യം നൽകുക അല്ലെങ്കിൽ ഒരു ചോദ്യം ചോദിക്കുക." },
+    "errMicRequired": { "message": "മൈക്രോഫോൺ അനുമതി ആവശ്യമാണ്. സെറ്റപ്പ് ടാബ് തുറക്കുന്നു..." },
+    "errDeleteOnlyProfile": { "message": "ബാക്കിയുള്ള ഒരേയൊരു പ്രൊഫൈൽ ഇല്ലാതാക്കാൻ കഴിയില്ല." },
+    "errNoModels": { "message": "മോഡലുകൾ ഒന്നും കണ്ടെത്തിയില്ല." },
+
+    "headerAutofill": { "message": "ഓട്ടോഫിൽ പ്രൊഫൈലുകൾ" },
+    "lblSelectProfile": { "message": "പ്രൊഫൈൽ തിരഞ്ഞെടുക്കുക" },
+    "lblActiveProfile": { "message": " (സജീവമാണ്)" },
+    "titleNewProfile": { "message": "പുതിയ പ്രൊഫൈൽ ചേർക്കുക" },
+    "btnNewProfile": { "message": "+ പുതിയത്" },
+    "titleDeleteProfile": { "message": "നിലവിലെ പ്രൊഫൈൽ ഇല്ലാതാക്കുക" },
+    "btnDeleteProfile": { "message": "ഇല്ലാതാക്കുക" },
+    "lblNewProfileName": { "message": "പുതിയ പ്രൊഫൈൽ" },
+    "msgEnterProfileDetails": { "message": "പ്രൊഫൈൽ വിവരങ്ങൾ നൽകി സേവ് ക്ലിക്ക് ചെയ്യുക." },
+    "msgProfileRemoved": { "message": "പ്രൊഫൈൽ നീക്കം ചെയ്തു." },
+    "msgProfileSaved": { "message": "പ്രൊഫൈൽ സേവ് ചെയ്തു." },
+
+    "lblProfileName": { "message": "പ്രൊഫൈൽ പേര് (ലേബൽ)" },
+    "phProfileName": { "message": "ഉദാ: വ്യക്തിപരം, ജോലി, രാഹുൽ" },
+    "lblUsername": { "message": "ഉപയോക്തൃനാമം / യൂസർ ഐഡി" },
+    "phUsername": { "message": "ഉദാ: rahul99" },
+    "lblFirstName": { "message": "ആദ്യ നാമം" },
+    "phFirstName": { "message": "രാഹുൽ" },
+    "lblMiddleName": { "message": "ഇടതു നാമം" },
+    "phMiddleName": { "message": "കുമാർ" },
+    "lblLastName": { "message": "അവസാന നാമം" },
+    "phLastName": { "message": "മേനോൻ" },
+    "lblEmail": { "message": "ഇമെയിൽ" },
+    "phEmail": { "message": "rahul@example.com" },
+    "lblPhone": { "message": "ഫോൺ" },
+    "phPhone": { "message": "+91 98765 43210" },
+    "lblAddress": { "message": "വിലാസം" },
+    "phAddress": { "message": "123 മെയിൻ സ്ട്രീറ്റ്" },
+    "lblCity": { "message": "നഗരം" },
+    "phCity": { "message": "കൊച്ചി" },
+    "lblState": { "message": "സംസ്ഥാനം" },
+    "phState": { "message": "കേരളം" },
+    "lblZip": { "message": "പിൻ കോഡ്" },
+    "phZip": { "message": "682001" },
+    "lblCountry": { "message": "രാജ്യം" },
+    "phCountry": { "message": "ഇന്ത്യ" },
+    "btnSaveProfile": { "message": "സജീവ പ്രൊഫൈൽ സേവ് ചെയ്യുക" },
+
+    "headerSettings": { "message": "ക്രമീകരണങ്ങൾ" },
+    "lblTheme": { "message": "തീം" },
+    "themeGraphite": { "message": "ഗ്രാഫൈറ്റ് ഡാർക്ക് (ഇരുണ്ട ചാരനിറം/കറുപ്പ്)" },
+    "themeClean": { "message": "ക്ലീൻ സ്ലേറ്റ് (വെളിച്ചമുള്ള മിനിമൽ)" },
+    "themeIndigo": { "message": "ഡീപ് ഇൻഡിഗോ ഡാർക്ക്" },
+    "themeLavender": { "message": "ലാവെൻഡർ ലൈറ്റ്" },
+    "lblMaxSteps": { "message": "സ്വയംഭരണ പടികളുടെ പരിധി" },
+    "lblServerUrl": { "message": "Open WebUI സെർവർ URL" },
+    "phServerUrl": { "message": "https://openwebui.example.com" },
+    "lblApiKey": { "message": "API കീ" },
+    "phApiKey": { "message": "sk-..." },
+    "lblModel": { "message": "വിഷൻ മോഡൽ" },
+    "btnRefresh": { "message": "പുതുക്കുക" },
+    "phModel": { "message": "Gemma 4" },
+    "btnSaveSettings": { "message": "സേവ് ചെയ്യുക" },
+    "btnTestSettings": { "message": "പരിശോധിക്കുക" },
+    "msgSettingsSaved": { "message": "ക്രമീകരണങ്ങൾ സേവ് ചെയ്തു." },
+
+    "stepCounter": {
+        "message": "പടി $1/$2",
+        "description": "Shows current step out of total max steps",
+        "placeholders": {
+            "current": { "content": "$1" },
+            "total": { "content": "$2" }
+        }
+    },
+    "statusExecuting": {
+        "message": "നടപ്പിലാക്കുന്നു: $1...",
+        "placeholders": {
+            "actionName": { "content": "$1" }
+        }
+    },
+    "statusRecognized": {
+        "message": "തിരിച്ചറിഞ്ഞു: \"$1\"",
+        "placeholders": {
+            "text": { "content": "$1" }
+        }
+    },
+    "errDictation": {
+        "message": "ഡിക്ടേഷൻ പരാജയപ്പെട്ടു: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errMicError": {
+        "message": "മൈക്രോഫോൺ പിഴവ്: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errSaveFailed": {
+        "message": "സേവ് ചെയ്യുന്നത് പരാജയപ്പെട്ടു: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errDeleteFailed": {
+        "message": "ഇല്ലാതാക്കുന്നത് പരാജയപ്പെട്ടു: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "msgModelsFound": {
+        "message": "$1 മോഡൽ(കൾ) കണ്ടെത്തി.",
+        "placeholders": {
+            "count": { "content": "$1" }
+        }
+    }
+}

@@ -1,0 +1,150 @@
+{
+    "extName": { "message": "KivoAI" },
+    "extDescription": { "message": "Assistant de navigateur autonome axé sur la confidentialité, propulsé par une IA locale." },
+
+    "promptLabel": { "message": "Posez une question ou définissez un objectif" },
+    "promptPlaceholder": { "message": "ex. 'Remplis ce formulaire' ou 'Quelle est cette page ?'..." },
+    "btnDictate": { "message": "Dicter l'instruction" },
+    "btnSubmit": { "message": "Envoyer" },
+    "btnStop": { "message": "Arrêter" },
+
+    "titleAutofill": { "message": "Profils de saisie automatique" },
+    "titleSettings": { "message": "Paramètres" },
+    "titleDictatePrompt": { "message": "Dicter l'instruction" },
+    "titleAiExplanation": { "message": "Explication de l'IA" },
+    "titleBack": { "message": "Retour" },
+
+    "btnDismiss": { "message": "Fermer" },
+    "btnSteps": { "message": "Étapes" },
+    "btnHide": { "message": "Masquer" },
+
+    "statusConnecting": { "message": "Connexion à l'onglet actif..." },
+    "statusReady": { "message": "Prêt" },
+    "statusTranscribing": { "message": "Transcription vocale..." },
+    "statusSpeechShort": { "message": "Discours trop court ou vide." },
+    "statusDeliberating": { "message": "Analyse en cours..." },
+    "statusStopped": { "message": "Arrêté par l'utilisateur." },
+    "statusInspecting": { "message": "Inspection de l'état de la page..." },
+    "statusRedacting": { "message": "Masquage des données personnelles..." },
+    "statusExplanation": { "message": "Explication fournie." },
+    "statusNoSpeech": { "message": "Aucune voix claire détectée." },
+    "statusListeningWait": { "message": "Écoute... Prononcez votre commande." },
+    "statusProcessingSpeech": { "message": "Traitement de la voix..." },
+    "statusTaskFinished": { "message": "Tâche terminée !" },
+
+    "titleListening": { "message": "Écoute... (Sera soumis automatiquement lorsque vous arrêterez de parler)" },
+    "lblListening": { "message": "Écoute... (Parlez maintenant)" },
+    "titleDictate": { "message": "Dicter l'instruction" },
+
+    "errNoInput": { "message": "Veuillez entrer un objectif ou poser une question." },
+    "errMicRequired": { "message": "Autorisation du microphone requise. Ouverture de l'onglet de configuration..." },
+    "errDeleteOnlyProfile": { "message": "Impossible de supprimer le seul profil restant." },
+    "errNoModels": { "message": "Aucun modèle trouvé." },
+
+    "headerAutofill": { "message": "Profils de saisie automatique" },
+    "lblSelectProfile": { "message": "Sélectionner un profil" },
+    "lblActiveProfile": { "message": " (Actif)" },
+    "titleNewProfile": { "message": "Ajouter un nouveau profil" },
+    "btnNewProfile": { "message": "+ Nouveau" },
+    "titleDeleteProfile": { "message": "Supprimer le profil actuel" },
+    "btnDeleteProfile": { "message": "Supprimer" },
+    "lblNewProfileName": { "message": "Nouveau profil" },
+    "msgEnterProfileDetails": { "message": "Entrez les détails du profil et cliquez sur Enregistrer." },
+    "msgProfileRemoved": { "message": "Profil supprimé." },
+    "msgProfileSaved": { "message": "Profil enregistré." },
+
+    "lblProfileName": { "message": "Nom du profil (Étiquette)" },
+    "phProfileName": { "message": "ex. Personnel, Travail, Alex" },
+    "lblUsername": { "message": "Nom d'utilisateur / ID" },
+    "phUsername": { "message": "ex. jdupont99" },
+    "lblFirstName": { "message": "Prénom" },
+    "phFirstName": { "message": "Jean" },
+    "lblMiddleName": { "message": "Deuxième prénom" },
+    "phMiddleName": { "message": "Marie" },
+    "lblLastName": { "message": "Nom de famille" },
+    "phLastName": { "message": "Dupont" },
+    "lblEmail": { "message": "E-mail" },
+    "phEmail": { "message": "jean@exemple.fr" },
+    "lblPhone": { "message": "Téléphone" },
+    "phPhone": { "message": "+33 6 12 34 56 78" },
+    "lblAddress": { "message": "Adresse postale" },
+    "phAddress": { "message": "123 Rue de la République" },
+    "lblCity": { "message": "Ville" },
+    "phCity": { "message": "Paris" },
+    "lblState": { "message": "État / Province / Région" },
+    "phState": { "message": "IDF" },
+    "lblZip": { "message": "Code postal" },
+    "phZip": { "message": "75001" },
+    "lblCountry": { "message": "Pays" },
+    "phCountry": { "message": "France" },
+    "btnSaveProfile": { "message": "Enregistrer le profil actif" },
+
+    "headerSettings": { "message": "Paramètres" },
+    "lblTheme": { "message": "Thème" },
+    "themeGraphite": { "message": "Graphite sombre (Gris foncé/Noir)" },
+    "themeClean": { "message": "Ardoise propre (Clair minimaliste)" },
+    "themeIndigo": { "message": "Indigo profond sombre" },
+    "themeLavender": { "message": "Lavande clair" },
+    "lblMaxSteps": { "message": "Limite d'étapes autonomes" },
+    "lblServerUrl": { "message": "URL du serveur Open WebUI" },
+    "phServerUrl": { "message": "https://openwebui.exemple.fr" },
+    "lblApiKey": { "message": "Clé API" },
+    "phApiKey": { "message": "sk-..." },
+    "lblModel": { "message": "Modèle de vision" },
+    "btnRefresh": { "message": "Actualiser" },
+    "phModel": { "message": "Gemma 4" },
+    "btnSaveSettings": { "message": "Enregistrer" },
+    "btnTestSettings": { "message": "Tester" },
+    "msgSettingsSaved": { "message": "Paramètres enregistrés." },
+
+    "stepCounter": {
+        "message": "Étape $1/$2",
+        "description": "Shows current step out of total max steps",
+        "placeholders": {
+            "current": { "content": "$1" },
+            "total": { "content": "$2" }
+        }
+    },
+    "statusExecuting": {
+        "message": "Exécution de : $1...",
+        "placeholders": {
+            "actionName": { "content": "$1" }
+        }
+    },
+    "statusRecognized": {
+        "message": "Reconnu : \"$1\"",
+        "placeholders": {
+            "text": { "content": "$1" }
+        }
+    },
+    "errDictation": {
+        "message": "Échec de la dictée : $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errMicError": {
+        "message": "Erreur du microphone : $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errSaveFailed": {
+        "message": "Échec de l'enregistrement : $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errDeleteFailed": {
+        "message": "Échec de la suppression : $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "msgModelsFound": {
+        "message": "$1 modèle(s) trouvé(s).",
+        "placeholders": {
+            "count": { "content": "$1" }
+        }
+    }
+}

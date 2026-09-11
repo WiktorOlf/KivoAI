@@ -1,0 +1,150 @@
+{
+    "extName": { "message": "KivoAI" },
+    "extDescription": { "message": "ಸ್ಥಳೀಯ AI ನಿಂದ ನಡೆಸಲ್ಪಡುವ, ಗೌಪ್ಯತೆಗೆ-ಮೊದಲ ಆದ್ಯತೆ ನೀಡುವ ಸ್ವಾಯತ್ತ ಬ್ರೌಸರ್ ಸಹಾಯಕ." },
+
+    "promptLabel": { "message": "ಪ್ರಶ್ನೆ ಕೇಳಿ ಅಥವಾ ಗುರಿಯನ್ನು ನೀಡಿ" },
+    "promptPlaceholder": { "message": "ಉದಾ. 'ಈ ಫಾರ್ಮ್ ಭರ್ತಿ ಮಾಡಿ' ಅಥವಾ 'ಈ ಪುಟ ಯಾವುದರ ಬಗ್ಗೆ?'..." },
+    "btnDictate": { "message": "ಪ್ರಾಂಪ್ಟ್ ಹೇಳಿ" },
+    "btnSubmit": { "message": "ಸಲ್ಲಿಸಿ" },
+    "btnStop": { "message": "ನಿಲ್ಲಿಸಿ" },
+
+    "titleAutofill": { "message": "ಸ್ವಯಂ ಭರ್ತಿ ಪ್ರೊಫೈಲ್‌ಗಳು" },
+    "titleSettings": { "message": "ಸೆಟ್ಟಿಂಗ್‌ಗಳು" },
+    "titleDictatePrompt": { "message": "ಪ್ರಾಂಪ್ಟ್ ಹೇಳಿ" },
+    "titleAiExplanation": { "message": "AI ವಿವರಣೆ" },
+    "titleBack": { "message": "ಹಿಂದೆ" },
+
+    "btnDismiss": { "message": "ಮುಚ್ಚಿ" },
+    "btnSteps": { "message": "ಹಂತಗಳು" },
+    "btnHide": { "message": "ಮರೆಮಾಡಿ" },
+
+    "statusConnecting": { "message": "ಸಕ್ರಿಯ ಟ್ಯಾಬ್‌ಗೆ ಸಂಪರ್ಕಗೊಳ್ಳುತ್ತಿದೆ..." },
+    "statusReady": { "message": "ಸಿದ್ಧವಾಗಿದೆ" },
+    "statusTranscribing": { "message": "ಧ್ವನಿಯನ್ನು ಪಠ್ಯಕ್ಕೆ ಬದಲಾಯಿಸಲಾಗುತ್ತಿದೆ..." },
+    "statusSpeechShort": { "message": "ಧ್ವನಿ ತುಂಬಾ ಚಿಕ್ಕದಾಗಿದೆ ಅಥವಾ ಖಾಲಿಯಾಗಿದೆ." },
+    "statusDeliberating": { "message": "ವಿಶ್ಲೇಷಿಸಲಾಗುತ್ತಿದೆ..." },
+    "statusStopped": { "message": "ಬಳಕೆದಾರರಿಂದ ನಿಲ್ಲಿಸಲಾಗಿದೆ." },
+    "statusInspecting": { "message": "ಪುಟದ ಸ್ಥಿತಿಯನ್ನು ಪರಿಶೀಲಿಸಲಾಗುತ್ತಿದೆ..." },
+    "statusRedacting": { "message": "ವೈಯಕ್ತಿಕ ಮಾಹಿತಿಯನ್ನು (PII) ಮರೆಮಾಡಲಾಗುತ್ತಿದೆ..." },
+    "statusExplanation": { "message": "ವಿವರಣೆ ಒದಗಿಸಲಾಗಿದೆ." },
+    "statusNoSpeech": { "message": "ಸ್ಪಷ್ಟವಾದ ಧ್ವನಿ ಕೇಳಿಸಿಲ್ಲ." },
+    "statusListeningWait": { "message": "ಆಲಿಸಲಾಗುತ್ತಿದೆ... ನಿಮ್ಮ ಆಜ್ಞೆಯನ್ನು ಹೇಳಿ." },
+    "statusProcessingSpeech": { "message": "ಧ್ವನಿಯನ್ನು ಪ್ರಕ್ರಿಯೆಗೊಳಿಸಲಾಗುತ್ತಿದೆ..." },
+    "statusTaskFinished": { "message": "ಕಾರ್ಯ ಪೂರ್ಣಗೊಂಡಿದೆ!" },
+
+    "titleListening": { "message": "ಆಲಿಸಲಾಗುತ್ತಿದೆ... (ನೀವು ಮಾತನಾಡುವುದನ್ನು ನಿಲ್ಲಿಸಿದಾಗ ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಸಲ್ಲಿಸಲಾಗುತ್ತದೆ)" },
+    "lblListening": { "message": "ಆಲಿಸಲಾಗುತ್ತಿದೆ... (ಈಗ ಮಾತನಾಡಿ)" },
+    "titleDictate": { "message": "ಪ್ರಾಂಪ್ಟ್ ಹೇಳಿ" },
+
+    "errNoInput": { "message": "ದಯವಿಟ್ಟು ಗುರಿಯನ್ನು ನಮೂದಿಸಿ ಅಥವಾ ಪ್ರಶ್ನೆಯನ್ನು ಕೇಳಿ." },
+    "errMicRequired": { "message": "ಮೈಕ್ರೊಫೋನ್ ಅನುಮತಿ ಅಗತ್ಯವಿದೆ. ಸೆಟಪ್ ಟ್ಯಾಬ್ ತೆರೆಯಲಾಗುತ್ತಿದೆ..." },
+    "errDeleteOnlyProfile": { "message": "ಉಳಿದಿರುವ ಏಕೈಕ ಪ್ರೊಫೈಲ್ ಅನ್ನು ಅಳಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ." },
+    "errNoModels": { "message": "ಯಾವುದೇ ಮಾಡೆಲ್‌ಗಳು ಕಂಡುಬಂದಿಲ್ಲ." },
+
+    "headerAutofill": { "message": "ಸ್ವಯಂ ಭರ್ತಿ ಪ್ರೊಫೈಲ್‌ಗಳು" },
+    "lblSelectProfile": { "message": "ಪ್ರೊಫೈಲ್ ಆಯ್ಕೆಮಾಡಿ" },
+    "lblActiveProfile": { "message": " (ಸಕ್ರಿಯ)" },
+    "titleNewProfile": { "message": "ಹೊಸ ಪ್ರೊಫೈಲ್ ಸೇರಿಸಿ" },
+    "btnNewProfile": { "message": "+ ಹೊಸತು" },
+    "titleDeleteProfile": { "message": "ಪ್ರಸ್ತುತ ಪ್ರೊಫೈಲ್ ಅಳಿಸಿ" },
+    "btnDeleteProfile": { "message": "ಅಳಿಸಿ" },
+    "lblNewProfileName": { "message": "ಹೊಸ ಪ್ರೊಫೈಲ್" },
+    "msgEnterProfileDetails": { "message": "ಪ್ರೊಫೈಲ್ ವಿವರಗಳನ್ನು ನಮೂದಿಸಿ ಮತ್ತು 'ಉಳಿಸಿ' ಕ್ಲಿಕ್ ಮಾಡಿ." },
+    "msgProfileRemoved": { "message": "ಪ್ರೊಫೈಲ್ ತೆಗೆದುಹಾಕಲಾಗಿದೆ." },
+    "msgProfileSaved": { "message": "ಪ್ರೊಫೈಲ್ ಉಳಿಸಲಾಗಿದೆ." },
+
+    "lblProfileName": { "message": "ಪ್ರೊಫೈಲ್ ಹೆಸರು (ಲೇಬಲ್)" },
+    "phProfileName": { "message": "ಉದಾ. ವೈಯಕ್ತಿಕ, ಕಚೇರಿ, ರಮೇಶ್" },
+    "lblUsername": { "message": "ಬಳಕೆದಾರಹೆಸರು / ಬಳಕೆದಾರ ID" },
+    "phUsername": { "message": "ಉದಾ. ramesh99" },
+    "lblFirstName": { "message": "ಮೊದಲ ಹೆಸರು" },
+    "phFirstName": { "message": "ರಮೇಶ್" },
+    "lblMiddleName": { "message": "ಮಧ್ಯದ ಹೆಸರು" },
+    "phMiddleName": { "message": "ಕುಮಾರ್" },
+    "lblLastName": { "message": "ಕೊನೆಯ ಹೆಸರು" },
+    "phLastName": { "message": "ರಾವ್" },
+    "lblEmail": { "message": "ಇಮೇಲ್" },
+    "phEmail": { "message": "ramesh@example.com" },
+    "lblPhone": { "message": "ಫೋನ್" },
+    "phPhone": { "message": "+91 98765 43210" },
+    "lblAddress": { "message": "ಬೀದಿ ವಿಳಾಸ" },
+    "phAddress": { "message": "123 ಮುಖ್ಯ ರಸ್ತೆ" },
+    "lblCity": { "message": "ನಗರ" },
+    "phCity": { "message": "ಬೆಂಗಳೂರು" },
+    "lblState": { "message": "ರಾಜ್ಯ / ಪ್ರಾಂತ್ಯ" },
+    "phState": { "message": "ಕರ್ನಾಟಕ" },
+    "lblZip": { "message": "ಪಿನ್ ಕೋಡ್" },
+    "phZip": { "message": "560001" },
+    "lblCountry": { "message": "ದೇಶ" },
+    "phCountry": { "message": "ಭಾರತ" },
+    "btnSaveProfile": { "message": "ಸಕ್ರಿಯ ಪ್ರೊಫೈಲ್ ಉಳಿಸಿ" },
+
+    "headerSettings": { "message": "ಸೆಟ್ಟಿಂಗ್‌ಗಳು" },
+    "lblTheme": { "message": "ಥೀಮ್" },
+    "themeGraphite": { "message": "ಗ್ರಾಫೈಟ್ ಡಾರ್ಕ್ (ಗಾಢ ಬೂದು/ಕಪ್ಪು)" },
+    "themeClean": { "message": "ಕ್ಲೀನ್ ಸ್ಲೇಟ್ (ತಿಳಿ ಕನಿಷ್ಠ)" },
+    "themeIndigo": { "message": "ಡೀಪ್ ಇಂಡಿಗೊ ಡಾರ್ಕ್" },
+    "themeLavender": { "message": "ಲ್ಯಾವೆಂಡರ್ ಲೈಟ್" },
+    "lblMaxSteps": { "message": "ಸ್ವಾಯತ್ತ ಹಂತದ ಮಿತಿ" },
+    "lblServerUrl": { "message": "Open WebUI ಸರ್ವರ್ URL" },
+    "phServerUrl": { "message": "https://openwebui.example.com" },
+    "lblApiKey": { "message": "API ಕೀ" },
+    "phApiKey": { "message": "sk-..." },
+    "lblModel": { "message": "ವಿಷನ್ ಮಾಡೆಲ್" },
+    "btnRefresh": { "message": "ರಿಫ್ರೆಶ್" },
+    "phModel": { "message": "Gemma 4" },
+    "btnSaveSettings": { "message": "ಉಳಿಸಿ" },
+    "btnTestSettings": { "message": "ಪರೀಕ್ಷಿಸಿ" },
+    "msgSettingsSaved": { "message": "ಸೆಟ್ಟಿಂಗ್‌ಗಳನ್ನು ಉಳಿಸಲಾಗಿದೆ." },
+
+    "stepCounter": {
+        "message": "ಹಂತ $1/$2",
+        "description": "Shows current step out of total max steps",
+        "placeholders": {
+            "current": { "content": "$1" },
+            "total": { "content": "$2" }
+        }
+    },
+    "statusExecuting": {
+        "message": "ಕಾರ್ಯಗತಗೊಳಿಸಲಾಗುತ್ತಿದೆ: $1...",
+        "placeholders": {
+            "actionName": { "content": "$1" }
+        }
+    },
+    "statusRecognized": {
+        "message": "ಗುರುತಿಸಲಾಗಿದೆ: \"$1\"",
+        "placeholders": {
+            "text": { "content": "$1" }
+        }
+    },
+    "errDictation": {
+        "message": "ಉಕ್ತಲೇಖನ ವಿಫಲವಾಗಿದೆ: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errMicError": {
+        "message": "ಮೈಕ್ರೊಫೋನ್ ದೋಷ: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errSaveFailed": {
+        "message": "ಉಳಿಸಲು ವಿಫಲವಾಗಿದೆ: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errDeleteFailed": {
+        "message": "ಅಳಿಸಲು ವಿಫಲವಾಗಿದೆ: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "msgModelsFound": {
+        "message": "$1 ಮಾಡೆಲ್(ಗಳು) ಕಂಡುಬಂದಿವೆ.",
+        "placeholders": {
+            "count": { "content": "$1" }
+        }
+    }
+}

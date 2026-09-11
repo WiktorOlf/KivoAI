@@ -1,0 +1,150 @@
+{
+    "extName": { "message": "KivoAI" },
+    "extDescription": { "message": "உள்ளூர் AI மூலம் இயங்கும், தனியுரிமைக்கு முன்னுரிமை அளிக்கும் தன்னாட்சி உலாவி உதவியாளர்." },
+
+    "promptLabel": { "message": "ஒரு கேள்வியைக் கேளுங்கள் அல்லது ஒரு இலக்கை அளியுங்கள்" },
+    "promptPlaceholder": { "message": "உதாரணமாக, 'இந்த படிவத்தை நிரப்பவும்' அல்லது 'இது என்ன பக்கம்?'..." },
+    "btnDictate": { "message": "குரல் கட்டளை கொடுங்கள்" },
+    "btnSubmit": { "message": "சமர்ப்பி" },
+    "btnStop": { "message": "நிறுத்து" },
+
+    "titleAutofill": { "message": "தன்னியக்க நிரப்புதல் சுயவிவரங்கள்" },
+    "titleSettings": { "message": "அமைப்புகள்" },
+    "titleDictatePrompt": { "message": "குரல் கட்டளை கொடுங்கள்" },
+    "titleAiExplanation": { "message": "AI விளக்கம்" },
+    "titleBack": { "message": "பின்னே" },
+
+    "btnDismiss": { "message": "நிராகரி" },
+    "btnSteps": { "message": "படிகள்" },
+    "btnHide": { "message": "மறை" },
+
+    "statusConnecting": { "message": "செயலில் உள்ள தாவலுடன் இணைகிறது..." },
+    "statusReady": { "message": "தயார்" },
+    "statusTranscribing": { "message": "குரலை உரைமாற்றுகிறது..." },
+    "statusSpeechShort": { "message": "பேச்சு மிகக் குறுகியது அல்லது காலியாக உள்ளது." },
+    "statusDeliberating": { "message": "பகுப்பாய்வு செய்கிறது..." },
+    "statusStopped": { "message": "பயனரால் நிறுத்தப்பட்டது." },
+    "statusInspecting": { "message": "பக்கத்தின் நிலையை ஆய்வு செய்கிறது..." },
+    "statusRedacting": { "message": "தனிப்பட்ட தகவல்களை (PII) மறைக்கிறது..." },
+    "statusExplanation": { "message": "விளக்கம் வழங்கப்பட்டது." },
+    "statusNoSpeech": { "message": "தெளிவான பேச்சு கேட்கவில்லை." },
+    "statusListeningWait": { "message": "கேட்கிறது... உங்கள் கட்டளையைக் கூறுங்கள்." },
+    "statusProcessingSpeech": { "message": "பேச்சை செயலாக்குகிறது..." },
+    "statusTaskFinished": { "message": "பணி முடிந்தது!" },
+
+    "titleListening": { "message": "கேட்கிறது... (நீங்கள் பேசுவதை நிறுத்தியதும் தானாக சமர்ப்பிக்கப்படும்)" },
+    "lblListening": { "message": "கேட்கிறது... (இப்போது பேசுங்கள்)" },
+    "titleDictate": { "message": "குரல் கட்டளை கொடுங்கள்" },
+
+    "errNoInput": { "message": "தயவுசெய்து ஒரு இலக்கை உள்ளிடவும் அல்லது ஒரு கேள்வியைக் கேட்கவும்." },
+    "errMicRequired": { "message": "மைக்ரோஃபோன் அனுமதி தேவை. அமைப்புகள் தாவலைத் திறக்கிறது..." },
+    "errDeleteOnlyProfile": { "message": "மீதமுள்ள ஒரே ஒரு சுயவிவரத்தை நீக்க முடியாது." },
+    "errNoModels": { "message": "மாதிரிகள் எதுவும் காணப்படவில்லை." },
+
+    "headerAutofill": { "message": "தன்னியக்க நிரப்புதல் சுயவிவரங்கள்" },
+    "lblSelectProfile": { "message": "சுயவிவரத்தைத் தேர்ந்தெடுக்கவும்" },
+    "lblActiveProfile": { "message": " (செயலில் உள்ளது)" },
+    "titleNewProfile": { "message": "புதிய சுயவிவரத்தைச் சேர்" },
+    "btnNewProfile": { "message": "+ புதியது" },
+    "titleDeleteProfile": { "message": "தற்போதைய சுயவிவரத்தை நீக்கு" },
+    "btnDeleteProfile": { "message": "நீக்கு" },
+    "lblNewProfileName": { "message": "புதிய சுயவிவரம்" },
+    "msgEnterProfileDetails": { "message": "சுயவிவர விவரங்களை உள்ளிட்டு சேமி என்பதைக் கிளிக் செய்யவும்." },
+    "msgProfileRemoved": { "message": "சுயவிவரம் அகற்றப்பட்டது." },
+    "msgProfileSaved": { "message": "சுயவிவரம் சேமிக்கப்பட்டது." },
+
+    "lblProfileName": { "message": "சுயவிவரத்தின் பெயர் (லேபிள்)" },
+    "phProfileName": { "message": "உதாரணமாக, தனிப்பட்ட, வேலை, ரவி" },
+    "lblUsername": { "message": "பயனர்பெயர் / பயனர் ஐடி" },
+    "phUsername": { "message": "உதாரணமாக, ravi99" },
+    "lblFirstName": { "message": "முதல் பெயர்" },
+    "phFirstName": { "message": "ரவி" },
+    "lblMiddleName": { "message": "நடுப் பெயர்" },
+    "phMiddleName": { "message": "குமார்" },
+    "lblLastName": { "message": "கடைசி பெயர்" },
+    "phLastName": { "message": "வர்மா" },
+    "lblEmail": { "message": "மின்னஞ்சல்" },
+    "phEmail": { "message": "ravi@example.com" },
+    "lblPhone": { "message": "தொலைபேசி" },
+    "phPhone": { "message": "+91 98765 43210" },
+    "lblAddress": { "message": "தெரு முகவரி" },
+    "phAddress": { "message": "123 மெயின் ஸ்ட்ரீட்" },
+    "lblCity": { "message": "நகரம்" },
+    "phCity": { "message": "சென்னை" },
+    "lblState": { "message": "மாநிலம் / மாகாணம்" },
+    "phState": { "message": "தமிழ்நாடு" },
+    "lblZip": { "message": "அஞ்சல் குறியீடு" },
+    "phZip": { "message": "600001" },
+    "lblCountry": { "message": "நாடு" },
+    "phCountry": { "message": "இந்தியா" },
+    "btnSaveProfile": { "message": "செயலில் உள்ள சுயவிவரத்தை சேமி" },
+
+    "headerSettings": { "message": "அமைப்புகள்" },
+    "lblTheme": { "message": "தீம் (கருப்பொருள்)" },
+    "themeGraphite": { "message": "கிராஃபைட் டார்க் (அடர் சாம்பல்/கருப்பு)" },
+    "themeClean": { "message": "க்ளீன் ஸ்லேட் (வெளிர் குறைந்தபட்சம்)" },
+    "themeIndigo": { "message": "டீப் இண்டிகோ டார்க்" },
+    "themeLavender": { "message": "லாவெண்டர் லைட்" },
+    "lblMaxSteps": { "message": "தன்னாட்சி படிகளின் வரம்பு" },
+    "lblServerUrl": { "message": "Open WebUI சேவையக URL" },
+    "phServerUrl": { "message": "https://openwebui.example.com" },
+    "lblApiKey": { "message": "API திறவுகோல் (API Key)" },
+    "phApiKey": { "message": "sk-..." },
+    "lblModel": { "message": "விஷன் மாடல் (Vision Model)" },
+    "btnRefresh": { "message": "புதுப்பி" },
+    "phModel": { "message": "Gemma 4" },
+    "btnSaveSettings": { "message": "சேமி" },
+    "btnTestSettings": { "message": "சோதனை" },
+    "msgSettingsSaved": { "message": "அமைப்புகள் சேமிக்கப்பட்டன." },
+
+    "stepCounter": {
+        "message": "படி $1/$2",
+        "description": "Shows current step out of total max steps",
+        "placeholders": {
+            "current": { "content": "$1" },
+            "total": { "content": "$2" }
+        }
+    },
+    "statusExecuting": {
+        "message": "செயல்படுத்துகிறது: $1...",
+        "placeholders": {
+            "actionName": { "content": "$1" }
+        }
+    },
+    "statusRecognized": {
+        "message": "அடையாளம் காணப்பட்டது: \"$1\"",
+        "placeholders": {
+            "text": { "content": "$1" }
+        }
+    },
+    "errDictation": {
+        "message": "குரல் கட்டளை தோல்வியடைந்தது: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errMicError": {
+        "message": "மைக்ரோஃபோன் பிழை: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errSaveFailed": {
+        "message": "சேமிக்க முடியவில்லை: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errDeleteFailed": {
+        "message": "நீக்க முடியவில்லை: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "msgModelsFound": {
+        "message": "$1 மாதிரி(கள்) கண்டறியப்பட்டன.",
+        "placeholders": {
+            "count": { "content": "$1" }
+        }
+    }
+}

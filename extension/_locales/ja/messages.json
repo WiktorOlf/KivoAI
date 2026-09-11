@@ -1,0 +1,150 @@
+{
+    "extName": { "message": "KivoAI" },
+    "extDescription": { "message": "ローカルAIを搭載した、プライバシー最優先の自律型ブラウザアシスタント。" },
+
+    "promptLabel": { "message": "質問または目標を入力してください" },
+    "promptPlaceholder": { "message": "例: 「このフォームに入力して」や「このページは何？」..." },
+    "btnDictate": { "message": "プロンプトを音声入力" },
+    "btnSubmit": { "message": "送信" },
+    "btnStop": { "message": "停止" },
+
+    "titleAutofill": { "message": "自動入力プロファイル" },
+    "titleSettings": { "message": "設定" },
+    "titleDictatePrompt": { "message": "プロンプトを音声入力" },
+    "titleAiExplanation": { "message": "AIの説明" },
+    "titleBack": { "message": "戻る" },
+
+    "btnDismiss": { "message": "閉じる" },
+    "btnSteps": { "message": "ステップ" },
+    "btnHide": { "message": "非表示" },
+
+    "statusConnecting": { "message": "アクティブなタブに接続中..." },
+    "statusReady": { "message": "準備完了" },
+    "statusTranscribing": { "message": "音声を文字起こし中..." },
+    "statusSpeechShort": { "message": "音声が短すぎるか、空です。" },
+    "statusDeliberating": { "message": "分析中..." },
+    "statusStopped": { "message": "ユーザーによって停止されました。" },
+    "statusInspecting": { "message": "ページの状態を検査中..." },
+    "statusRedacting": { "message": "個人情報をマスキング中..." },
+    "statusExplanation": { "message": "説明が提供されました。" },
+    "statusNoSpeech": { "message": "明確な音声が検出されませんでした。" },
+    "statusListeningWait": { "message": "聞き取り中... コマンドを話してください。" },
+    "statusProcessingSpeech": { "message": "音声を処理中..." },
+    "statusTaskFinished": { "message": "タスクが完了しました！" },
+
+    "titleListening": { "message": "聞き取り中... (話し終わると自動的に送信されます)" },
+    "lblListening": { "message": "聞き取り中... (話してください)" },
+    "titleDictate": { "message": "プロンプトを音声入力" },
+
+    "errNoInput": { "message": "目標を入力するか、質問をしてください。" },
+    "errMicRequired": { "message": "マイクの許可が必要です。設定タブを開きます..." },
+    "errDeleteOnlyProfile": { "message": "残りの唯一のプロファイルは削除できません。" },
+    "errNoModels": { "message": "モデルが見つかりません。" },
+
+    "headerAutofill": { "message": "自動入力プロファイル" },
+    "lblSelectProfile": { "message": "プロファイルを選択" },
+    "lblActiveProfile": { "message": " (アクティブ)" },
+    "titleNewProfile": { "message": "新しいプロファイルを追加" },
+    "btnNewProfile": { "message": "+ 新規" },
+    "titleDeleteProfile": { "message": "現在のプロファイルを削除" },
+    "btnDeleteProfile": { "message": "削除" },
+    "lblNewProfileName": { "message": "新規プロファイル" },
+    "msgEnterProfileDetails": { "message": "プロファイルの詳細を入力し、保存をクリックしてください。" },
+    "msgProfileRemoved": { "message": "プロファイルが削除されました。" },
+    "msgProfileSaved": { "message": "プロファイルが保存されました。" },
+
+    "lblProfileName": { "message": "プロファイル名（ラベル）" },
+    "phProfileName": { "message": "例: 個人用、仕事用、Alex" },
+    "lblUsername": { "message": "ユーザー名 / ユーザーID" },
+    "phUsername": { "message": "例: jdoe99" },
+    "lblFirstName": { "message": "名" },
+    "phFirstName": { "message": "太郎" },
+    "lblMiddleName": { "message": "ミドルネーム" },
+    "phMiddleName": { "message": "マリー" },
+    "lblLastName": { "message": "姓" },
+    "phLastName": { "message": "山田" },
+    "lblEmail": { "message": "メールアドレス" },
+    "phEmail": { "message": "taro@example.com" },
+    "lblPhone": { "message": "電話番号" },
+    "phPhone": { "message": "090-1234-5678" },
+    "lblAddress": { "message": "住所（市区町村以降）" },
+    "phAddress": { "message": "渋谷区神南1-2-3" },
+    "lblCity": { "message": "市区町村" },
+    "phCity": { "message": "東京" },
+    "lblState": { "message": "都道府県 / 州" },
+    "phState": { "message": "東京都" },
+    "lblZip": { "message": "郵便番号" },
+    "phZip": { "message": "150-0041" },
+    "lblCountry": { "message": "国" },
+    "phCountry": { "message": "日本" },
+    "btnSaveProfile": { "message": "アクティブなプロファイルを保存" },
+
+    "headerSettings": { "message": "設定" },
+    "lblTheme": { "message": "テーマ" },
+    "themeGraphite": { "message": "グラファイトダーク (ダークグレー/黒)" },
+    "themeClean": { "message": "クリーンスレート (ライト/ミニマル)" },
+    "themeIndigo": { "message": "ディープインディゴダーク" },
+    "themeLavender": { "message": "ラベンダーライト" },
+    "lblMaxSteps": { "message": "自律ステップ上限" },
+    "lblServerUrl": { "message": "Open WebUI サーバーURL" },
+    "phServerUrl": { "message": "https://openwebui.example.com" },
+    "lblApiKey": { "message": "APIキー" },
+    "phApiKey": { "message": "sk-..." },
+    "lblModel": { "message": "ビジョンモデル" },
+    "btnRefresh": { "message": "更新" },
+    "phModel": { "message": "Gemma 4" },
+    "btnSaveSettings": { "message": "保存" },
+    "btnTestSettings": { "message": "テスト" },
+    "msgSettingsSaved": { "message": "設定が保存されました。" },
+
+    "stepCounter": {
+        "message": "ステップ $1/$2",
+        "description": "Shows current step out of total max steps",
+        "placeholders": {
+            "current": { "content": "$1" },
+            "total": { "content": "$2" }
+        }
+    },
+    "statusExecuting": {
+        "message": "実行中: $1...",
+        "placeholders": {
+            "actionName": { "content": "$1" }
+        }
+    },
+    "statusRecognized": {
+        "message": "認識結果: \"$1\"",
+        "placeholders": {
+            "text": { "content": "$1" }
+        }
+    },
+    "errDictation": {
+        "message": "音声入力に失敗しました: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errMicError": {
+        "message": "マイクエラー: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errSaveFailed": {
+        "message": "保存に失敗しました: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "errDeleteFailed": {
+        "message": "削除に失敗しました: $1",
+        "placeholders": {
+            "error": { "content": "$1" }
+        }
+    },
+    "msgModelsFound": {
+        "message": "$1個のモデルが見つかりました。",
+        "placeholders": {
+            "count": { "content": "$1" }
+        }
+    }
+}
